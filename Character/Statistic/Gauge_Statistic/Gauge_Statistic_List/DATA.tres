@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Gauge_Statistic_List" load_steps=7 format=3 uid="uid://cjlu8225cgfcx"]
+
+[ext_resource type="Script" uid="uid://lwbx7cgu7ytl" path="res://Character/Statistic/Gauge_Statistic/Gauge_Statistic_List/Gauge_Statistic_List.gd" id="1_jdtco"]
+[ext_resource type="Resource" uid="uid://bb55g2ax20bk7" path="res://Character/Statistic/Gauge_Statistic/Gauge_Statistic_List/ENGINE/DATA.tres" id="1_ltgmw"]
+[ext_resource type="Resource" uid="uid://8uyt72nx0pbh" path="res://Character/Statistic/Gauge_Statistic/Gauge_Statistic_List/HEALTH/DATA.tres" id="2_yt16b"]
+[ext_resource type="Resource" uid="uid://ckd5go3gtog0n" path="res://Character/Statistic/Gauge_Statistic/Gauge_Statistic_List/RUNE/DATA.tres" id="3_dim1n"]
+[ext_resource type="Resource" uid="uid://rguhxb2kdcyv" path="res://Character/Statistic/Gauge_Statistic/Gauge_Statistic_List/THREAD/DATA.tres" id="4_2bhwv"]
+[ext_resource type="Resource" uid="uid://7k4n7aday8si" path="res://Character/Statistic/Gauge_Statistic/Gauge_Statistic_List/ZERO/DATA.tres" id="5_xbyov"]
+
+[resource]
+script = ExtResource("1_jdtco")
+Health_Gauge = ExtResource("2_yt16b")
+Rune_Gauge = ExtResource("3_dim1n")
+Engine_Gauge = ExtResource("1_ltgmw")
+Thread_Gauge = ExtResource("4_2bhwv")
+Zero_Gauge = ExtResource("5_xbyov")
+metadata/_custom_type_script = "uid://lwbx7cgu7ytl"

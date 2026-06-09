@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Skill_Data" load_steps=2 format=3 uid="uid://cc1y02vohdqx"]
+
+[ext_resource type="Script" uid="uid://cbuw5jrmmkwi0" path="res://Action/Item/Skill/Skill_Data.gd" id="1_5akpn"]
+
+[resource]
+script = ExtResource("1_5akpn")
+skill_name = "Potion"
+metadata/_custom_type_script = "uid://cbuw5jrmmkwi0"

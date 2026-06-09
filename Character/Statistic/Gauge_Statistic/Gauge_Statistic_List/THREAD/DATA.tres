@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Gauge_Statistic_Data" load_steps=2 format=3 uid="uid://rguhxb2kdcyv"]
+
+[ext_resource type="Script" uid="uid://ojih7y580tq2" path="res://Character/Statistic/Gauge_Statistic/Gauge_Statistic_Data.gd" id="1_fg0k6"]
+
+[resource]
+script = ExtResource("1_fg0k6")
+name = "Thread Gauge"
+base_statistic_multiplier = 1.05
+metadata/_custom_type_script = "uid://ojih7y580tq2"

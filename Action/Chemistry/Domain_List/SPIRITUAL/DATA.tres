@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Domain_Data" load_steps=3 format=3 uid="uid://btatm2kp4c867"]
+
+[ext_resource type="Texture2D" uid="uid://6gqyvnbxugqw" path="res://Action/Chemistry/Domain_List/SPIRITUAL/ICON.png" id="1_blgit"]
+[ext_resource type="Script" uid="uid://cakf2apsnxbq5" path="res://Action/Chemistry/Domain_Data.gd" id="1_ijfw8"]
+
+[resource]
+script = ExtResource("1_ijfw8")
+name = "SPIRITUAL"
+icon = ExtResource("1_blgit")
+PHYSICAL = 2
+MAGICAL = 1
+SPIRITUAL = 1
+TEMPERED = 2
+metadata/_custom_type_script = "uid://cakf2apsnxbq5"

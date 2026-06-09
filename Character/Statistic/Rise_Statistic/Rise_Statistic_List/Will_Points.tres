@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Rise_Statistic_Data" load_steps=2 format=3 uid="uid://cwueng2o8iy4h"]
+
+[ext_resource type="Script" uid="uid://na7mcusrkcsi" path="res://Character/Statistic/Rise_Statistic/Rise_Statistic_Data.gd" id="1_yswoy"]
+
+[resource]
+script = ExtResource("1_yswoy")
+metadata/_custom_type_script = "uid://na7mcusrkcsi"

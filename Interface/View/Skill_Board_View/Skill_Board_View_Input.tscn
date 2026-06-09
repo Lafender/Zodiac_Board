@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://ojqnymo0myng"]
+
+[ext_resource type="Script" uid="uid://cawtm041divhn" path="res://Interface/View/Skill_Board_View/Skill_Board_View_Input.gd" id="1_u1lwq"]
+
+[node name="Skill_Board_View_Input" type="Node"]
+script = ExtResource("1_u1lwq")

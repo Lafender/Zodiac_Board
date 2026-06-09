@@ -1,0 +1,95 @@
+[gd_resource type="Resource" script_class="Element_List" load_steps=46 format=3 uid="uid://dcqc0wk1ypvqx"]
+
+[ext_resource type="Resource" uid="uid://b7hpx6n1ney4h" path="res://Action/Chemistry/Element_List/BASS/DATA.tres" id="1_s71gn"]
+[ext_resource type="Script" uid="uid://5f4lbomg13px" path="res://Action/Chemistry/Element_List/Element_List.gd" id="2_iu25f"]
+[ext_resource type="Resource" uid="uid://d2f361r433p01" path="res://Action/Chemistry/Element_List/BINARY/DATA.tres" id="2_oxnet"]
+[ext_resource type="Resource" uid="uid://c8yso30giwvsj" path="res://Action/Chemistry/Element_List/CHILL/DATA.tres" id="2_r8h7c"]
+[ext_resource type="Resource" uid="uid://0hl1qcole768" path="res://Action/Chemistry/Element_List/COMPRESSED/Compressed_Element.tres" id="3_4s12v"]
+[ext_resource type="Resource" uid="uid://pvh8akkfbx7r" path="res://Action/Chemistry/Element_List/CHAOTIC/DATA.tres" id="3_t13mj"]
+[ext_resource type="Resource" uid="uid://bcm7r8pab7yvh" path="res://Action/Chemistry/Element_List/HEAT/Heat_Element.tres" id="4_ohdlc"]
+[ext_resource type="Resource" uid="uid://dfrewqbmnsna1" path="res://Action/Chemistry/Element_List/CHROMATIC/Chromatic_Element.tres" id="5_da2xj"]
+[ext_resource type="Resource" uid="uid://ho1wiscoodol" path="res://Action/Chemistry/Element_List/TREBLE/Treble_Element.tres" id="5_ixvx7"]
+[ext_resource type="Resource" uid="uid://0t4uc1pgtdto" path="res://Action/Chemistry/Element_List/COMPLEX/Complex_Element.tres" id="6_fher6"]
+[ext_resource type="Resource" uid="uid://b3h3lnavwwefd" path="res://Action/Chemistry/Element_List/CONDUCTIVE/Conductive_Element.tres" id="8_mymyi"]
+[ext_resource type="Resource" uid="uid://6skunya2t5dd" path="res://Action/Chemistry/Element_List/CRYSTAL/Crystal_Element.tres" id="9_as18u"]
+[ext_resource type="Resource" uid="uid://dm30f6pffqdct" path="res://Action/Chemistry/Element_List/DATA/Data_Element.tres" id="10_dtire"]
+[ext_resource type="Resource" uid="uid://dalqomai5hcuh" path="res://Action/Chemistry/Element_List/ELECTRONIC/Electronic_Element.tres" id="11_rfcu8"]
+[ext_resource type="Resource" uid="uid://clgd2b0j6d6lq" path="res://Action/Chemistry/Element_List/FRACTAL/Fractal_Element.tres" id="12_nv4o6"]
+[ext_resource type="Resource" uid="uid://r85673fpsqel" path="res://Action/Chemistry/Element_List/GEL/Gel_Element.tres" id="13_vt817"]
+[ext_resource type="Resource" uid="uid://bg7ef1482r1m6" path="res://Action/Chemistry/Element_List/GENETIC/Genetic_Element.tres" id="14_hhke6"]
+[ext_resource type="Resource" uid="uid://yibyjpfyblw2" path="res://Action/Chemistry/Element_List/GRADIENT/Gradient_Element.tres" id="15_g1pfc"]
+[ext_resource type="Resource" uid="uid://p4hdbp8acoq1" path="res://Action/Chemistry/Element_List/ILLUSION/Illusion_Element.tres" id="17_wnm80"]
+[ext_resource type="Resource" uid="uid://bx3wgnucaeipj" path="res://Action/Chemistry/Element_List/LIMIT/Limit_Element.tres" id="18_a8vjy"]
+[ext_resource type="Resource" uid="uid://bd1sx5ud8ctdp" path="res://Action/Chemistry/Element_List/LIQUID/Liquid_Element.tres" id="19_uf5om"]
+[ext_resource type="Resource" uid="uid://byvfwh6nn1pk0" path="res://Action/Chemistry/Element_List/MASSIVE/Massive_Element.tres" id="20_72m21"]
+[ext_resource type="Resource" uid="uid://cddbtju3x3xm" path="res://Action/Chemistry/Element_List/MATRIX/Matrix_Element.tres" id="21_sqfjt"]
+[ext_resource type="Resource" uid="uid://556ra0e78wp2" path="res://Action/Chemistry/Element_List/MEMORY/Memory_Element.tres" id="22_qvovx"]
+[ext_resource type="Resource" uid="uid://ekbb6iwit2cq" path="res://Action/Chemistry/Element_List/METAL/Metal_Element.tres" id="23_pv3ei"]
+[ext_resource type="Resource" uid="uid://0tvaq517tia4" path="res://Action/Chemistry/Element_List/NEON/Neon_Element.tres" id="24_tw6xo"]
+[ext_resource type="Resource" uid="uid://l61lga6wigul" path="res://Action/Chemistry/Element_List/OBSIDIAN/Obsidian_Element.tres" id="25_qlwny"]
+[ext_resource type="Resource" uid="uid://boguyjrey7lsw" path="res://Action/Chemistry/Element_List/ORDERED/Ordered_Element.tres" id="26_ndkkk"]
+[ext_resource type="Resource" uid="uid://ckefwstwk6vm7" path="res://Action/Chemistry/Element_List/OXIDIZING/Oxidizing_Element.tres" id="27_e416a"]
+[ext_resource type="Resource" uid="uid://btfe71f13v3cn" path="res://Action/Chemistry/Element_List/PARTICLE/Particle_Element.tres" id="28_80ny1"]
+[ext_resource type="Resource" uid="uid://b1w3j73pt8ouf" path="res://Action/Chemistry/Element_List/PLASMA/Plasma_Element.tres" id="29_2pwun"]
+[ext_resource type="Resource" uid="uid://dlo8nbnaivcy7" path="res://Action/Chemistry/Element_List/PLASTIC/Plastic_Element.tres" id="30_iiuaj"]
+[ext_resource type="Resource" uid="uid://dytlscf3or3na" path="res://Action/Chemistry/Element_List/PRISMATIC/Prismatic_Element.tres" id="31_n7atx"]
+[ext_resource type="Resource" uid="uid://pwy8lna4tsvy" path="res://Action/Chemistry/Element_List/PULSE/Pulse_Element.tres" id="32_00qoq"]
+[ext_resource type="Resource" uid="uid://c7lsyliwc06f5" path="res://Action/Chemistry/Element_List/QUANTUM/Quantum_Element.tres" id="33_1upei"]
+[ext_resource type="Resource" uid="uid://bhwp8blpbtjgn" path="res://Action/Chemistry/Element_List/RADIANT/Radiant_Element.tres" id="34_iytad"]
+[ext_resource type="Resource" uid="uid://xfo35qnu0bcx" path="res://Action/Chemistry/Element_List/RAINBOW/Rainbow_Element.tres" id="35_ogkgp"]
+[ext_resource type="Resource" uid="uid://ceahubeaht64j" path="res://Action/Chemistry/Element_List/REFLECTIVE/Reflective_Element.tres" id="36_ay0an"]
+[ext_resource type="Resource" uid="uid://c8oqbhc1d4uuc" path="res://Action/Chemistry/Element_List/SIMPLE/Simple_Element.tres" id="37_ohech"]
+[ext_resource type="Resource" uid="uid://lkr2w3uqweve" path="res://Action/Chemistry/Element_List/SMOKE/Smoke_Element.tres" id="38_07dxd"]
+[ext_resource type="Resource" uid="uid://chwe31f3hicjx" path="res://Action/Chemistry/Element_List/SOLVENT/Solvent_Element.tres" id="39_53t6r"]
+[ext_resource type="Resource" uid="uid://d08vg88sd4tvv" path="res://Action/Chemistry/Element_List/STEAM/Steam_Element.tres" id="40_f8itu"]
+[ext_resource type="Resource" uid="uid://bgw016dkbmntt" path="res://Action/Chemistry/Element_List/STRETCHED/Stretched_Element.tres" id="41_nv4tc"]
+[ext_resource type="Resource" uid="uid://xnl4crehcs4l" path="res://Action/Chemistry/Element_List/VECTOR/Vector_Element.tres" id="43_afhj7"]
+[ext_resource type="Resource" uid="uid://dw1qqb8k85ok8" path="res://Action/Chemistry/Element_List/VOID/Void_Element.tres" id="44_h76pt"]
+
+[resource]
+script = ExtResource("2_iu25f")
+BASS = ExtResource("1_s71gn")
+TREBLE = ExtResource("5_ixvx7")
+STRETCHED = ExtResource("41_nv4tc")
+COMPRESSED = ExtResource("3_4s12v")
+HEAT = ExtResource("4_ohdlc")
+CHILL = ExtResource("2_r8h7c")
+SIMPLE = ExtResource("37_ohech")
+COMPLEX = ExtResource("6_fher6")
+CONDUCTIVE = ExtResource("8_mymyi")
+PULSE = ExtResource("32_00qoq")
+REFLECTIVE = ExtResource("36_ay0an")
+RADIANT = ExtResource("34_iytad")
+VOID = ExtResource("44_h76pt")
+PLASMA = ExtResource("29_2pwun")
+MASSIVE = ExtResource("20_72m21")
+QUANTUM = ExtResource("33_1upei")
+ELECTRONIC = ExtResource("11_rfcu8")
+SOLVENT = ExtResource("39_53t6r")
+OXIDIZING = ExtResource("27_e416a")
+PARTICLE = ExtResource("28_80ny1")
+LIMIT = ExtResource("18_a8vjy")
+VECTOR = ExtResource("43_afhj7")
+MATRIX = ExtResource("21_sqfjt")
+DATA = ExtResource("10_dtire")
+BINARY = ExtResource("2_oxnet")
+MEMORY = ExtResource("22_qvovx")
+GENETIC = ExtResource("14_hhke6")
+ILLUSION = ExtResource("17_wnm80")
+OBSIDIAN = ExtResource("25_qlwny")
+STEAM = ExtResource("40_f8itu")
+SMOKE = ExtResource("38_07dxd")
+PLASTIC = ExtResource("30_iiuaj")
+LIQUID = ExtResource("19_uf5om")
+GEL = ExtResource("13_vt817")
+NEON = ExtResource("24_tw6xo")
+METAL = ExtResource("23_pv3ei")
+CRYSTAL = ExtResource("9_as18u")
+GRADIENT = ExtResource("15_g1pfc")
+RAINBOW = ExtResource("35_ogkgp")
+CHROMATIC = ExtResource("5_da2xj")
+PRISMATIC = ExtResource("31_n7atx")
+FRACTAL = ExtResource("12_nv4o6")
+ORDERED = ExtResource("26_ndkkk")
+CHAOTIC = ExtResource("3_t13mj")
+metadata/_custom_type_script = "uid://5f4lbomg13px"

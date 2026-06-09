@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Element_Interaction_Data" load_steps=2 format=3 uid="uid://822j6w6ya56y"]
+
+[ext_resource type="Script" uid="uid://cd6qxos25cgqs" path="res://Action/Chemistry/Element_Interaction_Data.gd" id="1_6bra8"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_6bra8")
+type = 11
+target_gauge = 1
+damage_multiplier = 0.25
+damage_duration = 0.75
+damage_interval = 0.5
+metadata/_custom_type_script = "uid://cd6qxos25cgqs"

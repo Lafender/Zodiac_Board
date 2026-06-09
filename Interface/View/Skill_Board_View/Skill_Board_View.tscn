@@ -1,0 +1,2917 @@
+[gd_scene load_steps=4 format=3 uid="uid://b2kac4wfphm84"]
+
+[ext_resource type="StyleBox" uid="uid://by15ofaw0ws7w" path="res://Interface/StyleBoxFlat/Skill_Chip_Code_Background.tres" id="1_soswj"]
+[ext_resource type="StyleBox" uid="uid://ccu3cf1mmm7km" path="res://Interface/StyleBoxFlat/Skill_Chip_Selection_Highlighttres.tres" id="1_xdkfv"]
+[ext_resource type="Script" uid="uid://cawtm041divhn" path="res://Interface/View/Skill_Board_View/Skill_Board_View_Input.gd" id="3_uvea8"]
+
+[node name="Skill_Board_View" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ScrollContainer3" type="ScrollContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DPAD_Hightlight_Container" type="GridContainer" parent="ScrollContainer3"]
+layout_mode = 2
+columns = 2
+
+[node name="Dpad_Down" type="ColorRect" parent="ScrollContainer3/DPAD_Hightlight_Container" groups=["corner_down"]]
+custom_minimum_size = Vector2(268, 268)
+layout_mode = 2
+color = Color(0.27450982, 0.5294118, 0.19215687, 0.5019608)
+
+[node name="Dpad_Right" type="ColorRect" parent="ScrollContainer3/DPAD_Hightlight_Container" groups=["corner_right"]]
+custom_minimum_size = Vector2(268, 268)
+layout_mode = 2
+color = Color(0.29803923, 0.57254905, 0.21176471, 0.4745098)
+
+[node name="Dpad_Left" type="ColorRect" parent="ScrollContainer3/DPAD_Hightlight_Container" groups=["corner_left"]]
+custom_minimum_size = Vector2(268, 268)
+layout_mode = 2
+color = Color(0.29803923, 0.57254905, 0.21176471, 0.4745098)
+
+[node name="Dpad_Up" type="ColorRect" parent="ScrollContainer3/DPAD_Hightlight_Container" groups=["corner_up"]]
+custom_minimum_size = Vector2(268, 268)
+layout_mode = 2
+color = Color(0.29803923, 0.57254905, 0.21176471, 0.4745098)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Checkerboard" type="GridContainer" parent="ScrollContainer"]
+layout_mode = 2
+columns = 8
+
+[node name="Tile_00" type="ColorRect" parent="ScrollContainer/Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+color = Color(0.59607846, 0.4745098, 0.16470589, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Checkerboard/Tile_00"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Checkerboard/Tile_00"]
+custom_minimum_size = Vector2(48, 24)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 72.0
+offset_bottom = 88.0
+theme_override_styles/panel = ExtResource("1_soswj")
+
+[node name="Label" type="Label" parent="ScrollContainer/Checkerboard/Tile_00/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0000"
+
+[node name="Tile_01" type="ColorRect" parent="ScrollContainer/Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+color = Color(0.29803923, 0.21176471, 0.14117648, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Checkerboard/Tile_01"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Checkerboard/Tile_01"]
+custom_minimum_size = Vector2(48, 24)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 72.0
+offset_bottom = 88.0
+theme_override_styles/panel = ExtResource("1_soswj")
+
+[node name="Label" type="Label" parent="ScrollContainer/Checkerboard/Tile_01/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0000"
+
+[node name="Tile_02" type="ColorRect" parent="ScrollContainer/Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+color = Color(0.59607846, 0.4745098, 0.16470589, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Checkerboard/Tile_02"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Checkerboard/Tile_02"]
+custom_minimum_size = Vector2(48, 24)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 72.0
+offset_bottom = 88.0
+theme_override_styles/panel = ExtResource("1_soswj")
+
+[node name="Label" type="Label" parent="ScrollContainer/Checkerboard/Tile_02/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0000"
+
+[node name="Tile_03" type="ColorRect" parent="ScrollContainer/Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+color = Color(0.29803923, 0.21176471, 0.14117648, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Checkerboard/Tile_03"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Checkerboard/Tile_03"]
+custom_minimum_size = Vector2(48, 24)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 72.0
+offset_bottom = 88.0
+theme_override_styles/panel = ExtResource("1_soswj")
+
+[node name="Label" type="Label" parent="ScrollContainer/Checkerboard/Tile_03/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0000"
+
+[node name="Tile_04" type="ColorRect" parent="ScrollContainer/Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+color = Color(0.59607846, 0.4745098, 0.16470589, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Checkerboard/Tile_04"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Checkerboard/Tile_04"]
+custom_minimum_size = Vector2(48, 24)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 72.0
+offset_bottom = 88.0
+theme_override_styles/panel = ExtResource("1_soswj")
+
+[node name="Label" type="Label" parent="ScrollContainer/Checkerboard/Tile_04/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0000"
+
+[node name="Tile_05" type="ColorRect" parent="ScrollContainer/Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+color = Color(0.29803923, 0.21176471, 0.14117648, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Checkerboard/Tile_05"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Checkerboard/Tile_05"]
+custom_minimum_size = Vector2(48, 24)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 72.0
+offset_bottom = 88.0
+theme_override_styles/panel = ExtResource("1_soswj")
+
+[node name="Label" type="Label" parent="ScrollContainer/Checkerboard/Tile_05/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0000"
+
+[node name="Tile_06" type="ColorRect" parent="ScrollContainer/Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+color = Color(0.59607846, 0.4745098, 0.16470589, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Checkerboard/Tile_06"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Checkerboard/Tile_06"]
+custom_minimum_size = Vector2(48, 24)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 72.0
+offset_bottom = 88.0
+theme_override_styles/panel = ExtResource("1_soswj")
+
+[node name="Label" type="Label" parent="ScrollContainer/Checkerboard/Tile_06/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0000"
+
+[node name="Tile_07" type="ColorRect" parent="ScrollContainer/Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+color = Color(0.29803923, 0.21176471, 0.14117648, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Checkerboard/Tile_07"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Checkerboard/Tile_07"]
+custom_minimum_size = Vector2(48, 24)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 72.0
+offset_bottom = 88.0
+theme_override_styles/panel = ExtResource("1_soswj")
+
+[node name="Label" type="Label" parent="ScrollContainer/Checkerboard/Tile_07/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0000"
+
+[node name="Tile_08" type="ColorRect" parent="ScrollContainer/Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+color = Color(0.29803923, 0.21176471, 0.14117648, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Checkerboard/Tile_08"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Checkerboard/Tile_08"]
+custom_minimum_size = Vector2(48, 24)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 72.0
+offset_bottom = 88.0
+theme_override_styles/panel = ExtResource("1_soswj")
+
+[node name="Label" type="Label" parent="ScrollContainer/Checkerboard/Tile_08/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0000"
+
+[node name="Tile_09" type="ColorRect" parent="ScrollContainer/Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+color = Color(0.59607846, 0.4745098, 0.16470589, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Checkerboard/Tile_09"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Checkerboard/Tile_09"]
+custom_minimum_size = Vector2(48, 24)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 72.0
+offset_bottom = 88.0
+theme_override_styles/panel = ExtResource("1_soswj")
+
+[node name="Label" type="Label" parent="ScrollContainer/Checkerboard/Tile_09/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0000"
+
+[node name="Tile_10" type="ColorRect" parent="ScrollContainer/Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+color = Color(0.29803923, 0.21176471, 0.14117648, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Checkerboard/Tile_10"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Checkerboard/Tile_10"]
+custom_minimum_size = Vector2(48, 24)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 72.0
+offset_bottom = 88.0
+theme_override_styles/panel = ExtResource("1_soswj")
+
+[node name="Label" type="Label" parent="ScrollContainer/Checkerboard/Tile_10/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0000"
+
+[node name="Tile_11" type="ColorRect" parent="ScrollContainer/Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+color = Color(0.59607846, 0.4745098, 0.16470589, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Checkerboard/Tile_11"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Checkerboard/Tile_11"]
+custom_minimum_size = Vector2(48, 24)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 72.0
+offset_bottom = 88.0
+theme_override_styles/panel = ExtResource("1_soswj")
+
+[node name="Label" type="Label" parent="ScrollContainer/Checkerboard/Tile_11/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0000"
+
+[node name="Tile_12" type="ColorRect" parent="ScrollContainer/Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+color = Color(0.29803923, 0.21176471, 0.14117648, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Checkerboard/Tile_12"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Checkerboard/Tile_12"]
+custom_minimum_size = Vector2(48, 24)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 72.0
+offset_bottom = 88.0
+theme_override_styles/panel = ExtResource("1_soswj")
+
+[node name="Label" type="Label" parent="ScrollContainer/Checkerboard/Tile_12/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0000"
+
+[node name="Tile_13" type="ColorRect" parent="ScrollContainer/Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+color = Color(0.59607846, 0.4745098, 0.16470589, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Checkerboard/Tile_13"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Checkerboard/Tile_13"]
+custom_minimum_size = Vector2(48, 24)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 72.0
+offset_bottom = 88.0
+theme_override_styles/panel = ExtResource("1_soswj")
+
+[node name="Label" type="Label" parent="ScrollContainer/Checkerboard/Tile_13/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0000"
+
+[node name="Tile_14" type="ColorRect" parent="ScrollContainer/Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+color = Color(0.29803923, 0.21176471, 0.14117648, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Checkerboard/Tile_14"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Checkerboard/Tile_14"]
+custom_minimum_size = Vector2(48, 24)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 72.0
+offset_bottom = 88.0
+theme_override_styles/panel = ExtResource("1_soswj")
+
+[node name="Label" type="Label" parent="ScrollContainer/Checkerboard/Tile_14/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0000"
+
+[node name="Tile_15" type="ColorRect" parent="ScrollContainer/Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+color = Color(0.59607846, 0.4745098, 0.16470589, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Checkerboard/Tile_15"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Checkerboard/Tile_15"]
+custom_minimum_size = Vector2(48, 24)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 72.0
+offset_bottom = 88.0
+theme_override_styles/panel = ExtResource("1_soswj")
+
+[node name="Label" type="Label" parent="ScrollContainer/Checkerboard/Tile_15/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0000"
+
+[node name="Tile_16" type="ColorRect" parent="ScrollContainer/Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+color = Color(0.59607846, 0.4745098, 0.16470589, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Checkerboard/Tile_16"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Checkerboard/Tile_16"]
+custom_minimum_size = Vector2(48, 24)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 72.0
+offset_bottom = 88.0
+theme_override_styles/panel = ExtResource("1_soswj")
+
+[node name="Label" type="Label" parent="ScrollContainer/Checkerboard/Tile_16/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0000"
+
+[node name="Tile_17" type="ColorRect" parent="ScrollContainer/Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+color = Color(0.29803923, 0.21176471, 0.14117648, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Checkerboard/Tile_17"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Checkerboard/Tile_17"]
+custom_minimum_size = Vector2(48, 24)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 72.0
+offset_bottom = 88.0
+theme_override_styles/panel = ExtResource("1_soswj")
+
+[node name="Label" type="Label" parent="ScrollContainer/Checkerboard/Tile_17/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0000"
+
+[node name="Tile_18" type="ColorRect" parent="ScrollContainer/Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+color = Color(0.59607846, 0.4745098, 0.16470589, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Checkerboard/Tile_18"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Checkerboard/Tile_18"]
+custom_minimum_size = Vector2(48, 24)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 72.0
+offset_bottom = 88.0
+theme_override_styles/panel = ExtResource("1_soswj")
+
+[node name="Label" type="Label" parent="ScrollContainer/Checkerboard/Tile_18/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0000"
+
+[node name="Tile_19" type="ColorRect" parent="ScrollContainer/Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+color = Color(0.29803923, 0.21176471, 0.14117648, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Checkerboard/Tile_19"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Checkerboard/Tile_19"]
+custom_minimum_size = Vector2(48, 24)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 72.0
+offset_bottom = 88.0
+theme_override_styles/panel = ExtResource("1_soswj")
+
+[node name="Label" type="Label" parent="ScrollContainer/Checkerboard/Tile_19/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0000"
+
+[node name="Tile_20" type="ColorRect" parent="ScrollContainer/Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+color = Color(0.59607846, 0.4745098, 0.16470589, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Checkerboard/Tile_20"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Checkerboard/Tile_20"]
+custom_minimum_size = Vector2(48, 24)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 72.0
+offset_bottom = 88.0
+theme_override_styles/panel = ExtResource("1_soswj")
+
+[node name="Label" type="Label" parent="ScrollContainer/Checkerboard/Tile_20/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0000"
+
+[node name="Tile_21" type="ColorRect" parent="ScrollContainer/Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+color = Color(0.29803923, 0.21176471, 0.14117648, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Checkerboard/Tile_21"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Checkerboard/Tile_21"]
+custom_minimum_size = Vector2(48, 24)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 72.0
+offset_bottom = 88.0
+theme_override_styles/panel = ExtResource("1_soswj")
+
+[node name="Label" type="Label" parent="ScrollContainer/Checkerboard/Tile_21/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0000"
+
+[node name="Tile_22" type="ColorRect" parent="ScrollContainer/Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+color = Color(0.59607846, 0.4745098, 0.16470589, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Checkerboard/Tile_22"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Checkerboard/Tile_22"]
+custom_minimum_size = Vector2(48, 24)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 72.0
+offset_bottom = 88.0
+theme_override_styles/panel = ExtResource("1_soswj")
+
+[node name="Label" type="Label" parent="ScrollContainer/Checkerboard/Tile_22/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0000"
+
+[node name="Tile_23" type="ColorRect" parent="ScrollContainer/Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+color = Color(0.29803923, 0.21176471, 0.14117648, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Checkerboard/Tile_23"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Checkerboard/Tile_23"]
+custom_minimum_size = Vector2(48, 24)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 72.0
+offset_bottom = 88.0
+theme_override_styles/panel = ExtResource("1_soswj")
+
+[node name="Label" type="Label" parent="ScrollContainer/Checkerboard/Tile_23/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0000"
+
+[node name="Tile_24" type="ColorRect" parent="ScrollContainer/Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+color = Color(0.29803923, 0.21176471, 0.14117648, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Checkerboard/Tile_24"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Checkerboard/Tile_24"]
+custom_minimum_size = Vector2(48, 24)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 72.0
+offset_bottom = 88.0
+theme_override_styles/panel = ExtResource("1_soswj")
+
+[node name="Label" type="Label" parent="ScrollContainer/Checkerboard/Tile_24/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0000"
+
+[node name="Tile_25" type="ColorRect" parent="ScrollContainer/Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+color = Color(0.59607846, 0.4745098, 0.16470589, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Checkerboard/Tile_25"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Checkerboard/Tile_25"]
+custom_minimum_size = Vector2(48, 24)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 72.0
+offset_bottom = 88.0
+theme_override_styles/panel = ExtResource("1_soswj")
+
+[node name="Label" type="Label" parent="ScrollContainer/Checkerboard/Tile_25/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0000"
+
+[node name="Tile_26" type="ColorRect" parent="ScrollContainer/Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+color = Color(0.29803923, 0.21176471, 0.14117648, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Checkerboard/Tile_26"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Checkerboard/Tile_26"]
+custom_minimum_size = Vector2(48, 24)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 72.0
+offset_bottom = 88.0
+theme_override_styles/panel = ExtResource("1_soswj")
+
+[node name="Label" type="Label" parent="ScrollContainer/Checkerboard/Tile_26/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0000"
+
+[node name="Tile_27" type="ColorRect" parent="ScrollContainer/Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+color = Color(0.59607846, 0.4745098, 0.16470589, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Checkerboard/Tile_27"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Checkerboard/Tile_27"]
+custom_minimum_size = Vector2(48, 24)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 72.0
+offset_bottom = 88.0
+theme_override_styles/panel = ExtResource("1_soswj")
+
+[node name="Label" type="Label" parent="ScrollContainer/Checkerboard/Tile_27/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0000"
+
+[node name="Tile_28" type="ColorRect" parent="ScrollContainer/Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+color = Color(0.29803923, 0.21176471, 0.14117648, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Checkerboard/Tile_28"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Checkerboard/Tile_28"]
+custom_minimum_size = Vector2(48, 24)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 72.0
+offset_bottom = 88.0
+theme_override_styles/panel = ExtResource("1_soswj")
+
+[node name="Label" type="Label" parent="ScrollContainer/Checkerboard/Tile_28/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0000"
+
+[node name="Tile_29" type="ColorRect" parent="ScrollContainer/Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+color = Color(0.59607846, 0.4745098, 0.16470589, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Checkerboard/Tile_29"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Checkerboard/Tile_29"]
+custom_minimum_size = Vector2(48, 24)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 72.0
+offset_bottom = 88.0
+theme_override_styles/panel = ExtResource("1_soswj")
+
+[node name="Label" type="Label" parent="ScrollContainer/Checkerboard/Tile_29/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0000"
+
+[node name="Tile_30" type="ColorRect" parent="ScrollContainer/Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+color = Color(0.29803923, 0.21176471, 0.14117648, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Checkerboard/Tile_30"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Checkerboard/Tile_30"]
+custom_minimum_size = Vector2(48, 24)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 72.0
+offset_bottom = 88.0
+theme_override_styles/panel = ExtResource("1_soswj")
+
+[node name="Label" type="Label" parent="ScrollContainer/Checkerboard/Tile_30/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0000"
+
+[node name="Tile_31" type="ColorRect" parent="ScrollContainer/Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+color = Color(0.59607846, 0.4745098, 0.16470589, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Checkerboard/Tile_31"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Checkerboard/Tile_31"]
+custom_minimum_size = Vector2(48, 24)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 72.0
+offset_bottom = 88.0
+theme_override_styles/panel = ExtResource("1_soswj")
+
+[node name="Label" type="Label" parent="ScrollContainer/Checkerboard/Tile_31/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0000"
+
+[node name="Tile_32" type="ColorRect" parent="ScrollContainer/Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+color = Color(0.59607846, 0.4745098, 0.16470589, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Checkerboard/Tile_32"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Checkerboard/Tile_32"]
+custom_minimum_size = Vector2(48, 24)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 72.0
+offset_bottom = 88.0
+theme_override_styles/panel = ExtResource("1_soswj")
+
+[node name="Label" type="Label" parent="ScrollContainer/Checkerboard/Tile_32/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0000"
+
+[node name="Tile_33" type="ColorRect" parent="ScrollContainer/Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+color = Color(0.29803923, 0.21176471, 0.14117648, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Checkerboard/Tile_33"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Checkerboard/Tile_33"]
+custom_minimum_size = Vector2(48, 24)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 72.0
+offset_bottom = 88.0
+theme_override_styles/panel = ExtResource("1_soswj")
+
+[node name="Label" type="Label" parent="ScrollContainer/Checkerboard/Tile_33/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0000"
+
+[node name="Tile_34" type="ColorRect" parent="ScrollContainer/Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+color = Color(0.59607846, 0.4745098, 0.16470589, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Checkerboard/Tile_34"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Checkerboard/Tile_34"]
+custom_minimum_size = Vector2(48, 24)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 72.0
+offset_bottom = 88.0
+theme_override_styles/panel = ExtResource("1_soswj")
+
+[node name="Label" type="Label" parent="ScrollContainer/Checkerboard/Tile_34/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0000"
+
+[node name="Tile_35" type="ColorRect" parent="ScrollContainer/Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+color = Color(0.29803923, 0.21176471, 0.14117648, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Checkerboard/Tile_35"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Checkerboard/Tile_35"]
+custom_minimum_size = Vector2(48, 24)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 72.0
+offset_bottom = 88.0
+theme_override_styles/panel = ExtResource("1_soswj")
+
+[node name="Label" type="Label" parent="ScrollContainer/Checkerboard/Tile_35/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0000"
+
+[node name="Tile_36" type="ColorRect" parent="ScrollContainer/Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+color = Color(0.59607846, 0.4745098, 0.16470589, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Checkerboard/Tile_36"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Checkerboard/Tile_36"]
+custom_minimum_size = Vector2(48, 24)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 72.0
+offset_bottom = 88.0
+theme_override_styles/panel = ExtResource("1_soswj")
+
+[node name="Label" type="Label" parent="ScrollContainer/Checkerboard/Tile_36/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0000"
+
+[node name="Tile_37" type="ColorRect" parent="ScrollContainer/Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+color = Color(0.29803923, 0.21176471, 0.14117648, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Checkerboard/Tile_37"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Checkerboard/Tile_37"]
+custom_minimum_size = Vector2(48, 24)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 72.0
+offset_bottom = 88.0
+theme_override_styles/panel = ExtResource("1_soswj")
+
+[node name="Label" type="Label" parent="ScrollContainer/Checkerboard/Tile_37/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0000"
+
+[node name="Tile_38" type="ColorRect" parent="ScrollContainer/Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+color = Color(0.59607846, 0.4745098, 0.16470589, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Checkerboard/Tile_38"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Checkerboard/Tile_38"]
+custom_minimum_size = Vector2(48, 24)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 72.0
+offset_bottom = 88.0
+theme_override_styles/panel = ExtResource("1_soswj")
+
+[node name="Label" type="Label" parent="ScrollContainer/Checkerboard/Tile_38/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0000"
+
+[node name="Tile_39" type="ColorRect" parent="ScrollContainer/Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+color = Color(0.29803923, 0.21176471, 0.14117648, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Checkerboard/Tile_39"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Checkerboard/Tile_39"]
+custom_minimum_size = Vector2(48, 24)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 72.0
+offset_bottom = 88.0
+theme_override_styles/panel = ExtResource("1_soswj")
+
+[node name="Label" type="Label" parent="ScrollContainer/Checkerboard/Tile_39/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0000"
+
+[node name="Tile_40" type="ColorRect" parent="ScrollContainer/Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+color = Color(0.29803923, 0.21176471, 0.14117648, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Checkerboard/Tile_40"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Checkerboard/Tile_40"]
+custom_minimum_size = Vector2(48, 24)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 72.0
+offset_bottom = 88.0
+theme_override_styles/panel = ExtResource("1_soswj")
+
+[node name="Label" type="Label" parent="ScrollContainer/Checkerboard/Tile_40/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0000"
+
+[node name="Tile_41" type="ColorRect" parent="ScrollContainer/Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+color = Color(0.59607846, 0.4745098, 0.16470589, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Checkerboard/Tile_41"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Checkerboard/Tile_41"]
+custom_minimum_size = Vector2(48, 24)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 72.0
+offset_bottom = 88.0
+theme_override_styles/panel = ExtResource("1_soswj")
+
+[node name="Label" type="Label" parent="ScrollContainer/Checkerboard/Tile_41/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0000"
+
+[node name="Tile_42" type="ColorRect" parent="ScrollContainer/Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+color = Color(0.29803923, 0.21176471, 0.14117648, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Checkerboard/Tile_42"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Checkerboard/Tile_42"]
+custom_minimum_size = Vector2(48, 24)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 72.0
+offset_bottom = 88.0
+theme_override_styles/panel = ExtResource("1_soswj")
+
+[node name="Label" type="Label" parent="ScrollContainer/Checkerboard/Tile_42/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0000"
+
+[node name="Tile_43" type="ColorRect" parent="ScrollContainer/Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+color = Color(0.59607846, 0.4745098, 0.16470589, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Checkerboard/Tile_43"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Checkerboard/Tile_43"]
+custom_minimum_size = Vector2(48, 24)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 72.0
+offset_bottom = 88.0
+theme_override_styles/panel = ExtResource("1_soswj")
+
+[node name="Label" type="Label" parent="ScrollContainer/Checkerboard/Tile_43/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0000"
+
+[node name="Tile_44" type="ColorRect" parent="ScrollContainer/Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+color = Color(0.29803923, 0.21176471, 0.14117648, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Checkerboard/Tile_44"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Checkerboard/Tile_44"]
+custom_minimum_size = Vector2(48, 24)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 72.0
+offset_bottom = 88.0
+theme_override_styles/panel = ExtResource("1_soswj")
+
+[node name="Label" type="Label" parent="ScrollContainer/Checkerboard/Tile_44/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0000"
+
+[node name="Tile_45" type="ColorRect" parent="ScrollContainer/Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+color = Color(0.59607846, 0.4745098, 0.16470589, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Checkerboard/Tile_45"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Checkerboard/Tile_45"]
+custom_minimum_size = Vector2(48, 24)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 72.0
+offset_bottom = 88.0
+theme_override_styles/panel = ExtResource("1_soswj")
+
+[node name="Label" type="Label" parent="ScrollContainer/Checkerboard/Tile_45/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0000"
+
+[node name="Tile_46" type="ColorRect" parent="ScrollContainer/Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+color = Color(0.29803923, 0.21176471, 0.14117648, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Checkerboard/Tile_46"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Checkerboard/Tile_46"]
+custom_minimum_size = Vector2(48, 24)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 72.0
+offset_bottom = 88.0
+theme_override_styles/panel = ExtResource("1_soswj")
+
+[node name="Label" type="Label" parent="ScrollContainer/Checkerboard/Tile_46/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0000"
+
+[node name="Tile_47" type="ColorRect" parent="ScrollContainer/Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+color = Color(0.59607846, 0.4745098, 0.16470589, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Checkerboard/Tile_47"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Checkerboard/Tile_47"]
+custom_minimum_size = Vector2(48, 24)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 72.0
+offset_bottom = 88.0
+theme_override_styles/panel = ExtResource("1_soswj")
+
+[node name="Label" type="Label" parent="ScrollContainer/Checkerboard/Tile_47/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0000"
+
+[node name="Tile_48" type="ColorRect" parent="ScrollContainer/Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+color = Color(0.59607846, 0.4745098, 0.16470589, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Checkerboard/Tile_48"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Checkerboard/Tile_48"]
+custom_minimum_size = Vector2(48, 24)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 72.0
+offset_bottom = 88.0
+theme_override_styles/panel = ExtResource("1_soswj")
+
+[node name="Label" type="Label" parent="ScrollContainer/Checkerboard/Tile_48/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0000"
+
+[node name="Tile_49" type="ColorRect" parent="ScrollContainer/Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+color = Color(0.29803923, 0.21176471, 0.14117648, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Checkerboard/Tile_49"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Checkerboard/Tile_49"]
+custom_minimum_size = Vector2(48, 24)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 72.0
+offset_bottom = 88.0
+theme_override_styles/panel = ExtResource("1_soswj")
+
+[node name="Label" type="Label" parent="ScrollContainer/Checkerboard/Tile_49/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0000"
+
+[node name="Tile_50" type="ColorRect" parent="ScrollContainer/Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+color = Color(0.59607846, 0.4745098, 0.16470589, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Checkerboard/Tile_50"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Checkerboard/Tile_50"]
+custom_minimum_size = Vector2(48, 24)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 72.0
+offset_bottom = 88.0
+theme_override_styles/panel = ExtResource("1_soswj")
+
+[node name="Label" type="Label" parent="ScrollContainer/Checkerboard/Tile_50/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0000"
+
+[node name="Tile_51" type="ColorRect" parent="ScrollContainer/Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+color = Color(0.29803923, 0.21176471, 0.14117648, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Checkerboard/Tile_51"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Checkerboard/Tile_51"]
+custom_minimum_size = Vector2(48, 24)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 72.0
+offset_bottom = 88.0
+theme_override_styles/panel = ExtResource("1_soswj")
+
+[node name="Label" type="Label" parent="ScrollContainer/Checkerboard/Tile_51/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0000"
+
+[node name="Tile_52" type="ColorRect" parent="ScrollContainer/Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+color = Color(0.59607846, 0.4745098, 0.16470589, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Checkerboard/Tile_52"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Checkerboard/Tile_52"]
+custom_minimum_size = Vector2(48, 24)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 72.0
+offset_bottom = 88.0
+theme_override_styles/panel = ExtResource("1_soswj")
+
+[node name="Label" type="Label" parent="ScrollContainer/Checkerboard/Tile_52/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0000"
+
+[node name="Tile_53" type="ColorRect" parent="ScrollContainer/Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+color = Color(0.29803923, 0.21176471, 0.14117648, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Checkerboard/Tile_53"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Checkerboard/Tile_53"]
+custom_minimum_size = Vector2(48, 24)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 72.0
+offset_bottom = 88.0
+theme_override_styles/panel = ExtResource("1_soswj")
+
+[node name="Label" type="Label" parent="ScrollContainer/Checkerboard/Tile_53/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0000"
+
+[node name="Tile_54" type="ColorRect" parent="ScrollContainer/Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+color = Color(0.59607846, 0.4745098, 0.16470589, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Checkerboard/Tile_54"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Checkerboard/Tile_54"]
+custom_minimum_size = Vector2(48, 24)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 72.0
+offset_bottom = 88.0
+theme_override_styles/panel = ExtResource("1_soswj")
+
+[node name="Label" type="Label" parent="ScrollContainer/Checkerboard/Tile_54/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0000"
+
+[node name="Tile_55" type="ColorRect" parent="ScrollContainer/Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+color = Color(0.29803923, 0.21176471, 0.14117648, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Checkerboard/Tile_55"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Checkerboard/Tile_55"]
+custom_minimum_size = Vector2(48, 24)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 72.0
+offset_bottom = 88.0
+theme_override_styles/panel = ExtResource("1_soswj")
+
+[node name="Label" type="Label" parent="ScrollContainer/Checkerboard/Tile_55/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0000"
+
+[node name="Tile_56" type="ColorRect" parent="ScrollContainer/Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+color = Color(0.29803923, 0.21176471, 0.14117648, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Checkerboard/Tile_56"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Checkerboard/Tile_56"]
+custom_minimum_size = Vector2(48, 24)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 72.0
+offset_bottom = 88.0
+theme_override_styles/panel = ExtResource("1_soswj")
+
+[node name="Label" type="Label" parent="ScrollContainer/Checkerboard/Tile_56/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0000"
+
+[node name="Tile_57" type="ColorRect" parent="ScrollContainer/Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+color = Color(0.59607846, 0.4745098, 0.16470589, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Checkerboard/Tile_57"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Checkerboard/Tile_57"]
+custom_minimum_size = Vector2(48, 24)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 72.0
+offset_bottom = 88.0
+theme_override_styles/panel = ExtResource("1_soswj")
+
+[node name="Label" type="Label" parent="ScrollContainer/Checkerboard/Tile_57/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0000"
+
+[node name="Tile_58" type="ColorRect" parent="ScrollContainer/Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+color = Color(0.29803923, 0.21176471, 0.14117648, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Checkerboard/Tile_58"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Checkerboard/Tile_58"]
+custom_minimum_size = Vector2(48, 24)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 72.0
+offset_bottom = 88.0
+theme_override_styles/panel = ExtResource("1_soswj")
+
+[node name="Label" type="Label" parent="ScrollContainer/Checkerboard/Tile_58/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0000"
+
+[node name="Tile_59" type="ColorRect" parent="ScrollContainer/Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+color = Color(0.59607846, 0.4745098, 0.16470589, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Checkerboard/Tile_59"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Checkerboard/Tile_59"]
+custom_minimum_size = Vector2(48, 24)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 72.0
+offset_bottom = 88.0
+theme_override_styles/panel = ExtResource("1_soswj")
+
+[node name="Label" type="Label" parent="ScrollContainer/Checkerboard/Tile_59/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0000"
+
+[node name="Tile_60" type="ColorRect" parent="ScrollContainer/Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+color = Color(0.29803923, 0.21176471, 0.14117648, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Checkerboard/Tile_60"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Checkerboard/Tile_60"]
+custom_minimum_size = Vector2(48, 24)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 72.0
+offset_bottom = 88.0
+theme_override_styles/panel = ExtResource("1_soswj")
+
+[node name="Label" type="Label" parent="ScrollContainer/Checkerboard/Tile_60/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0000"
+
+[node name="Tile_61" type="ColorRect" parent="ScrollContainer/Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+color = Color(0.59607846, 0.4745098, 0.16470589, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Checkerboard/Tile_61"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Checkerboard/Tile_61"]
+custom_minimum_size = Vector2(48, 24)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 72.0
+offset_bottom = 88.0
+theme_override_styles/panel = ExtResource("1_soswj")
+
+[node name="Label" type="Label" parent="ScrollContainer/Checkerboard/Tile_61/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0000"
+
+[node name="Tile_62" type="ColorRect" parent="ScrollContainer/Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+color = Color(0.29803923, 0.21176471, 0.14117648, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Checkerboard/Tile_62"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Checkerboard/Tile_62"]
+custom_minimum_size = Vector2(48, 24)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 72.0
+offset_bottom = 88.0
+theme_override_styles/panel = ExtResource("1_soswj")
+
+[node name="Label" type="Label" parent="ScrollContainer/Checkerboard/Tile_62/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0000"
+
+[node name="Tile_63" type="ColorRect" parent="ScrollContainer/Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+color = Color(0.59607846, 0.4745098, 0.16470589, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Checkerboard/Tile_63"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Checkerboard/Tile_63"]
+custom_minimum_size = Vector2(48, 24)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 72.0
+offset_bottom = 88.0
+theme_override_styles/panel = ExtResource("1_soswj")
+
+[node name="Label" type="Label" parent="ScrollContainer/Checkerboard/Tile_63/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0000"
+
+[node name="ScrollContainer2" type="ScrollContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Face_Highlight_Container" type="GridContainer" parent="ScrollContainer2"]
+layout_mode = 2
+columns = 4
+
+[node name="ColorRect" type="ColorRect" parent="ScrollContainer2/Face_Highlight_Container" groups=["corner_left", "face_left"]]
+custom_minimum_size = Vector2(132, 132)
+layout_mode = 2
+color = Color(0.11764706, 0.6666667, 1, 0.43137255)
+
+[node name="ColorRect2" type="ColorRect" parent="ScrollContainer2/Face_Highlight_Container" groups=["corner_left", "face_up"]]
+custom_minimum_size = Vector2(132, 132)
+layout_mode = 2
+color = Color(1, 0.9411765, 0.039215688, 0.43137255)
+
+[node name="ColorRect3" type="ColorRect" parent="ScrollContainer2/Face_Highlight_Container" groups=["corner_up", "face_left"]]
+custom_minimum_size = Vector2(132, 132)
+layout_mode = 2
+color = Color(0.11764706, 0.6666667, 1, 0.43137255)
+
+[node name="ColorRect4" type="ColorRect" parent="ScrollContainer2/Face_Highlight_Container" groups=["corner_up", "face_up"]]
+custom_minimum_size = Vector2(132, 132)
+layout_mode = 2
+color = Color(1, 0.9411765, 0.039215688, 0.43137255)
+
+[node name="ColorRect5" type="ColorRect" parent="ScrollContainer2/Face_Highlight_Container" groups=["corner_left", "face_down"]]
+custom_minimum_size = Vector2(132, 132)
+layout_mode = 2
+color = Color(0.2784314, 1, 0.3254902, 0.43137255)
+
+[node name="ColorRect6" type="ColorRect" parent="ScrollContainer2/Face_Highlight_Container" groups=["corner_left", "face_right"]]
+custom_minimum_size = Vector2(132, 132)
+layout_mode = 2
+color = Color(0.89411765, 0, 0, 0.43137255)
+
+[node name="ColorRect7" type="ColorRect" parent="ScrollContainer2/Face_Highlight_Container" groups=["corner_up", "face_down"]]
+custom_minimum_size = Vector2(132, 132)
+layout_mode = 2
+color = Color(0.2784314, 1, 0.3254902, 0.43137255)
+
+[node name="ColorRect8" type="ColorRect" parent="ScrollContainer2/Face_Highlight_Container" groups=["corner_up", "face_right"]]
+custom_minimum_size = Vector2(132, 132)
+layout_mode = 2
+color = Color(0.89411765, 0, 0, 0.43137255)
+
+[node name="ColorRect9" type="ColorRect" parent="ScrollContainer2/Face_Highlight_Container" groups=["corner_left", "face_left"]]
+custom_minimum_size = Vector2(132, 132)
+layout_mode = 2
+color = Color(0.11764706, 0.6666667, 1, 0.43137255)
+
+[node name="ColorRect10" type="ColorRect" parent="ScrollContainer2/Face_Highlight_Container" groups=["corner_left", "face_up"]]
+custom_minimum_size = Vector2(132, 132)
+layout_mode = 2
+color = Color(1, 0.9411765, 0.039215688, 0.43137255)
+
+[node name="ColorRect11" type="ColorRect" parent="ScrollContainer2/Face_Highlight_Container" groups=["corner_up", "face_left"]]
+custom_minimum_size = Vector2(132, 132)
+layout_mode = 2
+color = Color(0.11764706, 0.6666667, 1, 0.43137255)
+
+[node name="ColorRect12" type="ColorRect" parent="ScrollContainer2/Face_Highlight_Container" groups=["corner_up", "face_up"]]
+custom_minimum_size = Vector2(132, 132)
+layout_mode = 2
+color = Color(1, 0.9411765, 0.039215688, 0.43137255)
+
+[node name="ColorRect13" type="ColorRect" parent="ScrollContainer2/Face_Highlight_Container" groups=["corner_left", "face_down"]]
+custom_minimum_size = Vector2(132, 132)
+layout_mode = 2
+color = Color(0.2784314, 1, 0.3254902, 0.43137255)
+
+[node name="ColorRect14" type="ColorRect" parent="ScrollContainer2/Face_Highlight_Container" groups=["corner_left", "face_right"]]
+custom_minimum_size = Vector2(132, 132)
+layout_mode = 2
+color = Color(0.89411765, 0, 0, 0.43137255)
+
+[node name="ColorRect15" type="ColorRect" parent="ScrollContainer2/Face_Highlight_Container" groups=["corner_up", "face_down"]]
+custom_minimum_size = Vector2(132, 132)
+layout_mode = 2
+color = Color(0.2784314, 1, 0.3254902, 0.43137255)
+
+[node name="ColorRect16" type="ColorRect" parent="ScrollContainer2/Face_Highlight_Container" groups=["corner_up", "face_right"]]
+custom_minimum_size = Vector2(132, 132)
+layout_mode = 2
+color = Color(0.89411765, 0, 0, 0.43137255)
+
+[node name="Selection_Highlight" type="Panel" parent="."]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 0
+offset_right = 96.0
+offset_bottom = 96.0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+theme_override_styles/panel = ExtResource("1_xdkfv")
+
+[node name="Skill_Board_View_Input" type="Node" parent="."]
+script = ExtResource("3_uvea8")
