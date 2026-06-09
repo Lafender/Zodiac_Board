@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://53a5lkh1nbmy"]
+
+[ext_resource type="Script" uid="uid://bc4wnnfu6iduh" path="res://Systems/Factories/Chip_Factory/Chip_Factory.gd" id="1_kqh47"]
+[ext_resource type="ColorPalette" uid="uid://qqd1q72wdmc8" path="res://Action/Item/Skill/Skill_Code_Strip_Color_Palette.tres" id="2_6qpws"]
+[ext_resource type="Resource" uid="uid://d0gh5barmfnq6" path="res://Systems/Factories/Code_Generator/Skill_Code_Generator.tres" id="3_dtorp"]
+[ext_resource type="Resource" uid="uid://dcqc0wk1ypvqx" path="res://Action/Chemistry/Element_List/DATA.tres" id="4_uqy4j"]
+[ext_resource type="Resource" uid="uid://bv3phmsg7jd2k" path="res://Action/Chemistry/Domain_List/DATA.tres" id="4_y46jh"]
+
+[node name="Chip_Factory" type="Node"]
+script = ExtResource("1_kqh47")
+strip_palette = ExtResource("2_6qpws")
+code_generator = ExtResource("3_dtorp")
+element_list = ExtResource("4_uqy4j")
+domain_list = ExtResource("4_y46jh")
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="UI/VBoxContainer"]
+layout_mode = 2
+text = "Generate All"
+
+[node name="Button2" type="Button" parent="UI/VBoxContainer"]
+layout_mode = 2
+text = "Generate Single"
+
+[node name="Button3" type="Button" parent="UI/VBoxContainer"]
+layout_mode = 2
+text = "Preview Name"
+
+[node name="Button4" type="Button" parent="UI/VBoxContainer"]
+layout_mode = 2
+text = "Preview Code"

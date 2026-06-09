@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dkoiwh65ni0dl"]
+
+[ext_resource type="Script" uid="uid://dyylkmafsdmlc" path="res://Interface/View/Skill_Inventory_View/Skill_Inventory_View_Input.gd" id="1_v7lp6"]
+
+[node name="SkillInventoryViewInput" type="Node"]
+script = ExtResource("1_v7lp6")

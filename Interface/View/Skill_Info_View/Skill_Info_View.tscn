@@ -1,0 +1,103 @@
+[gd_scene load_steps=3 format=3 uid="uid://ctorrb7lsaqvv"]
+
+[ext_resource type="Script" uid="uid://cl64tfthj2lsy" path="res://Interface/View/Skill_Info_View/Skill_Info_View.gd" id="1_tdhgo"]
+[ext_resource type="Script" uid="uid://dyylkmafsdmlc" path="res://Interface/View/Skill_Inventory_View/Skill_Inventory_View_Input.gd" id="2_appry"]
+
+[node name="Skill_Info_View" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tdhgo")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Inventory_Info_Panel" type="Panel" parent="HBoxContainer"]
+custom_minimum_size = Vector2(292, 128)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer/Inventory_Info_Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/Inventory_Info_Panel/ScrollContainer"]
+layout_mode = 2
+
+[node name="Name_Label" type="Label" parent="HBoxContainer/Inventory_Info_Panel/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "Name"
+
+[node name="Domain_Label" type="Label" parent="HBoxContainer/Inventory_Info_Panel/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "Domain"
+
+[node name="Element_Label" type="Label" parent="HBoxContainer/Inventory_Info_Panel/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "Element"
+
+[node name="Power_Label" type="Label" parent="HBoxContainer/Inventory_Info_Panel/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "Power"
+
+[node name="Speed_Label" type="Label" parent="HBoxContainer/Inventory_Info_Panel/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "Speed"
+
+[node name="Effects_Label" type="Label" parent="HBoxContainer/Inventory_Info_Panel/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "Effects"
+
+[node name="Skill_Board_Info_Panel" type="Panel" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer/Skill_Board_Info_Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/Skill_Board_Info_Panel/ScrollContainer"]
+layout_mode = 2
+
+[node name="Name_Label" type="Label" parent="HBoxContainer/Skill_Board_Info_Panel/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "Name"
+
+[node name="Domain_Label" type="Label" parent="HBoxContainer/Skill_Board_Info_Panel/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "Domain"
+
+[node name="Element_Label" type="Label" parent="HBoxContainer/Skill_Board_Info_Panel/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "Element"
+
+[node name="Power_Label" type="Label" parent="HBoxContainer/Skill_Board_Info_Panel/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "Power"
+
+[node name="Speed_Label" type="Label" parent="HBoxContainer/Skill_Board_Info_Panel/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "Speed"
+
+[node name="Effects_Label" type="Label" parent="HBoxContainer/Skill_Board_Info_Panel/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "Effects"
+
+[node name="Skill_Info_Input" type="Node" parent="."]
+script = ExtResource("2_appry")

@@ -1,0 +1,133 @@
+[gd_scene load_steps=5 format=3 uid="uid://dxy4x1indjv4v"]
+
+[ext_resource type="Script" uid="uid://cb5obyqxirvit" path="res://Interface/View/Skill_Inventory_View/Skill_Inventory_View.gd" id="2_xq6bb"]
+[ext_resource type="PackedScene" uid="uid://bgfrmxcnkxdhn" path="res://Interface/Panel/Skill_Chip_Panel/Skill_Chip_Panel.tscn" id="2_y65bg"]
+[ext_resource type="StyleBox" uid="uid://ccu3cf1mmm7km" path="res://Interface/StyleBoxFlat/Skill_Chip_Selection_Highlighttres.tres" id="3_rmiuf"]
+[ext_resource type="PackedScene" uid="uid://dkoiwh65ni0dl" path="res://Interface/View/Skill_Inventory_View/Skill_Inventory_View_Input.tscn" id="3_xfrb2"]
+
+[node name="Skill_Inventory_View" type="Panel"]
+custom_minimum_size = Vector2(346, 0)
+anchors_preset = 9
+anchor_bottom = 1.0
+grow_vertical = 2
+size_flags_horizontal = 0
+script = ExtResource("2_xq6bb")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BoxContainer" type="BoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="ScrollContainer/BoxContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 48
+theme_override_constants/v_separation = 48
+columns = 3
+
+[node name="Skill_Chip_Panel" parent="ScrollContainer/BoxContainer/GridContainer" instance=ExtResource("2_y65bg")]
+layout_mode = 2
+
+[node name="Skill_Chip_Panel2" parent="ScrollContainer/BoxContainer/GridContainer" instance=ExtResource("2_y65bg")]
+layout_mode = 2
+
+[node name="Skill_Chip_Panel3" parent="ScrollContainer/BoxContainer/GridContainer" instance=ExtResource("2_y65bg")]
+layout_mode = 2
+
+[node name="Skill_Chip_Panel4" parent="ScrollContainer/BoxContainer/GridContainer" instance=ExtResource("2_y65bg")]
+layout_mode = 2
+
+[node name="Skill_Chip_Panel5" parent="ScrollContainer/BoxContainer/GridContainer" instance=ExtResource("2_y65bg")]
+layout_mode = 2
+
+[node name="Skill_Chip_Panel6" parent="ScrollContainer/BoxContainer/GridContainer" instance=ExtResource("2_y65bg")]
+layout_mode = 2
+
+[node name="Skill_Chip_Panel7" parent="ScrollContainer/BoxContainer/GridContainer" instance=ExtResource("2_y65bg")]
+layout_mode = 2
+
+[node name="Skill_Chip_Panel8" parent="ScrollContainer/BoxContainer/GridContainer" instance=ExtResource("2_y65bg")]
+layout_mode = 2
+
+[node name="Skill_Chip_Panel9" parent="ScrollContainer/BoxContainer/GridContainer" instance=ExtResource("2_y65bg")]
+layout_mode = 2
+
+[node name="Skill_Chip_Panel10" parent="ScrollContainer/BoxContainer/GridContainer" instance=ExtResource("2_y65bg")]
+layout_mode = 2
+
+[node name="Skill_Chip_Panel11" parent="ScrollContainer/BoxContainer/GridContainer" instance=ExtResource("2_y65bg")]
+layout_mode = 2
+
+[node name="Skill_Chip_Panel12" parent="ScrollContainer/BoxContainer/GridContainer" instance=ExtResource("2_y65bg")]
+layout_mode = 2
+
+[node name="Skill_Chip_Panel13" parent="ScrollContainer/BoxContainer/GridContainer" instance=ExtResource("2_y65bg")]
+layout_mode = 2
+
+[node name="Skill_Chip_Panel14" parent="ScrollContainer/BoxContainer/GridContainer" instance=ExtResource("2_y65bg")]
+layout_mode = 2
+
+[node name="Skill_Chip_Panel15" parent="ScrollContainer/BoxContainer/GridContainer" instance=ExtResource("2_y65bg")]
+layout_mode = 2
+
+[node name="Skill_Chip_Panel16" parent="ScrollContainer/BoxContainer/GridContainer" instance=ExtResource("2_y65bg")]
+layout_mode = 2
+
+[node name="Skill_Chip_Panel17" parent="ScrollContainer/BoxContainer/GridContainer" instance=ExtResource("2_y65bg")]
+layout_mode = 2
+
+[node name="Skill_Chip_Panel18" parent="ScrollContainer/BoxContainer/GridContainer" instance=ExtResource("2_y65bg")]
+layout_mode = 2
+
+[node name="Skill_Chip_Panel19" parent="ScrollContainer/BoxContainer/GridContainer" instance=ExtResource("2_y65bg")]
+layout_mode = 2
+
+[node name="Skill_Chip_Panel20" parent="ScrollContainer/BoxContainer/GridContainer" instance=ExtResource("2_y65bg")]
+layout_mode = 2
+
+[node name="Skill_Chip_Panel21" parent="ScrollContainer/BoxContainer/GridContainer" instance=ExtResource("2_y65bg")]
+layout_mode = 2
+
+[node name="Skill_Chip_Panel22" parent="ScrollContainer/BoxContainer/GridContainer" instance=ExtResource("2_y65bg")]
+layout_mode = 2
+
+[node name="Skill_Chip_Panel23" parent="ScrollContainer/BoxContainer/GridContainer" instance=ExtResource("2_y65bg")]
+layout_mode = 2
+
+[node name="Skill_Chip_Panel24" parent="ScrollContainer/BoxContainer/GridContainer" instance=ExtResource("2_y65bg")]
+layout_mode = 2
+
+[node name="Skill_Chip_Panel25" parent="ScrollContainer/BoxContainer/GridContainer" instance=ExtResource("2_y65bg")]
+layout_mode = 2
+
+[node name="Skill_Chip_Panel26" parent="ScrollContainer/BoxContainer/GridContainer" instance=ExtResource("2_y65bg")]
+layout_mode = 2
+
+[node name="Skill_Chip_Panel27" parent="ScrollContainer/BoxContainer/GridContainer" instance=ExtResource("2_y65bg")]
+layout_mode = 2
+
+[node name="Skill_Chip_Panel28" parent="ScrollContainer/BoxContainer/GridContainer" instance=ExtResource("2_y65bg")]
+layout_mode = 2
+
+[node name="Skill_Chip_Panel29" parent="ScrollContainer/BoxContainer/GridContainer" instance=ExtResource("2_y65bg")]
+layout_mode = 2
+
+[node name="Skill_Chip_Panel30" parent="ScrollContainer/BoxContainer/GridContainer" instance=ExtResource("2_y65bg")]
+layout_mode = 2
+
+[node name="Selection_Highlight" type="Panel" parent="."]
+custom_minimum_size = Vector2(56, 61)
+layout_mode = 0
+offset_left = 37.0
+offset_right = 93.0
+offset_bottom = 61.0
+theme_override_styles/panel = ExtResource("3_rmiuf")
+
+[node name="Skill_Inventory_View_Input" parent="." instance=ExtResource("3_xfrb2")]

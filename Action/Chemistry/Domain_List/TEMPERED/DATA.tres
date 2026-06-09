@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Domain_Data" load_steps=3 format=3 uid="uid://cse82mxq2byym"]
+
+[ext_resource type="Script" uid="uid://cakf2apsnxbq5" path="res://Action/Chemistry/Domain_Data.gd" id="1_art1b"]
+[ext_resource type="Texture2D" uid="uid://qyrkeg5oplu5" path="res://Action/Chemistry/Domain_List/TEMPERED/ICON.png" id="1_u7yi2"]
+
+[resource]
+script = ExtResource("1_art1b")
+name = "TEMPERED"
+icon = ExtResource("1_u7yi2")
+PHYSICAL = 3
+MAGICAL = 3
+SPIRITUAL = 1
+TEMPERED = 2
+metadata/_custom_type_script = "uid://cakf2apsnxbq5"

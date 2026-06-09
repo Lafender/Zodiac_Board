@@ -1,0 +1,447 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6wdrfi12jtp6"]
+
+[ext_resource type="Script" uid="uid://dkjdxityixh7f" path="res://Interface/Selector/Skill_Field_Selector/Skill_Shortcut_Selector.gd" id="1_jx3ot"]
+
+[node name="Skill_Field_Selector" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_jx3ot")
+
+[node name="Checkerboard" type="GridContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+rotation = -0.7853982
+columns = 8
+
+[node name="Tile_00" type="ColorRect" parent="Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+color = Color(0.59607846, 0.4745098, 0.16470589, 1)
+
+[node name="Tile_01" type="ColorRect" parent="Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+color = Color(0.29803923, 0.21176471, 0.14117648, 1)
+
+[node name="Tile_02" type="ColorRect" parent="Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+color = Color(0.59607846, 0.4745098, 0.16470589, 1)
+
+[node name="Tile_03" type="ColorRect" parent="Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+color = Color(0.29803923, 0.21176471, 0.14117648, 1)
+
+[node name="Tile_04" type="ColorRect" parent="Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+color = Color(0.59607846, 0.4745098, 0.16470589, 1)
+
+[node name="Tile_05" type="ColorRect" parent="Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+color = Color(0.29803923, 0.21176471, 0.14117648, 1)
+
+[node name="Tile_06" type="ColorRect" parent="Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+color = Color(0.59607846, 0.4745098, 0.16470589, 1)
+
+[node name="Tile_07" type="ColorRect" parent="Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+color = Color(0.29803923, 0.21176471, 0.14117648, 1)
+
+[node name="Tile_08" type="ColorRect" parent="Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+color = Color(0.29803923, 0.21176471, 0.14117648, 1)
+
+[node name="Tile_09" type="ColorRect" parent="Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+color = Color(0.59607846, 0.4745098, 0.16470589, 1)
+
+[node name="Tile_10" type="ColorRect" parent="Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+color = Color(0.29803923, 0.21176471, 0.14117648, 1)
+
+[node name="Tile_11" type="ColorRect" parent="Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+color = Color(0.59607846, 0.4745098, 0.16470589, 1)
+
+[node name="Tile_12" type="ColorRect" parent="Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+color = Color(0.29803923, 0.21176471, 0.14117648, 1)
+
+[node name="Tile_13" type="ColorRect" parent="Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+color = Color(0.59607846, 0.4745098, 0.16470589, 1)
+
+[node name="Tile_14" type="ColorRect" parent="Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+color = Color(0.29803923, 0.21176471, 0.14117648, 1)
+
+[node name="Tile_15" type="ColorRect" parent="Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+color = Color(0.59607846, 0.4745098, 0.16470589, 1)
+
+[node name="Tile_16" type="ColorRect" parent="Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+color = Color(0.59607846, 0.4745098, 0.16470589, 1)
+
+[node name="Tile_17" type="ColorRect" parent="Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+color = Color(0.29803923, 0.21176471, 0.14117648, 1)
+
+[node name="Tile_18" type="ColorRect" parent="Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+color = Color(0.59607846, 0.4745098, 0.16470589, 1)
+
+[node name="Tile_19" type="ColorRect" parent="Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+color = Color(0.29803923, 0.21176471, 0.14117648, 1)
+
+[node name="Tile_20" type="ColorRect" parent="Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+color = Color(0.59607846, 0.4745098, 0.16470589, 1)
+
+[node name="Tile_21" type="ColorRect" parent="Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+color = Color(0.29803923, 0.21176471, 0.14117648, 1)
+
+[node name="Tile_22" type="ColorRect" parent="Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+color = Color(0.59607846, 0.4745098, 0.16470589, 1)
+
+[node name="Tile_23" type="ColorRect" parent="Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+color = Color(0.29803923, 0.21176471, 0.14117648, 1)
+
+[node name="Tile_24" type="ColorRect" parent="Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+color = Color(0.29803923, 0.21176471, 0.14117648, 1)
+
+[node name="Tile_25" type="ColorRect" parent="Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+color = Color(0.59607846, 0.4745098, 0.16470589, 1)
+
+[node name="Tile_26" type="ColorRect" parent="Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+color = Color(0.29803923, 0.21176471, 0.14117648, 1)
+
+[node name="Tile_27" type="ColorRect" parent="Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+color = Color(0.59607846, 0.4745098, 0.16470589, 1)
+
+[node name="Tile_28" type="ColorRect" parent="Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+color = Color(0.29803923, 0.21176471, 0.14117648, 1)
+
+[node name="Tile_29" type="ColorRect" parent="Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+color = Color(0.59607846, 0.4745098, 0.16470589, 1)
+
+[node name="Tile_30" type="ColorRect" parent="Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+color = Color(0.29803923, 0.21176471, 0.14117648, 1)
+
+[node name="Tile_31" type="ColorRect" parent="Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+color = Color(0.59607846, 0.4745098, 0.16470589, 1)
+
+[node name="Tile_32" type="ColorRect" parent="Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+color = Color(0.59607846, 0.4745098, 0.16470589, 1)
+
+[node name="Tile_33" type="ColorRect" parent="Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+color = Color(0.29803923, 0.21176471, 0.14117648, 1)
+
+[node name="Tile_34" type="ColorRect" parent="Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+color = Color(0.59607846, 0.4745098, 0.16470589, 1)
+
+[node name="Tile_35" type="ColorRect" parent="Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+color = Color(0.29803923, 0.21176471, 0.14117648, 1)
+
+[node name="Tile_36" type="ColorRect" parent="Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+color = Color(0.59607846, 0.4745098, 0.16470589, 1)
+
+[node name="Tile_37" type="ColorRect" parent="Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+color = Color(0.29803923, 0.21176471, 0.14117648, 1)
+
+[node name="Tile_38" type="ColorRect" parent="Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+color = Color(0.59607846, 0.4745098, 0.16470589, 1)
+
+[node name="Tile_39" type="ColorRect" parent="Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+color = Color(0.29803923, 0.21176471, 0.14117648, 1)
+
+[node name="Tile_40" type="ColorRect" parent="Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+color = Color(0.29803923, 0.21176471, 0.14117648, 1)
+
+[node name="Tile_41" type="ColorRect" parent="Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+color = Color(0.59607846, 0.4745098, 0.16470589, 1)
+
+[node name="Tile_42" type="ColorRect" parent="Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+color = Color(0.29803923, 0.21176471, 0.14117648, 1)
+
+[node name="Tile_43" type="ColorRect" parent="Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+color = Color(0.59607846, 0.4745098, 0.16470589, 1)
+
+[node name="Tile_44" type="ColorRect" parent="Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+color = Color(0.29803923, 0.21176471, 0.14117648, 1)
+
+[node name="Tile_45" type="ColorRect" parent="Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+color = Color(0.59607846, 0.4745098, 0.16470589, 1)
+
+[node name="Tile_46" type="ColorRect" parent="Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+color = Color(0.29803923, 0.21176471, 0.14117648, 1)
+
+[node name="Tile_47" type="ColorRect" parent="Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+color = Color(0.59607846, 0.4745098, 0.16470589, 1)
+
+[node name="Tile_48" type="ColorRect" parent="Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+color = Color(0.59607846, 0.4745098, 0.16470589, 1)
+
+[node name="Tile_49" type="ColorRect" parent="Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+color = Color(0.29803923, 0.21176471, 0.14117648, 1)
+
+[node name="Tile_50" type="ColorRect" parent="Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+color = Color(0.59607846, 0.4745098, 0.16470589, 1)
+
+[node name="Tile_51" type="ColorRect" parent="Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+color = Color(0.29803923, 0.21176471, 0.14117648, 1)
+
+[node name="Tile_52" type="ColorRect" parent="Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+color = Color(0.59607846, 0.4745098, 0.16470589, 1)
+
+[node name="Tile_53" type="ColorRect" parent="Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+color = Color(0.29803923, 0.21176471, 0.14117648, 1)
+
+[node name="Tile_54" type="ColorRect" parent="Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+color = Color(0.59607846, 0.4745098, 0.16470589, 1)
+
+[node name="Tile_55" type="ColorRect" parent="Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+color = Color(0.29803923, 0.21176471, 0.14117648, 1)
+
+[node name="Tile_56" type="ColorRect" parent="Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+color = Color(0.29803923, 0.21176471, 0.14117648, 1)
+
+[node name="Tile_57" type="ColorRect" parent="Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+color = Color(0.59607846, 0.4745098, 0.16470589, 1)
+
+[node name="Tile_58" type="ColorRect" parent="Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+color = Color(0.29803923, 0.21176471, 0.14117648, 1)
+
+[node name="Tile_59" type="ColorRect" parent="Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+color = Color(0.59607846, 0.4745098, 0.16470589, 1)
+
+[node name="Tile_60" type="ColorRect" parent="Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+color = Color(0.29803923, 0.21176471, 0.14117648, 1)
+
+[node name="Tile_61" type="ColorRect" parent="Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+color = Color(0.59607846, 0.4745098, 0.16470589, 1)
+
+[node name="Tile_62" type="ColorRect" parent="Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+color = Color(0.29803923, 0.21176471, 0.14117648, 1)
+
+[node name="Tile_63" type="ColorRect" parent="Checkerboard" groups=["selector_tile"]]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+color = Color(0.59607846, 0.4745098, 0.16470589, 1)
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 0
+offset_right = 80.0
+offset_bottom = 80.0
+rotation = -0.7853982
+columns = 2
+
+[node name="Dpad_Down" type="ColorRect" parent="GridContainer" groups=["corner_down"]]
+custom_minimum_size = Vector2(76, 76)
+layout_mode = 2
+color = Color(0.29803923, 0.57254905, 0.21176471, 0.4745098)
+
+[node name="Dpad_Right" type="ColorRect" parent="GridContainer" groups=["corner_right"]]
+custom_minimum_size = Vector2(76, 76)
+layout_mode = 2
+color = Color(0.29803923, 0.57254905, 0.21176471, 0.4745098)
+
+[node name="Dpad_Left" type="ColorRect" parent="GridContainer" groups=["corner_left"]]
+custom_minimum_size = Vector2(76, 76)
+layout_mode = 2
+color = Color(0.29803923, 0.57254905, 0.21176471, 0.4745098)
+
+[node name="Dpad_Up" type="ColorRect" parent="GridContainer" groups=["corner_up"]]
+custom_minimum_size = Vector2(76, 76)
+layout_mode = 2
+color = Color(0.29803923, 0.57254905, 0.21176471, 0.4745098)
+
+[node name="Face_Highlight_Container" type="GridContainer" parent="."]
+layout_mode = 0
+rotation = -0.7853982
+columns = 4
+
+[node name="ColorRect" type="ColorRect" parent="Face_Highlight_Container" groups=["corner_left", "face_left"]]
+custom_minimum_size = Vector2(36, 36)
+layout_mode = 2
+color = Color(0.11764706, 0.6666667, 1, 0.43137255)
+
+[node name="ColorRect2" type="ColorRect" parent="Face_Highlight_Container" groups=["corner_left", "face_up"]]
+custom_minimum_size = Vector2(36, 36)
+layout_mode = 2
+color = Color(1, 0.9411765, 0.039215688, 0.43137255)
+
+[node name="ColorRect3" type="ColorRect" parent="Face_Highlight_Container" groups=["corner_up", "face_left"]]
+custom_minimum_size = Vector2(36, 36)
+layout_mode = 2
+color = Color(0.11764706, 0.6666667, 1, 0.43137255)
+
+[node name="ColorRect4" type="ColorRect" parent="Face_Highlight_Container" groups=["corner_up", "face_up"]]
+custom_minimum_size = Vector2(36, 36)
+layout_mode = 2
+color = Color(1, 0.9411765, 0.039215688, 0.43137255)
+
+[node name="ColorRect5" type="ColorRect" parent="Face_Highlight_Container" groups=["corner_left", "face_down"]]
+custom_minimum_size = Vector2(36, 36)
+layout_mode = 2
+color = Color(0.2784314, 1, 0.3254902, 0.43137255)
+
+[node name="ColorRect6" type="ColorRect" parent="Face_Highlight_Container" groups=["corner_left", "face_right"]]
+custom_minimum_size = Vector2(36, 36)
+layout_mode = 2
+color = Color(0.89411765, 0, 0, 0.43137255)
+
+[node name="ColorRect7" type="ColorRect" parent="Face_Highlight_Container" groups=["corner_up", "face_down"]]
+custom_minimum_size = Vector2(36, 36)
+layout_mode = 2
+color = Color(0.2784314, 1, 0.3254902, 0.43137255)
+
+[node name="ColorRect8" type="ColorRect" parent="Face_Highlight_Container" groups=["corner_up", "face_right"]]
+custom_minimum_size = Vector2(36, 36)
+layout_mode = 2
+color = Color(0.89411765, 0, 0, 0.43137255)
+
+[node name="ColorRect9" type="ColorRect" parent="Face_Highlight_Container" groups=["corner_left", "face_left"]]
+custom_minimum_size = Vector2(36, 36)
+layout_mode = 2
+color = Color(0.11764706, 0.6666667, 1, 0.43137255)
+
+[node name="ColorRect10" type="ColorRect" parent="Face_Highlight_Container" groups=["corner_left", "face_up"]]
+custom_minimum_size = Vector2(36, 36)
+layout_mode = 2
+color = Color(1, 0.9411765, 0.039215688, 0.43137255)
+
+[node name="ColorRect11" type="ColorRect" parent="Face_Highlight_Container" groups=["corner_up", "face_left"]]
+custom_minimum_size = Vector2(36, 36)
+layout_mode = 2
+color = Color(0.11764706, 0.6666667, 1, 0.43137255)
+
+[node name="ColorRect12" type="ColorRect" parent="Face_Highlight_Container" groups=["corner_up", "face_up"]]
+custom_minimum_size = Vector2(36, 36)
+layout_mode = 2
+color = Color(1, 0.9411765, 0.039215688, 0.43137255)
+
+[node name="ColorRect13" type="ColorRect" parent="Face_Highlight_Container" groups=["corner_left", "face_down"]]
+custom_minimum_size = Vector2(36, 36)
+layout_mode = 2
+color = Color(0.2784314, 1, 0.3254902, 0.43137255)
+
+[node name="ColorRect14" type="ColorRect" parent="Face_Highlight_Container" groups=["corner_left", "face_right"]]
+custom_minimum_size = Vector2(36, 36)
+layout_mode = 2
+color = Color(0.89411765, 0, 0, 0.43137255)
+
+[node name="ColorRect15" type="ColorRect" parent="Face_Highlight_Container" groups=["corner_up", "face_down"]]
+custom_minimum_size = Vector2(36, 36)
+layout_mode = 2
+color = Color(0.2784314, 1, 0.3254902, 0.43137255)
+
+[node name="ColorRect16" type="ColorRect" parent="Face_Highlight_Container" groups=["corner_up", "face_right"]]
+custom_minimum_size = Vector2(36, 36)
+layout_mode = 2
+color = Color(0.89411765, 0, 0, 0.43137255)

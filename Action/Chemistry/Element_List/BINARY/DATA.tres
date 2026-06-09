@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Element_Data" load_steps=3 format=3 uid="uid://d2f361r433p01"]
+
+[ext_resource type="Texture2D" uid="uid://b0v6km0lyx305" path="res://Action/Chemistry/Element_List/BINARY/ICON.png" id="1_guuav"]
+[ext_resource type="Script" uid="uid://oywel5jmij2e" path="res://Action/Chemistry/Element_Data.gd" id="2_3ynii"]
+
+[resource]
+script = ExtResource("2_3ynii")
+icon = ExtResource("1_guuav")
+metadata/_custom_type_script = "uid://oywel5jmij2e"

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Domain_List" load_steps=6 format=3 uid="uid://bv3phmsg7jd2k"]
+
+[ext_resource type="Resource" uid="uid://35fp12j6uiar" path="res://Action/Chemistry/Domain_List/MAGICAL/DATA.tres" id="1_22rkw"]
+[ext_resource type="Resource" uid="uid://gm22m1t8ujb1" path="res://Action/Chemistry/Domain_List/PHYSICAL/DATA.tres" id="2_xcjev"]
+[ext_resource type="Resource" uid="uid://btatm2kp4c867" path="res://Action/Chemistry/Domain_List/SPIRITUAL/DATA.tres" id="3_c8ulx"]
+[ext_resource type="Resource" uid="uid://cse82mxq2byym" path="res://Action/Chemistry/Domain_List/TEMPERED/DATA.tres" id="4_vyrtg"]
+[ext_resource type="Script" uid="uid://dcstk3w71mag2" path="res://Action/Chemistry/Domain_List/Domain_List.gd" id="5_mv3bi"]
+
+[resource]
+script = ExtResource("5_mv3bi")
+PHYSICAL = ExtResource("2_xcjev")
+MAGICAL = ExtResource("1_22rkw")
+SPIRITUAL = ExtResource("3_c8ulx")
+TEMPERED = ExtResource("4_vyrtg")
+metadata/_custom_type_script = "uid://dcstk3w71mag2"
