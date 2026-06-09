@@ -1,7 +1,9 @@
-[gd_resource type="Resource" script_class="Element_Data" load_steps=2 format=3 uid="uid://pvh8akkfbx7r"]
+[gd_resource type="Resource" script_class="Element_Data" load_steps=3 format=3 uid="uid://pvh8akkfbx7r"]
 
-[ext_resource type="Script" uid="uid://oywel5jmij2e" path="res://Action/Chemistry/Element_Data.gd" id="1_1who8"]
+[ext_resource type="Texture2D" uid="uid://du4n0kp6vbr0w" path="res://Action/Chemistry/Element_List/CHAOTIC/ICON.png" id="1_jhgqk"]
+[ext_resource type="Script" uid="uid://oywel5jmij2e" path="res://Action/Chemistry/Element_Data.gd" id="2_acet1"]
 
 [resource]
-script = ExtResource("1_1who8")
+script = ExtResource("2_acet1")
+icon = ExtResource("1_jhgqk")
 metadata/_custom_type_script = "uid://oywel5jmij2e"
