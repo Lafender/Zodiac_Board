@@ -1,7 +1,0 @@
-[gd_resource type="Resource" script_class="Code_Generator" load_steps=2 format=3 uid="uid://d0gh5barmfnq6"]
-
-[ext_resource type="Script" uid="uid://ctyhpa4s1aiyu" path="res://Systems/Factories/Code_Generator/Code_Generator.gd" id="1_kgdcd"]
-
-[resource]
-script = ExtResource("1_kgdcd")
-metadata/_custom_type_script = "uid://ctyhpa4s1aiyu"

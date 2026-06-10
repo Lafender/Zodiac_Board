@@ -1,8 +1,0 @@
-[gd_resource type="Resource" script_class="Base_Statistic_Data" load_steps=2 format=3 uid="uid://dvdw0q1rr7cly"]
-
-[ext_resource type="Script" uid="uid://d0k85hq10dqap" path="res://Character/Statistic/Base_Statistic/Base_Statistic_Data.gd" id="1_kwavk"]
-
-[resource]
-script = ExtResource("1_kwavk")
-power = 10
-metadata/_custom_type_script = "uid://d0k85hq10dqap"

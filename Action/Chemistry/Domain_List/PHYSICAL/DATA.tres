@@ -1,14 +1,16 @@
-[gd_resource type="Resource" script_class="Domain_Data" load_steps=3 format=3 uid="uid://gm22m1t8ujb1"]
+[gd_resource type="Resource" load_steps=5 format=2]
 
-[ext_resource type="Script" uid="uid://cakf2apsnxbq5" path="res://Action/Chemistry/Domain_Data.gd" id="1_76xii"]
-[ext_resource type="Texture2D" uid="uid://cdpapxjivjcc5" path="res://Action/Chemistry/Domain_List/PHYSICAL/ICON.png" id="1_tc520"]
+[ext_resource path="res://Action/Chemistry/Domain_Data.gd" type="Script" id=1]
+[ext_resource path="res://Action/Chemistry/Domain_List/PHYSICAL/ICON.png" type="Texture" id=2]
+[ext_resource path="res://Action/Chemistry/Interaction/Interaction_List/NORMAL/DATA.tres" type="Resource" id=3]
+[ext_resource path="res://Action/Chemistry/Interaction/Interaction_List/RESIST/DATA.tres" type="Resource" id=4]
 
 [resource]
-script = ExtResource("1_76xii")
+resource_name = "Physical Data"
+script = ExtResource( 1 )
 name = "PHYSICAL"
-icon = ExtResource("1_tc520")
-PHYSICAL = 2
-MAGICAL = 2
-SPIRITUAL = 1
-TEMPERED = 2
-metadata/_custom_type_script = "uid://cakf2apsnxbq5"
+icon = ExtResource( 2 )
+PHYSICAL = ExtResource( 3 )
+MAGICAL = ExtResource( 3 )
+SPIRITUAL = ExtResource( 4 )
+TEMPERED = ExtResource( 3 )

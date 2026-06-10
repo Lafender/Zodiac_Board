@@ -1,10 +1,15 @@
-[gd_resource type="Resource" script_class="Element_Data" load_steps=3 format=3 uid="uid://b7hpx6n1ney4h"]
+[gd_resource type="Resource" load_steps=3 format=2]
 
-[ext_resource type="Texture2D" uid="uid://vtu0e2qlev0y" path="res://Action/Chemistry/Element_List/BASS/ICON.png" id="1_ei17w"]
-[ext_resource type="Script" uid="uid://oywel5jmij2e" path="res://Action/Chemistry/Element_Data.gd" id="2_ldxjj"]
+[ext_resource path="res://Action/Chemistry/Element_List/BASS/ICON.png" type="Texture" id=1]
+[ext_resource path="res://Action/Chemistry/Element_Data.gd" type="Script" id=2]
 
 [resource]
-script = ExtResource("2_ldxjj")
+resource_name = "Bass Data"
+script = ExtResource( 2 )
 name = "BASS"
-icon = ExtResource("1_ei17w")
-metadata/_custom_type_script = "uid://oywel5jmij2e"
+icon = ExtResource( 1 )
+element_group_0 = "Intensity"
+element_group_1 = "Transfer"
+element_group_2 = "Virtual"
+element_group_3 = "Minerals"
+element_group_4 = "Patterns"

@@ -6,15 +6,304 @@
 ;   [section] ; section goes between []
 ;   param=value ; assign values to parameters
 
-config_version=5
+config_version=4
+
+_global_script_classes=[ {
+"base": "CharacterBody2D",
+"class": "Active_Character",
+"language": "GDScript",
+"path": "res://Character/Friend/Active_Character/Active_Character.gd"
+}, {
+"base": "Statistic_Data",
+"class": "Base_Statistic_Data",
+"language": "GDScript",
+"path": "res://Character/Statistic/Base_Statistic/Base_Statistic_Data.gd"
+}, {
+"base": "Resource",
+"class": "Base_Statistic_List",
+"language": "GDScript",
+"path": "res://Character/Statistic/Base_Statistic/Base_Statistic_List.gd"
+}, {
+"base": "Resource",
+"class": "Character_Data",
+"language": "GDScript",
+"path": "res://Character/Character_Data.gd"
+}, {
+"base": "Node",
+"class": "Chip_Factory",
+"language": "GDScript",
+"path": "res://Systems/Factories/Chip_Factory/Chip_Factory.gd"
+}, {
+"base": "Resource",
+"class": "Code_Generator",
+"language": "GDScript",
+"path": "res://Systems/Factories/Code_Generator/Code_Generator.gd"
+}, {
+"base": "Resource",
+"class": "Domain_Data",
+"language": "GDScript",
+"path": "res://Action/Chemistry/Domain_Data.gd"
+}, {
+"base": "Resource",
+"class": "Domain_List",
+"language": "GDScript",
+"path": "res://Action/Chemistry/Domain_List/Domain_List.gd"
+}, {
+"base": "Domain_Data",
+"class": "Element_Data",
+"language": "GDScript",
+"path": "res://Action/Chemistry/Element_Data.gd"
+}, {
+"base": "Resource",
+"class": "Element_Groups_List",
+"language": "GDScript",
+"path": "res://Action/Chemistry/Element_Groups_List.gd"
+}, {
+"base": "Resource",
+"class": "Element_Interaction_Data",
+"language": "GDScript",
+"path": "res://Action/Chemistry/Interaction/Interaction_Data.gd"
+}, {
+"base": "Resource",
+"class": "Element_Interaction_List",
+"language": "GDScript",
+"path": "res://Action/Chemistry/Interaction/Interaction_List/Interaction_List.gd"
+}, {
+"base": "Resource",
+"class": "Element_List",
+"language": "GDScript",
+"path": "res://Action/Chemistry/Element_List/Element_List.gd"
+}, {
+"base": "Statistic_Data",
+"class": "Flux_Statistic_Data",
+"language": "GDScript",
+"path": "res://Character/Statistic/Flux_Statistic/Flux_Statistic_Data.gd"
+}, {
+"base": "Resource",
+"class": "Flux_Statistic_List",
+"language": "GDScript",
+"path": "res://Character/Statistic/Flux_Statistic/Flux_Statistic_List.gd"
+}, {
+"base": "Statistic_Data",
+"class": "Gauge_Statistic_Data",
+"language": "GDScript",
+"path": "res://Character/Statistic/Gauge_Statistic/Gauge_Statistic_Data.gd"
+}, {
+"base": "Resource",
+"class": "Gauge_Statistic_List",
+"language": "GDScript",
+"path": "res://Character/Statistic/Gauge_Statistic/Gauge_Statistic_List/Gauge_Statistic_List.gd"
+}, {
+"base": "Node",
+"class": "Movement",
+"language": "GDScript",
+"path": "res://Character/Friend/Active_Character/Movement.gd"
+}, {
+"base": "Race_Data",
+"class": "Party_Member_Data",
+"language": "GDScript",
+"path": "res://Character/Friend/Party_Member/Party_Member_Data.gd"
+}, {
+"base": "Node",
+"class": "Print_Resource_Name",
+"language": "GDScript",
+"path": "res://Systems/debug/print_name/print_resource_name.gd"
+}, {
+"base": "Resource",
+"class": "Race_Data",
+"language": "GDScript",
+"path": "res://Character/Race/Race_Data.gd"
+}, {
+"base": "Resource",
+"class": "Race_List",
+"language": "GDScript",
+"path": "res://Character/Race/Race_List/Race_List.gd"
+}, {
+"base": "Statistic_Data",
+"class": "Rise_Statistic_Data",
+"language": "GDScript",
+"path": "res://Character/Statistic/Rise_Statistic/Rise_Statistic_Data.gd"
+}, {
+"base": "Resource",
+"class": "Rise_Statistic_List",
+"language": "GDScript",
+"path": "res://Character/Statistic/Rise_Statistic/Rise_Statistic_List.gd"
+}, {
+"base": "Resource",
+"class": "Skill_Board_Data",
+"language": "GDScript",
+"path": "res://Action/Item/Skill/Skill_Board_Data.gd"
+}, {
+"base": "Control",
+"class": "Skill_Board_Menu",
+"language": "GDScript",
+"path": "res://Interface/Menu/Skill_Board_Menu/Skill_Board_Menu.gd"
+}, {
+"base": "Panel",
+"class": "Skill_Board_Slot_Panel",
+"language": "GDScript",
+"path": "res://Interface/View/Skill_Board_View/Skill_Board_Slot_Panel.gd"
+}, {
+"base": "Node",
+"class": "Skill_Board_View_Input",
+"language": "GDScript",
+"path": "res://Interface/View/Skill_Board_View/Skill_Board_View_Input.gd"
+}, {
+"base": "Panel",
+"class": "Skill_Chip_Panel",
+"language": "GDScript",
+"path": "res://Interface/Panel/Skill_Chip_Panel/Skill_Chip_Panel.gd"
+}, {
+"base": "Resource",
+"class": "Skill_Data",
+"language": "GDScript",
+"path": "res://Action/Item/Skill/Skill_Data.gd"
+}, {
+"base": "Node",
+"class": "Skill_Info_Input",
+"language": "GDScript",
+"path": "res://Interface/View/Skill_Info_View/Skill_info_Input.gd"
+}, {
+"base": "Control",
+"class": "Skill_Info_View",
+"language": "GDScript",
+"path": "res://Interface/View/Skill_Info_View/Skill_Info_View.gd"
+}, {
+"base": "Node",
+"class": "Skill_Input",
+"language": "GDScript",
+"path": "res://Character/Friend/Active_Character/Skill_Input.gd"
+}, {
+"base": "Node",
+"class": "Skill_Inventory_Input",
+"language": "GDScript",
+"path": "res://Interface/View/Skill_Inventory_View/Skill_Inventory_View_Input.gd"
+}, {
+"base": "Control",
+"class": "Skill_Inventory_View",
+"language": "GDScript",
+"path": "res://Interface/View/Skill_Inventory_View/Skill_Inventory_View.gd"
+}, {
+"base": "Resource",
+"class": "Skill_List",
+"language": "GDScript",
+"path": "res://Action/Item/Skill/Skill_List.gd"
+}, {
+"base": "Resource",
+"class": "Skill_Set_Data",
+"language": "GDScript",
+"path": "res://Action/Item/Skill/Skill_Set_Data.gd"
+}, {
+"base": "Control",
+"class": "Skill_Shortcut_Selector",
+"language": "GDScript",
+"path": "res://Interface/Selector/Skill_Field_Selector/Skill_Shortcut_Selector.gd"
+}, {
+"base": "Resource",
+"class": "Skill_Tween_Profile",
+"language": "GDScript",
+"path": "res://Action/Item/Skill/Skill_Tween_Profile.gd"
+}, {
+"base": "Resource",
+"class": "Statistic_Data",
+"language": "GDScript",
+"path": "res://Character/Statistic/Statistic_Data.gd"
+}, {
+"base": "Resource",
+"class": "Statistic_List",
+"language": "GDScript",
+"path": "res://Character/Statistic/Statistic_List.gd"
+}, {
+"base": "Node",
+"class": "WeaponInput",
+"language": "GDScript",
+"path": "res://Character/Friend/Active_Character/Weapon_Input.gd"
+}, {
+"base": "Resource",
+"class": "Weapon_Data",
+"language": "GDScript",
+"path": "res://Action/Item/Weapon/Weapon_Data.gd"
+}, {
+"base": "Resource",
+"class": "Weapon_Loadout",
+"language": "GDScript",
+"path": "res://Action/Item/Weapon/Weapon_Loadout.gd"
+}, {
+"base": "Statistic_Data",
+"class": "Wind_Statistic_Data",
+"language": "GDScript",
+"path": "res://Character/Statistic/Wind_Statistic/Wind_Statistic_Data.gd"
+}, {
+"base": "Resource",
+"class": "Wind_Statistic_List",
+"language": "GDScript",
+"path": "res://Character/Statistic/Wind_Statistic/Wind_Statistic_List.gd"
+} ]
+_global_script_class_icons={
+"Active_Character": "",
+"Base_Statistic_Data": "",
+"Base_Statistic_List": "",
+"Character_Data": "",
+"Chip_Factory": "",
+"Code_Generator": "",
+"Domain_Data": "",
+"Domain_List": "",
+"Element_Data": "",
+"Element_Groups_List": "",
+"Element_Interaction_Data": "",
+"Element_Interaction_List": "",
+"Element_List": "",
+"Flux_Statistic_Data": "",
+"Flux_Statistic_List": "",
+"Gauge_Statistic_Data": "",
+"Gauge_Statistic_List": "",
+"Movement": "",
+"Party_Member_Data": "",
+"Print_Resource_Name": "",
+"Race_Data": "",
+"Race_List": "",
+"Rise_Statistic_Data": "",
+"Rise_Statistic_List": "",
+"Skill_Board_Data": "",
+"Skill_Board_Menu": "",
+"Skill_Board_Slot_Panel": "",
+"Skill_Board_View_Input": "",
+"Skill_Chip_Panel": "",
+"Skill_Data": "",
+"Skill_Info_Input": "",
+"Skill_Info_View": "",
+"Skill_Input": "",
+"Skill_Inventory_Input": "",
+"Skill_Inventory_View": "",
+"Skill_List": "",
+"Skill_Set_Data": "",
+"Skill_Shortcut_Selector": "",
+"Skill_Tween_Profile": "",
+"Statistic_Data": "",
+"Statistic_List": "",
+"WeaponInput": "",
+"Weapon_Data": "",
+"Weapon_Loadout": "",
+"Wind_Statistic_Data": "",
+"Wind_Statistic_List": ""
+}
 
 [application]
 
 config/name="Zodiac_Board"
-config/features=PackedStringArray("4.5", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="res://icon.png"
+
+[gui]
+
+common/drop_mouse_on_gui_input_disabled=true
+
+[physics]
+
+common/enable_pause_aware_picking=true
 
 [rendering]
 
-renderer/rendering_method="gl_compatibility"
-renderer/rendering_method.mobile="gl_compatibility"
+quality/driver/driver_name="GLES2"
+vram_compression/import_etc=true
+vram_compression/import_etc2=false
+environment/default_environment="res://default_env.tres"

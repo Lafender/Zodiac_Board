@@ -1,9 +1,15 @@
-[gd_resource type="Resource" script_class="Element_Data" load_steps=3 format=3 uid="uid://c8yso30giwvsj"]
+[gd_resource type="Resource" load_steps=3 format=2]
 
-[ext_resource type="Texture2D" uid="uid://cea68k2i6xfwk" path="res://Action/Chemistry/Element_List/CHILL/ICON.png" id="1_w6amc"]
-[ext_resource type="Script" uid="uid://oywel5jmij2e" path="res://Action/Chemistry/Element_Data.gd" id="2_p56w0"]
+[ext_resource path="res://Action/Chemistry/Element_List/CHILL/ICON.png" type="Texture" id=1]
+[ext_resource path="res://Action/Chemistry/Element_Data.gd" type="Script" id=2]
 
 [resource]
-script = ExtResource("2_p56w0")
-icon = ExtResource("1_w6amc")
-metadata/_custom_type_script = "uid://oywel5jmij2e"
+resource_name = "Chill Data"
+script = ExtResource( 2 )
+name = "CHILL"
+icon = ExtResource( 1 )
+element_group_0 = "Intensity"
+element_group_1 = "Transfer"
+element_group_2 = "Virtual"
+element_group_3 = "Minerals"
+element_group_4 = "Patterns"

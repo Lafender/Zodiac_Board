@@ -1,9 +1,15 @@
-[gd_resource type="Resource" script_class="Element_Data" load_steps=3 format=3 uid="uid://pvh8akkfbx7r"]
+[gd_resource type="Resource" load_steps=3 format=2]
 
-[ext_resource type="Texture2D" uid="uid://du4n0kp6vbr0w" path="res://Action/Chemistry/Element_List/CHAOTIC/ICON.png" id="1_jhgqk"]
-[ext_resource type="Script" uid="uid://oywel5jmij2e" path="res://Action/Chemistry/Element_Data.gd" id="2_acet1"]
+[ext_resource path="res://Action/Chemistry/Element_Data.gd" type="Script" id=1]
+[ext_resource path="res://Action/Chemistry/Element_List/CHAOTIC/ICON.png" type="Texture" id=2]
 
 [resource]
-script = ExtResource("2_acet1")
-icon = ExtResource("1_jhgqk")
-metadata/_custom_type_script = "uid://oywel5jmij2e"
+resource_name = "Chaotic Data"
+script = ExtResource( 1 )
+name = "CHAOTIC"
+icon = ExtResource( 2 )
+element_group_0 = "Intensity"
+element_group_1 = "Transfer"
+element_group_2 = "Virtual"
+element_group_3 = "Minerals"
+element_group_4 = "Patterns"

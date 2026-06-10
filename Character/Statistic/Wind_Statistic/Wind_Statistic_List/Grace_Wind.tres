@@ -1,8 +1,0 @@
-[gd_resource type="Resource" script_class="Wind_Statistic_Data" load_steps=2 format=3 uid="uid://deox1ykedjrw"]
-
-[ext_resource type="Script" uid="uid://b8nugwqlapg1a" path="res://Character/Statistic/Wind_Statistic/Wind_Statistic_Data.gd" id="1_2yf3n"]
-
-[resource]
-resource_local_to_scene = true
-script = ExtResource("1_2yf3n")
-metadata/_custom_type_script = "uid://b8nugwqlapg1a"

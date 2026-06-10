@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="Element_Interaction_Data" load_steps=2 format=3 uid="uid://dt32setxu6320"]
-
-[ext_resource type="Script" uid="uid://cd6qxos25cgqs" path="res://Action/Chemistry/Element_Interaction_Data.gd" id="1_4q87l"]
-
-[resource]
-resource_local_to_scene = true
-script = ExtResource("1_4q87l")
-damage_multiplier = 0.0
-metadata/_custom_type_script = "uid://cd6qxos25cgqs"

@@ -1,7 +1,0 @@
-[gd_resource type="Resource" script_class="Element_Data" load_steps=2 format=3 uid="uid://clgd2b0j6d6lq"]
-
-[ext_resource type="Script" uid="uid://oywel5jmij2e" path="res://Action/Chemistry/Element_Data.gd" id="1_ahymm"]
-
-[resource]
-script = ExtResource("1_ahymm")
-metadata/_custom_type_script = "uid://oywel5jmij2e"

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Action/Chemistry/Interaction/Interaction_Data.gd" type="Script" id=1]
+
+[resource]
+resource_name = "Siphon Data"
+script = ExtResource( 1 )
+interaction_type = "SIPHON"
+target_gauge = "RUNE"
+damage_multiplier = 1.0
+damage_duration = 0.0
+damage_interval = 0.0
+self_gauge = "RUNE"
+self_multiplier = -0.5
+self_duration = 0.0
+self_interval = 0.0

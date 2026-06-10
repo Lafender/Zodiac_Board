@@ -3,59 +3,59 @@ class_name Element_List
 
 
 
-@export_group("Intensity")
-@export var BASS: Element_Data
-@export var TREBLE: Element_Data
-@export var STRETCHED: Element_Data
-@export var COMPRESSED: Element_Data
-@export var HEAT: Element_Data
-@export var CHILL: Element_Data
-@export var SIMPLE: Element_Data
-@export var COMPLEX: Element_Data
+export var element_group_0 := "Intensity"
+export var BASS: Resource
+export var TREBLE: Resource
+export var STRETCHED: Resource
+export var COMPRESSED: Resource
+export var HEAT: Resource
+export var CHILL: Resource
+export var SIMPLE: Resource
+export var COMPLEX: Resource
 
-@export_group("Transfer")
-@export var CONDUCTIVE: Element_Data
-@export var MAGNETIC: Element_Data
-@export var PULSE: Element_Data
-@export var REFLECTIVE: Element_Data
-@export var RADIANT: Element_Data
-@export var VOID: Element_Data
-@export var PLASMA: Element_Data
-@export var MASSIVE: Element_Data
-@export var QUANTUM: Element_Data
-@export var ELECTRONIC: Element_Data
-@export var SOLVENT: Element_Data
-@export var OXIDIZING: Element_Data
-@export var PARTICLE: Element_Data
+export var element_group_1 := "Transfer"
+export var CONDUCTIVE: Resource
+export var MAGNETIC: Resource
+export var PULSE: Resource
+export var REFLECTIVE: Resource
+export var RADIANT: Resource
+export var VOID: Resource
+export var PLASMA: Resource
+export var MASSIVE: Resource
+export var QUANTUM: Resource
+export var ELECTRONIC: Resource
+export var SOLVENT: Resource
+export var OXIDIZING: Resource
+export var PARTICLE: Resource
 
-@export_group("Virtual")
-@export var LIMIT: Element_Data
-@export var VECTOR: Element_Data
-@export var MATRIX: Element_Data
-@export var DATA: Element_Data
-@export var BINARY: Element_Data
-@export var MEMORY: Element_Data
-@export var GENETIC: Element_Data
-@export var ILLUSION:Element_Data
+export var element_group_2 := "Virtual"
+export var LIMIT: Resource
+export var VECTOR: Resource
+export var MATRIX: Resource
+export var DATA: Resource
+export var BINARY: Resource
+export var MEMORY: Resource
+export var GENETIC: Resource
+export var ILLUSION:Resource
 
-@export_group("Minerals")
-@export var OBSIDIAN: Element_Data
-@export var STEAM: Element_Data
-@export var SMOKE: Element_Data
-@export var PLASTIC: Element_Data
-@export var GLASS: Element_Data
-@export var LIQUID: Element_Data
-@export var GEL:Element_Data
-@export var NEON:Element_Data
-@export var METAL: Element_Data
-@export var CRYSTAL: Element_Data
-@export var DIAMOND: Element_Data
+export var element_group_3 := "Mineral"
+export var OBSIDIAN: Resource
+export var STEAM: Resource
+export var SMOKE: Resource
+export var PLASTIC: Resource
+export var GLASS: Resource
+export var LIQUID: Resource
+export var GEL:Resource
+export var NEON:Resource
+export var METAL: Resource
+export var CRYSTAL: Resource
+export var DIAMOND: Resource
 
-@export_group("Patterns")
-@export var GRADIENT: Element_Data
-@export var RAINBOW: Element_Data
-@export var CHROMATIC: Element_Data
-@export var PRISMATIC: Element_Data
-@export var FRACTAL: Element_Data
-@export var ORDERED: Element_Data
-@export var CHAOTIC: Element_Data
+export var element_group_4 := "Pattern"
+export var GRADIENT: Resource
+export var RAINBOW: Resource
+export var CHROMATIC: Resource
+export var PRISMATIC: Resource
+export var FRACTAL: Resource
+export var ORDERED: Resource
+export var CHAOTIC: Resource
