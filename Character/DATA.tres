@@ -1,0 +1,11 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Character/Character_Data.gd" type="Script" id=1]
+
+[resource]
+resource_local_to_scene = true
+resource_name = "Character Data"
+script = ExtResource( 1 )
+character_name = "Lyle"
+job_level = 0
+loaded_weapon = ""

@@ -1,0 +1,30 @@
+[gd_resource type="Resource" load_steps=13 format=2]
+
+[ext_resource path="res://Action/Chemistry/Element/LIST/MINERAL/Element_Mineral_List.gd" type="Script" id=1]
+[ext_resource path="res://Action/Chemistry/Element/LIST/MINERAL/GLASS/DATA.tres" type="Resource" id=2]
+[ext_resource path="res://Action/Chemistry/Element/LIST/MINERAL/SMOKE/DATA.tres" type="Resource" id=3]
+[ext_resource path="res://Action/Chemistry/Element/LIST/MINERAL/OBSIDIAN/DATA.tres" type="Resource" id=4]
+[ext_resource path="res://Action/Chemistry/Element/LIST/MINERAL/PLASTIC/DATA.tres" type="Resource" id=5]
+[ext_resource path="res://Action/Chemistry/Element/LIST/MINERAL/STEAM/DATA.tres" type="Resource" id=6]
+[ext_resource path="res://Action/Chemistry/Element/LIST/MINERAL/CRYSTAL/DATA.tres" type="Resource" id=7]
+[ext_resource path="res://Action/Chemistry/Element/LIST/MINERAL/NEON/DATA.tres" type="Resource" id=8]
+[ext_resource path="res://Action/Chemistry/Element/LIST/MINERAL/METAL/DATA.tres" type="Resource" id=9]
+[ext_resource path="res://Action/Chemistry/Element/LIST/MINERAL/DIAMOND/DATA.tres" type="Resource" id=10]
+[ext_resource path="res://Action/Chemistry/Element/LIST/MINERAL/LIQUID/DATA.tres" type="Resource" id=11]
+[ext_resource path="res://Action/Chemistry/Element/LIST/MINERAL/GEL/DATA.tres" type="Resource" id=12]
+
+[resource]
+resource_name = "Element Mineral List"
+script = ExtResource( 1 )
+group_name = "MINERAL"
+STEAM = ExtResource( 6 )
+SMOKE = ExtResource( 3 )
+NEON = ExtResource( 8 )
+LIQUID = ExtResource( 11 )
+GEL = ExtResource( 12 )
+GLASS = ExtResource( 2 )
+OBSIDIAN = ExtResource( 4 )
+CRYSTAL = ExtResource( 7 )
+DIAMOND = ExtResource( 10 )
+METAL = ExtResource( 9 )
+PLASTIC = ExtResource( 5 )

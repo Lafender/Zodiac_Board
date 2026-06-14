@@ -1,14 +1,15 @@
 extends Resource
 class_name Code_Generator
 
-@export var code_length: int = 4
-@export var use_symbols: bool = false
+export var code_length: int = 4
+export var use_symbols: bool = false
 
-@export_enum("None", "-", "_", ".", "/", "#", "@") var separator: int = 0
-@export var segment_lengths: Array[int] = [4]  # e.g. [3, 2, 3] → "ABC-DE-FGH"
+export var spearator_list:=  ["None", "-", "_", ".", "/", "#", "@"]
+export var separator: String
+export var segment_lengths: Array = [4]  # e.g. [3, 2, 3] → "ABC-DE-FGH"
 
-@export var base_chars := "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-@export var symbol_chars := "!@#$%^&*+-=?"
+export var base_chars := "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+export var symbol_chars := "!@#$%^&*+-=?"
 
 var rng := RandomNumberGenerator.new()
 
@@ -33,7 +34,7 @@ func generate_code(length: int = code_length) -> String:
 # CUSTOM SYMBOL INSERTION
 # ---------------------------------------------------------
 
-func generate_code_with_custom_symbol(length: int, symbol: String, positions: Array[int]) -> String:
+func generate_code_with_custom_symbol(length: int, symbol: String, positions: Array) -> String:
 	var s := ""
 	for i in length:
 		if positions.has(i):
@@ -48,14 +49,8 @@ func generate_code_with_custom_symbol(length: int, symbol: String, positions: Ar
 
 func generate_full_code() -> String:
 	var sep := ""
-	match separator:
-		0: sep = ""
-		1: sep = "-"
-		2: sep = "_"
-		3: sep = "."
-		4: sep = "/"
-		5: sep = "#"
-		6: sep = "@"
+	if separator != "None":
+		sep = separator
 
 	var parts := []
 	for seg_len in segment_lengths:

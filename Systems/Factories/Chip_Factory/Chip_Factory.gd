@@ -1,17 +1,21 @@
 extends Node
 class_name Chip_Factory
 
-@export var output_path := "res://Action/Skill/Skill_List/"
+export(String, DIR) var skills_path := "res://Action/Item/Skill/LIST/"
+export(String, FILE) var skill_panel_path := "res://Interface/Panel/Skill_Chip_Panel/Skill_Chip_Panel.tscn"
+export(NodePath) onready var grid_container = $UI/VBoxContainer/GridContainer
 
 # External resources
-@export var strip_palette: ColorPalette
-@export var code_generator: Code_Generator
-@export var icons: Array[Texture2D]
+export var strip_palette: PoolColorArray
+export var code_generator: Resource
+export(String, DIR) var icons_dir
+var icons: Array
+var skills: Array
 
 # Element / Domain / Gauge lists
-@export var element_list: Element_List
-@export var domain_list: Domain_List
-@export var gauge_statistic_list: Gauge_Statistic_List
+export var element_list: Resource
+export var domain_list:Resource
+export var gauge_statistic_list: Resource
 
 # ---------------------------------------------------------
 # INTERNAL NAME POOLS (cannot disappear)
@@ -20,19 +24,24 @@ class_name Chip_Factory
 const NAME_ROOTS := [
 	"Astra", "Voro", "Luma", "Cryo", "Vita", "Noct", "Ferro", "Aero",
 	"Sola", "Umbra", "Mythra", "Draco", "Flaer", "Vesper", "Arcan",
-	"Lyra", "Venti", "Chrono", "Faye", "Rune", "Eldra", "Mistral"
+	"Lyra", "Venti", "Chrono", "Faye", "Rune", "Eldra", "Mistral", 
+	"Fart", "Oscar", "Stim", "Lance", "Bone", "Vedlt", "Baste", "Create",
+	"Opal", "Ruby", "Emerald", "Sapphire", "Mace", "Star"
 ]
 
 const NAME_ACTIONS := [
 	"Claw", "Burst", "Strike", "Blaze", "Crash", "Pulse", "Wave",
 	"Slash", "Drift", "Pierce", "Bloom", "Snap", "Fang", "Drill",
-	"Spiral", "Flash", "Bolt", "Crash", "Sweep", "Lunge"
+	"Spiral", "Flash", "Bolt", "Felt", "Sweep", "Lunge", "Rampage",
+	"Chase", "Waste", "Joke", "Poke", "Sit", "Cry", "Rise", "Trance",
+	"Trace", "Brace", "Guess", "Shade", "Ace"
 ]
 
 const NAME_ADVERBS := [
 	"Softly", "Brutally", "Swiftly", "Lovely", "Straight", "Wildly",
 	"Brightly", "Quietly", "Sharply", "Heavily", "Gently", "Roughly",
-	"Gracefully", "Boldly", "Fiercely", "Calmly", "Warmly"
+	"Gracefully", "Boldly", "Fiercely", "Calmly", "Warmly", "Hastey",
+	"Shying", "Cutely", "Sweetly", "Awkwardly", "Smelly"
 ]
 
 # ---------------------------------------------------------
@@ -40,16 +49,52 @@ const NAME_ADVERBS := [
 # ---------------------------------------------------------
 
 func _ready():
-	$UI/VBoxContainer/Button.pressed.connect(_generate_all)
-	$UI/VBoxContainer/Button2.pressed.connect(_generate_single)
-	$UI/VBoxContainer/Button3.pressed.connect(_preview_name)
-	$UI/VBoxContainer/Button4.pressed.connect(_preview_code)
+	print("hello!")
+	_load_all_textures(icons_dir)
+#	$UI/VBoxContainer/Button.pressed.connect(_generate_all())
+#	$UI/VBoxContainer/Button2.pressed.connect(_generate_single())
+#	$UI/VBoxContainer/Button3.pressed.connect(_preview_name())
+#	$UI/VBoxContainer/Button4.pressed.connect(_preview_code())
+	
+	if icons.size() == 0:
+		print("icons size empty")
+	print(icons.size())
+#	print(icons)
+	
+	_load_skills()
+	
 
 # ---------------------------------------------------------
 # GENERATION
 # ---------------------------------------------------------
 
-@export var number_of_chips := 30
+export var number_of_chips := 30
+
+func _load_skills():
+	skills = []
+	var dir_array = Directory_Array.new()
+	dir_array.set_array(skills_path, ".tres")
+	skills = dir_array.get_array()
+	
+	for child in grid_container.get_children():
+		child.queue_free()
+	
+	var i = 0
+	for skill_path in skills:
+		var skill = load(skills[i])
+		i = i + 1
+		var panel = load(skill_panel_path)
+		var panel_instance = panel.instance()
+		grid_container.add_child(panel_instance)
+		grid_container.get_child(i).set_chip(skill)
+	
+
+#	while i < grid_container.get_children().size() :
+		
+#		grid_container.get_children()[i]
+		
+	
+
 
 func _generate_all():
 	for i in number_of_chips:
@@ -58,15 +103,15 @@ func _generate_all():
 func _generate_single():
 	_generate_skill(randi() % 9999)
 
-func _generate_skill(i: int):
+func _generate_skill(i: int) -> String:
 	var skill := Skill_Data.new()
 
 	# Name
 	skill.skill_name = _generate_name()
 
 	# Icon + strip
-	skill.icon = icons[i % icons.size()]
-	skill.chip_color = strip_palette.colors[i % strip_palette.colors.size()]
+	skill.icon = load(icons[randi() % 30])
+	skill.chip_color = strip_palette[randi() % strip_palette.size()]
 	skill.chip_code = code_generator.generate_full_code()
 
 	# Stats
@@ -80,14 +125,16 @@ func _generate_skill(i: int):
 
 	# Gauge cost (placeholder)
 	skill.cost = randi() % 10
-	skill.target_gauge = Skill_Data.gauge.values()[randi() % Skill_Data.gauge.size()]
+	skill.target_gauge = _random_gauge()
 
 	# Animation (simple placeholder tween)
 	skill.animation = [_generate_tween_profile()]
 
 	# Save
-	var file := "%s/Skill_%04d.tres" % [output_path, i]
-	ResourceSaver.save(skill, file)
+	var file := "%s/Skill_%04d.tres" % [skills_path, i]
+	ResourceSaver.save(file, skill)
+	_load_skills()
+	return file
 
 # ---------------------------------------------------------
 # NAME GENERATION
@@ -103,59 +150,66 @@ func _generate_name() -> String:
 # RANDOMIZATION HELPERS
 # ---------------------------------------------------------
 
-func _random_element() -> Element_Data:
+func _random_element() -> Resource:
 	var arr := [
-		element_list.BASS, 
-		element_list.TREBLE, 
-		element_list.STRETCHED, 
-		element_list.COMPRESSED,
-		element_list.HEAT, 
-		element_list.CHILL, 
-		element_list.SIMPLE,
-		element_list.COMPLEX,
-		element_list.CONDUCTIVE, 
-		element_list.MAGNETIC, 
-		element_list.PULSE, 
-		element_list.REFLECTIVE,
-		element_list.RADIANT, 
-		element_list.VOID, 
-		element_list.PLASMA, 
-		element_list.MASSIVE,
-		element_list.QUANTUM, 
-		element_list.ELECTRONIC, 
-		element_list.SOLVENT, 
-		element_list.OXIDIZING,
-		element_list.PARTICLE, 
-		element_list.LIMIT, 
-		element_list.VECTOR, 
-		element_list.MATRIX,
-		element_list.DATA, 
-		element_list.BINARY, 
-		element_list.MEMORY, 
-		element_list.GENETIC,
-		element_list.ILLUSION, 
-		element_list.OBSIDIAN, 
-		element_list.STEAM, 
-		element_list.SMOKE,
-		element_list.PLASTIC, 
-		element_list.GLASS, 
-		element_list.LIQUID, 
-		element_list.GEL, 
-		element_list.NEON, 
-		element_list.METAL, 
-		element_list.CRYSTAL, 
-		element_list.DIAMOND,
-		element_list.GRADIENT, 
-		element_list.RAINBOW, 
-		element_list.CHROMATIC, 
-		element_list.PRISMATIC,
-		element_list.FRACTAL, 
-		element_list.ORDERED, 
-		element_list.CHAOTIC
+		element_list.INTENSITY.BASS, 
+		element_list.INTENSITY.TREBLE, 
+		element_list.INTENSITY.STRETCHED, 
+		element_list.INTENSITY.COMPRESSED,
+		element_list.INTENSITY.HEAT, 
+		element_list.INTENSITY.CHILL, 
+		element_list.INTENSITY.PULSE, 
+		
+		element_list.SCALE.VOID,  
+		element_list.SCALE.MASSIVE,
+		element_list.SCALE.PARTICLE, 
+		element_list.SCALE.QUANTUM, 
+		element_list.SCALE.ELECTRONIC, 
+		element_list.SCALE.PLASMA,
+		
+		element_list.TRANSFER.CONDUCTIVE, 
+		element_list.TRANSFER.MAGNETIC, 
+		element_list.TRANSFER.REFLECTIVE,
+		element_list.TRANSFER.RADIANT, 
+		element_list.TRANSFER.SOLVENT, 
+		element_list.TRANSFER.OXIDIZING,
+		
+		element_list.MINERAL.STEAM, 
+		element_list.MINERAL.SMOKE,
+		element_list.MINERAL.NEON, 
+		element_list.MINERAL.LIQUID, 
+		element_list.MINERAL.GEL, 
+		element_list.MINERAL.METAL,
+		element_list.MINERAL.GLASS, 
+		element_list.MINERAL.OBSIDIAN, 
+		element_list.MINERAL.CRYSTAL, 
+		element_list.MINERAL.DIAMOND,
+		element_list.MINERAL.PLASTIC, 
+		
+		element_list.PATTERN.GRADIENT, 
+		element_list.PATTERN.RAINBOW, 
+		element_list.PATTERN.CHROMATIC, 
+		element_list.PATTERN.PRISMATIC,
+		element_list.PATTERN.FRACTAL, 
+		element_list.PATTERN.SIMPLE,
+		element_list.PATTERN.COMPLEX,
+		element_list.PATTERN.ORDERED, 
+		element_list.PATTERN.CHAOTIC,
+		
+		element_list.VIRTUAL.LIMIT, 
+		element_list.VIRTUAL.VECTOR, 
+		element_list.VIRTUAL.MATRIX,
+		element_list.VIRTUAL.DATA, 
+		element_list.VIRTUAL.BINARY, 
+		element_list.VIRTUAL.GENETIC,
+		element_list.VIRTUAL.MEMORY, 
+		element_list.VIRTUAL.ILLUSION
 	]
+
+
 	return arr[randi() % arr.size()]
 
-func _random_domain() -> Domain_Data:
+func _random_domain() -> Resource:
 	var arr := [
 		domain_list.PHYSICAL,
 		domain_list.MAGICAL,
@@ -164,10 +218,20 @@ func _random_domain() -> Domain_Data:
 	]
 	return arr[randi() % arr.size()]
 
-func _generate_tween_profile() -> Skill_Tween_Profile:
+func _random_gauge() -> Resource:
+	var arr := [
+		gauge_statistic_list.HEALTH_GAUGE,
+		gauge_statistic_list.RUNE_GAUGE,
+		gauge_statistic_list.ENGINE_GAUGE,
+		gauge_statistic_list.THREAD_GAUGE,
+		gauge_statistic_list.ZERO_GAUGE
+	]
+	return arr[randi() % arr.size()]
+
+func _generate_tween_profile():
 	var t := Skill_Tween_Profile.new()
-	t.tween_duration = randf_range(0.2, 0.8)
-	t.tween_offset = Vector2(randf_range(-8, 8), randf_range(-8, 8))
+	t.tween_duration = rand_range(0.2, 0.8)
+	t.tween_offset = Vector2(rand_range(-8, 8), rand_range(-8, 8))
 	t.tween_loop = randf() < 0.3
 	t.tween_is_active_animation = t.tween_loop
 	t.tween_is_start_animation = not t.tween_loop
@@ -182,3 +246,11 @@ func _preview_name():
 
 func _preview_code():
 	print(code_generator.generate_full_code())
+	
+
+func _load_all_textures(folder_path):
+	print("Loading Textures started.")
+	var dir_array = Directory_Array.new()
+	dir_array.set_array(folder_path, ".png")
+	icons = dir_array.get_array()
+

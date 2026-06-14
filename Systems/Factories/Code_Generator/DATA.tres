@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Systems/Factories/Code_Generator/Code_Generator.gd" type="Script" id=1]
+
+[resource]
+resource_local_to_scene = true
+resource_name = "Code_Generator"
+script = ExtResource( 1 )
+code_length = 4
+use_symbols = false
+spearator_list = [ "None", "-", "_", ".", "/", "#", "@" ]
+separator = ""
+segment_lengths = [ 4 ]
+base_chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+symbol_chars = "!@#$%^&*+-=?"

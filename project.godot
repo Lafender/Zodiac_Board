@@ -19,10 +19,10 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Character/Statistic/Base_Statistic/Base_Statistic_Data.gd"
 }, {
-"base": "Resource",
+"base": "Groups_Data",
 "class": "Base_Statistic_List",
 "language": "GDScript",
-"path": "res://Character/Statistic/Base_Statistic/Base_Statistic_List.gd"
+"path": "res://Character/Statistic/Base_Statistic/LIST/Base_Statistic_List.gd"
 }, {
 "base": "Resource",
 "class": "Character_Data",
@@ -39,60 +39,95 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Systems/Factories/Code_Generator/Code_Generator.gd"
 }, {
+"base": "Object",
+"class": "Directory_Array",
+"language": "GDScript",
+"path": "res://Systems/Common/Directory_Array.gd"
+}, {
 "base": "Resource",
 "class": "Domain_Data",
 "language": "GDScript",
-"path": "res://Action/Chemistry/Domain_Data.gd"
+"path": "res://Action/Chemistry/Domain/Domain_Data.gd"
 }, {
 "base": "Resource",
 "class": "Domain_List",
 "language": "GDScript",
-"path": "res://Action/Chemistry/Domain_List/Domain_List.gd"
+"path": "res://Action/Chemistry/Domain/LIST/Domain_List.gd"
 }, {
 "base": "Domain_Data",
 "class": "Element_Data",
 "language": "GDScript",
-"path": "res://Action/Chemistry/Element_Data.gd"
+"path": "res://Action/Chemistry/Element/Element_Data.gd"
 }, {
-"base": "Resource",
-"class": "Element_Groups_List",
+"base": "Groups_Data",
+"class": "Element_Intensity_List",
 "language": "GDScript",
-"path": "res://Action/Chemistry/Element_Groups_List.gd"
+"path": "res://Action/Chemistry/Element/LIST/INTENSITY/Element_Intensity_List.gd"
 }, {
-"base": "Resource",
-"class": "Element_Interaction_Data",
-"language": "GDScript",
-"path": "res://Action/Chemistry/Interaction/Interaction_Data.gd"
-}, {
-"base": "Resource",
-"class": "Element_Interaction_List",
-"language": "GDScript",
-"path": "res://Action/Chemistry/Interaction/Interaction_List/Interaction_List.gd"
-}, {
-"base": "Resource",
+"base": "Groups_Data",
 "class": "Element_List",
 "language": "GDScript",
-"path": "res://Action/Chemistry/Element_List/Element_List.gd"
+"path": "res://Action/Chemistry/Element/LIST/Element_List.gd"
+}, {
+"base": "Groups_Data",
+"class": "Element_Mineral_List",
+"language": "GDScript",
+"path": "res://Action/Chemistry/Element/LIST/MINERAL/Element_Mineral_List.gd"
+}, {
+"base": "Groups_Data",
+"class": "Element_Pattern_List",
+"language": "GDScript",
+"path": "res://Action/Chemistry/Element/LIST/PATTERN/Element_Pattern_List.gd"
+}, {
+"base": "Groups_Data",
+"class": "Element_Scale_List",
+"language": "GDScript",
+"path": "res://Action/Chemistry/Element/LIST/SCALE/Element_Scale_List.gd"
+}, {
+"base": "Groups_Data",
+"class": "Element_Transfer_List",
+"language": "GDScript",
+"path": "res://Action/Chemistry/Element/LIST/TRANSFER/Element_Tranfer_List.gd"
+}, {
+"base": "Groups_Data",
+"class": "Element_Virtual_List",
+"language": "GDScript",
+"path": "res://Action/Chemistry/Element/LIST/VIRTUAL/Element_Virtual_List.gd"
 }, {
 "base": "Statistic_Data",
 "class": "Flux_Statistic_Data",
 "language": "GDScript",
 "path": "res://Character/Statistic/Flux_Statistic/Flux_Statistic_Data.gd"
 }, {
-"base": "Resource",
+"base": "Groups_Data",
 "class": "Flux_Statistic_List",
 "language": "GDScript",
-"path": "res://Character/Statistic/Flux_Statistic/Flux_Statistic_List.gd"
+"path": "res://Character/Statistic/Flux_Statistic/LIST/Flux_Statistic_List.gd"
 }, {
 "base": "Statistic_Data",
 "class": "Gauge_Statistic_Data",
 "language": "GDScript",
 "path": "res://Character/Statistic/Gauge_Statistic/Gauge_Statistic_Data.gd"
 }, {
-"base": "Resource",
+"base": "Groups_Data",
 "class": "Gauge_Statistic_List",
 "language": "GDScript",
-"path": "res://Character/Statistic/Gauge_Statistic/Gauge_Statistic_List/Gauge_Statistic_List.gd"
+"path": "res://Character/Statistic/Gauge_Statistic/LIST/Gauge_Statistic_List.gd"
+}, {
+"base": "Resource",
+"class": "Groups_Data",
+"language": "GDScript",
+"path": "res://Systems/Common/Groups_Data.gd"
+}, {
+"base": "Resource",
+"class": "Interaction_Data",
+"language": "GDScript",
+"path": "res://Action/Chemistry/Interaction/Interaction_Data.gd"
+}, {
+"base": "Resource",
+"class": "Interaction_List",
+"language": "GDScript",
+"path": "res://Action/Chemistry/Interaction/Interaction_List/Interaction_List.gd"
 }, {
 "base": "Node",
 "class": "Movement",
@@ -117,17 +152,17 @@ _global_script_classes=[ {
 "base": "Resource",
 "class": "Race_List",
 "language": "GDScript",
-"path": "res://Character/Race/Race_List/Race_List.gd"
+"path": "res://Character/Race/LIST/Race_List.gd"
 }, {
 "base": "Statistic_Data",
 "class": "Rise_Statistic_Data",
 "language": "GDScript",
 "path": "res://Character/Statistic/Rise_Statistic/Rise_Statistic_Data.gd"
 }, {
-"base": "Resource",
+"base": "Groups_Data",
 "class": "Rise_Statistic_List",
 "language": "GDScript",
-"path": "res://Character/Statistic/Rise_Statistic/Rise_Statistic_List.gd"
+"path": "res://Character/Statistic/Rise_Statistic/LIST/Rise_Statistic_List.gd"
 }, {
 "base": "Resource",
 "class": "Skill_Board_Data",
@@ -187,12 +222,12 @@ _global_script_classes=[ {
 "base": "Resource",
 "class": "Skill_List",
 "language": "GDScript",
-"path": "res://Action/Item/Skill/Skill_List.gd"
+"path": "res://Action/Item/Skill/LIST/Skill_List.gd"
 }, {
 "base": "Resource",
-"class": "Skill_Set_Data",
+"class": "Skill_Loadout_Data",
 "language": "GDScript",
-"path": "res://Action/Item/Skill/Skill_Set_Data.gd"
+"path": "res://Action/Item/Skill/LOADOUT/Skill_Loadout_Data.gd"
 }, {
 "base": "Control",
 "class": "Skill_Shortcut_Selector",
@@ -209,7 +244,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Character/Statistic/Statistic_Data.gd"
 }, {
-"base": "Resource",
+"base": "Groups_Data",
 "class": "Statistic_List",
 "language": "GDScript",
 "path": "res://Character/Statistic/Statistic_List.gd"
@@ -227,17 +262,17 @@ _global_script_classes=[ {
 "base": "Resource",
 "class": "Weapon_Loadout",
 "language": "GDScript",
-"path": "res://Action/Item/Weapon/Weapon_Loadout.gd"
+"path": "res://Action/Item/Weapon/LOADOUT/Weapon_Loadout.gd"
 }, {
 "base": "Statistic_Data",
 "class": "Wind_Statistic_Data",
 "language": "GDScript",
 "path": "res://Character/Statistic/Wind_Statistic/Wind_Statistic_Data.gd"
 }, {
-"base": "Resource",
+"base": "Groups_Data",
 "class": "Wind_Statistic_List",
 "language": "GDScript",
-"path": "res://Character/Statistic/Wind_Statistic/Wind_Statistic_List.gd"
+"path": "res://Character/Statistic/Wind_Statistic/LIST/Wind_Statistic_List.gd"
 } ]
 _global_script_class_icons={
 "Active_Character": "",
@@ -246,17 +281,24 @@ _global_script_class_icons={
 "Character_Data": "",
 "Chip_Factory": "",
 "Code_Generator": "",
+"Directory_Array": "",
 "Domain_Data": "",
 "Domain_List": "",
 "Element_Data": "",
-"Element_Groups_List": "",
-"Element_Interaction_Data": "",
-"Element_Interaction_List": "",
+"Element_Intensity_List": "",
 "Element_List": "",
+"Element_Mineral_List": "",
+"Element_Pattern_List": "",
+"Element_Scale_List": "",
+"Element_Transfer_List": "",
+"Element_Virtual_List": "",
 "Flux_Statistic_Data": "",
 "Flux_Statistic_List": "",
 "Gauge_Statistic_Data": "",
 "Gauge_Statistic_List": "",
+"Groups_Data": "",
+"Interaction_Data": "",
+"Interaction_List": "",
 "Movement": "",
 "Party_Member_Data": "",
 "Print_Resource_Name": "",
@@ -276,7 +318,7 @@ _global_script_class_icons={
 "Skill_Inventory_Input": "",
 "Skill_Inventory_View": "",
 "Skill_List": "",
-"Skill_Set_Data": "",
+"Skill_Loadout_Data": "",
 "Skill_Shortcut_Selector": "",
 "Skill_Tween_Profile": "",
 "Statistic_Data": "",
@@ -290,8 +332,12 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Zodiac_Board"
+config/name="Zodiac Board"
 config/icon="res://icon.png"
+
+[global]
+
+"default texture filter"=false
 
 [gui]
 
@@ -303,7 +349,4 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
-quality/driver/driver_name="GLES2"
-vram_compression/import_etc=true
-vram_compression/import_etc2=false
 environment/default_environment="res://default_env.tres"

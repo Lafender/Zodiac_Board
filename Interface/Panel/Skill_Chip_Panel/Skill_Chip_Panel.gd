@@ -1,16 +1,22 @@
 extends Panel
 class_name Skill_Chip_Panel
 
-@onready var icon_rect: TextureRect = $TextureRect
-@onready var strip: Panel = $Panel
-@onready var code_label: Label = $Panel/Label
+export(NodePath) onready var icon_rect = $Panel/CenterContainer/TextureRect
+export(NodePath) onready var strip = $CenterContainer/VBoxContainer/Panel
+export(NodePath) onready var code_label = $CenterContainer/VBoxContainer/Panel/CenterContainer/Label
+export(NodePath) onready var element_icon = $Panel2/CenterContainer/TextureRect
+export(NodePath) onready var domain_icon = $Panel2/CenterContainer/TextureRect/Panel/CenterContainer/TextureRect
 
 var chip: Skill_Data
 
 func set_chip(skill: Skill_Data) -> void:
 	chip = skill
+	
+	domain_icon.texture = chip.domain_data.icon
+	element_icon.texture = chip.element_data.icon
+	strip.get_stylebox("panel").bg_color = chip.chip_color
+	
 	icon_rect.texture = chip.icon
-	strip.color = chip.chip_color
 	code_label.text = chip.chip_code
 
 func set_equipped(equipped: bool) -> void:

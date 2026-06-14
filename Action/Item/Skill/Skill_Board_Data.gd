@@ -1,10 +1,10 @@
 extends Resource
 class_name Skill_Board_Data
 
-@export var width: int = 8
-@export var height: int = 8
+export var width: int = 8
+export var height: int = 8
 
-@export var slots: Array[Skill_Data] = []
+export(PoolStringArray) var slots
 
 var dpad_group: Array = []
 var face_group: Array = []
@@ -41,8 +41,8 @@ func _generate_groups() -> void:
 			dpad_group[y].append(dpad)
 
 			# --- Face-button grouping (4×4 regions) ---
-			var rx := x / region_w  # 0..3
-			var ry := y / region_h  # 0..3
+			var rx : int = x / region_w  # 0..3
+			var ry : int = y / region_h  # 0..3
 
 			var idx := (ry % 2) * 2 + (rx % 2)  # 0..3
 			var face := ""
@@ -57,18 +57,18 @@ func _generate_groups() -> void:
 func get_index(x: int, y: int) -> int:
 	return y * width + x
 
-func get_slot(x: int, y: int) -> Skill_Data:
+func get_slot(x: int, y: int) -> String:
 	var idx := get_index(x, y)
 	return slots[idx] if idx >= 0 and idx < slots.size() else null
 
-func set_slot(x: int, y: int, skill: Skill_Data) -> void:
+func set_slot(x: int, y: int, skill_code: String) -> void:
 	var idx := get_index(x, y)
 	if idx >= 0 and idx < slots.size():
-		slots[idx] = skill
+		slots[idx] = skill_code
 
-func get_skill(button: String) -> Skill_Data:
+func get_skill(button: String) -> String:
 	for y in height:
 		for x in width:
 			if face_group[y][x] == button:
 				return get_slot(x, y)
-	return null
+	return "0000"

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" load_steps=5 format=2]
+
+[ext_resource path="res://Action/Chemistry/Domain/Domain_Data.gd" type="Script" id=1]
+[ext_resource path="res://Action/Chemistry/Domain/LIST/MAGICAL/ICON.png" type="Texture" id=2]
+[ext_resource path="res://Action/Chemistry/Interaction/Interaction_List/RESIST/DATA.tres" type="Resource" id=3]
+[ext_resource path="res://Action/Chemistry/Interaction/Interaction_List/BOOST/DATA.tres" type="Resource" id=4]
+
+[resource]
+resource_name = "Magical Data"
+script = ExtResource( 1 )
+name = "MAGICAL"
+icon = ExtResource( 2 )
+PHYSICAL = ExtResource( 4 )
+MAGICAL = ExtResource( 3 )
+SPIRITUAL = ExtResource( 3 )
+TEMPERED = ExtResource( 4 )

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" load_steps=5 format=2]
+
+[ext_resource path="res://Action/Chemistry/Domain/Domain_Data.gd" type="Script" id=1]
+[ext_resource path="res://Action/Chemistry/Domain/LIST/PHYSICAL/ICON.png" type="Texture" id=2]
+[ext_resource path="res://Action/Chemistry/Interaction/Interaction_List/NORMAL/DATA.tres" type="Resource" id=3]
+[ext_resource path="res://Action/Chemistry/Interaction/Interaction_List/RESIST/DATA.tres" type="Resource" id=4]
+
+[resource]
+resource_name = "Physical Data"
+script = ExtResource( 1 )
+name = "PHYSICAL"
+icon = ExtResource( 2 )
+PHYSICAL = ExtResource( 3 )
+MAGICAL = ExtResource( 3 )
+SPIRITUAL = ExtResource( 4 )
+TEMPERED = ExtResource( 3 )

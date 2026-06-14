@@ -1,5 +1,5 @@
 extends Resource
-class_name Element_Interaction_Data
+class_name Interaction_Data
 
 
 export var interaction_type: String

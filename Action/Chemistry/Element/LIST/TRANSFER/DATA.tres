@@ -1,0 +1,20 @@
+[gd_resource type="Resource" load_steps=8 format=2]
+
+[ext_resource path="res://Action/Chemistry/Element/LIST/TRANSFER/Element_Tranfer_List.gd" type="Script" id=1]
+[ext_resource path="res://Action/Chemistry/Element/LIST/TRANSFER/CONDUCTIVE/DATA.tres" type="Resource" id=2]
+[ext_resource path="res://Action/Chemistry/Element/LIST/TRANSFER/MAGNETIC/DATA.tres" type="Resource" id=3]
+[ext_resource path="res://Action/Chemistry/Element/LIST/TRANSFER/OXIDIZING/DATA.tres" type="Resource" id=4]
+[ext_resource path="res://Action/Chemistry/Element/LIST/TRANSFER/REFLECTIVE/DATA.tres" type="Resource" id=5]
+[ext_resource path="res://Action/Chemistry/Element/LIST/TRANSFER/RADIANT/DATA.tres" type="Resource" id=6]
+[ext_resource path="res://Action/Chemistry/Element/LIST/TRANSFER/SOLVENT/DATA.tres" type="Resource" id=7]
+
+[resource]
+resource_name = "Element Transfer List"
+script = ExtResource( 1 )
+group_name = "TRANSFER"
+CONDUCTIVE = ExtResource( 2 )
+MAGNETIC = ExtResource( 3 )
+REFLECTIVE = ExtResource( 5 )
+RADIANT = ExtResource( 6 )
+SOLVENT = ExtResource( 7 )
+OXIDIZING = ExtResource( 4 )

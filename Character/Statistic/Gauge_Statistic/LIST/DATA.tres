@@ -1,0 +1,18 @@
+[gd_resource type="Resource" load_steps=7 format=2]
+
+[ext_resource path="res://Character/Statistic/Gauge_Statistic/LIST/Gauge_Statistic_List.gd" type="Script" id=1]
+[ext_resource path="res://Character/Statistic/Gauge_Statistic/LIST/RUNE/DATA.tres" type="Resource" id=2]
+[ext_resource path="res://Character/Statistic/Gauge_Statistic/LIST/HEALTH/DATA.tres" type="Resource" id=3]
+[ext_resource path="res://Character/Statistic/Gauge_Statistic/LIST/ZERO/DATA.tres" type="Resource" id=4]
+[ext_resource path="res://Character/Statistic/Gauge_Statistic/LIST/THREAD/DATA.tres" type="Resource" id=5]
+[ext_resource path="res://Character/Statistic/Gauge_Statistic/LIST/ENGINE/DATA.tres" type="Resource" id=6]
+
+[resource]
+resource_name = "Gauge Statistic List"
+script = ExtResource( 1 )
+group_name = ""
+HEALTH_GAUGE = ExtResource( 3 )
+RUNE_GAUGE = ExtResource( 2 )
+ENGINE_GAUGE = ExtResource( 6 )
+THREAD_GAUGE = ExtResource( 5 )
+ZERO_GAUGE = ExtResource( 4 )
