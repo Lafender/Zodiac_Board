@@ -3,7 +3,8 @@ class_name Chip_Factory
 
 export(String, DIR) var skills_path := "res://Action/Item/Skill/LIST/"
 export(String, FILE) var skill_panel_path := "res://Interface/Panel/Skill_Chip_Panel/Skill_Chip_Panel.tscn"
-export(NodePath) onready var grid_container = $UI/VBoxContainer/GridContainer
+export(NodePath) onready var grid_container = $UI/VBoxContainer/ScrollContainer/GridContainer
+export(NodePath) onready var skill_info_panel = $UI/Skill_Info_Panel
 
 # External resources
 export var strip_palette: PoolColorArray
@@ -50,19 +51,55 @@ const NAME_ADVERBS := [
 
 func _ready():
 	print("hello!")
-	_load_all_textures(icons_dir)
+	_preload_all_textures(icons_dir)
+	_refresh_all_skills()
+	var skill: Skill_Data
+	for i in 5:
+		skill = load(skills[5-i])
+		print(
+			"name: " + 
+			skill.skill_name_part_1 + " " + 
+			skill.skill_name_part_2 + " " + 
+			skill.skill_name_part_3
+		)
+		print("code: " + skill.code)
+	_setup_info_panel(skill)
 #	$UI/VBoxContainer/Button.pressed.connect(_generate_all())
 #	$UI/VBoxContainer/Button2.pressed.connect(_generate_single())
 #	$UI/VBoxContainer/Button3.pressed.connect(_preview_name())
 #	$UI/VBoxContainer/Button4.pressed.connect(_preview_code())
-	
 	if icons.size() == 0:
 		print("icons size empty")
 	print(icons.size())
 #	print(icons)
+
+
+# ---------------------------------------------------------
+# SETTING UP ARRAYS
+# ---------------------------------------------------------
+
+
+func _refresh_all_skills():
+	skills = []
+	for child in grid_container.get_children():
+		child.queue_free()
+	var dir_array = Directory_Array.new()
+	dir_array.set_array(skills_path, ".tres")
+	skills = dir_array.get_array()
 	
-	_load_skills()
-	
+	var i = 0
+	for skill_path in skills:
+		var skill = load(skills[i])
+		_add_skill_panel(skill)
+		i = i + 1
+
+
+
+func _preload_all_textures(folder_path):
+	print("Loading Textures started.")
+	var dir_array = Directory_Array.new()
+	dir_array.set_array(folder_path, ".png")
+	icons = dir_array.get_array()
 
 # ---------------------------------------------------------
 # GENERATION
@@ -70,49 +107,35 @@ func _ready():
 
 export var number_of_chips := 30
 
-func _load_skills():
-	skills = []
-	var dir_array = Directory_Array.new()
-	dir_array.set_array(skills_path, ".tres")
-	skills = dir_array.get_array()
-	
-	for child in grid_container.get_children():
-		child.queue_free()
-	
-	var i = 0
-	for skill_path in skills:
-		var skill = load(skills[i])
-		i = i + 1
-		var panel = load(skill_panel_path)
-		var panel_instance = panel.instance()
-		grid_container.add_child(panel_instance)
-		grid_container.get_child(i).set_chip(skill)
-	
 
+	
 #	while i < grid_container.get_children().size() :
-		
 #		grid_container.get_children()[i]
-		
 	
 
 
 func _generate_all():
 	for i in number_of_chips:
 		_generate_skill(i)
+		_refresh_all_skills()
 
 func _generate_single():
-	_generate_skill(randi() % 9999)
+	_generate_skill(skills.size())
+	_refresh_all_skills()
 
 func _generate_skill(i: int) -> String:
 	var skill := Skill_Data.new()
 
 	# Name
-	skill.skill_name = _generate_name()
+	var name = _generate_name()
+	skill.skill_name_part_1 = name[0]
+	skill.skill_name_part_2 = name[1]
+	skill.skill_name_part_3 = name[2]
 
 	# Icon + strip
-	skill.icon = load(icons[randi() % 30])
-	skill.chip_color = strip_palette[randi() % strip_palette.size()]
-	skill.chip_code = code_generator.generate_full_code()
+	skill.icon = load(icons[randi() % icons.size()])
+	skill.color_code = strip_palette[randi() % strip_palette.size()]
+	skill.code = code_generator.generate_full_code()
 
 	# Stats
 	skill.base_power = randi() % 50 + 10
@@ -129,22 +152,22 @@ func _generate_skill(i: int) -> String:
 
 	# Animation (simple placeholder tween)
 	skill.animation = [_generate_tween_profile()]
-
 	# Save
 	var file := "%s/Skill_%04d.tres" % [skills_path, i]
 	ResourceSaver.save(file, skill)
-	_load_skills()
+	
 	return file
 
 # ---------------------------------------------------------
 # NAME GENERATION
 # ---------------------------------------------------------
 
-func _generate_name() -> String:
+func _generate_name() -> Array:
 	var root : String = NAME_ROOTS[randi() % NAME_ROOTS.size()]
 	var action : String = NAME_ACTIONS[randi() % NAME_ACTIONS.size()]
 	var adv : String = NAME_ADVERBS[randi() % NAME_ADVERBS.size()]
-	return "%s %s %s" % [root, action, adv]
+#	return "%s %s %s" % [root, action, adv]
+	return [root, action, adv]
 
 # ---------------------------------------------------------
 # RANDOMIZATION HELPERS
@@ -152,10 +175,12 @@ func _generate_name() -> String:
 
 func _random_element() -> Resource:
 	var arr := [
-		element_list.INTENSITY.BASS, 
-		element_list.INTENSITY.TREBLE, 
+		element_list.INTENSITY.SIMPLE,
+		element_list.INTENSITY.COMPLEX,
 		element_list.INTENSITY.STRETCHED, 
 		element_list.INTENSITY.COMPRESSED,
+		element_list.INTENSITY.BASS, 
+		element_list.INTENSITY.TREBLE, 
 		element_list.INTENSITY.HEAT, 
 		element_list.INTENSITY.CHILL, 
 		element_list.INTENSITY.PULSE, 
@@ -191,8 +216,6 @@ func _random_element() -> Resource:
 		element_list.PATTERN.CHROMATIC, 
 		element_list.PATTERN.PRISMATIC,
 		element_list.PATTERN.FRACTAL, 
-		element_list.PATTERN.SIMPLE,
-		element_list.PATTERN.COMPLEX,
 		element_list.PATTERN.ORDERED, 
 		element_list.PATTERN.CHAOTIC,
 		
@@ -205,8 +228,6 @@ func _random_element() -> Resource:
 		element_list.VIRTUAL.MEMORY, 
 		element_list.VIRTUAL.ILLUSION
 	]
-
-
 	return arr[randi() % arr.size()]
 
 func _random_domain() -> Resource:
@@ -248,9 +269,17 @@ func _preview_code():
 	print(code_generator.generate_full_code())
 	
 
-func _load_all_textures(folder_path):
-	print("Loading Textures started.")
-	var dir_array = Directory_Array.new()
-	dir_array.set_array(folder_path, ".png")
-	icons = dir_array.get_array()
+func _add_skill_panel(skill: Skill_Data) -> void: 
+	var chip_panel = load(skill_panel_path)
+	var chip_panel_instance = chip_panel.instance()
+	grid_container.add_child(chip_panel_instance)
+	chip_panel_instance.set_chip(skill)
 
+
+# ---------------------------------------------------------
+# INFO PANEL
+# ---------------------------------------------------------
+
+func _setup_info_panel(skill: Skill_Data):
+	skill_info_panel._setup_panel(skill)
+	pass

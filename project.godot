@@ -14,6 +14,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Character/Friend/Active_Character/Active_Character.gd"
 }, {
+"base": "Object",
+"class": "Alphabetic_Array",
+"language": "GDScript",
+"path": "res://Systems/Common/Object/Alphabetic_Array.gd"
+}, {
 "base": "Statistic_Data",
 "class": "Base_Statistic_Data",
 "language": "GDScript",
@@ -42,7 +47,7 @@ _global_script_classes=[ {
 "base": "Object",
 "class": "Directory_Array",
 "language": "GDScript",
-"path": "res://Systems/Common/Directory_Array.gd"
+"path": "res://Systems/Common/Object/Directory_Array.gd"
 }, {
 "base": "Resource",
 "class": "Domain_Data",
@@ -117,7 +122,7 @@ _global_script_classes=[ {
 "base": "Resource",
 "class": "Groups_Data",
 "language": "GDScript",
-"path": "res://Systems/Common/Groups_Data.gd"
+"path": "res://Systems/Common/Resource/Groups_Data.gd"
 }, {
 "base": "Resource",
 "class": "Interaction_Data",
@@ -128,6 +133,16 @@ _global_script_classes=[ {
 "class": "Interaction_List",
 "language": "GDScript",
 "path": "res://Action/Chemistry/Interaction/Interaction_List/Interaction_List.gd"
+}, {
+"base": "Groups_Data",
+"class": "Inventory_Data",
+"language": "GDScript",
+"path": "res://Action/Item/Inventory_Data.gd"
+}, {
+"base": "Resource",
+"class": "Item_Data",
+"language": "GDScript",
+"path": "res://Action/Item/Item_Data.gd"
 }, {
 "base": "Node",
 "class": "Movement",
@@ -198,6 +213,11 @@ _global_script_classes=[ {
 "class": "Skill_Info_Input",
 "language": "GDScript",
 "path": "res://Interface/View/Skill_Info_View/Skill_info_Input.gd"
+}, {
+"base": "Panel",
+"class": "Skill_Info_Panel",
+"language": "GDScript",
+"path": "res://Interface/Panel/Skill_Info_Popup_Panel/Skill_Info_Panel.gd"
 }, {
 "base": "Control",
 "class": "Skill_Info_View",
@@ -276,6 +296,7 @@ _global_script_classes=[ {
 } ]
 _global_script_class_icons={
 "Active_Character": "",
+"Alphabetic_Array": "",
 "Base_Statistic_Data": "",
 "Base_Statistic_List": "",
 "Character_Data": "",
@@ -299,6 +320,8 @@ _global_script_class_icons={
 "Groups_Data": "",
 "Interaction_Data": "",
 "Interaction_List": "",
+"Inventory_Data": "",
+"Item_Data": "",
 "Movement": "",
 "Party_Member_Data": "",
 "Print_Resource_Name": "",
@@ -313,6 +336,7 @@ _global_script_class_icons={
 "Skill_Chip_Panel": "",
 "Skill_Data": "",
 "Skill_Info_Input": "",
+"Skill_Info_Panel": "",
 "Skill_Info_View": "",
 "Skill_Input": "",
 "Skill_Inventory_Input": "",

@@ -3,7 +3,7 @@ class_name  Directory_Array
 
 var array:= []
 
-func set_array(directory, file_extension):
+func set_array(directory: String, file_extension:= ""):
 	var dir = Directory.new()
 	
 	if dir.open(directory) != OK:

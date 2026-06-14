@@ -1,0 +1,24 @@
+[gd_resource type="Resource" load_steps=6 format=2]
+
+[ext_resource path="res://Action/Chemistry/Domain/LIST/PHYSICAL/DATA.tres" type="Resource" id=1]
+[ext_resource path="res://Character/Statistic/Gauge_Statistic/LIST/RUNE/DATA.tres" type="Resource" id=2]
+[ext_resource path="res://Action/Item/Skill/Skill_Data.gd" type="Script" id=3]
+[ext_resource path="res://Action/Chemistry/Element/LIST/TRANSFER/MAGNETIC/DATA.tres" type="Resource" id=4]
+[ext_resource path="res://Action/Item/Skill/Icons/tile115.png" type="Texture" id=5]
+
+[resource]
+script = ExtResource( 3 )
+skill_name_part_1 = "Noct"
+skill_name_part_2 = "Flash"
+skill_name_part_3 = "Fiercely"
+icon = ExtResource( 5 )
+chip_code = "OVXG"
+chip_color = Color( 1, 0.686275, 0, 1 )
+base_power = 28
+speed = 6
+effects = PoolStringArray(  )
+domain_data = ExtResource( 1 )
+element_data = ExtResource( 4 )
+target_gauge = ExtResource( 2 )
+cost = 0
+animation = PoolStringArray( "[Resource:59048]" )

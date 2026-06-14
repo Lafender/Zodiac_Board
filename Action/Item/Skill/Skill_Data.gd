@@ -2,11 +2,13 @@ extends Resource
 class_name Skill_Data
 
 
-export var skill_name: String
+export var skill_name_part_1: String
+export var skill_name_part_2: String
+export var skill_name_part_3: String
 export var icon: Texture
 # Chip metadata for the board UI
-export var chip_code: String = ""      # 4‑char alphanumeric
-export var chip_color: Color = Color.white
+export var code: String = ""      # 4‑char alphanumeric
+export var color_code: Color = Color.white
 
 ## Multiplies with character stat (based on skill domain), to get total outgoing damage (total_damage) before defense subtractions for PHYSICAL and TEMPERED attacks, and multiples with multiplier after it has been derived from stats in MAGICAL and SPIRITUAL attacks.
 export var base_power:= 100

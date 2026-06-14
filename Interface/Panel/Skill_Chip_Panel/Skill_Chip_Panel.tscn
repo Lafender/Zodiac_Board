@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Interface/Panel/Skill_Chip_Panel/Skill_Chip_Panel.gd" type="Script" id=1]
 [ext_resource path="res://Action/Item/Skill/Icons/tile016.png" type="Texture" id=2]
@@ -8,14 +8,27 @@
 [ext_resource path="res://Action/Chemistry/Element/LIST/SCALE/MASSIVE/ICON.png" type="Texture" id=6]
 [ext_resource path="res://Action/Chemistry/Domain/LIST/PHYSICAL/ICON.png" type="Texture" id=7]
 [ext_resource path="res://Interface/Panel/Skill_Chip_Panel/Domain_StyleBoxFlat.tres" type="StyleBox" id=8]
+[ext_resource path="res://Interface/Panel/Element_Icon/Element_Icon_StyleBoxFlat.1.tres" type="StyleBox" id=9]
+[ext_resource path="res://Action/Item/Skill/LIST/Skill_9999.tres" type="Resource" id=10]
 
-[sub_resource type="StyleBoxFlat" id=1]
-bg_color = Color( 0, 0, 0.376471, 1 )
-border_color = Color( 1, 0.87451, 0, 0.619608 )
-corner_radius_top_left = 12
-corner_radius_top_right = 12
-corner_radius_bottom_right = 12
-corner_radius_bottom_left = 12
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+border_width_left = 16
+border_width_top = 16
+border_width_right = 16
+border_width_bottom = 16
+border_color = Color( 1, 0, 0, 1 )
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+expand_margin_left = 8.0
+expand_margin_right = 8.0
+expand_margin_top = 8.0
+expand_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
 
 [node name="Skill_Chip_Panel" type="Panel"]
 margin_right = 123.0
@@ -30,6 +43,7 @@ strip = NodePath("CenterContainer/VBoxContainer/Panel")
 code_label = NodePath("CenterContainer/VBoxContainer/Panel/CenterContainer/Label")
 element_icon = NodePath("Panel2/CenterContainer/TextureRect")
 domain_icon = NodePath("Panel2/CenterContainer/TextureRect/Panel/CenterContainer/TextureRect")
+chip = ExtResource( 10 )
 
 [node name="Panel" type="Panel" parent="."]
 anchor_right = 1.0
@@ -98,6 +112,7 @@ margin_top = 3.0
 margin_right = 41.0
 margin_bottom = 17.0
 size_flags_horizontal = 4
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "0000"
 
 [node name="Panel2" type="Panel" parent="."]
@@ -107,7 +122,7 @@ anchor_right = 0.9
 anchor_bottom = 0.5
 margin_right = 1.25
 rect_min_size = Vector2( 32, 32 )
-custom_styles/panel = SubResource( 1 )
+custom_styles/panel = ExtResource( 9 )
 
 [node name="CenterContainer" type="CenterContainer" parent="Panel2"]
 anchor_right = 1.0
@@ -142,3 +157,14 @@ margin_top = 3.0
 margin_right = 19.0
 margin_bottom = 19.0
 texture = ExtResource( 7 )
+
+[node name="Button" type="Button" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -111.0
+margin_bottom = -140.0
+rect_min_size = Vector2( 123, 160 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+
+[connection signal="button_up" from="Button" to="." method="skill_chip_clicked"]

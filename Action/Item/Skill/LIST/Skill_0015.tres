@@ -1,0 +1,24 @@
+[gd_resource type="Resource" load_steps=6 format=2]
+
+[ext_resource path="res://Action/Item/Skill/Skill_Data.gd" type="Script" id=1]
+[ext_resource path="res://Action/Chemistry/Domain/LIST/SPIRITUAL/DATA.tres" type="Resource" id=2]
+[ext_resource path="res://Character/Statistic/Gauge_Statistic/LIST/HEALTH/DATA.tres" type="Resource" id=3]
+[ext_resource path="res://Action/Chemistry/Element/LIST/PATTERN/FRACTAL/DATA.tres" type="Resource" id=4]
+[ext_resource path="res://Action/Item/Skill/Icons/tile041.png" type="Texture" id=5]
+
+[resource]
+script = ExtResource( 1 )
+skill_name_part_1 = "Fart"
+skill_name_part_2 = "Slash"
+skill_name_part_3 = "Sharply"
+icon = ExtResource( 5 )
+chip_code = "MPB6"
+chip_color = Color( 0.686275, 1, 0.686275, 1 )
+base_power = 34
+speed = 2
+effects = PoolStringArray(  )
+domain_data = ExtResource( 2 )
+element_data = ExtResource( 4 )
+target_gauge = ExtResource( 3 )
+cost = 8
+animation = PoolStringArray( "[Resource:11227]" )

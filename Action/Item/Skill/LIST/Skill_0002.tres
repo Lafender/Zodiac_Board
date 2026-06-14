@@ -1,0 +1,24 @@
+[gd_resource type="Resource" load_steps=6 format=2]
+
+[ext_resource path="res://Action/Item/Skill/Skill_Data.gd" type="Script" id=1]
+[ext_resource path="res://Action/Item/Skill/Icons/tile055.png" type="Texture" id=2]
+[ext_resource path="res://Action/Chemistry/Domain/LIST/MAGICAL/DATA.tres" type="Resource" id=3]
+[ext_resource path="res://Character/Statistic/Gauge_Statistic/LIST/ZERO/DATA.tres" type="Resource" id=4]
+[ext_resource path="res://Action/Chemistry/Element/LIST/INTENSITY/PULSE/DATA.tres" type="Resource" id=5]
+
+[resource]
+script = ExtResource( 1 )
+skill_name_part_1 = "Umbra"
+skill_name_part_2 = "Rise"
+skill_name_part_3 = "Sharply"
+icon = ExtResource( 2 )
+chip_code = "X4CR"
+chip_color = Color( 0.435294, 0.435294, 1, 1 )
+base_power = 29
+speed = 2
+effects = PoolStringArray(  )
+domain_data = ExtResource( 3 )
+element_data = ExtResource( 5 )
+target_gauge = ExtResource( 4 )
+cost = 9
+animation = PoolStringArray( "[Resource:3011]" )

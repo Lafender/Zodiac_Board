@@ -12,3 +12,5 @@ export var TREBLE: Resource
 
 export var HEAT: Resource
 export var CHILL: Resource
+
+export var PULSE: Resource

@@ -1,0 +1,24 @@
+[gd_resource type="Resource" load_steps=6 format=2]
+
+[ext_resource path="res://Action/Chemistry/Domain/LIST/PHYSICAL/DATA.tres" type="Resource" id=1]
+[ext_resource path="res://Character/Statistic/Gauge_Statistic/LIST/RUNE/DATA.tres" type="Resource" id=2]
+[ext_resource path="res://Action/Item/Skill/Skill_Data.gd" type="Script" id=3]
+[ext_resource path="res://Action/Chemistry/Element/LIST/MINERAL/LIQUID/DATA.tres" type="Resource" id=4]
+[ext_resource path="res://Action/Item/Skill/Icons/tile106.png" type="Texture" id=5]
+
+[resource]
+script = ExtResource( 3 )
+skill_name_part_1 = "Ferro"
+skill_name_part_2 = "Rise"
+skill_name_part_3 = "Sweetly"
+icon = ExtResource( 5 )
+chip_code = "Y7TI"
+chip_color = Color( 0, 0.435294, 0.121569, 1 )
+base_power = 58
+speed = 1
+effects = PoolStringArray(  )
+domain_data = ExtResource( 1 )
+element_data = ExtResource( 4 )
+target_gauge = ExtResource( 2 )
+cost = 4
+animation = PoolStringArray( "[Resource:112997]" )
