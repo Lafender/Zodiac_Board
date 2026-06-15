@@ -151,7 +151,7 @@ func _generate_skill(i: int) -> String:
 	skill.target_gauge = _random_gauge()
 
 	# Animation (simple placeholder tween)
-	skill.animation = [_generate_tween_profile()]
+	skill.animation = _generate_tween_profile()
 	# Save
 	var file := "%s/Skill_%04d.tres" % [skills_path, i]
 	ResourceSaver.save(file, skill)

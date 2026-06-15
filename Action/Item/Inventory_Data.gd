@@ -3,8 +3,6 @@ class_name Inventory_Data
 
 export(String, DIR) var all_item_list
 
-
-
 var item_sums = [
 	
 ]
@@ -22,7 +20,7 @@ func _setup_inventory():
 	var alphabetic_array = Alphabetic_Array.new()
 	item_sums = alphabetic_array.dict_to_alphabetized_2d(temp_dict)
 
-func _get_item_resource(item_code: String, file_ext:= "") -> Resource:
+func get_item_resource(item_code: String, file_ext:= ".tres") -> Resource:
 	var dir_arr_tool = Directory_Array.new()
 	dir_arr_tool.set_array(all_item_list, file_ext)
 	var dir_arr = dir_arr_tool.get_array()
@@ -33,7 +31,18 @@ func _get_item_resource(item_code: String, file_ext:= "") -> Resource:
 
 func _add_item_to_inventory(item: Resource):
 	if item_sums.has(item.code):
-		item_sums[item.code] += 1
+		item_sums[item.code][1] += 1
 	else:
 		item_sums.append(item[item.code])
-		item[item.code] = 1
+		item[item.code][1] = 1
+
+# Returns whether or not item was successfully removed based on whether it was available in the Inventory's item_sums.
+func _remove_item_from_inventory(item_code: String) -> bool:
+	if item_sums.has(item_code):
+		item_sums[item_code][1] -=1
+		if item_sums[item_code][1] <= 1:
+			item_sums.remove(item_sums.find(item_code))
+		return true
+	else:
+		print("Could not remove item from Inventory. Item wasn't found in item_sums.")
+		return false

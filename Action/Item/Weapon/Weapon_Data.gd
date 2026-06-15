@@ -1,12 +1,8 @@
-extends Resource
+extends Item_Data
 class_name Weapon_Data
 
-@export_group("ID")
-@export var name: String
-@export var icon: Texture2D
+export var name: String
 
-@export_group("Weapon Power")
-@export var base_power: int
-@export_range(0.5, 8.0, 0.5) var attacks_per_second: float
-@export var domain: Domain_Data
-@export var element: Element_Data
+
+export var base_power: int
+export(float, 0.25, 12.0, 0.25) var attacks_per_second: float
