@@ -11,9 +11,10 @@
 [node name="Chip_Factory" type="Node"]
 script = ExtResource( 1 )
 grid_container = NodePath("UI/VBoxContainer/ScrollContainer/GridContainer")
+skill_info_panel = NodePath("UI/Skill_Info_Panel")
 strip_palette = PoolColorArray( 1, 0, 1, 1, 1, 0, 0.435294, 1, 1, 0.435294, 0.435294, 1, 1, 0, 0, 1, 0.686275, 0, 0.121569, 1, 0.435294, 0.121569, 0, 1, 1, 0.686275, 0, 1, 1, 1, 0, 1, 0.686275, 1, 0, 1, 0, 1, 0, 1, 0.121569, 0.686275, 0, 1, 0, 0.435294, 0.121569, 1, 0, 1, 0.435294, 1, 0.686275, 1, 0.686275, 1, 0, 1, 1, 1, 0, 0.686275, 1, 1, 0, 0.435294, 0.686275, 1, 0, 0, 1, 1, 0, 0.121569, 0.435294, 1, 0.435294, 0.435294, 1, 1, 0.423529, 0, 1, 1, 0.435294, 0, 0.435294, 1 )
 code_generator = ExtResource( 2 )
-icons_dir = "res://Action/Item/Skill/Icons"
+icons_dir = "res://Action/Item/Equipment/Skill/Icons"
 element_list = ExtResource( 6 )
 domain_list = ExtResource( 4 )
 gauge_statistic_list = ExtResource( 5 )

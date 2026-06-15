@@ -1,8 +1,8 @@
 extends Node
 class_name Chip_Factory
 
-export(String, DIR) var skills_path := "res://Action/Item/Skill/LIST/"
-export(String, FILE) var skill_panel_path := "res://Action/Item/Equipment/Skill/Skill_Chip/Skill_Chip_Panel/Skill_Chip_Panel.tscn"
+export(String, DIR) var skills_path := "res://Action/Item/Equipment/Skill/LIST/"
+const skill_panel_path := "res://Action/Item/Equipment/Skill/Skill_Chip/Skill_Chip_Panel/Skill_Chip_Panel.tscn"
 export(NodePath) onready var grid_container = $UI/VBoxContainer/ScrollContainer/GridContainer
 export(NodePath) onready var skill_info_panel = $UI/Skill_Info_Panel
 
@@ -53,9 +53,10 @@ func _ready():
 	print("hello!")
 	_preload_all_textures(icons_dir)
 	_refresh_all_skills()
+	print(skills.size())
 	var skill: Resource
-	for i in 5:
-		skill = load(skills[5-i])
+	for i in skills.size():
+		skill = load(skills[skills.size()-(i+1)])
 		print(
 			"name: " + 
 			skill.skill_name_part_1 + " " + 
@@ -86,12 +87,10 @@ func _refresh_all_skills():
 	var dir_array = Directory_Array.new()
 	dir_array.set_array(skills_path, ".tres")
 	skills = dir_array.get_array()
-	
-	var i = 0
+
 	for skill_path in skills:
-		var skill = load(skills[i])
+		var skill = load(skill_path)
 		_add_skill_panel(skill)
-		i = i + 1
 
 
 
@@ -279,7 +278,8 @@ func _preview_code():
 	
 
 func _add_skill_panel(skill: Resource) -> void: 
-	var chip_panel = load(skill_panel_path)
+	var chip_panel = preload(skill_panel_path)
+	print(chip_panel)
 	var chip_panel_instance = chip_panel.instance()
 	grid_container.add_child(chip_panel_instance)
 	chip_panel_instance.set_chip(skill)
