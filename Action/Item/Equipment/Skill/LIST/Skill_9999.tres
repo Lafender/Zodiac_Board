@@ -1,0 +1,16 @@
+[gd_resource type="Resource" load_steps=4 format=2]
+
+[ext_resource path="res://Character/Statistic/Gauge_Statistic/LIST/RUNE/DATA.tres" type="Resource" id=1]
+[ext_resource path="res://Action/Item/Equipment/Skill/Icons/tile032.png" type="Texture" id=2]
+[ext_resource path="res://Action/Item/Equipment/Skill/Skill_Data.gd" type="Script" id=3]
+
+[resource]
+script = ExtResource( 3 )
+icon = ExtResource( 2 )
+skill_name_part_1 = "Pheasant"
+skill_name_part_2 = "Symphony"
+skill_name_part_3 = "Peripheral"
+speed = 100
+target_gauge = ExtResource( 1 )
+cost = 1
+animation = PoolStringArray(  )

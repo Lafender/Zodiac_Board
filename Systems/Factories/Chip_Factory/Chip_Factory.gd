@@ -2,7 +2,7 @@ extends Node
 class_name Chip_Factory
 
 export(String, DIR) var skills_path := "res://Action/Item/Skill/LIST/"
-export(String, FILE) var skill_panel_path := "res://Interface/Panel/Skill_Chip_Panel/Skill_Chip_Panel.tscn"
+export(String, FILE) var skill_panel_path := "res://Action/Item/Equipment/Skill/Skill_Chip/Skill_Chip_Panel/Skill_Chip_Panel.tscn"
 export(NodePath) onready var grid_container = $UI/VBoxContainer/ScrollContainer/GridContainer
 export(NodePath) onready var skill_info_panel = $UI/Skill_Info_Panel
 
@@ -53,7 +53,7 @@ func _ready():
 	print("hello!")
 	_preload_all_textures(icons_dir)
 	_refresh_all_skills()
-	var skill: Skill_Data
+	var skill: Resource
 	for i in 5:
 		skill = load(skills[5-i])
 		print(
@@ -125,6 +125,7 @@ func _generate_single():
 
 func _generate_skill(i: int) -> String:
 	var skill := Skill_Data.new()
+	skill.is_consumable = randi() % 1
 
 	# Name
 	var name = _generate_name()
@@ -138,8 +139,8 @@ func _generate_skill(i: int) -> String:
 	skill.code = code_generator.generate_full_code()
 
 	# Stats
-	skill.base_power = randi() % 50 + 10
-	skill.speed = randi() % 10 + 1
+	skill.base_power = randi() %  4999 + 5000
+	skill.speed = randi() % 1600 + 1
 	skill.effects = []  # no effects yet
 
 	# Domain + Element (actual resource objects)
@@ -147,8 +148,16 @@ func _generate_skill(i: int) -> String:
 	skill.element_data = _random_element()
 
 	# Gauge cost (placeholder)
-	skill.cost = randi() % 10
 	skill.target_gauge = _random_gauge()
+	var gauge_max: int
+	match skill.target_gauge.name:
+		"HEALTH": gauge_max = 3
+		"RUNE": gauge_max = 9
+		"ENGINE": gauge_max = 3
+		"THREAD": gauge_max = 3
+		"ZERO": gauge_max = 9
+	skill.cost = randi() % gauge_max
+	
 
 	# Animation (simple placeholder tween)
 	skill.animation = _generate_tween_profile()
@@ -269,7 +278,7 @@ func _preview_code():
 	print(code_generator.generate_full_code())
 	
 
-func _add_skill_panel(skill: Skill_Data) -> void: 
+func _add_skill_panel(skill: Resource) -> void: 
 	var chip_panel = load(skill_panel_path)
 	var chip_panel_instance = chip_panel.instance()
 	grid_container.add_child(chip_panel_instance)
@@ -280,6 +289,6 @@ func _add_skill_panel(skill: Skill_Data) -> void:
 # INFO PANEL
 # ---------------------------------------------------------
 
-func _setup_info_panel(skill: Skill_Data):
+func _setup_info_panel(skill: Resource):
 	skill_info_panel._setup_panel(skill)
 	pass
