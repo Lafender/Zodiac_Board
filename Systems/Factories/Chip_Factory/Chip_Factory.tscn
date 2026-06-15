@@ -6,7 +6,7 @@
 [ext_resource path="res://Action/Chemistry/Domain/LIST/DATA.tres" type="Resource" id=4]
 [ext_resource path="res://Character/Statistic/Gauge_Statistic/LIST/DATA.tres" type="Resource" id=5]
 [ext_resource path="res://Action/Chemistry/Element/LIST/DATA.tres" type="Resource" id=6]
-[ext_resource path="res://Interface/Panel/Skill_Info_Panel/Skill_Info_Panel.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Action/Item/Equipment/Skill/Skill_Info/Skill_Info_Panel/Skill_Info_Panel.tscn" type="PackedScene" id=7]
 
 [node name="Chip_Factory" type="Node"]
 script = ExtResource( 1 )
@@ -81,7 +81,7 @@ size_flags_vertical = 1
 
 [node name="Skill_Info_Panel" parent="UI" instance=ExtResource( 7 )]
 margin_left = 796.0
-margin_right = 1024.0
+margin_right = 956.0
 margin_bottom = 600.0
 
 [connection signal="pressed" from="UI/VBoxContainer/Button" to="." method="_generate_all"]

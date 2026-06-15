@@ -23,6 +23,8 @@ export var effects: PoolStringArray
 
 export(Vector2) var viewport_dimensions:= Vector2(1024, 600)
 
+export(Resource) var selected_skill
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.

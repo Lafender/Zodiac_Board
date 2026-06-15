@@ -1,0 +1,18 @@
+[gd_resource type="StyleBoxFlat" format=2]
+
+[resource]
+resource_name = "Skill Chip Panel Button Hover"
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+border_width_left = 16
+border_width_top = 16
+border_width_right = 16
+border_width_bottom = 16
+border_color = Color( 1, 0, 0, 1 )
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+expand_margin_left = 8.0
+expand_margin_right = 8.0
+expand_margin_top = 8.0
+expand_margin_bottom = 8.0

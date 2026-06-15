@@ -1,0 +1,38 @@
+[gd_resource type="Resource" load_steps=8 format=2]
+
+[ext_resource path="res://Action/Item/Equipment/Skill/Skill_Data.gd" type="Script" id=1]
+[ext_resource path="res://Character/Statistic/Gauge_Statistic/LIST/ZERO/DATA.tres" type="Resource" id=2]
+[ext_resource path="res://Action/Chemistry/Domain/LIST/MAGICAL/DATA.tres" type="Resource" id=3]
+[ext_resource path="res://Action/Item/Equipment/Skill/Skill_Tween_Profile.gd" type="Script" id=4]
+[ext_resource path="res://Action/Chemistry/Element/LIST/MINERAL/METAL/DATA.tres" type="Resource" id=5]
+[ext_resource path="res://Action/Item/Equipment/Skill/Icons/tile117.png" type="Texture" id=6]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 4 )
+tween_duration = 0.639308
+tween_offset = Vector2( -6.40948, 6.4723 )
+tween_loop = false
+tween_is_active_animation = false
+tween_is_start_animation = true
+
+[resource]
+script = ExtResource( 1 )
+color_code = Color( 0, 1, 0.435294, 1 )
+code = "BC4K"
+icon = ExtResource( 6 )
+is_consumable = 0
+is_tradable = true
+price = 500
+max_quantity = 999999
+base_power = 5726
+speed = 823
+domain_data = ExtResource( 3 )
+element_data = ExtResource( 5 )
+is_equipped = false
+skill_name_part_1 = "Mistral"
+skill_name_part_2 = "Spiral"
+skill_name_part_3 = "Swiftly"
+effects = PoolStringArray(  )
+target_gauge = ExtResource( 2 )
+cost = 3
+animation = SubResource( 1 )

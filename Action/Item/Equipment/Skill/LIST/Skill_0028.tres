@@ -1,0 +1,38 @@
+[gd_resource type="Resource" load_steps=8 format=2]
+
+[ext_resource path="res://Action/Chemistry/Element/LIST/PATTERN/FRACTAL/DATA.tres" type="Resource" id=1]
+[ext_resource path="res://Action/Item/Equipment/Skill/Skill_Data.gd" type="Script" id=2]
+[ext_resource path="res://Action/Chemistry/Domain/LIST/TEMPERED/DATA.tres" type="Resource" id=3]
+[ext_resource path="res://Character/Statistic/Gauge_Statistic/LIST/THREAD/DATA.tres" type="Resource" id=4]
+[ext_resource path="res://Action/Item/Equipment/Skill/Skill_Tween_Profile.gd" type="Script" id=5]
+[ext_resource path="res://Action/Item/Equipment/Skill/Icons/tile044.png" type="Texture" id=6]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 5 )
+tween_duration = 0.281126
+tween_offset = Vector2( -7.34058, -0.461244 )
+tween_loop = false
+tween_is_active_animation = false
+tween_is_start_animation = true
+
+[resource]
+script = ExtResource( 2 )
+color_code = Color( 0.686275, 1, 0, 1 )
+code = "OOMT"
+icon = ExtResource( 6 )
+is_consumable = 0
+is_tradable = true
+price = 500
+max_quantity = 999999
+base_power = 5925
+speed = 1493
+domain_data = ExtResource( 3 )
+element_data = ExtResource( 1 )
+is_equipped = false
+skill_name_part_1 = "Chrono"
+skill_name_part_2 = "Rampage"
+skill_name_part_3 = "Warmly"
+effects = PoolStringArray(  )
+target_gauge = ExtResource( 4 )
+cost = 0
+animation = SubResource( 1 )

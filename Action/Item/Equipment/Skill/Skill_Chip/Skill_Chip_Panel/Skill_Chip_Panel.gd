@@ -46,8 +46,14 @@ func set_equipped(equipped: bool) -> void:
 func skill_chip_clicked():
 	print("Skill Chip: \"" + chip.code + "\" clicked.")
 	print(String(NodePath("Chip_Factory")))
-	get_parent().get_parent().get_parent().get_parent().get_parent()._setup_info_panel(chip)
-	emit_signal("skill_chip_clicked", chip)
+	var path = String(get_path())
+	print(path)
+	if path.begins_with("/root/Skill_Chip_Panel"):
+		return
+	var top_parent = get_parent().get_parent().get_parent().get_parent().get_parent()
+	if top_parent != null:
+		top_parent._setup_info_panel(chip)
+#	emit_signal("skill_chip_clicked", chip)
 #	popup._setup_popuppanel(chip)
 #	if !visible:
 #		popup.visible = true

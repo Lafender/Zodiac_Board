@@ -227,7 +227,7 @@ _global_script_classes=[ {
 "base": "Panel",
 "class": "Skill_Info_Panel",
 "language": "GDScript",
-"path": "res://Interface/Panel/Skill_Info_Panel/Skill_Info_Panel.gd"
+"path": "res://Action/Item/Equipment/Skill/Skill_Info/Skill_Info_Panel/Skill_Info_Panel.gd"
 }, {
 "base": "Control",
 "class": "Skill_Info_View",
@@ -263,6 +263,11 @@ _global_script_classes=[ {
 "class": "Skill_Loadout_Data",
 "language": "GDScript",
 "path": "res://Action/Item/Equipment/Skill/LOADOUT/Skill_Loadout_Data.gd"
+}, {
+"base": "Node",
+"class": "Skill_Share",
+"language": "GDScript",
+"path": "res://Systems/Factories/Skill_Share/Skill_Share.gd"
 }, {
 "base": "Skill_Board_View",
 "class": "Skill_Shortcut_Selector",
@@ -361,6 +366,7 @@ _global_script_class_icons={
 "Skill_Inventory_View": "",
 "Skill_List": "",
 "Skill_Loadout_Data": "",
+"Skill_Share": "",
 "Skill_Shortcut_Selector": "",
 "Skill_Tween_Profile": "",
 "Statistic_Data": "",

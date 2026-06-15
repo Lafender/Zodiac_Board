@@ -11,7 +11,7 @@ export(Resource) var inventory
 
 export(NodePath) onready var scroll = $ScrollContainer
 export(NodePath) onready var grid = $ScrollContainer/GridContainer
-export(NodePath) onready var highlight = $Selection_Highlight
+#export(NodePath) onready var highlight = $Selection_Highlight
 
 var selected_index: int = 0
 var chip_list: Array
@@ -24,8 +24,8 @@ func _ready() -> void:
 func _build_grid() -> void:
 	for child in grid.get_children():
 		child.queue_free()
-	for k in inventory.item_sums.keys():
-		var chip: Resource = inventory.get_item_resource(inventory.item_sums[k])
+	for i in inventory.item_sums:
+		var chip: Resource = inventory.get_item_resource(inventory.item_sums[i][0])
 		var panel: Panel  = preload("res://Action/Item/Equipment/Skill/Skill_Chip/Skill_Chip_Panel/Skill_Chip_Panel.tscn").instance()
 		grid.add_child(panel)
 		panel.set_chip(chip)
@@ -46,12 +46,12 @@ func move_selection(dx: int, dy: int) -> void:
 
 func _update_highlight() -> void:
 	if selected_index < 0 or selected_index >= grid.get_child_count():
-		highlight.visible = false
+#		highlight.visible = false
 		return
-	highlight.visible = true
+#	highlight.visible = true
 	var target_panel: Control = grid.get_child(selected_index)
-	highlight.global_position = target_panel.global_position
-	highlight.rect_size = target_panel.rect_size
+#	highlight.global_position = target_panel.global_position
+#	highlight.rect_size = target_panel.rect_size
 	# Ensure selected panel is visible
 	scroll.ensure_control_visible(target_panel)
 
