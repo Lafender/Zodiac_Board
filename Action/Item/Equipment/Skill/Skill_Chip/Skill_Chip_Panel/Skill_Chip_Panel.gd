@@ -7,6 +7,7 @@ export(NodePath) onready var code_label = $CenterContainer/VBoxContainer/Panel/C
 export(NodePath) onready var element_icon = $Panel2/CenterContainer/TextureRect
 export(NodePath) onready var domain_icon = $Panel2/CenterContainer/TextureRect/Panel/CenterContainer/TextureRect
 
+var skill_info_panel
 export var chip: Resource
 
 signal skill_chip_clicked(Skill_Data)
@@ -15,7 +16,7 @@ func _ready():
 	set_chip(chip)
 #	popup._setup_popuppanel(chip)
 
-func set_chip(skill: Resource) -> void:
+func set_chip(skill: Skill_Data) -> void:
 	chip = skill
 	
 	domain_icon.texture = chip.domain_data.icon
@@ -45,14 +46,29 @@ func set_equipped(equipped: bool) -> void:
 #		
 func skill_chip_clicked():
 	print("Skill Chip: \"" + chip.code + "\" clicked.")
-	print(String(NodePath("Chip_Factory")))
 	var path = String(get_path())
-	print(path)
-	if path.begins_with("/root/Skill_Chip_Panel"):
+	var top_parent = get_tree().get_current_scene()
+	if top_parent == $Skill_Chip_Panel:
 		return
-	var top_parent = get_parent().get_parent().get_parent().get_parent().get_parent()
-	if top_parent != null:
-		top_parent._setup_info_panel(chip)
+	else:
+		_update_info_panel(top_parent)
+		_update_skill_share_select(top_parent)
+		
+
+
+func _update_skill_share_select(top_parent):
+	if top_parent.name != "Skill_Share":
+		return
+	else:
+		top_parent.selected_skill_chip = chip
+		print(top_parent.selected_skill_chip.code + " now selected chip for Skill Share.")
+
+
+func _update_info_panel(top_parent):
+		# var top_parent = get_parent().get_parent().get_parent().get_parent().get_parent()
+	var info_panel = top_parent.find_node("Skill_Info_Panel", true, false)
+	if info_panel != null:
+		info_panel._setup_panel(chip)
 #	emit_signal("skill_chip_clicked", chip)
 #	popup._setup_popuppanel(chip)
 #	if !visible:

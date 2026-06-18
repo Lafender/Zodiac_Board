@@ -81,7 +81,7 @@ size_flags_vertical = 1
 
 [node name="Skill_Info_Panel" parent="UI" instance=ExtResource( 7 )]
 margin_left = 796.0
-margin_right = 956.0
+margin_right = 988.0
 margin_bottom = 600.0
 
 [connection signal="pressed" from="UI/VBoxContainer/Button" to="." method="_generate_all"]

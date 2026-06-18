@@ -10,15 +10,17 @@ export(NodePath) onready var icon_rect = $CenterContainer/VBoxContainer/ID/Icon/
 export(NodePath) onready var strip = $CenterContainer/VBoxContainer/ID/Icon/Strip
 export(NodePath) onready var code_label = $CenterContainer/VBoxContainer/ID/Icon/Strip/CenterContainer/Code_Label
 
-export(NodePath) onready var base_power_label = $CenterContainer/VBoxContainer/Power/Power_Label
-export(NodePath) onready var speed_label = $CenterContainer/VBoxContainer/Speed/Speed_Label
-export(NodePath) onready var cost_label = $CenterContainer/VBoxContainer/Cost/Cost_Label
-export(NodePath) onready var target_gauge_label = $CenterContainer/VBoxContainer/Cost/Gauge_Label
+export(NodePath) onready var base_power_label = $CenterContainer/VBoxContainer/Power/HBoxContainer/Power_Label
+export(NodePath) onready var speed_label = $CenterContainer/VBoxContainer/Speed/HBoxContainer/Speed_Label
+export(NodePath) onready var cost_label = $CenterContainer/VBoxContainer/Cost/HBoxContainer/Cost_Label
+export(NodePath) onready var target_gauge_label = $CenterContainer/VBoxContainer/Cost/HBoxContainer/Gauge_Label
 
-export(NodePath) onready var domain_label = $CenterContainer/VBoxContainer/Domain_and_Element/Domain/Domain_Label
-export(NodePath) onready var domain_icon = $CenterContainer/VBoxContainer/Domain_and_Element/Domain/CenterContainer/Domain_TexutureRect
-export(NodePath) onready var element_label = $CenterContainer/VBoxContainer/Domain_and_Element/Element/Element_Label
-export(NodePath) onready var element_icon = $CenterContainer/VBoxContainer/Domain_and_Element/Element/CenterContainer/Element_TextureRect
+export(NodePath) onready var domain_label = $CenterContainer/VBoxContainer/Domain_and_Element/Panel/Domain/CenterContainer2/VBoxContainer/Domain_Label
+export(NodePath) onready var domain_icon = $CenterContainer/VBoxContainer/Domain_and_Element/Panel/Domain/CenterContainer/Domain_TexutureRect
+export(NodePath) onready var element_label = $CenterContainer/VBoxContainer/Domain_and_Element/Panel2/Element/CenterContainer2/VBoxContainer/Element_Label
+export(NodePath) onready var element_icon = $CenterContainer/VBoxContainer/Domain_and_Element/Panel2/Element/CenterContainer/Element_TextureRect
+
+export(NodePath) onready var price_label = $CenterContainer/VBoxContainer/Price/HBoxContainer/Price_Label
 export var effects: PoolStringArray
 
 export(Vector2) var viewport_dimensions:= Vector2(1024, 600)
@@ -50,5 +52,6 @@ func _setup_panel(skill: Skill_Data):
 	element_label.text = skill.element_data.name
 	element_icon.texture = skill.element_data.icon
 	
+	price_label.text = String(skill.price)
 
 

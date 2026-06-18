@@ -6,9 +6,7 @@
 [ext_resource path="res://Action/Item/Equipment/Skill/INVENTORY/DATA.tres" type="Resource" id=4]
 
 [node name="Skill_Inventory_View" type="Panel"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-rect_min_size = Vector2( 320, 600 )
+rect_min_size = Vector2( 416, 600 )
 script = ExtResource( 3 )
 inventory = ExtResource( 4 )
 scroll = NodePath("ScrollContainer")
@@ -17,7 +15,9 @@ grid = NodePath("ScrollContainer/GridContainer")
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = 16.0
 rect_min_size = Vector2( 320, 600 )
+size_flags_horizontal = 4
 
 [node name="GridContainer" type="GridContainer" parent="ScrollContainer"]
 margin_right = 377.0

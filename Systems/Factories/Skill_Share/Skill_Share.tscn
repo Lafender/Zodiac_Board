@@ -1,36 +1,42 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Action/Item/Equipment/Skill/Skill_Info/Skill_Info_Panel/Skill_Info_Panel.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Systems/Factories/Skill_Share/Skill_Share.gd" type="Script" id=2]
+[ext_resource path="res://Action/Item/Equipment/Skill/LIST/Skill_9999.tres" type="Resource" id=3]
+[ext_resource path="res://Action/Item/Equipment/Skill/INVENTORY/Skill_Inventory_View/Skill_Inventory_View.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Action/Item/Equipment/Skill/INVENTORY/DATA.tres" type="Resource" id=5]
 
 [node name="Skill_Share" type="Node"]
 script = ExtResource( 2 )
+selected_skill_chip = ExtResource( 3 )
+inventory = ExtResource( 5 )
+skills_list_grid_container = NodePath("HBoxContainer/ScrollContainer/GridContainer")
+skill_info_panel = NodePath("HBoxContainer/Skill_Info_Panel")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer"]
-margin_right = 428.0
+margin_right = 408.0
 margin_bottom = 600.0
 rect_min_size = Vector2( 400, 0 )
 size_flags_horizontal = 3
 
 [node name="GridContainer" type="GridContainer" parent="HBoxContainer/ScrollContainer"]
-columns = 4
-
-[node name="ScrollContainer2" type="ScrollContainer" parent="HBoxContainer"]
-margin_left = 432.0
-margin_right = 860.0
+margin_right = 408.0
 margin_bottom = 600.0
-rect_min_size = Vector2( 400, 0 )
 size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 3
 
-[node name="GridContainer" type="GridContainer" parent="HBoxContainer/ScrollContainer2"]
-columns = 4
+[node name="Skill_Inventory_View" parent="HBoxContainer" instance=ExtResource( 4 )]
+margin_left = 412.0
+margin_right = 828.0
+margin_bottom = 600.0
 
 [node name="Skill_Info_Panel" parent="HBoxContainer" instance=ExtResource( 1 )]
-margin_left = 864.0
+margin_left = 832.0
 margin_right = 1024.0
 margin_bottom = 600.0
 
@@ -53,3 +59,5 @@ margin_top = 580.0
 margin_right = 160.0
 margin_bottom = 600.0
 text = "Remove Skill"
+
+[connection signal="button_up" from="HBoxContainer/Skill_Info_Panel/VBoxContainer/Button" to="." method="_add_skill_to_inventory"]

@@ -1,38 +1,38 @@
 [gd_resource type="Resource" load_steps=8 format=2]
 
-[ext_resource path="res://Action/Item/Equipment/Skill/Skill_Data.gd" type="Script" id=1]
-[ext_resource path="res://Character/Statistic/Gauge_Statistic/LIST/THREAD/DATA.tres" type="Resource" id=2]
-[ext_resource path="res://Action/Chemistry/Domain/LIST/MAGICAL/DATA.tres" type="Resource" id=3]
-[ext_resource path="res://Action/Item/Equipment/Skill/Skill_Tween_Profile.gd" type="Script" id=4]
-[ext_resource path="res://Action/Chemistry/Element/LIST/MINERAL/PLASTIC/DATA.tres" type="Resource" id=5]
-[ext_resource path="res://Action/Item/Equipment/Skill/Icons/tile083.png" type="Texture" id=6]
+[ext_resource path="res://Character/Statistic/Gauge_Statistic/LIST/ZERO/DATA.tres" type="Resource" id=1]
+[ext_resource path="res://Action/Chemistry/Domain/LIST/PHYSICAL/DATA.tres" type="Resource" id=2]
+[ext_resource path="res://Action/Item/Equipment/Skill/Skill_Tween_Profile.gd" type="Script" id=3]
+[ext_resource path="res://Action/Item/Equipment/Skill/Skill_Data.gd" type="Script" id=4]
+[ext_resource path="res://Action/Chemistry/Element/LIST/VIRTUAL/LIMIT/DATA.tres" type="Resource" id=5]
+[ext_resource path="res://Action/Item/Equipment/Skill/Icons/tile097.png" type="Texture" id=6]
 
 [sub_resource type="Resource" id=1]
-script = ExtResource( 4 )
-tween_duration = 0.208289
-tween_offset = Vector2( 3.9772, 3.18412 )
-tween_loop = true
-tween_is_active_animation = true
-tween_is_start_animation = false
+script = ExtResource( 3 )
+tween_duration = 0.485124
+tween_offset = Vector2( -2.03947, 4.74179 )
+tween_loop = false
+tween_is_active_animation = false
+tween_is_start_animation = true
 
 [resource]
-script = ExtResource( 1 )
-color_code = Color( 1, 0, 0, 1 )
-code = "IL1R"
+script = ExtResource( 4 )
+color_code = Color( 0.423529, 0, 1, 1 )
+code = "D0PA"
 icon = ExtResource( 6 )
 is_consumable = 0
 is_tradable = true
-price = 500
+price = 505548090
 max_quantity = 999999
-base_power = 7731
-speed = 138
-domain_data = ExtResource( 3 )
+base_power = 6174
+speed = 1095
+domain_data = ExtResource( 2 )
 element_data = ExtResource( 5 )
 is_equipped = false
-skill_name_part_1 = "Mistral"
-skill_name_part_2 = "Joke"
-skill_name_part_3 = "Calmly"
+skill_name_part_1 = "Cryo"
+skill_name_part_2 = "Pierce"
+skill_name_part_3 = "Lovely"
 effects = PoolStringArray(  )
-target_gauge = ExtResource( 2 )
+target_gauge = ExtResource( 1 )
 cost = 1
 animation = SubResource( 1 )

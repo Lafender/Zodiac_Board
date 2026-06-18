@@ -13,19 +13,32 @@ export(NodePath) onready var scroll = $ScrollContainer
 export(NodePath) onready var grid = $ScrollContainer/GridContainer
 #export(NodePath) onready var highlight = $Selection_Highlight
 
+export(String, DIR) var skills_directory = "res://Action/Item/Equipment/Skill/LIST/"
+
+
+const skill_chip_panel = "res://Action/Item/Equipment/Skill/Skill_Chip/Skill_Chip_Panel/Skill_Chip_Panel.tscn"
+
 var selected_index: int = 0
 var chip_list: Array
 
 func _ready() -> void:
 	grid.columns = visible_columns
+	_setup_chip_list()
 	_build_grid()
 #	_update_highlight()
+
+func _setup_chip_list() -> void:
+	var dir_arr = Directory_Array.new()
+	dir_arr.set_array(skills_directory, ".tres")
+	for i in dir_arr.get_array().size():
+		chip_list.append(load(dir_arr.get_array()[i]))
+	pass
 
 func _build_grid() -> void:
 	for child in grid.get_children():
 		child.queue_free()
-	for i in inventory.item_sums:
-		var chip: Resource = inventory.get_item_resource(inventory.item_sums[i][0])
+	for item in inventory.item_sums:
+		var chip: Resource = inventory.get_item_resource(item)
 		var panel: Panel  = preload("res://Action/Item/Equipment/Skill/Skill_Chip/Skill_Chip_Panel/Skill_Chip_Panel.tscn").instance()
 		grid.add_child(panel)
 		panel.set_chip(chip)
@@ -69,3 +82,17 @@ func mark_chip_equipped(chip: Resource) -> void:
 		var panel := child as Panel
 		if panel and panel.chip == chip:
 			panel.set_equipped(true)
+
+
+func _update_inventory_view() -> void:
+	for child in grid.get_children():
+		child.queue_free()
+	for skill_code in inventory.item_sums:
+		for skill in chip_list:
+			if skill_code == skill.code:
+				var panel_packed_scene = preload(skill_chip_panel)
+				var skill_chip = panel_packed_scene.instance()
+				grid.add_child(skill_chip)
+				skill_chip.set_chip(skill)
+				print("\"" + skill_code + "\"  skill chip added to scene.")
+	pass

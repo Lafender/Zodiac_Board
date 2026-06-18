@@ -57,13 +57,7 @@ func _ready():
 	var skill: Resource
 	for i in skills.size():
 		skill = load(skills[skills.size()-(i+1)])
-		print(
-			"name: " + 
-			skill.skill_name_part_1 + " " + 
-			skill.skill_name_part_2 + " " + 
-			skill.skill_name_part_3
-		)
-		print("code: " + skill.code)
+		print("code: \"" + skill.code +"\"")
 	_setup_info_panel(skill)
 #	$UI/VBoxContainer/Button.pressed.connect(_generate_all())
 #	$UI/VBoxContainer/Button2.pressed.connect(_generate_single())
@@ -125,7 +119,20 @@ func _generate_single():
 func _generate_skill(i: int) -> String:
 	var skill := Skill_Data.new()
 	skill.is_consumable = randi() % 1
-
+	skill.is_tradable = true
+	var price_roll_1 = randi() % 1
+	var price_roll_2 = randi() % 3
+	var price_roll_3 = randi() % 999999999999
+	var price: int
+	match price_roll_1:
+		0: price = price_roll_3 / 2
+		1: price = price_roll_3
+	match price_roll_2:
+		0: price = price / 8
+		1: price = price / 4
+		2: price = price / 2
+		3: price = price
+	skill.price = price
 	# Name
 	var name = _generate_name()
 	skill.skill_name_part_1 = name[0]
@@ -157,7 +164,7 @@ func _generate_skill(i: int) -> String:
 		"ZERO": gauge_max = 9
 	skill.cost = randi() % gauge_max
 	
-
+	
 	# Animation (simple placeholder tween)
 	skill.animation = _generate_tween_profile()
 	# Save
@@ -279,7 +286,6 @@ func _preview_code():
 
 func _add_skill_panel(skill: Resource) -> void: 
 	var chip_panel = preload(skill_panel_path)
-	print(chip_panel)
 	var chip_panel_instance = chip_panel.instance()
 	grid_container.add_child(chip_panel_instance)
 	chip_panel_instance.set_chip(skill)
