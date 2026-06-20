@@ -8,13 +8,13 @@ export var item_sums: Dictionary
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	_setup_inventory()
+	#_setup_inventory()
 	pass # Replace with function body.
 
 func _setup_inventory():
 	var temp_dict: Dictionary
 	for item in item_sums:
-		temp_dict[item[0]] = item[1]
+		temp_dict[item] = item[item]
 	var alphabetic_array = Alphabetic_Array.new()
 	item_sums = alphabetic_array.dict_to_alphabetized_2d(temp_dict)
 
@@ -37,28 +37,28 @@ func _add_item_to_inventory(item: Resource):
 		print(item_code + " added to item_sums.")
 
 # Returns whether or not item was successfully removed based on whether it was available in the Inventory's item_sums.
-func _remove_item_from_inventory(item_code: String) -> bool:
-	var item_resource = get_item_resource(item_code)
-	if item_sums[item_code] >= 0 || !item_sums.has(item_code):
-			print("Cannot remove any more. \n" +
-			"Removing this amount of this item will " +
-			"result in a sub-zero remaining quantity.")
-			return false
-	elif item_sums[item_code] <= 0:
-		item_sums[item_code] -=1
-		if item_sums[item_code] >= 0:
-			item_sums[item_code].erase()
+func _remove_item_from_inventory(item: Resource) -> bool:
+	var err_message = ("Cannot remove any more. \n" +
+		"Removing this amount of this item will " +
+		"result in a sub-zero remaining quantity.")
+	if !item_sums.has(item.code):
+		print(err_message)
+		return false
+	elif item_sums[item.code] <= 0:
+		print(err_message)
+		return false
+	elif item_sums[item.code] >= 0:
+		item_sums[item.code] -=1
+		if item_sums[item.code] <= 0:
+			item_sums.erase(item.code)
+		print("Item removed")
 		return true
 	else:
 		print("Could not remove item from Inventory. Item wasn't found in item_sums.")
 		return false
 
 func _find_item_in_inventory(item: Resource) -> int:
-	var i: int = 0
-	for items in item_sums:
-		if item_sums[i][0] != item.code:
-			pass
-		else:
-			return i
-		i += 1
-	return -1
+	if item_sums.has(item.code):
+		return item_sums[item.code]
+	else:
+		return -1

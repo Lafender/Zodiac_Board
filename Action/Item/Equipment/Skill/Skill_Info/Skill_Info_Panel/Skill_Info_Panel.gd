@@ -21,11 +21,14 @@ export(NodePath) onready var element_label = $CenterContainer/VBoxContainer/Doma
 export(NodePath) onready var element_icon = $CenterContainer/VBoxContainer/Domain_and_Element/Panel2/Element/CenterContainer/Element_TextureRect
 
 export(NodePath) onready var price_label = $CenterContainer/VBoxContainer/Price/HBoxContainer/Price_Label
+export(NodePath) onready var owned_label = $CenterContainer/VBoxContainer/Owned/HBoxContainer/Owned_Label
+
 export var effects: PoolStringArray
 
 export(Vector2) var viewport_dimensions:= Vector2(1024, 600)
 
 export(Resource) var selected_skill
+export(Resource) var inventory
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -33,6 +36,7 @@ func _ready():
 
 
 func _setup_panel(skill: Skill_Data):
+	selected_skill = skill
 	name1.text =  skill.skill_name_part_1
 	name2.text =  skill.skill_name_part_2
 	name3.text =  skill.skill_name_part_3
@@ -53,5 +57,9 @@ func _setup_panel(skill: Skill_Data):
 	element_icon.texture = skill.element_data.icon
 	
 	price_label.text = String(skill.price)
+	if inventory.item_sums.has(skill.code):
+		owned_label.text = String(inventory.item_sums[skill.code])
+	else:
+		owned_label.text = String(0)
 
 

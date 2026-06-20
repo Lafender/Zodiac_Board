@@ -11,6 +11,7 @@ script = ExtResource( 2 )
 selected_skill_chip = ExtResource( 3 )
 inventory = ExtResource( 5 )
 skills_list_grid_container = NodePath("HBoxContainer/ScrollContainer/GridContainer")
+inventory_view = NodePath("HBoxContainer/Skill_Inventory_View")
 skill_info_panel = NodePath("HBoxContainer/Skill_Info_Panel")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
@@ -61,3 +62,4 @@ margin_bottom = 600.0
 text = "Remove Skill"
 
 [connection signal="button_up" from="HBoxContainer/Skill_Info_Panel/VBoxContainer/Button" to="." method="_add_skill_to_inventory"]
+[connection signal="button_up" from="HBoxContainer/Skill_Info_Panel/VBoxContainer/Button2" to="." method="_remove_skill_from_inventory"]

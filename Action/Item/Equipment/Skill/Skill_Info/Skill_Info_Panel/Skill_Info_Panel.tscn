@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Interface/Panel/Element_Icon/Element_Icon_StyleBoxFlat.1.tres" type="StyleBox" id=1]
 [ext_resource path="res://Action/Chemistry/Domain/LIST/PHYSICAL/ICON.png" type="Texture" id=2]
@@ -6,11 +6,13 @@
 [ext_resource path="res://Action/Item/Equipment/Skill/Skill_Chip/Skill_Chip_Panel/Code_StyleBoxFlat.tres" type="StyleBox" id=4]
 [ext_resource path="res://Action/Item/Equipment/Skill/Skill_Info/Skill_Info_Panel/Skill_Info_Panel.gd" type="Script" id=5]
 [ext_resource path="res://Action/Chemistry/Element/LIST/SCALE/MASSIVE/ICON.png" type="Texture" id=6]
+[ext_resource path="res://Action/Item/Equipment/Skill/INVENTORY/DATA.tres" type="Resource" id=7]
+[ext_resource path="res://Action/Item/Equipment/Skill/LIST/Skill_9999.tres" type="Resource" id=8]
 
 [node name="Skill_Info_Panel" type="Panel"]
-margin_right = 160.0
+margin_right = 192.0
 margin_bottom = 240.0
-rect_min_size = Vector2( 192, 240 )
+rect_min_size = Vector2( 192, 248 )
 size_flags_horizontal = 4
 size_flags_vertical = 3
 custom_styles/panel = ExtResource( 1 )
@@ -29,6 +31,10 @@ domain_label = NodePath("CenterContainer/VBoxContainer/Domain_and_Element/Panel/
 domain_icon = NodePath("CenterContainer/VBoxContainer/Domain_and_Element/Panel/Domain/CenterContainer/Domain_TexutureRect")
 element_label = NodePath("CenterContainer/VBoxContainer/Domain_and_Element/Panel2/Element/CenterContainer2/VBoxContainer/Element_Label")
 element_icon = NodePath("CenterContainer/VBoxContainer/Domain_and_Element/Panel2/Element/CenterContainer/Element_TextureRect")
+price_label = NodePath("CenterContainer/VBoxContainer/Price/HBoxContainer/Price_Label")
+owned_label = NodePath("CenterContainer/VBoxContainer/Owned/HBoxContainer/Owned_Label")
+selected_skill = ExtResource( 8 )
+inventory = ExtResource( 7 )
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 margin_right = -33.0
@@ -39,9 +45,8 @@ size_flags_vertical = 3
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
 margin_left = 14.0
-margin_top = 8.0
 margin_right = 178.0
-margin_bottom = 232.0
+margin_bottom = 242.0
 
 [node name="ID" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
 margin_right = 164.0
@@ -329,3 +334,26 @@ margin_left = 95.0
 margin_right = 119.0
 margin_bottom = 14.0
 text = "500"
+
+[node name="Owned" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+margin_top = 228.0
+margin_right = 164.0
+margin_bottom = 242.0
+
+[node name="Tag_Label" type="Label" parent="CenterContainer/VBoxContainer/Owned"]
+margin_right = 54.0
+margin_bottom = 14.0
+text = "Owned -"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer/Owned"]
+margin_left = 58.0
+margin_right = 164.0
+margin_bottom = 14.0
+size_flags_horizontal = 3
+alignment = 2
+
+[node name="Owned_Label" type="Label" parent="CenterContainer/VBoxContainer/Owned/HBoxContainer"]
+margin_left = 98.0
+margin_right = 106.0
+margin_bottom = 14.0
+text = "0"

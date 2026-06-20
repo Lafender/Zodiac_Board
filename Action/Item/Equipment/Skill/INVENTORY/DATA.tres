@@ -8,6 +8,5 @@ script = ExtResource( 1 )
 group_name = "Skill Inventory"
 all_item_list = "res://Action/Item/Equipment/Skill/LIST"
 item_sums = {
-"AIA0": 1,
 "ZW4J": 3
 }

@@ -12,7 +12,7 @@ func equip_skill_to_board(skill: Resource, idx_x: int, idx_y: int) -> Dictionary
 	skill_dict["skill"] = skill
 	skill_dict["x"] = idx_x
 	skill_dict["y"] = idx_y
-	
+	_remove_item_from_inventory(skill.code)
 	return skill_dict
 
 func deequip_skill_from_board(skill: Resource, idx_x: int, idx_y: int) -> void:

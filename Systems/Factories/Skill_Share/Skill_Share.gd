@@ -40,8 +40,18 @@ func _add_skill_to_inventory() -> void:
 	inventory._add_item_to_inventory(selected_skill_chip)
 	inventory_view._update_inventory_view()
 	var new_inventory = save_resource(inventory, inventory_directory, "DATA", ".tres")
-	print("Inventory saved to \"" + new_inventory + "\".")
-	pass # Replace with function body.
+	print("Item added to saved inventory \"" + new_inventory + "\" Resource.")
+
+
+func _remove_skill_from_inventory():
+	var removed_successfully = inventory._remove_item_from_inventory(selected_skill_chip)
+	inventory_view._update_inventory_view()
+	var new_inventory = save_resource(inventory, inventory_directory, "DATA", ".tres")
+	if removed_successfully:
+		print("Item removed from saved inventory \"" + new_inventory + "\" Resource.")
+	else:
+		print("No item removed. \"" + new_inventory + "\" saved.")
+	
 
 static func save_resource(resource: Resource, folder_path: String, file_name: String = "", file_extension: String = ".tres") -> String:
 	# Ensure folder ends with a slash
