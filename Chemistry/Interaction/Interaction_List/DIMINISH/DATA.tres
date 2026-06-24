@@ -1,0 +1,16 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Chemistry/Interaction/Interaction_Data.gd" type="Script" id=1]
+
+[resource]
+resource_name = "Diminish Data"
+script = ExtResource( 1 )
+interaction_type = "DIMINISH"
+target_gauge = "RUNE"
+damage_multiplier = 0.5
+damage_duration = 0.0
+damage_interval = 0.0
+self_gauge = ""
+self_multiplier = 0.0
+self_duration = 0.0
+self_interval = 0.0

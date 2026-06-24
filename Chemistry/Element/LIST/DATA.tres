@@ -1,0 +1,20 @@
+[gd_resource type="Resource" load_steps=8 format=2]
+
+[ext_resource path="res://Chemistry/Element/LIST/Element_List.gd" type="Script" id=1]
+[ext_resource path="res://Chemistry/Element/LIST/PATTERN/DATA.tres" type="Resource" id=2]
+[ext_resource path="res://Chemistry/Element/LIST/VIRTUAL/DATA.tres" type="Resource" id=3]
+[ext_resource path="res://Chemistry/Element/LIST/SCALE/DATA.tres" type="Resource" id=4]
+[ext_resource path="res://Chemistry/Element/LIST/INTENSITY/DATA.tres" type="Resource" id=5]
+[ext_resource path="res://Chemistry/Element/LIST/TRANSFER/DATA.tres" type="Resource" id=6]
+[ext_resource path="res://Chemistry/Element/LIST/MINERAL/DATA.tres" type="Resource" id=7]
+
+[resource]
+resource_name = "Element List"
+script = ExtResource( 1 )
+group_name = ""
+SCALE = ExtResource( 4 )
+INTENSITY = ExtResource( 5 )
+TRANSFER = ExtResource( 6 )
+PATTERN = ExtResource( 2 )
+MINERAL = ExtResource( 7 )
+VIRTUAL = ExtResource( 3 )

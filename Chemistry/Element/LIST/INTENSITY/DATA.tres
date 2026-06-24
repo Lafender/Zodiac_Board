@@ -1,0 +1,26 @@
+[gd_resource type="Resource" load_steps=11 format=2]
+
+[ext_resource path="res://Chemistry/Element/LIST/INTENSITY/Element_Intensity_List.gd" type="Script" id=1]
+[ext_resource path="res://Chemistry/Element/LIST/PATTERN/SIMPLE/DATA.tres" type="Resource" id=2]
+[ext_resource path="res://Chemistry/Element/LIST/INTENSITY/BASS/DATA.tres" type="Resource" id=3]
+[ext_resource path="res://Chemistry/Element/LIST/INTENSITY/STRETCHED/DATA.tres" type="Resource" id=4]
+[ext_resource path="res://Chemistry/Element/LIST/PATTERN/COMPLEX/DATA.tres" type="Resource" id=5]
+[ext_resource path="res://Chemistry/Element/LIST/INTENSITY/HEAT/DATA.tres" type="Resource" id=6]
+[ext_resource path="res://Chemistry/Element/LIST/INTENSITY/TREBLE/DATA.tres" type="Resource" id=7]
+[ext_resource path="res://Chemistry/Element/LIST/INTENSITY/COMPRESSED/DATA.tres" type="Resource" id=8]
+[ext_resource path="res://Chemistry/Element/LIST/INTENSITY/CHILL/DATA.tres" type="Resource" id=9]
+[ext_resource path="res://Chemistry/Element/LIST/INTENSITY/PULSE/DATA.tres" type="Resource" id=10]
+
+[resource]
+resource_name = "Element Intensity List"
+script = ExtResource( 1 )
+group_name = "INTENSITY"
+SIMPLE = ExtResource( 2 )
+COMPLEX = ExtResource( 5 )
+STRETCHED = ExtResource( 4 )
+COMPRESSED = ExtResource( 8 )
+BASS = ExtResource( 3 )
+TREBLE = ExtResource( 7 )
+HEAT = ExtResource( 6 )
+CHILL = ExtResource( 9 )
+PULSE = ExtResource( 10 )

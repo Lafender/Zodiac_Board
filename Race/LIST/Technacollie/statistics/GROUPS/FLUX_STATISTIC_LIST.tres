@@ -1,0 +1,7 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Statistic/Flux_Statistic/LIST/Flux_Statistic_List.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+group_name = ""

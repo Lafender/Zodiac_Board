@@ -6,7 +6,7 @@ export(Resource) var inventory
 
 export(String, DIR) var skills_directory = "res://Action/Item/Equipment/Skill/LIST/"
 export(String, DIR) var inventory_directory = "res://Action/Item/Equipment/Skill/INVENTORY/"
-const skill_chip_panel = "res://Action/Item/Equipment/Skill/Skill_Chip/Skill_Chip_Panel/Skill_Chip_Panel.tscn"
+const skill_chip_panel = "res://Action/Item/Equipment/Skill/CHIP/Skill_Chip_Panel/Skill_Chip_Panel.tscn"
 
 export(NodePath) onready var skills_list_grid_container = $HBoxContainer/ScrollContainer/GridContainer
 export(NodePath) onready var inventory_view = $HBoxContainer/Skill_Inventory_View
@@ -40,6 +40,7 @@ func _add_skill_to_inventory() -> void:
 	inventory._add_item_to_inventory(selected_skill_chip)
 	inventory_view._update_inventory_view()
 	var new_inventory = save_resource(inventory, inventory_directory, "DATA", ".tres")
+	skill_info_panel._setup_panel(selected_skill_chip)
 	print("Item added to saved inventory \"" + new_inventory + "\" Resource.")
 
 
@@ -47,6 +48,7 @@ func _remove_skill_from_inventory():
 	var removed_successfully = inventory._remove_item_from_inventory(selected_skill_chip)
 	inventory_view._update_inventory_view()
 	var new_inventory = save_resource(inventory, inventory_directory, "DATA", ".tres")
+	skill_info_panel._setup_panel(selected_skill_chip)
 	if removed_successfully:
 		print("Item removed from saved inventory \"" + new_inventory + "\" Resource.")
 	else:

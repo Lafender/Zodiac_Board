@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Item/Equipment/Skill/INVENTORY/Skill_Inventory_Data.gd" type="Script" id=1]
+
+[resource]
+resource_name = "Skill Inventory Data"
+script = ExtResource( 1 )
+group_name = "Skill Inventory"
+all_item_list = "res://Action/Item/Equipment/Skill/LIST"
+item_sums = {
+"6RYM": 5,
+"8ZWL": 5,
+"AIA0": 5,
+"DPVB": 5,
+"JUJC": 5,
+"ZW4J": 5
+}

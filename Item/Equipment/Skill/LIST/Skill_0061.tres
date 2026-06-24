@@ -1,0 +1,38 @@
+[gd_resource type="Resource" load_steps=8 format=2]
+
+[ext_resource path="res://Statistic/Gauge_Statistic/LIST/THREAD/DATA.tres" type="Resource" id=1]
+[ext_resource path="res://Chemistry/Domain/LIST/SPIRITUAL/DATA.tres" type="Resource" id=2]
+[ext_resource path="res://Item/Equipment/Skill/Skill_Tween_Profile.gd" type="Script" id=3]
+[ext_resource path="res://Item/Equipment/Skill/Skill_Data.gd" type="Script" id=4]
+[ext_resource path="res://Chemistry/Element/LIST/PATTERN/COMPLEX/DATA.tres" type="Resource" id=5]
+[ext_resource path="res://Item/Equipment/Skill/ICONS/tile098.png" type="Texture" id=6]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 3 )
+tween_duration = 0.324338
+tween_offset = Vector2( -7.74629, 4.02783 )
+tween_loop = true
+tween_is_active_animation = true
+tween_is_start_animation = false
+
+[resource]
+script = ExtResource( 4 )
+color_code = Color( 1, 0, 1, 1 )
+code = "IKB9"
+icon = ExtResource( 6 )
+is_consumable = 0
+is_tradable = true
+price = 258531607
+max_quantity = 999999
+base_power = 5521
+speed = 173
+domain_data = ExtResource( 2 )
+element_data = ExtResource( 5 )
+is_equipped = false
+skill_name_part_1 = "Opal"
+skill_name_part_2 = "Pulse"
+skill_name_part_3 = "Lovely"
+effects = PoolStringArray(  )
+target_gauge = ExtResource( 1 )
+cost = 0
+animation = SubResource( 1 )

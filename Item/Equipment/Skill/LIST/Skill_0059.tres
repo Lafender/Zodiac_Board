@@ -1,0 +1,38 @@
+[gd_resource type="Resource" load_steps=8 format=2]
+
+[ext_resource path="res://Statistic/Gauge_Statistic/LIST/HEALTH/DATA.tres" type="Resource" id=1]
+[ext_resource path="res://Item/Equipment/Skill/Skill_Tween_Profile.gd" type="Script" id=2]
+[ext_resource path="res://Item/Equipment/Skill/Skill_Data.gd" type="Script" id=3]
+[ext_resource path="res://Chemistry/Domain/LIST/TEMPERED/DATA.tres" type="Resource" id=4]
+[ext_resource path="res://Chemistry/Element/LIST/TRANSFER/CONDUCTIVE/DATA.tres" type="Resource" id=5]
+[ext_resource path="res://Item/Equipment/Skill/ICONS/tile031.png" type="Texture" id=6]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 2 )
+tween_duration = 0.777527
+tween_offset = Vector2( 1.9243, -1.5043 )
+tween_loop = false
+tween_is_active_animation = false
+tween_is_start_animation = true
+
+[resource]
+script = ExtResource( 3 )
+color_code = Color( 0.435294, 0.435294, 1, 1 )
+code = "10PS"
+icon = ExtResource( 6 )
+is_consumable = 0
+is_tradable = true
+price = 233011673
+max_quantity = 999999
+base_power = 7373
+speed = 236
+domain_data = ExtResource( 4 )
+element_data = ExtResource( 5 )
+is_equipped = false
+skill_name_part_1 = "Voro"
+skill_name_part_2 = "Sit"
+skill_name_part_3 = "Boldly"
+effects = PoolStringArray(  )
+target_gauge = ExtResource( 1 )
+cost = 0
+animation = SubResource( 1 )

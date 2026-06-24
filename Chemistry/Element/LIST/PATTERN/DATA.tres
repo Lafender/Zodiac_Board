@@ -1,0 +1,22 @@
+[gd_resource type="Resource" load_steps=9 format=2]
+
+[ext_resource path="res://Chemistry/Element/LIST/PATTERN/Element_Pattern_List.gd" type="Script" id=1]
+[ext_resource path="res://Chemistry/Element/LIST/PATTERN/CHROMATIC/DATA.tres" type="Resource" id=2]
+[ext_resource path="res://Chemistry/Element/LIST/PATTERN/FRACTAL/DATA.tres" type="Resource" id=3]
+[ext_resource path="res://Chemistry/Element/LIST/PATTERN/CHAOTIC/DATA.tres" type="Resource" id=4]
+[ext_resource path="res://Chemistry/Element/LIST/PATTERN/RAINBOW/DATA.tres" type="Resource" id=5]
+[ext_resource path="res://Chemistry/Element/LIST/PATTERN/PRISMATIC/DATA.tres" type="Resource" id=6]
+[ext_resource path="res://Chemistry/Element/LIST/PATTERN/GRADIENT/DATA.tres" type="Resource" id=7]
+[ext_resource path="res://Chemistry/Element/LIST/PATTERN/ORDERED/DATA.tres" type="Resource" id=8]
+
+[resource]
+resource_name = "Element Pattern List"
+script = ExtResource( 1 )
+group_name = "PATTERN"
+GRADIENT = ExtResource( 7 )
+RAINBOW = ExtResource( 5 )
+CHROMATIC = ExtResource( 2 )
+PRISMATIC = ExtResource( 6 )
+FRACTAL = ExtResource( 3 )
+ORDERED = ExtResource( 8 )
+CHAOTIC = ExtResource( 4 )

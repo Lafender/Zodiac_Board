@@ -1,0 +1,212 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Item/Equipment/Skill/CHIP/Skill_Chip_Hightlight.tres" type="StyleBox" id=1]
+[ext_resource path="res://Item/Equipment/Skill/CHIP/Skill_Chip_Panel/Skill_Chip_Panel.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Item/Equipment/Skill/INVENTORY/Skill_Inventory_View/Skill_Inventory_View.gd" type="Script" id=3]
+[ext_resource path="res://Item/Equipment/Skill/INVENTORY/DATA.tres" type="Resource" id=4]
+
+[node name="Skill_Inventory_View" type="Panel"]
+margin_right = 264.0
+margin_bottom = 584.0
+rect_min_size = Vector2( 264, 584 )
+script = ExtResource( 3 )
+inventory = ExtResource( 4 )
+scroll = NodePath("ScrollContainer")
+grid = NodePath("ScrollContainer/CenterContainer/GridContainer")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -16.0
+rect_min_size = Vector2( 264, 584 )
+size_flags_horizontal = 4
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer"]
+margin_right = 264.0
+margin_bottom = 986.0
+rect_min_size = Vector2( 264, 0 )
+
+[node name="GridContainer" type="GridContainer" parent="ScrollContainer/CenterContainer"]
+margin_left = 20.0
+margin_right = 244.0
+margin_bottom = 986.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+columns = 3
+
+[node name="Skill_Chip_Panel" parent="ScrollContainer/CenterContainer/GridContainer" instance=ExtResource( 2 )]
+
+[node name="Skill_Chip_Panel2" parent="ScrollContainer/CenterContainer/GridContainer" instance=ExtResource( 2 )]
+margin_left = 76.0
+margin_right = 148.0
+
+[node name="Skill_Chip_Panel3" parent="ScrollContainer/CenterContainer/GridContainer" instance=ExtResource( 2 )]
+margin_left = 152.0
+margin_right = 224.0
+
+[node name="Skill_Chip_Panel4" parent="ScrollContainer/CenterContainer/GridContainer" instance=ExtResource( 2 )]
+margin_top = 90.0
+margin_bottom = 176.0
+
+[node name="Skill_Chip_Panel5" parent="ScrollContainer/CenterContainer/GridContainer" instance=ExtResource( 2 )]
+margin_left = 76.0
+margin_top = 90.0
+margin_right = 148.0
+margin_bottom = 176.0
+
+[node name="Skill_Chip_Panel6" parent="ScrollContainer/CenterContainer/GridContainer" instance=ExtResource( 2 )]
+margin_left = 152.0
+margin_top = 90.0
+margin_right = 224.0
+margin_bottom = 176.0
+
+[node name="Skill_Chip_Panel7" parent="ScrollContainer/CenterContainer/GridContainer" instance=ExtResource( 2 )]
+margin_top = 180.0
+margin_bottom = 266.0
+
+[node name="Skill_Chip_Panel8" parent="ScrollContainer/CenterContainer/GridContainer" instance=ExtResource( 2 )]
+margin_left = 76.0
+margin_top = 180.0
+margin_right = 148.0
+margin_bottom = 266.0
+
+[node name="Skill_Chip_Panel9" parent="ScrollContainer/CenterContainer/GridContainer" instance=ExtResource( 2 )]
+margin_left = 152.0
+margin_top = 180.0
+margin_right = 224.0
+margin_bottom = 266.0
+
+[node name="Skill_Chip_Panel10" parent="ScrollContainer/CenterContainer/GridContainer" instance=ExtResource( 2 )]
+margin_top = 270.0
+margin_bottom = 356.0
+
+[node name="Skill_Chip_Panel11" parent="ScrollContainer/CenterContainer/GridContainer" instance=ExtResource( 2 )]
+margin_left = 76.0
+margin_top = 270.0
+margin_right = 148.0
+margin_bottom = 356.0
+
+[node name="Skill_Chip_Panel12" parent="ScrollContainer/CenterContainer/GridContainer" instance=ExtResource( 2 )]
+margin_left = 152.0
+margin_top = 270.0
+margin_right = 224.0
+margin_bottom = 356.0
+
+[node name="Skill_Chip_Panel13" parent="ScrollContainer/CenterContainer/GridContainer" instance=ExtResource( 2 )]
+margin_top = 360.0
+margin_bottom = 446.0
+
+[node name="Skill_Chip_Panel14" parent="ScrollContainer/CenterContainer/GridContainer" instance=ExtResource( 2 )]
+margin_left = 76.0
+margin_top = 360.0
+margin_right = 148.0
+margin_bottom = 446.0
+
+[node name="Skill_Chip_Panel15" parent="ScrollContainer/CenterContainer/GridContainer" instance=ExtResource( 2 )]
+margin_left = 152.0
+margin_top = 360.0
+margin_right = 224.0
+margin_bottom = 446.0
+
+[node name="Skill_Chip_Panel16" parent="ScrollContainer/CenterContainer/GridContainer" instance=ExtResource( 2 )]
+margin_top = 450.0
+margin_bottom = 536.0
+
+[node name="Skill_Chip_Panel17" parent="ScrollContainer/CenterContainer/GridContainer" instance=ExtResource( 2 )]
+margin_left = 76.0
+margin_top = 450.0
+margin_right = 148.0
+margin_bottom = 536.0
+
+[node name="Skill_Chip_Panel18" parent="ScrollContainer/CenterContainer/GridContainer" instance=ExtResource( 2 )]
+margin_left = 152.0
+margin_top = 450.0
+margin_right = 224.0
+margin_bottom = 536.0
+
+[node name="Skill_Chip_Panel19" parent="ScrollContainer/CenterContainer/GridContainer" instance=ExtResource( 2 )]
+margin_top = 540.0
+margin_bottom = 626.0
+
+[node name="Skill_Chip_Panel20" parent="ScrollContainer/CenterContainer/GridContainer" instance=ExtResource( 2 )]
+margin_left = 76.0
+margin_top = 540.0
+margin_right = 148.0
+margin_bottom = 626.0
+
+[node name="Skill_Chip_Panel21" parent="ScrollContainer/CenterContainer/GridContainer" instance=ExtResource( 2 )]
+margin_left = 152.0
+margin_top = 540.0
+margin_right = 224.0
+margin_bottom = 626.0
+
+[node name="Skill_Chip_Panel22" parent="ScrollContainer/CenterContainer/GridContainer" instance=ExtResource( 2 )]
+margin_top = 630.0
+margin_bottom = 716.0
+
+[node name="Skill_Chip_Panel23" parent="ScrollContainer/CenterContainer/GridContainer" instance=ExtResource( 2 )]
+margin_left = 76.0
+margin_top = 630.0
+margin_right = 148.0
+margin_bottom = 716.0
+
+[node name="Skill_Chip_Panel24" parent="ScrollContainer/CenterContainer/GridContainer" instance=ExtResource( 2 )]
+margin_left = 152.0
+margin_top = 630.0
+margin_right = 224.0
+margin_bottom = 716.0
+
+[node name="Skill_Chip_Panel25" parent="ScrollContainer/CenterContainer/GridContainer" instance=ExtResource( 2 )]
+margin_top = 720.0
+margin_bottom = 806.0
+
+[node name="Skill_Chip_Panel26" parent="ScrollContainer/CenterContainer/GridContainer" instance=ExtResource( 2 )]
+margin_left = 76.0
+margin_top = 720.0
+margin_right = 148.0
+margin_bottom = 806.0
+
+[node name="Skill_Chip_Panel27" parent="ScrollContainer/CenterContainer/GridContainer" instance=ExtResource( 2 )]
+margin_left = 152.0
+margin_top = 720.0
+margin_right = 224.0
+margin_bottom = 806.0
+
+[node name="Skill_Chip_Panel28" parent="ScrollContainer/CenterContainer/GridContainer" instance=ExtResource( 2 )]
+margin_top = 810.0
+margin_bottom = 896.0
+
+[node name="Skill_Chip_Panel29" parent="ScrollContainer/CenterContainer/GridContainer" instance=ExtResource( 2 )]
+margin_left = 76.0
+margin_top = 810.0
+margin_right = 148.0
+margin_bottom = 896.0
+
+[node name="Skill_Chip_Panel30" parent="ScrollContainer/CenterContainer/GridContainer" instance=ExtResource( 2 )]
+margin_left = 152.0
+margin_top = 810.0
+margin_right = 224.0
+margin_bottom = 896.0
+
+[node name="Skill_Chip_Panel31" parent="ScrollContainer/CenterContainer/GridContainer" instance=ExtResource( 2 )]
+margin_top = 900.0
+margin_bottom = 986.0
+
+[node name="Skill_Chip_Panel32" parent="ScrollContainer/CenterContainer/GridContainer" instance=ExtResource( 2 )]
+margin_left = 76.0
+margin_top = 900.0
+margin_right = 148.0
+margin_bottom = 986.0
+
+[node name="Skill_Chip_Panel33" parent="ScrollContainer/CenterContainer/GridContainer" instance=ExtResource( 2 )]
+margin_left = 152.0
+margin_top = 900.0
+margin_right = 224.0
+margin_bottom = 986.0
+
+[node name="Selection_Hightlight" type="Panel" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 123, 160 )
+custom_styles/panel = ExtResource( 1 )

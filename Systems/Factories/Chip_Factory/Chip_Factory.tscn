@@ -2,11 +2,11 @@
 
 [ext_resource path="res://Systems/Factories/Chip_Factory/Chip_Factory.gd" type="Script" id=1]
 [ext_resource path="res://Systems/Factories/Code_Generator/DATA.tres" type="Resource" id=2]
-[ext_resource path="res://Action/Item/Equipment/Skill/Skill_Chip/Skill_Chip_Panel/Skill_Chip_Panel.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Action/Chemistry/Domain/LIST/DATA.tres" type="Resource" id=4]
-[ext_resource path="res://Character/Statistic/Gauge_Statistic/LIST/DATA.tres" type="Resource" id=5]
-[ext_resource path="res://Action/Chemistry/Element/LIST/DATA.tres" type="Resource" id=6]
-[ext_resource path="res://Action/Item/Equipment/Skill/Skill_Info/Skill_Info_Panel/Skill_Info_Panel.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Item/Equipment/Skill/CHIP/Skill_Chip_Panel/Skill_Chip_Panel.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Chemistry/Domain/LIST/DATA.tres" type="Resource" id=4]
+[ext_resource path="res://Statistic/Gauge_Statistic/LIST/DATA.tres" type="Resource" id=5]
+[ext_resource path="res://Chemistry/Element/LIST/DATA.tres" type="Resource" id=6]
+[ext_resource path="res://Item/Equipment/Skill/INFO/Skill_Info_Panel/Skill_Info_Panel.tscn" type="PackedScene" id=7]
 
 [node name="Chip_Factory" type="Node"]
 script = ExtResource( 1 )

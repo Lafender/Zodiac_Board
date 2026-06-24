@@ -1,15 +1,15 @@
 extends Node
 class_name Chip_Factory
 
-export(String, DIR) var skills_path := "res://Action/Item/Equipment/Skill/LIST/"
-const skill_panel_path := "res://Action/Item/Equipment/Skill/Skill_Chip/Skill_Chip_Panel/Skill_Chip_Panel.tscn"
+export(String, DIR) var skills_path = "res://Action/Item/Equipment/Skill/LIST/"
+const skill_panel_path = "res://Action/Item/Equipment/Skill/CHIP/Skill_Chip_Panel/Skill_Chip_Panel.tscn"
 export(NodePath) onready var grid_container = $UI/VBoxContainer/ScrollContainer/GridContainer
 export(NodePath) onready var skill_info_panel = $UI/Skill_Info_Panel
 
 # External resources
 export var strip_palette: PoolColorArray
 export var code_generator: Resource
-export(String, DIR) var icons_dir
+export(String, DIR) var icons_dir = "res://Action/Item/Equipment/Skill/ICONS/"
 var icons: Array
 var skills: Array
 
@@ -118,6 +118,7 @@ func _generate_single():
 
 func _generate_skill(i: int) -> String:
 	var skill := Skill_Data.new()
+	skill.item_type = "SKILL"
 	skill.is_consumable = randi() % 1
 	skill.is_tradable = true
 	var price_roll_1 = randi() % 1

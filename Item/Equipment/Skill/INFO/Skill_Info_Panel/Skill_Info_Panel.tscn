@@ -1,0 +1,457 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Interface/Panel/Element_Icon/Element_Icon_StyleBoxFlat.1.tres" type="StyleBox" id=1]
+[ext_resource path="res://Chemistry/Domain/LIST/PHYSICAL/ICON.png" type="Texture" id=2]
+[ext_resource path="res://Item/Equipment/Skill/ICONS/tile032.png" type="Texture" id=3]
+[ext_resource path="res://Item/Equipment/Skill/CHIP/Skill_Chip_Panel/Code_StyleBoxFlat.tres" type="StyleBox" id=4]
+[ext_resource path="res://Item/Equipment/Skill/INFO/Skill_Info_Panel/Skill_Info_Panel.gd" type="Script" id=5]
+[ext_resource path="res://Chemistry/Element/LIST/SCALE/MASSIVE/ICON.png" type="Texture" id=6]
+[ext_resource path="res://Item/Equipment/Skill/INVENTORY/DATA.tres" type="Resource" id=7]
+[ext_resource path="res://Item/Equipment/Skill/LIST/Skill_9999.tres" type="Resource" id=8]
+
+[node name="Skill_Info_Panel" type="Panel"]
+margin_right = 192.0
+margin_bottom = 320.0
+rect_min_size = Vector2( 192, 248 )
+size_flags_horizontal = 4
+size_flags_vertical = 3
+custom_styles/panel = ExtResource( 1 )
+script = ExtResource( 5 )
+name1 = NodePath("CenterContainer/VBoxContainer/ID/Name/Name_Label")
+name2 = NodePath("CenterContainer/VBoxContainer/ID/Name/Name2_Label")
+name3 = NodePath("CenterContainer/VBoxContainer/ID/Name/Name3_Label")
+icon_rect = NodePath("CenterContainer/VBoxContainer/ID/Icon/Icon_TextureRect")
+strip = NodePath("CenterContainer/VBoxContainer/ID/Icon/Strip")
+code_label = NodePath("CenterContainer/VBoxContainer/ID/Icon/Strip/CenterContainer/Code_Label")
+base_power_label = NodePath("CenterContainer/VBoxContainer/Power/HBoxContainer/Power_Label")
+speed_label = NodePath("CenterContainer/VBoxContainer/Speed/HBoxContainer/Speed_Label")
+cost_label = NodePath("CenterContainer/VBoxContainer/Cost/HBoxContainer/Cost_Label")
+target_gauge_label = NodePath("CenterContainer/VBoxContainer/Cost/HBoxContainer/Gauge_Label")
+domain_label = NodePath("CenterContainer/VBoxContainer/Domain_and_Element/Panel/Domain/CenterContainer2/VBoxContainer/Domain_Label")
+domain_icon = NodePath("CenterContainer/VBoxContainer/Domain_and_Element/Panel/Domain/CenterContainer/Domain_TexutureRect")
+element_label = NodePath("CenterContainer/VBoxContainer/Domain_and_Element/Panel2/Element/CenterContainer2/VBoxContainer/Element_Label")
+element_icon = NodePath("CenterContainer/VBoxContainer/Domain_and_Element/Panel2/Element/CenterContainer/Element_TextureRect")
+price_label = NodePath("CenterContainer/VBoxContainer/Price/HBoxContainer/Price_Label")
+owned_label = NodePath("CenterContainer/VBoxContainer/Owned/HBoxContainer/Owned_Label")
+slot_dpad_label = NodePath("CenterContainer/VBoxContainer/Equipped_Slot/Panel/Groups/Dpad_Group/HBoxContainer/Dpad_Label")
+slot_face_label = NodePath("CenterContainer/VBoxContainer/Equipped_Slot/Panel/Groups/Face_Group/HBoxContainer/Face_Label")
+slot_input_label = NodePath("CenterContainer/VBoxContainer/Equipped_Slot/Panel/Groups/Input_Group/HBoxContainer/Input_Label")
+selected_skill = ExtResource( 8 )
+inventory = ExtResource( 7 )
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+margin_right = -33.0
+margin_bottom = -14.0
+rect_min_size = Vector2( 192, 320 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+margin_left = 14.0
+margin_top = 9.0
+margin_right = 178.0
+margin_bottom = 311.0
+
+[node name="ID" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+margin_right = 164.0
+margin_bottom = 68.0
+
+[node name="Icon" type="VBoxContainer" parent="CenterContainer/VBoxContainer/ID"]
+margin_right = 48.0
+margin_bottom = 68.0
+
+[node name="Strip" type="Panel" parent="CenterContainer/VBoxContainer/ID/Icon"]
+margin_right = 48.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 48, 20 )
+custom_styles/panel = ExtResource( 4 )
+
+[node name="CenterContainer" type="CenterContainer" parent="CenterContainer/VBoxContainer/ID/Icon/Strip"]
+margin_right = 32.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 48, 20 )
+
+[node name="Code_Label" type="Label" parent="CenterContainer/VBoxContainer/ID/Icon/Strip/CenterContainer"]
+margin_left = 8.0
+margin_top = 3.0
+margin_right = 40.0
+margin_bottom = 17.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "0000"
+
+[node name="Icon_TextureRect" type="TextureRect" parent="CenterContainer/VBoxContainer/ID/Icon"]
+margin_top = 24.0
+margin_right = 48.0
+margin_bottom = 68.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 3 )
+expand = true
+
+[node name="Name" type="VBoxContainer" parent="CenterContainer/VBoxContainer/ID"]
+margin_left = 52.0
+margin_right = 104.0
+margin_bottom = 68.0
+alignment = 2
+
+[node name="Tag_Label" type="Label" parent="CenterContainer/VBoxContainer/ID/Name"]
+margin_right = 52.0
+margin_bottom = 14.0
+text = "Name -"
+
+[node name="Name_Label" type="Label" parent="CenterContainer/VBoxContainer/ID/Name"]
+margin_top = 18.0
+margin_right = 52.0
+margin_bottom = 32.0
+text = "Bit"
+
+[node name="Name2_Label" type="Label" parent="CenterContainer/VBoxContainer/ID/Name"]
+margin_top = 36.0
+margin_right = 52.0
+margin_bottom = 50.0
+text = "Winning"
+
+[node name="Name3_Label" type="Label" parent="CenterContainer/VBoxContainer/ID/Name"]
+margin_top = 54.0
+margin_right = 52.0
+margin_bottom = 68.0
+text = "Flimsy"
+
+[node name="Power" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+margin_top = 72.0
+margin_right = 164.0
+margin_bottom = 86.0
+
+[node name="Tag_Label" type="Label" parent="CenterContainer/VBoxContainer/Power"]
+margin_right = 48.0
+margin_bottom = 14.0
+text = "Power -"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer/Power"]
+margin_left = 52.0
+margin_right = 164.0
+margin_bottom = 14.0
+size_flags_horizontal = 3
+alignment = 2
+
+[node name="Power_Label" type="Label" parent="CenterContainer/VBoxContainer/Power/HBoxContainer"]
+margin_left = 96.0
+margin_right = 112.0
+margin_bottom = 14.0
+text = "50"
+
+[node name="Speed" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+margin_top = 90.0
+margin_right = 164.0
+margin_bottom = 104.0
+size_flags_horizontal = 3
+
+[node name="Speed_Tag_Label" type="Label" parent="CenterContainer/VBoxContainer/Speed"]
+margin_right = 48.0
+margin_bottom = 14.0
+text = "Speed -"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer/Speed"]
+margin_left = 52.0
+margin_right = 164.0
+margin_bottom = 14.0
+size_flags_horizontal = 3
+alignment = 2
+
+[node name="Speed_Label" type="Label" parent="CenterContainer/VBoxContainer/Speed/HBoxContainer"]
+margin_left = 88.0
+margin_right = 112.0
+margin_bottom = 14.0
+text = "100"
+
+[node name="Cost" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+margin_top = 108.0
+margin_right = 164.0
+margin_bottom = 122.0
+size_flags_horizontal = 3
+
+[node name="Tag_Label" type="Label" parent="CenterContainer/VBoxContainer/Cost"]
+margin_right = 37.0
+margin_bottom = 14.0
+text = "Cost -"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer/Cost"]
+margin_left = 41.0
+margin_right = 164.0
+margin_bottom = 14.0
+size_flags_horizontal = 3
+alignment = 2
+
+[node name="Cost_Label" type="Label" parent="CenterContainer/VBoxContainer/Cost/HBoxContainer"]
+margin_left = 79.0
+margin_right = 87.0
+margin_bottom = 14.0
+text = "1"
+
+[node name="Gauge_Label" type="Label" parent="CenterContainer/VBoxContainer/Cost/HBoxContainer"]
+margin_left = 91.0
+margin_right = 123.0
+margin_bottom = 14.0
+text = "Rune"
+
+[node name="Domain_and_Element" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+margin_top = 126.0
+margin_right = 164.0
+margin_bottom = 206.0
+
+[node name="Panel" type="Panel" parent="CenterContainer/VBoxContainer/Domain_and_Element"]
+margin_right = 80.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 80, 80 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Domain" type="VBoxContainer" parent="CenterContainer/VBoxContainer/Domain_and_Element/Panel"]
+margin_left = 4.0
+margin_right = 65.0
+margin_bottom = 68.0
+rect_min_size = Vector2( 80, 80 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="CenterContainer2" type="CenterContainer" parent="CenterContainer/VBoxContainer/Domain_and_Element/Panel/Domain"]
+margin_right = 80.0
+margin_bottom = 38.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/VBoxContainer/Domain_and_Element/Panel/Domain/CenterContainer2"]
+margin_left = 9.0
+margin_top = 3.0
+margin_right = 70.0
+margin_bottom = 35.0
+
+[node name="Tag_Label" type="Label" parent="CenterContainer/VBoxContainer/Domain_and_Element/Panel/Domain/CenterContainer2/VBoxContainer"]
+margin_left = 5.0
+margin_right = 55.0
+margin_bottom = 14.0
+size_flags_horizontal = 4
+text = "Domain"
+
+[node name="Domain_Label" type="Label" parent="CenterContainer/VBoxContainer/Domain_and_Element/Panel/Domain/CenterContainer2/VBoxContainer"]
+margin_top = 18.0
+margin_right = 61.0
+margin_bottom = 32.0
+size_flags_horizontal = 4
+text = "PHYSICAL"
+
+[node name="CenterContainer" type="CenterContainer" parent="CenterContainer/VBoxContainer/Domain_and_Element/Panel/Domain"]
+margin_top = 42.0
+margin_right = 80.0
+margin_bottom = 80.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Domain_TexutureRect" type="TextureRect" parent="CenterContainer/VBoxContainer/Domain_and_Element/Panel/Domain/CenterContainer"]
+margin_left = 32.0
+margin_top = 11.0
+margin_right = 48.0
+margin_bottom = 27.0
+texture = ExtResource( 2 )
+
+[node name="Panel2" type="Panel" parent="CenterContainer/VBoxContainer/Domain_and_Element"]
+margin_left = 84.0
+margin_right = 164.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 80, 80 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Element" type="VBoxContainer" parent="CenterContainer/VBoxContainer/Domain_and_Element/Panel2"]
+margin_right = 80.0
+margin_bottom = 68.0
+rect_min_size = Vector2( 80, 80 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="CenterContainer2" type="CenterContainer" parent="CenterContainer/VBoxContainer/Domain_and_Element/Panel2/Element"]
+margin_right = 80.0
+margin_bottom = 38.0
+rect_min_size = Vector2( 80, 0 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/VBoxContainer/Domain_and_Element/Panel2/Element/CenterContainer2"]
+margin_left = 12.0
+margin_top = 3.0
+margin_right = 67.0
+margin_bottom = 35.0
+size_flags_horizontal = 4
+
+[node name="Tag_Label" type="Label" parent="CenterContainer/VBoxContainer/Domain_and_Element/Panel2/Element/CenterContainer2/VBoxContainer"]
+margin_left = 1.0
+margin_right = 54.0
+margin_bottom = 14.0
+size_flags_horizontal = 4
+text = "Element"
+
+[node name="Element_Label" type="Label" parent="CenterContainer/VBoxContainer/Domain_and_Element/Panel2/Element/CenterContainer2/VBoxContainer"]
+margin_top = 18.0
+margin_right = 55.0
+margin_bottom = 32.0
+size_flags_horizontal = 4
+text = "MASSIVE"
+
+[node name="CenterContainer" type="CenterContainer" parent="CenterContainer/VBoxContainer/Domain_and_Element/Panel2/Element"]
+margin_top = 42.0
+margin_right = 80.0
+margin_bottom = 80.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Element_TextureRect" type="TextureRect" parent="CenterContainer/VBoxContainer/Domain_and_Element/Panel2/Element/CenterContainer"]
+margin_left = 24.0
+margin_top = 3.0
+margin_right = 56.0
+margin_bottom = 35.0
+rect_min_size = Vector2( 32, 32 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 6 )
+expand = true
+stretch_mode = 5
+
+[node name="Price" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+margin_top = 210.0
+margin_right = 164.0
+margin_bottom = 224.0
+
+[node name="Tag_Label" type="Label" parent="CenterContainer/VBoxContainer/Price"]
+margin_right = 41.0
+margin_bottom = 14.0
+text = "Price -"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer/Price"]
+margin_left = 45.0
+margin_right = 164.0
+margin_bottom = 14.0
+size_flags_horizontal = 3
+alignment = 2
+
+[node name="Price_Label" type="Label" parent="CenterContainer/VBoxContainer/Price/HBoxContainer"]
+margin_left = 95.0
+margin_right = 119.0
+margin_bottom = 14.0
+text = "500"
+
+[node name="Owned" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+margin_top = 228.0
+margin_right = 164.0
+margin_bottom = 242.0
+
+[node name="Tag_Label" type="Label" parent="CenterContainer/VBoxContainer/Owned"]
+margin_right = 54.0
+margin_bottom = 14.0
+text = "Owned -"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer/Owned"]
+margin_left = 58.0
+margin_right = 164.0
+margin_bottom = 14.0
+size_flags_horizontal = 3
+alignment = 2
+
+[node name="Owned_Label" type="Label" parent="CenterContainer/VBoxContainer/Owned/HBoxContainer"]
+margin_left = 98.0
+margin_right = 106.0
+margin_bottom = 14.0
+text = "0"
+
+[node name="Equipped_Slot" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+margin_top = 246.0
+margin_right = 164.0
+margin_bottom = 302.0
+
+[node name="Panel" type="Panel" parent="CenterContainer/VBoxContainer/Equipped_Slot"]
+margin_right = 164.0
+margin_bottom = 56.0
+rect_min_size = Vector2( 164, 56 )
+
+[node name="Tag_Label" type="Label" parent="CenterContainer/VBoxContainer/Equipped_Slot/Panel"]
+margin_left = 4.0
+margin_right = 37.0
+margin_bottom = 14.0
+size_flags_vertical = 1
+text = "Slot -"
+
+[node name="Groups" type="VBoxContainer" parent="CenterContainer/VBoxContainer/Equipped_Slot/Panel"]
+margin_left = 41.0
+margin_right = 164.0
+margin_bottom = 50.0
+size_flags_horizontal = 3
+
+[node name="Dpad_Group" type="HBoxContainer" parent="CenterContainer/VBoxContainer/Equipped_Slot/Panel/Groups"]
+margin_right = 123.0
+margin_bottom = 14.0
+
+[node name="Tag_Label" type="Label" parent="CenterContainer/VBoxContainer/Equipped_Slot/Panel/Groups/Dpad_Group"]
+margin_right = 31.0
+margin_bottom = 14.0
+custom_colors/font_color = Color( 0.47451, 0.67451, 0.94902, 1 )
+text = "dpad"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer/Equipped_Slot/Panel/Groups/Dpad_Group"]
+margin_left = 35.0
+margin_right = 123.0
+margin_bottom = 14.0
+size_flags_horizontal = 3
+alignment = 2
+
+[node name="Dpad_Label" type="Label" parent="CenterContainer/VBoxContainer/Equipped_Slot/Panel/Groups/Dpad_Group/HBoxContainer"]
+margin_left = 50.0
+margin_right = 88.0
+margin_bottom = 14.0
+text = "NONE"
+
+[node name="Face_Group" type="HBoxContainer" parent="CenterContainer/VBoxContainer/Equipped_Slot/Panel/Groups"]
+margin_top = 18.0
+margin_right = 123.0
+margin_bottom = 32.0
+
+[node name="Tag_Label" type="Label" parent="CenterContainer/VBoxContainer/Equipped_Slot/Panel/Groups/Face_Group"]
+margin_right = 26.0
+margin_bottom = 14.0
+custom_colors/font_color = Color( 1, 0.501961, 0.501961, 1 )
+text = "face"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer/Equipped_Slot/Panel/Groups/Face_Group"]
+margin_left = 30.0
+margin_right = 123.0
+margin_bottom = 14.0
+size_flags_horizontal = 3
+alignment = 2
+
+[node name="Face_Label" type="Label" parent="CenterContainer/VBoxContainer/Equipped_Slot/Panel/Groups/Face_Group/HBoxContainer"]
+margin_left = 55.0
+margin_right = 93.0
+margin_bottom = 14.0
+text = "NONE"
+
+[node name="Input_Group" type="HBoxContainer" parent="CenterContainer/VBoxContainer/Equipped_Slot/Panel/Groups"]
+margin_top = 36.0
+margin_right = 123.0
+margin_bottom = 50.0
+
+[node name="Tag_Label" type="Label" parent="CenterContainer/VBoxContainer/Equipped_Slot/Panel/Groups/Input_Group"]
+margin_right = 33.0
+margin_bottom = 14.0
+custom_colors/font_color = Color( 0.866667, 1, 0.52549, 1 )
+text = "input"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer/Equipped_Slot/Panel/Groups/Input_Group"]
+margin_left = 37.0
+margin_right = 123.0
+margin_bottom = 14.0
+size_flags_horizontal = 3
+alignment = 2
+
+[node name="Input_Label" type="Label" parent="CenterContainer/VBoxContainer/Equipped_Slot/Panel/Groups/Input_Group/HBoxContainer"]
+margin_left = 48.0
+margin_right = 86.0
+margin_bottom = 14.0
+text = "NONE"

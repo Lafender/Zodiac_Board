@@ -1,0 +1,1943 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Item/Equipment/Skill/BOARD/Skill_Board_View/Skill_Board_Slot_Panel.gd" type="Script" id=1]
+[ext_resource path="res://Item/Equipment/Skill/CHIP/Skill_Chip_Panel/Skill_Chip_Panel.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Item/Equipment/Skill/BOARD/Skill_Board_View/Skill_Board_View.gd" type="Script" id=3]
+[ext_resource path="res://Item/Equipment/Skill/CHIP/Skill_Chip_Panel/Hover.tres" type="StyleBox" id=4]
+[ext_resource path="res://Item/Equipment/Skill/BOARD/Skill_Board_View/Skill_Board_Slot_Panel_2.tres" type="StyleBox" id=6]
+
+[sub_resource type="StyleBoxFlat" id=4]
+resource_local_to_scene = true
+bg_color = Color( 0.776471, 0.670588, 0.411765, 1 )
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[node name="Skill_Board_View" type="PanelContainer"]
+margin_right = 556.0
+margin_bottom = 298.0
+script = ExtResource( 3 )
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 549.0
+margin_bottom = 307.0
+rect_min_size = Vector2( 542, 300 )
+
+[node name="Checkerboard" type="GridContainer" parent="ScrollContainer"]
+margin_right = 796.0
+margin_bottom = 796.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 8
+
+[node name="Panel" type="PanelContainer" parent="ScrollContainer/Checkerboard"]
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/panel = SubResource( 4 )
+script = ExtResource( 1 )
+skill_chip_position = Vector2( 16, 8 )
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel"]
+margin_right = 96.0
+margin_bottom = 96.0
+
+[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel/CenterContainer" instance=ExtResource( 2 )]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 84.0
+margin_bottom = 91.0
+
+[node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel"]
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+
+[node name="Panel2" type="PanelContainer" parent="ScrollContainer/Checkerboard"]
+margin_left = 100.0
+margin_right = 196.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/panel = ExtResource( 6 )
+script = ExtResource( 1 )
+skill_chip_position = Vector2( 16, 8 )
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel2"]
+margin_right = 96.0
+margin_bottom = 96.0
+
+[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel2/CenterContainer" instance=ExtResource( 2 )]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 84.0
+margin_bottom = 91.0
+
+[node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel2"]
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+
+[node name="Panel3" type="PanelContainer" parent="ScrollContainer/Checkerboard"]
+margin_left = 200.0
+margin_right = 296.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/panel = SubResource( 4 )
+script = ExtResource( 1 )
+skill_chip_position = Vector2( 16, 8 )
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel3"]
+margin_right = 96.0
+margin_bottom = 96.0
+
+[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel3/CenterContainer" instance=ExtResource( 2 )]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 84.0
+margin_bottom = 91.0
+
+[node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel3"]
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+
+[node name="Panel4" type="PanelContainer" parent="ScrollContainer/Checkerboard"]
+margin_left = 300.0
+margin_right = 396.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/panel = ExtResource( 6 )
+script = ExtResource( 1 )
+skill_chip_position = Vector2( 16, 8 )
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel4"]
+margin_right = 96.0
+margin_bottom = 96.0
+
+[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel4/CenterContainer" instance=ExtResource( 2 )]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 84.0
+margin_bottom = 91.0
+
+[node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel4"]
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+
+[node name="Panel5" type="PanelContainer" parent="ScrollContainer/Checkerboard"]
+margin_left = 400.0
+margin_right = 496.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/panel = SubResource( 4 )
+script = ExtResource( 1 )
+skill_chip_position = Vector2( 16, 8 )
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel5"]
+margin_right = 96.0
+margin_bottom = 96.0
+
+[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel5/CenterContainer" instance=ExtResource( 2 )]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 84.0
+margin_bottom = 91.0
+
+[node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel5"]
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+
+[node name="Panel6" type="PanelContainer" parent="ScrollContainer/Checkerboard"]
+margin_left = 500.0
+margin_right = 596.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/panel = ExtResource( 6 )
+script = ExtResource( 1 )
+skill_chip_position = Vector2( 16, 8 )
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel6"]
+margin_right = 96.0
+margin_bottom = 96.0
+
+[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel6/CenterContainer" instance=ExtResource( 2 )]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 84.0
+margin_bottom = 91.0
+
+[node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel6"]
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+
+[node name="Panel7" type="PanelContainer" parent="ScrollContainer/Checkerboard"]
+margin_left = 600.0
+margin_right = 696.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/panel = SubResource( 4 )
+script = ExtResource( 1 )
+skill_chip_position = Vector2( 16, 8 )
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel7"]
+margin_right = 96.0
+margin_bottom = 96.0
+
+[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel7/CenterContainer" instance=ExtResource( 2 )]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 84.0
+margin_bottom = 91.0
+
+[node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel7"]
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+
+[node name="Panel8" type="PanelContainer" parent="ScrollContainer/Checkerboard"]
+margin_left = 700.0
+margin_right = 796.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/panel = ExtResource( 6 )
+script = ExtResource( 1 )
+skill_chip_position = Vector2( 16, 8 )
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel8"]
+margin_right = 96.0
+margin_bottom = 96.0
+
+[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel8/CenterContainer" instance=ExtResource( 2 )]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 84.0
+margin_bottom = 91.0
+
+[node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel8"]
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+
+[node name="Panel9" type="PanelContainer" parent="ScrollContainer/Checkerboard"]
+margin_top = 100.0
+margin_right = 96.0
+margin_bottom = 196.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/panel = ExtResource( 6 )
+script = ExtResource( 1 )
+skill_chip_position = Vector2( 16, 8 )
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel9"]
+margin_right = 96.0
+margin_bottom = 96.0
+
+[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel9/CenterContainer" instance=ExtResource( 2 )]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 84.0
+margin_bottom = 91.0
+
+[node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel9"]
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+
+[node name="Panel10" type="PanelContainer" parent="ScrollContainer/Checkerboard"]
+margin_left = 100.0
+margin_top = 100.0
+margin_right = 196.0
+margin_bottom = 196.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/panel = SubResource( 4 )
+script = ExtResource( 1 )
+skill_chip_position = Vector2( 16, 8 )
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel10"]
+margin_right = 96.0
+margin_bottom = 96.0
+
+[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel10/CenterContainer" instance=ExtResource( 2 )]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 84.0
+margin_bottom = 91.0
+
+[node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel10"]
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+
+[node name="Panel11" type="PanelContainer" parent="ScrollContainer/Checkerboard"]
+margin_left = 200.0
+margin_top = 100.0
+margin_right = 296.0
+margin_bottom = 196.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/panel = ExtResource( 6 )
+script = ExtResource( 1 )
+skill_chip_position = Vector2( 16, 8 )
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel11"]
+margin_right = 96.0
+margin_bottom = 96.0
+
+[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel11/CenterContainer" instance=ExtResource( 2 )]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 84.0
+margin_bottom = 91.0
+
+[node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel11"]
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+
+[node name="Panel12" type="PanelContainer" parent="ScrollContainer/Checkerboard"]
+margin_left = 300.0
+margin_top = 100.0
+margin_right = 396.0
+margin_bottom = 196.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/panel = SubResource( 4 )
+script = ExtResource( 1 )
+skill_chip_position = Vector2( 16, 8 )
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel12"]
+margin_right = 96.0
+margin_bottom = 96.0
+
+[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel12/CenterContainer" instance=ExtResource( 2 )]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 84.0
+margin_bottom = 91.0
+
+[node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel12"]
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+
+[node name="Panel13" type="PanelContainer" parent="ScrollContainer/Checkerboard"]
+margin_left = 400.0
+margin_top = 100.0
+margin_right = 496.0
+margin_bottom = 196.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/panel = ExtResource( 6 )
+script = ExtResource( 1 )
+skill_chip_position = Vector2( 16, 8 )
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel13"]
+margin_right = 96.0
+margin_bottom = 96.0
+
+[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel13/CenterContainer" instance=ExtResource( 2 )]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 84.0
+margin_bottom = 91.0
+
+[node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel13"]
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+
+[node name="Panel14" type="PanelContainer" parent="ScrollContainer/Checkerboard"]
+margin_left = 500.0
+margin_top = 100.0
+margin_right = 596.0
+margin_bottom = 196.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/panel = SubResource( 4 )
+script = ExtResource( 1 )
+skill_chip_position = Vector2( 16, 8 )
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel14"]
+margin_right = 96.0
+margin_bottom = 96.0
+
+[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel14/CenterContainer" instance=ExtResource( 2 )]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 84.0
+margin_bottom = 91.0
+
+[node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel14"]
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+
+[node name="Panel15" type="PanelContainer" parent="ScrollContainer/Checkerboard"]
+margin_left = 600.0
+margin_top = 100.0
+margin_right = 696.0
+margin_bottom = 196.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/panel = ExtResource( 6 )
+script = ExtResource( 1 )
+skill_chip_position = Vector2( 16, 8 )
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel15"]
+margin_right = 96.0
+margin_bottom = 96.0
+
+[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel15/CenterContainer" instance=ExtResource( 2 )]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 84.0
+margin_bottom = 91.0
+
+[node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel15"]
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+
+[node name="Panel16" type="PanelContainer" parent="ScrollContainer/Checkerboard"]
+margin_left = 700.0
+margin_top = 100.0
+margin_right = 796.0
+margin_bottom = 196.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/panel = SubResource( 4 )
+script = ExtResource( 1 )
+skill_chip_position = Vector2( 16, 8 )
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel16"]
+margin_right = 96.0
+margin_bottom = 96.0
+
+[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel16/CenterContainer" instance=ExtResource( 2 )]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 84.0
+margin_bottom = 91.0
+
+[node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel16"]
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+
+[node name="Panel17" type="PanelContainer" parent="ScrollContainer/Checkerboard"]
+margin_top = 200.0
+margin_right = 96.0
+margin_bottom = 296.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/panel = SubResource( 4 )
+script = ExtResource( 1 )
+skill_chip_position = Vector2( 16, 8 )
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel17"]
+margin_right = 96.0
+margin_bottom = 96.0
+
+[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel17/CenterContainer" instance=ExtResource( 2 )]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 84.0
+margin_bottom = 91.0
+
+[node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel17"]
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+
+[node name="Panel18" type="PanelContainer" parent="ScrollContainer/Checkerboard"]
+margin_left = 100.0
+margin_top = 200.0
+margin_right = 196.0
+margin_bottom = 296.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/panel = ExtResource( 6 )
+script = ExtResource( 1 )
+skill_chip_position = Vector2( 16, 8 )
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel18"]
+margin_right = 96.0
+margin_bottom = 96.0
+
+[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel18/CenterContainer" instance=ExtResource( 2 )]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 84.0
+margin_bottom = 91.0
+
+[node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel18"]
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+
+[node name="Panel19" type="PanelContainer" parent="ScrollContainer/Checkerboard"]
+margin_left = 200.0
+margin_top = 200.0
+margin_right = 296.0
+margin_bottom = 296.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/panel = SubResource( 4 )
+script = ExtResource( 1 )
+skill_chip_position = Vector2( 16, 8 )
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel19"]
+margin_right = 96.0
+margin_bottom = 96.0
+
+[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel19/CenterContainer" instance=ExtResource( 2 )]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 84.0
+margin_bottom = 91.0
+
+[node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel19"]
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+
+[node name="Panel20" type="PanelContainer" parent="ScrollContainer/Checkerboard"]
+margin_left = 300.0
+margin_top = 200.0
+margin_right = 396.0
+margin_bottom = 296.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/panel = ExtResource( 6 )
+script = ExtResource( 1 )
+skill_chip_position = Vector2( 16, 8 )
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel20"]
+margin_right = 96.0
+margin_bottom = 96.0
+
+[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel20/CenterContainer" instance=ExtResource( 2 )]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 84.0
+margin_bottom = 91.0
+
+[node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel20"]
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+
+[node name="Panel21" type="PanelContainer" parent="ScrollContainer/Checkerboard"]
+margin_left = 400.0
+margin_top = 200.0
+margin_right = 496.0
+margin_bottom = 296.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/panel = SubResource( 4 )
+script = ExtResource( 1 )
+skill_chip_position = Vector2( 16, 8 )
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel21"]
+margin_right = 96.0
+margin_bottom = 96.0
+
+[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel21/CenterContainer" instance=ExtResource( 2 )]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 84.0
+margin_bottom = 91.0
+
+[node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel21"]
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+
+[node name="Panel22" type="PanelContainer" parent="ScrollContainer/Checkerboard"]
+margin_left = 500.0
+margin_top = 200.0
+margin_right = 596.0
+margin_bottom = 296.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/panel = ExtResource( 6 )
+script = ExtResource( 1 )
+skill_chip_position = Vector2( 16, 8 )
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel22"]
+margin_right = 96.0
+margin_bottom = 96.0
+
+[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel22/CenterContainer" instance=ExtResource( 2 )]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 84.0
+margin_bottom = 91.0
+
+[node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel22"]
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+
+[node name="Panel23" type="PanelContainer" parent="ScrollContainer/Checkerboard"]
+margin_left = 600.0
+margin_top = 200.0
+margin_right = 696.0
+margin_bottom = 296.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/panel = SubResource( 4 )
+script = ExtResource( 1 )
+skill_chip_position = Vector2( 16, 8 )
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel23"]
+margin_right = 96.0
+margin_bottom = 96.0
+
+[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel23/CenterContainer" instance=ExtResource( 2 )]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 84.0
+margin_bottom = 91.0
+
+[node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel23"]
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+
+[node name="Panel24" type="PanelContainer" parent="ScrollContainer/Checkerboard"]
+margin_left = 700.0
+margin_top = 200.0
+margin_right = 796.0
+margin_bottom = 296.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/panel = ExtResource( 6 )
+script = ExtResource( 1 )
+skill_chip_position = Vector2( 16, 8 )
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel24"]
+margin_right = 96.0
+margin_bottom = 96.0
+
+[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel24/CenterContainer" instance=ExtResource( 2 )]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 84.0
+margin_bottom = 91.0
+
+[node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel24"]
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+
+[node name="Panel25" type="PanelContainer" parent="ScrollContainer/Checkerboard"]
+margin_top = 300.0
+margin_right = 96.0
+margin_bottom = 396.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/panel = ExtResource( 6 )
+script = ExtResource( 1 )
+skill_chip_position = Vector2( 16, 8 )
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel25"]
+margin_right = 96.0
+margin_bottom = 96.0
+
+[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel25/CenterContainer" instance=ExtResource( 2 )]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 84.0
+margin_bottom = 91.0
+
+[node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel25"]
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+
+[node name="Panel26" type="PanelContainer" parent="ScrollContainer/Checkerboard"]
+margin_left = 100.0
+margin_top = 300.0
+margin_right = 196.0
+margin_bottom = 396.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/panel = SubResource( 4 )
+script = ExtResource( 1 )
+skill_chip_position = Vector2( 16, 8 )
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel26"]
+margin_right = 96.0
+margin_bottom = 96.0
+
+[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel26/CenterContainer" instance=ExtResource( 2 )]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 84.0
+margin_bottom = 91.0
+
+[node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel26"]
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+
+[node name="Panel27" type="PanelContainer" parent="ScrollContainer/Checkerboard"]
+margin_left = 200.0
+margin_top = 300.0
+margin_right = 296.0
+margin_bottom = 396.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/panel = ExtResource( 6 )
+script = ExtResource( 1 )
+skill_chip_position = Vector2( 16, 8 )
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel27"]
+margin_right = 96.0
+margin_bottom = 96.0
+
+[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel27/CenterContainer" instance=ExtResource( 2 )]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 84.0
+margin_bottom = 91.0
+
+[node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel27"]
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+
+[node name="Panel28" type="PanelContainer" parent="ScrollContainer/Checkerboard"]
+margin_left = 300.0
+margin_top = 300.0
+margin_right = 396.0
+margin_bottom = 396.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/panel = SubResource( 4 )
+script = ExtResource( 1 )
+skill_chip_position = Vector2( 16, 8 )
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel28"]
+margin_right = 96.0
+margin_bottom = 96.0
+
+[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel28/CenterContainer" instance=ExtResource( 2 )]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 84.0
+margin_bottom = 91.0
+
+[node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel28"]
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+
+[node name="Panel29" type="PanelContainer" parent="ScrollContainer/Checkerboard"]
+margin_left = 400.0
+margin_top = 300.0
+margin_right = 496.0
+margin_bottom = 396.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/panel = ExtResource( 6 )
+script = ExtResource( 1 )
+skill_chip_position = Vector2( 16, 8 )
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel29"]
+margin_right = 96.0
+margin_bottom = 96.0
+
+[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel29/CenterContainer" instance=ExtResource( 2 )]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 84.0
+margin_bottom = 91.0
+
+[node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel29"]
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+
+[node name="Panel30" type="PanelContainer" parent="ScrollContainer/Checkerboard"]
+margin_left = 500.0
+margin_top = 300.0
+margin_right = 596.0
+margin_bottom = 396.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/panel = SubResource( 4 )
+script = ExtResource( 1 )
+skill_chip_position = Vector2( 16, 8 )
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel30"]
+margin_right = 96.0
+margin_bottom = 96.0
+
+[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel30/CenterContainer" instance=ExtResource( 2 )]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 84.0
+margin_bottom = 91.0
+
+[node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel30"]
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+
+[node name="Panel31" type="PanelContainer" parent="ScrollContainer/Checkerboard"]
+margin_left = 600.0
+margin_top = 300.0
+margin_right = 696.0
+margin_bottom = 396.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/panel = ExtResource( 6 )
+script = ExtResource( 1 )
+skill_chip_position = Vector2( 16, 8 )
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel31"]
+margin_right = 96.0
+margin_bottom = 96.0
+
+[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel31/CenterContainer" instance=ExtResource( 2 )]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 84.0
+margin_bottom = 91.0
+
+[node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel31"]
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+
+[node name="Panel32" type="PanelContainer" parent="ScrollContainer/Checkerboard"]
+margin_left = 700.0
+margin_top = 300.0
+margin_right = 796.0
+margin_bottom = 396.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/panel = SubResource( 4 )
+script = ExtResource( 1 )
+skill_chip_position = Vector2( 16, 8 )
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel32"]
+margin_right = 96.0
+margin_bottom = 96.0
+
+[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel32/CenterContainer" instance=ExtResource( 2 )]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 84.0
+margin_bottom = 91.0
+
+[node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel32"]
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+
+[node name="Panel33" type="PanelContainer" parent="ScrollContainer/Checkerboard"]
+margin_top = 400.0
+margin_right = 96.0
+margin_bottom = 496.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/panel = SubResource( 4 )
+script = ExtResource( 1 )
+skill_chip_position = Vector2( 16, 8 )
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel33"]
+margin_right = 96.0
+margin_bottom = 96.0
+
+[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel33/CenterContainer" instance=ExtResource( 2 )]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 84.0
+margin_bottom = 91.0
+
+[node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel33"]
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+
+[node name="Panel34" type="PanelContainer" parent="ScrollContainer/Checkerboard"]
+margin_left = 100.0
+margin_top = 400.0
+margin_right = 196.0
+margin_bottom = 496.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/panel = ExtResource( 6 )
+script = ExtResource( 1 )
+skill_chip_position = Vector2( 16, 8 )
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel34"]
+margin_right = 96.0
+margin_bottom = 96.0
+
+[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel34/CenterContainer" instance=ExtResource( 2 )]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 84.0
+margin_bottom = 91.0
+
+[node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel34"]
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+
+[node name="Panel35" type="PanelContainer" parent="ScrollContainer/Checkerboard"]
+margin_left = 200.0
+margin_top = 400.0
+margin_right = 296.0
+margin_bottom = 496.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/panel = SubResource( 4 )
+script = ExtResource( 1 )
+skill_chip_position = Vector2( 16, 8 )
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel35"]
+margin_right = 96.0
+margin_bottom = 96.0
+
+[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel35/CenterContainer" instance=ExtResource( 2 )]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 84.0
+margin_bottom = 91.0
+
+[node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel35"]
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+
+[node name="Panel36" type="PanelContainer" parent="ScrollContainer/Checkerboard"]
+margin_left = 300.0
+margin_top = 400.0
+margin_right = 396.0
+margin_bottom = 496.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/panel = ExtResource( 6 )
+script = ExtResource( 1 )
+skill_chip_position = Vector2( 16, 8 )
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel36"]
+margin_right = 96.0
+margin_bottom = 96.0
+
+[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel36/CenterContainer" instance=ExtResource( 2 )]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 84.0
+margin_bottom = 91.0
+
+[node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel36"]
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+
+[node name="Panel37" type="PanelContainer" parent="ScrollContainer/Checkerboard"]
+margin_left = 400.0
+margin_top = 400.0
+margin_right = 496.0
+margin_bottom = 496.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/panel = SubResource( 4 )
+script = ExtResource( 1 )
+skill_chip_position = Vector2( 16, 8 )
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel37"]
+margin_right = 96.0
+margin_bottom = 96.0
+
+[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel37/CenterContainer" instance=ExtResource( 2 )]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 84.0
+margin_bottom = 91.0
+
+[node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel37"]
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+
+[node name="Panel38" type="PanelContainer" parent="ScrollContainer/Checkerboard"]
+margin_left = 500.0
+margin_top = 400.0
+margin_right = 596.0
+margin_bottom = 496.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/panel = ExtResource( 6 )
+script = ExtResource( 1 )
+skill_chip_position = Vector2( 16, 8 )
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel38"]
+margin_right = 96.0
+margin_bottom = 96.0
+
+[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel38/CenterContainer" instance=ExtResource( 2 )]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 84.0
+margin_bottom = 91.0
+
+[node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel38"]
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+
+[node name="Panel39" type="PanelContainer" parent="ScrollContainer/Checkerboard"]
+margin_left = 600.0
+margin_top = 400.0
+margin_right = 696.0
+margin_bottom = 496.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/panel = SubResource( 4 )
+script = ExtResource( 1 )
+skill_chip_position = Vector2( 16, 8 )
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel39"]
+margin_right = 96.0
+margin_bottom = 96.0
+
+[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel39/CenterContainer" instance=ExtResource( 2 )]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 84.0
+margin_bottom = 91.0
+
+[node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel39"]
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+
+[node name="Panel40" type="PanelContainer" parent="ScrollContainer/Checkerboard"]
+margin_left = 700.0
+margin_top = 400.0
+margin_right = 796.0
+margin_bottom = 496.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/panel = ExtResource( 6 )
+script = ExtResource( 1 )
+skill_chip_position = Vector2( 16, 8 )
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel40"]
+margin_right = 96.0
+margin_bottom = 96.0
+
+[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel40/CenterContainer" instance=ExtResource( 2 )]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 84.0
+margin_bottom = 91.0
+
+[node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel40"]
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+
+[node name="Panel41" type="PanelContainer" parent="ScrollContainer/Checkerboard"]
+margin_top = 500.0
+margin_right = 96.0
+margin_bottom = 596.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/panel = ExtResource( 6 )
+script = ExtResource( 1 )
+skill_chip_position = Vector2( 16, 8 )
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel41"]
+margin_right = 96.0
+margin_bottom = 96.0
+
+[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel41/CenterContainer" instance=ExtResource( 2 )]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 84.0
+margin_bottom = 91.0
+
+[node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel41"]
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+
+[node name="Panel42" type="PanelContainer" parent="ScrollContainer/Checkerboard"]
+margin_left = 100.0
+margin_top = 500.0
+margin_right = 196.0
+margin_bottom = 596.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/panel = SubResource( 4 )
+script = ExtResource( 1 )
+skill_chip_position = Vector2( 16, 8 )
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel42"]
+margin_right = 96.0
+margin_bottom = 96.0
+
+[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel42/CenterContainer" instance=ExtResource( 2 )]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 84.0
+margin_bottom = 91.0
+
+[node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel42"]
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+
+[node name="Panel43" type="PanelContainer" parent="ScrollContainer/Checkerboard"]
+margin_left = 200.0
+margin_top = 500.0
+margin_right = 296.0
+margin_bottom = 596.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/panel = ExtResource( 6 )
+script = ExtResource( 1 )
+skill_chip_position = Vector2( 16, 8 )
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel43"]
+margin_right = 96.0
+margin_bottom = 96.0
+
+[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel43/CenterContainer" instance=ExtResource( 2 )]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 84.0
+margin_bottom = 91.0
+
+[node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel43"]
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+
+[node name="Panel44" type="PanelContainer" parent="ScrollContainer/Checkerboard"]
+margin_left = 300.0
+margin_top = 500.0
+margin_right = 396.0
+margin_bottom = 596.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/panel = SubResource( 4 )
+script = ExtResource( 1 )
+skill_chip_position = Vector2( 16, 8 )
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel44"]
+margin_right = 96.0
+margin_bottom = 96.0
+
+[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel44/CenterContainer" instance=ExtResource( 2 )]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 84.0
+margin_bottom = 91.0
+
+[node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel44"]
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+
+[node name="Panel45" type="PanelContainer" parent="ScrollContainer/Checkerboard"]
+margin_left = 400.0
+margin_top = 500.0
+margin_right = 496.0
+margin_bottom = 596.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/panel = ExtResource( 6 )
+script = ExtResource( 1 )
+skill_chip_position = Vector2( 16, 8 )
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel45"]
+margin_right = 96.0
+margin_bottom = 96.0
+
+[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel45/CenterContainer" instance=ExtResource( 2 )]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 84.0
+margin_bottom = 91.0
+
+[node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel45"]
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+
+[node name="Panel46" type="PanelContainer" parent="ScrollContainer/Checkerboard"]
+margin_left = 500.0
+margin_top = 500.0
+margin_right = 596.0
+margin_bottom = 596.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/panel = SubResource( 4 )
+script = ExtResource( 1 )
+skill_chip_position = Vector2( 16, 8 )
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel46"]
+margin_right = 96.0
+margin_bottom = 96.0
+
+[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel46/CenterContainer" instance=ExtResource( 2 )]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 84.0
+margin_bottom = 91.0
+
+[node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel46"]
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+
+[node name="Panel47" type="PanelContainer" parent="ScrollContainer/Checkerboard"]
+margin_left = 600.0
+margin_top = 500.0
+margin_right = 696.0
+margin_bottom = 596.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/panel = ExtResource( 6 )
+script = ExtResource( 1 )
+skill_chip_position = Vector2( 16, 8 )
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel47"]
+margin_right = 96.0
+margin_bottom = 96.0
+
+[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel47/CenterContainer" instance=ExtResource( 2 )]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 84.0
+margin_bottom = 91.0
+
+[node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel47"]
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+
+[node name="Panel48" type="PanelContainer" parent="ScrollContainer/Checkerboard"]
+margin_left = 700.0
+margin_top = 500.0
+margin_right = 796.0
+margin_bottom = 596.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/panel = SubResource( 4 )
+script = ExtResource( 1 )
+skill_chip_position = Vector2( 16, 8 )
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel48"]
+margin_right = 96.0
+margin_bottom = 96.0
+
+[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel48/CenterContainer" instance=ExtResource( 2 )]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 84.0
+margin_bottom = 91.0
+
+[node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel48"]
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+
+[node name="Panel49" type="PanelContainer" parent="ScrollContainer/Checkerboard"]
+margin_top = 600.0
+margin_right = 96.0
+margin_bottom = 696.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/panel = SubResource( 4 )
+script = ExtResource( 1 )
+skill_chip_position = Vector2( 16, 8 )
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel49"]
+margin_right = 96.0
+margin_bottom = 96.0
+
+[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel49/CenterContainer" instance=ExtResource( 2 )]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 84.0
+margin_bottom = 91.0
+
+[node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel49"]
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+
+[node name="Panel50" type="PanelContainer" parent="ScrollContainer/Checkerboard"]
+margin_left = 100.0
+margin_top = 600.0
+margin_right = 196.0
+margin_bottom = 696.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/panel = ExtResource( 6 )
+script = ExtResource( 1 )
+skill_chip_position = Vector2( 16, 8 )
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel50"]
+margin_right = 96.0
+margin_bottom = 96.0
+
+[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel50/CenterContainer" instance=ExtResource( 2 )]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 84.0
+margin_bottom = 91.0
+
+[node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel50"]
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+
+[node name="Panel51" type="PanelContainer" parent="ScrollContainer/Checkerboard"]
+margin_left = 200.0
+margin_top = 600.0
+margin_right = 296.0
+margin_bottom = 696.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/panel = SubResource( 4 )
+script = ExtResource( 1 )
+skill_chip_position = Vector2( 16, 8 )
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel51"]
+margin_right = 96.0
+margin_bottom = 96.0
+
+[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel51/CenterContainer" instance=ExtResource( 2 )]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 84.0
+margin_bottom = 91.0
+
+[node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel51"]
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+
+[node name="Panel52" type="PanelContainer" parent="ScrollContainer/Checkerboard"]
+margin_left = 300.0
+margin_top = 600.0
+margin_right = 396.0
+margin_bottom = 696.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/panel = ExtResource( 6 )
+script = ExtResource( 1 )
+skill_chip_position = Vector2( 16, 8 )
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel52"]
+margin_right = 96.0
+margin_bottom = 96.0
+
+[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel52/CenterContainer" instance=ExtResource( 2 )]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 84.0
+margin_bottom = 91.0
+
+[node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel52"]
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+
+[node name="Panel53" type="PanelContainer" parent="ScrollContainer/Checkerboard"]
+margin_left = 400.0
+margin_top = 600.0
+margin_right = 496.0
+margin_bottom = 696.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/panel = SubResource( 4 )
+script = ExtResource( 1 )
+skill_chip_position = Vector2( 16, 8 )
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel53"]
+margin_right = 96.0
+margin_bottom = 96.0
+
+[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel53/CenterContainer" instance=ExtResource( 2 )]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 84.0
+margin_bottom = 91.0
+
+[node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel53"]
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+
+[node name="Panel54" type="PanelContainer" parent="ScrollContainer/Checkerboard"]
+margin_left = 500.0
+margin_top = 600.0
+margin_right = 596.0
+margin_bottom = 696.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/panel = ExtResource( 6 )
+script = ExtResource( 1 )
+skill_chip_position = Vector2( 16, 8 )
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel54"]
+margin_right = 96.0
+margin_bottom = 96.0
+
+[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel54/CenterContainer" instance=ExtResource( 2 )]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 84.0
+margin_bottom = 91.0
+
+[node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel54"]
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+
+[node name="Panel55" type="PanelContainer" parent="ScrollContainer/Checkerboard"]
+margin_left = 600.0
+margin_top = 600.0
+margin_right = 696.0
+margin_bottom = 696.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/panel = SubResource( 4 )
+script = ExtResource( 1 )
+skill_chip_position = Vector2( 16, 8 )
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel55"]
+margin_right = 96.0
+margin_bottom = 96.0
+
+[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel55/CenterContainer" instance=ExtResource( 2 )]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 84.0
+margin_bottom = 91.0
+
+[node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel55"]
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+
+[node name="Panel56" type="PanelContainer" parent="ScrollContainer/Checkerboard"]
+margin_left = 700.0
+margin_top = 600.0
+margin_right = 796.0
+margin_bottom = 696.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/panel = ExtResource( 6 )
+script = ExtResource( 1 )
+skill_chip_position = Vector2( 16, 8 )
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel56"]
+margin_right = 96.0
+margin_bottom = 96.0
+
+[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel56/CenterContainer" instance=ExtResource( 2 )]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 84.0
+margin_bottom = 91.0
+
+[node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel56"]
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+
+[node name="Panel57" type="PanelContainer" parent="ScrollContainer/Checkerboard"]
+margin_top = 700.0
+margin_right = 96.0
+margin_bottom = 796.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/panel = ExtResource( 6 )
+script = ExtResource( 1 )
+skill_chip_position = Vector2( 16, 8 )
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel57"]
+margin_right = 96.0
+margin_bottom = 96.0
+
+[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel57/CenterContainer" instance=ExtResource( 2 )]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 84.0
+margin_bottom = 91.0
+
+[node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel57"]
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+
+[node name="Panel58" type="PanelContainer" parent="ScrollContainer/Checkerboard"]
+margin_left = 100.0
+margin_top = 700.0
+margin_right = 196.0
+margin_bottom = 796.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/panel = SubResource( 4 )
+script = ExtResource( 1 )
+skill_chip_position = Vector2( 16, 8 )
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel58"]
+margin_right = 96.0
+margin_bottom = 96.0
+
+[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel58/CenterContainer" instance=ExtResource( 2 )]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 84.0
+margin_bottom = 91.0
+
+[node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel58"]
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+
+[node name="Panel59" type="PanelContainer" parent="ScrollContainer/Checkerboard"]
+margin_left = 200.0
+margin_top = 700.0
+margin_right = 296.0
+margin_bottom = 796.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/panel = ExtResource( 6 )
+script = ExtResource( 1 )
+skill_chip_position = Vector2( 16, 8 )
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel59"]
+margin_right = 96.0
+margin_bottom = 96.0
+
+[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel59/CenterContainer" instance=ExtResource( 2 )]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 84.0
+margin_bottom = 91.0
+
+[node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel59"]
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+
+[node name="Panel60" type="PanelContainer" parent="ScrollContainer/Checkerboard"]
+margin_left = 300.0
+margin_top = 700.0
+margin_right = 396.0
+margin_bottom = 796.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/panel = SubResource( 4 )
+script = ExtResource( 1 )
+skill_chip_position = Vector2( 16, 8 )
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel60"]
+margin_right = 96.0
+margin_bottom = 96.0
+
+[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel60/CenterContainer" instance=ExtResource( 2 )]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 84.0
+margin_bottom = 91.0
+
+[node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel60"]
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+
+[node name="Panel61" type="PanelContainer" parent="ScrollContainer/Checkerboard"]
+margin_left = 400.0
+margin_top = 700.0
+margin_right = 496.0
+margin_bottom = 796.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/panel = ExtResource( 6 )
+script = ExtResource( 1 )
+skill_chip_position = Vector2( 16, 8 )
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel61"]
+margin_right = 96.0
+margin_bottom = 96.0
+
+[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel61/CenterContainer" instance=ExtResource( 2 )]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 84.0
+margin_bottom = 91.0
+
+[node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel61"]
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+
+[node name="Panel62" type="PanelContainer" parent="ScrollContainer/Checkerboard"]
+margin_left = 500.0
+margin_top = 700.0
+margin_right = 596.0
+margin_bottom = 796.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/panel = SubResource( 4 )
+script = ExtResource( 1 )
+skill_chip_position = Vector2( 16, 8 )
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel62"]
+margin_right = 96.0
+margin_bottom = 96.0
+
+[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel62/CenterContainer" instance=ExtResource( 2 )]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 84.0
+margin_bottom = 91.0
+
+[node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel62"]
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+
+[node name="Panel63" type="PanelContainer" parent="ScrollContainer/Checkerboard"]
+margin_left = 600.0
+margin_top = 700.0
+margin_right = 696.0
+margin_bottom = 796.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/panel = ExtResource( 6 )
+script = ExtResource( 1 )
+skill_chip_position = Vector2( 16, 8 )
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel63"]
+margin_right = 96.0
+margin_bottom = 96.0
+
+[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel63/CenterContainer" instance=ExtResource( 2 )]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 84.0
+margin_bottom = 91.0
+
+[node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel63"]
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+
+[node name="Panel64" type="PanelContainer" parent="ScrollContainer/Checkerboard"]
+margin_left = 700.0
+margin_top = 700.0
+margin_right = 796.0
+margin_bottom = 796.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/panel = SubResource( 4 )
+script = ExtResource( 1 )
+skill_chip_position = Vector2( 16, 8 )
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel64"]
+margin_right = 96.0
+margin_bottom = 96.0
+
+[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel64/CenterContainer" instance=ExtResource( 2 )]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 84.0
+margin_bottom = 91.0
+
+[node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel64"]
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )

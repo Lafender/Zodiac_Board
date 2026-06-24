@@ -1,0 +1,16 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Chemistry/Interaction/Interaction_Data.gd" type="Script" id=1]
+
+[resource]
+resource_name = "Sustain Data"
+script = ExtResource( 1 )
+interaction_type = "SUSTAIN"
+target_gauge = "HEALTH"
+damage_multiplier = 1.2
+damage_duration = 12.0
+damage_interval = 0.2
+self_gauge = ""
+self_multiplier = 0.0
+self_duration = 0.0
+self_interval = 0.0

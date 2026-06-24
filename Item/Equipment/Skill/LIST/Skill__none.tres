@@ -1,0 +1,27 @@
+[gd_resource type="Resource" load_steps=5 format=2]
+
+[ext_resource path="res://Item/Equipment/Skill/Skill_Data.gd" type="Script" id=1]
+[ext_resource path="res://Chemistry/Domain/LIST/PHYSICAL/DATA.tres" type="Resource" id=2]
+[ext_resource path="res://Chemistry/Element/LIST/VIRTUAL/LIMIT/DATA.tres" type="Resource" id=3]
+[ext_resource path="res://Statistic/Gauge_Statistic/LIST/ZERO/DATA.tres" type="Resource" id=4]
+
+[resource]
+script = ExtResource( 1 )
+item_type = "Skill"
+color_code = Color( 1, 1, 1, 1 )
+code = "____"
+is_consumable = false
+is_tradable = false
+price = 0
+max_quantity = 999999
+base_power = 0
+speed = 100
+domain_data = ExtResource( 2 )
+element_data = ExtResource( 3 )
+is_equipped = false
+skill_name_part_1 = ""
+skill_name_part_2 = ""
+skill_name_part_3 = ""
+effects = PoolStringArray(  )
+target_gauge = ExtResource( 4 )
+cost = 0

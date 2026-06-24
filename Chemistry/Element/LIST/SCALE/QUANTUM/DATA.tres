@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Chemistry/Element/Element_Data.gd" type="Script" id=1]
+[ext_resource path="res://Chemistry/Element/LIST/SCALE/QUANTUM/ICON.png" type="Texture" id=2]
+
+[resource]
+resource_name = "Quantum Data"
+script = ExtResource( 1 )
+name = "QUANTUM"
+icon = ExtResource( 2 )
+element_group_0 = "Intensity"
+element_group_1 = "Transfer"
+element_group_2 = "Virtual"
+element_group_3 = "Minerals"
+element_group_4 = "Patterns"

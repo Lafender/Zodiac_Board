@@ -1,0 +1,38 @@
+[gd_resource type="Resource" load_steps=8 format=2]
+
+[ext_resource path="res://Statistic/Gauge_Statistic/LIST/ZERO/DATA.tres" type="Resource" id=1]
+[ext_resource path="res://Chemistry/Domain/LIST/PHYSICAL/DATA.tres" type="Resource" id=2]
+[ext_resource path="res://Item/Equipment/Skill/Skill_Tween_Profile.gd" type="Script" id=3]
+[ext_resource path="res://Item/Equipment/Skill/Skill_Data.gd" type="Script" id=4]
+[ext_resource path="res://Chemistry/Element/LIST/MINERAL/LIQUID/DATA.tres" type="Resource" id=5]
+[ext_resource path="res://Item/Equipment/Skill/ICONS/tile040.png" type="Texture" id=6]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 3 )
+tween_duration = 0.466105
+tween_offset = Vector2( -6.58747, -2.96946 )
+tween_loop = false
+tween_is_active_animation = false
+tween_is_start_animation = true
+
+[resource]
+script = ExtResource( 4 )
+color_code = Color( 0.686275, 1, 0.686275, 1 )
+code = "SJBI"
+icon = ExtResource( 6 )
+is_consumable = 0
+is_tradable = true
+price = 331038984
+max_quantity = 999999
+base_power = 8898
+speed = 40
+domain_data = ExtResource( 2 )
+element_data = ExtResource( 5 )
+is_equipped = false
+skill_name_part_1 = "Eldra"
+skill_name_part_2 = "Felt"
+skill_name_part_3 = "Quietly"
+effects = PoolStringArray(  )
+target_gauge = ExtResource( 1 )
+cost = 6
+animation = SubResource( 1 )
