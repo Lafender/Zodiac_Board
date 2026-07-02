@@ -44,6 +44,9 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 96, 96 )
 custom_styles/panel = SubResource( 4 )
 script = ExtResource( 1 )
+dpad_group = "LEFT"
+face_group = "X"
+input_group = "X"
 skill_chip_position = Vector2( 16, 8 )
 
 [node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel"]
@@ -73,6 +76,9 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 96, 96 )
 custom_styles/panel = ExtResource( 6 )
 script = ExtResource( 1 )
+dpad_group = "LEFT"
+face_group = "X"
+input_group = "Y"
 skill_chip_position = Vector2( 16, 8 )
 
 [node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel2"]
@@ -102,6 +108,9 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 96, 96 )
 custom_styles/panel = SubResource( 4 )
 script = ExtResource( 1 )
+dpad_group = "LEFT"
+face_group = "Y"
+input_group = "X"
 skill_chip_position = Vector2( 16, 8 )
 
 [node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel3"]
@@ -131,6 +140,9 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 96, 96 )
 custom_styles/panel = ExtResource( 6 )
 script = ExtResource( 1 )
+dpad_group = "LEFT"
+face_group = "Y"
+input_group = "Y"
 skill_chip_position = Vector2( 16, 8 )
 
 [node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel4"]
@@ -160,6 +172,9 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 96, 96 )
 custom_styles/panel = SubResource( 4 )
 script = ExtResource( 1 )
+dpad_group = "UP"
+face_group = "X"
+input_group = "X"
 skill_chip_position = Vector2( 16, 8 )
 
 [node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel5"]
@@ -189,6 +204,9 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 96, 96 )
 custom_styles/panel = ExtResource( 6 )
 script = ExtResource( 1 )
+dpad_group = "UP"
+face_group = "X"
+input_group = "Y"
 skill_chip_position = Vector2( 16, 8 )
 
 [node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel6"]
@@ -218,6 +236,9 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 96, 96 )
 custom_styles/panel = SubResource( 4 )
 script = ExtResource( 1 )
+dpad_group = "UP"
+face_group = "Y"
+input_group = "X"
 skill_chip_position = Vector2( 16, 8 )
 
 [node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel7"]
@@ -247,6 +268,9 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 96, 96 )
 custom_styles/panel = ExtResource( 6 )
 script = ExtResource( 1 )
+dpad_group = "UP"
+face_group = "Y"
+input_group = "Y"
 skill_chip_position = Vector2( 16, 8 )
 
 [node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel8"]
@@ -276,6 +300,9 @@ margin_bottom = 196.0
 rect_min_size = Vector2( 96, 96 )
 custom_styles/panel = ExtResource( 6 )
 script = ExtResource( 1 )
+dpad_group = "LEFT"
+face_group = "X"
+input_group = "A"
 skill_chip_position = Vector2( 16, 8 )
 
 [node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel9"]
@@ -306,6 +333,9 @@ margin_bottom = 196.0
 rect_min_size = Vector2( 96, 96 )
 custom_styles/panel = SubResource( 4 )
 script = ExtResource( 1 )
+dpad_group = "LEFT"
+face_group = "X"
+input_group = "B"
 skill_chip_position = Vector2( 16, 8 )
 
 [node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel10"]
@@ -336,6 +366,9 @@ margin_bottom = 196.0
 rect_min_size = Vector2( 96, 96 )
 custom_styles/panel = ExtResource( 6 )
 script = ExtResource( 1 )
+dpad_group = "LEFT"
+face_group = "Y"
+input_group = "A"
 skill_chip_position = Vector2( 16, 8 )
 
 [node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel11"]
@@ -366,6 +399,9 @@ margin_bottom = 196.0
 rect_min_size = Vector2( 96, 96 )
 custom_styles/panel = SubResource( 4 )
 script = ExtResource( 1 )
+dpad_group = "LEFT"
+face_group = "Y"
+input_group = "B"
 skill_chip_position = Vector2( 16, 8 )
 
 [node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel12"]
@@ -396,6 +432,9 @@ margin_bottom = 196.0
 rect_min_size = Vector2( 96, 96 )
 custom_styles/panel = ExtResource( 6 )
 script = ExtResource( 1 )
+dpad_group = "UP"
+face_group = "X"
+input_group = "A"
 skill_chip_position = Vector2( 16, 8 )
 
 [node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel13"]
@@ -426,6 +465,9 @@ margin_bottom = 196.0
 rect_min_size = Vector2( 96, 96 )
 custom_styles/panel = SubResource( 4 )
 script = ExtResource( 1 )
+dpad_group = "UP"
+face_group = "X"
+input_group = "B"
 skill_chip_position = Vector2( 16, 8 )
 
 [node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel14"]
@@ -456,6 +498,9 @@ margin_bottom = 196.0
 rect_min_size = Vector2( 96, 96 )
 custom_styles/panel = ExtResource( 6 )
 script = ExtResource( 1 )
+dpad_group = "UP"
+face_group = "Y"
+input_group = "A"
 skill_chip_position = Vector2( 16, 8 )
 
 [node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel15"]
@@ -486,6 +531,9 @@ margin_bottom = 196.0
 rect_min_size = Vector2( 96, 96 )
 custom_styles/panel = SubResource( 4 )
 script = ExtResource( 1 )
+dpad_group = "UP"
+face_group = "Y"
+input_group = "B"
 skill_chip_position = Vector2( 16, 8 )
 
 [node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel16"]
@@ -515,6 +563,9 @@ margin_bottom = 296.0
 rect_min_size = Vector2( 96, 96 )
 custom_styles/panel = SubResource( 4 )
 script = ExtResource( 1 )
+dpad_group = "LEFT"
+face_group = "A"
+input_group = "X"
 skill_chip_position = Vector2( 16, 8 )
 
 [node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel17"]
@@ -545,6 +596,9 @@ margin_bottom = 296.0
 rect_min_size = Vector2( 96, 96 )
 custom_styles/panel = ExtResource( 6 )
 script = ExtResource( 1 )
+dpad_group = "LEFT"
+face_group = "A"
+input_group = "Y"
 skill_chip_position = Vector2( 16, 8 )
 
 [node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel18"]
@@ -575,6 +629,9 @@ margin_bottom = 296.0
 rect_min_size = Vector2( 96, 96 )
 custom_styles/panel = SubResource( 4 )
 script = ExtResource( 1 )
+dpad_group = "LEFT"
+face_group = "B"
+input_group = "X"
 skill_chip_position = Vector2( 16, 8 )
 
 [node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel19"]
@@ -605,6 +662,9 @@ margin_bottom = 296.0
 rect_min_size = Vector2( 96, 96 )
 custom_styles/panel = ExtResource( 6 )
 script = ExtResource( 1 )
+dpad_group = "LEFT"
+face_group = "B"
+input_group = "Y"
 skill_chip_position = Vector2( 16, 8 )
 
 [node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel20"]
@@ -635,6 +695,9 @@ margin_bottom = 296.0
 rect_min_size = Vector2( 96, 96 )
 custom_styles/panel = SubResource( 4 )
 script = ExtResource( 1 )
+dpad_group = "UP"
+face_group = "A"
+input_group = "X"
 skill_chip_position = Vector2( 16, 8 )
 
 [node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel21"]
@@ -665,6 +728,9 @@ margin_bottom = 296.0
 rect_min_size = Vector2( 96, 96 )
 custom_styles/panel = ExtResource( 6 )
 script = ExtResource( 1 )
+dpad_group = "UP"
+face_group = "A"
+input_group = "Y"
 skill_chip_position = Vector2( 16, 8 )
 
 [node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel22"]
@@ -695,6 +761,9 @@ margin_bottom = 296.0
 rect_min_size = Vector2( 96, 96 )
 custom_styles/panel = SubResource( 4 )
 script = ExtResource( 1 )
+dpad_group = "UP"
+face_group = "B"
+input_group = "X"
 skill_chip_position = Vector2( 16, 8 )
 
 [node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel23"]
@@ -725,6 +794,9 @@ margin_bottom = 296.0
 rect_min_size = Vector2( 96, 96 )
 custom_styles/panel = ExtResource( 6 )
 script = ExtResource( 1 )
+dpad_group = "UP"
+face_group = "B"
+input_group = "Y"
 skill_chip_position = Vector2( 16, 8 )
 
 [node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel24"]
@@ -754,6 +826,9 @@ margin_bottom = 396.0
 rect_min_size = Vector2( 96, 96 )
 custom_styles/panel = ExtResource( 6 )
 script = ExtResource( 1 )
+dpad_group = "LEFT"
+face_group = "A"
+input_group = "A"
 skill_chip_position = Vector2( 16, 8 )
 
 [node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel25"]
@@ -784,6 +859,9 @@ margin_bottom = 396.0
 rect_min_size = Vector2( 96, 96 )
 custom_styles/panel = SubResource( 4 )
 script = ExtResource( 1 )
+dpad_group = "LEFT"
+face_group = "A"
+input_group = "B"
 skill_chip_position = Vector2( 16, 8 )
 
 [node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel26"]
@@ -814,6 +892,9 @@ margin_bottom = 396.0
 rect_min_size = Vector2( 96, 96 )
 custom_styles/panel = ExtResource( 6 )
 script = ExtResource( 1 )
+dpad_group = "LEFT"
+face_group = "B"
+input_group = "A"
 skill_chip_position = Vector2( 16, 8 )
 
 [node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel27"]
@@ -844,6 +925,9 @@ margin_bottom = 396.0
 rect_min_size = Vector2( 96, 96 )
 custom_styles/panel = SubResource( 4 )
 script = ExtResource( 1 )
+dpad_group = "LEFT"
+face_group = "B"
+input_group = "B"
 skill_chip_position = Vector2( 16, 8 )
 
 [node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel28"]
@@ -874,6 +958,9 @@ margin_bottom = 396.0
 rect_min_size = Vector2( 96, 96 )
 custom_styles/panel = ExtResource( 6 )
 script = ExtResource( 1 )
+dpad_group = "UP"
+face_group = "A"
+input_group = "A"
 skill_chip_position = Vector2( 16, 8 )
 
 [node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel29"]
@@ -904,6 +991,9 @@ margin_bottom = 396.0
 rect_min_size = Vector2( 96, 96 )
 custom_styles/panel = SubResource( 4 )
 script = ExtResource( 1 )
+dpad_group = "UP"
+face_group = "A"
+input_group = "B"
 skill_chip_position = Vector2( 16, 8 )
 
 [node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel30"]
@@ -934,6 +1024,9 @@ margin_bottom = 396.0
 rect_min_size = Vector2( 96, 96 )
 custom_styles/panel = ExtResource( 6 )
 script = ExtResource( 1 )
+dpad_group = "UP"
+face_group = "B"
+input_group = "A"
 skill_chip_position = Vector2( 16, 8 )
 
 [node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel31"]
@@ -964,6 +1057,9 @@ margin_bottom = 396.0
 rect_min_size = Vector2( 96, 96 )
 custom_styles/panel = SubResource( 4 )
 script = ExtResource( 1 )
+dpad_group = "UP"
+face_group = "B"
+input_group = "B"
 skill_chip_position = Vector2( 16, 8 )
 
 [node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel32"]
@@ -993,6 +1089,9 @@ margin_bottom = 496.0
 rect_min_size = Vector2( 96, 96 )
 custom_styles/panel = SubResource( 4 )
 script = ExtResource( 1 )
+dpad_group = "DOWN"
+face_group = "X"
+input_group = "X"
 skill_chip_position = Vector2( 16, 8 )
 
 [node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel33"]
@@ -1023,6 +1122,9 @@ margin_bottom = 496.0
 rect_min_size = Vector2( 96, 96 )
 custom_styles/panel = ExtResource( 6 )
 script = ExtResource( 1 )
+dpad_group = "DOWN"
+face_group = "X"
+input_group = "Y"
 skill_chip_position = Vector2( 16, 8 )
 
 [node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel34"]
@@ -1053,6 +1155,9 @@ margin_bottom = 496.0
 rect_min_size = Vector2( 96, 96 )
 custom_styles/panel = SubResource( 4 )
 script = ExtResource( 1 )
+dpad_group = "DOWN"
+face_group = "Y"
+input_group = "X"
 skill_chip_position = Vector2( 16, 8 )
 
 [node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel35"]
@@ -1083,6 +1188,9 @@ margin_bottom = 496.0
 rect_min_size = Vector2( 96, 96 )
 custom_styles/panel = ExtResource( 6 )
 script = ExtResource( 1 )
+dpad_group = "DOWN"
+face_group = "Y"
+input_group = "Y"
 skill_chip_position = Vector2( 16, 8 )
 
 [node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel36"]
@@ -1113,6 +1221,9 @@ margin_bottom = 496.0
 rect_min_size = Vector2( 96, 96 )
 custom_styles/panel = SubResource( 4 )
 script = ExtResource( 1 )
+dpad_group = "RIGHT"
+face_group = "X"
+input_group = "X"
 skill_chip_position = Vector2( 16, 8 )
 
 [node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel37"]
@@ -1143,6 +1254,9 @@ margin_bottom = 496.0
 rect_min_size = Vector2( 96, 96 )
 custom_styles/panel = ExtResource( 6 )
 script = ExtResource( 1 )
+dpad_group = "RIGHT"
+face_group = "X"
+input_group = "Y"
 skill_chip_position = Vector2( 16, 8 )
 
 [node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel38"]
@@ -1173,6 +1287,9 @@ margin_bottom = 496.0
 rect_min_size = Vector2( 96, 96 )
 custom_styles/panel = SubResource( 4 )
 script = ExtResource( 1 )
+dpad_group = "RIGHT"
+face_group = "Y"
+input_group = "X"
 skill_chip_position = Vector2( 16, 8 )
 
 [node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel39"]
@@ -1203,6 +1320,9 @@ margin_bottom = 496.0
 rect_min_size = Vector2( 96, 96 )
 custom_styles/panel = ExtResource( 6 )
 script = ExtResource( 1 )
+dpad_group = "RIGHT"
+face_group = "Y"
+input_group = "Y"
 skill_chip_position = Vector2( 16, 8 )
 
 [node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel40"]
@@ -1232,6 +1352,9 @@ margin_bottom = 596.0
 rect_min_size = Vector2( 96, 96 )
 custom_styles/panel = ExtResource( 6 )
 script = ExtResource( 1 )
+dpad_group = "DOWN"
+face_group = "X"
+input_group = "A"
 skill_chip_position = Vector2( 16, 8 )
 
 [node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel41"]
@@ -1262,6 +1385,9 @@ margin_bottom = 596.0
 rect_min_size = Vector2( 96, 96 )
 custom_styles/panel = SubResource( 4 )
 script = ExtResource( 1 )
+dpad_group = "DOWN"
+face_group = "X"
+input_group = "B"
 skill_chip_position = Vector2( 16, 8 )
 
 [node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel42"]
@@ -1292,6 +1418,9 @@ margin_bottom = 596.0
 rect_min_size = Vector2( 96, 96 )
 custom_styles/panel = ExtResource( 6 )
 script = ExtResource( 1 )
+dpad_group = "DOWN"
+face_group = "Y"
+input_group = "A"
 skill_chip_position = Vector2( 16, 8 )
 
 [node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel43"]
@@ -1322,6 +1451,9 @@ margin_bottom = 596.0
 rect_min_size = Vector2( 96, 96 )
 custom_styles/panel = SubResource( 4 )
 script = ExtResource( 1 )
+dpad_group = "DOWN"
+face_group = "Y"
+input_group = "B"
 skill_chip_position = Vector2( 16, 8 )
 
 [node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel44"]
@@ -1352,6 +1484,9 @@ margin_bottom = 596.0
 rect_min_size = Vector2( 96, 96 )
 custom_styles/panel = ExtResource( 6 )
 script = ExtResource( 1 )
+dpad_group = "RIGHT"
+face_group = "X"
+input_group = "A"
 skill_chip_position = Vector2( 16, 8 )
 
 [node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel45"]
@@ -1382,6 +1517,9 @@ margin_bottom = 596.0
 rect_min_size = Vector2( 96, 96 )
 custom_styles/panel = SubResource( 4 )
 script = ExtResource( 1 )
+dpad_group = "RIGHT"
+face_group = "X"
+input_group = "B"
 skill_chip_position = Vector2( 16, 8 )
 
 [node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel46"]
@@ -1412,6 +1550,9 @@ margin_bottom = 596.0
 rect_min_size = Vector2( 96, 96 )
 custom_styles/panel = ExtResource( 6 )
 script = ExtResource( 1 )
+dpad_group = "RIGHT"
+face_group = "Y"
+input_group = "A"
 skill_chip_position = Vector2( 16, 8 )
 
 [node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel47"]
@@ -1442,6 +1583,9 @@ margin_bottom = 596.0
 rect_min_size = Vector2( 96, 96 )
 custom_styles/panel = SubResource( 4 )
 script = ExtResource( 1 )
+dpad_group = "RIGHT"
+face_group = "Y"
+input_group = "B"
 skill_chip_position = Vector2( 16, 8 )
 
 [node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel48"]
@@ -1471,6 +1615,9 @@ margin_bottom = 696.0
 rect_min_size = Vector2( 96, 96 )
 custom_styles/panel = SubResource( 4 )
 script = ExtResource( 1 )
+dpad_group = "DOWN"
+face_group = "A"
+input_group = "X"
 skill_chip_position = Vector2( 16, 8 )
 
 [node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel49"]
@@ -1501,6 +1648,9 @@ margin_bottom = 696.0
 rect_min_size = Vector2( 96, 96 )
 custom_styles/panel = ExtResource( 6 )
 script = ExtResource( 1 )
+dpad_group = "DOWN"
+face_group = "A"
+input_group = "Y"
 skill_chip_position = Vector2( 16, 8 )
 
 [node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel50"]
@@ -1531,6 +1681,9 @@ margin_bottom = 696.0
 rect_min_size = Vector2( 96, 96 )
 custom_styles/panel = SubResource( 4 )
 script = ExtResource( 1 )
+dpad_group = "DOWN"
+face_group = "B"
+input_group = "X"
 skill_chip_position = Vector2( 16, 8 )
 
 [node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel51"]
@@ -1561,6 +1714,9 @@ margin_bottom = 696.0
 rect_min_size = Vector2( 96, 96 )
 custom_styles/panel = ExtResource( 6 )
 script = ExtResource( 1 )
+dpad_group = "DOWN"
+face_group = "B"
+input_group = "Y"
 skill_chip_position = Vector2( 16, 8 )
 
 [node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel52"]
@@ -1591,6 +1747,9 @@ margin_bottom = 696.0
 rect_min_size = Vector2( 96, 96 )
 custom_styles/panel = SubResource( 4 )
 script = ExtResource( 1 )
+dpad_group = "RIGHT"
+face_group = "A"
+input_group = "X"
 skill_chip_position = Vector2( 16, 8 )
 
 [node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel53"]
@@ -1621,6 +1780,9 @@ margin_bottom = 696.0
 rect_min_size = Vector2( 96, 96 )
 custom_styles/panel = ExtResource( 6 )
 script = ExtResource( 1 )
+dpad_group = "RIGHT"
+face_group = "A"
+input_group = "Y"
 skill_chip_position = Vector2( 16, 8 )
 
 [node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel54"]
@@ -1651,6 +1813,9 @@ margin_bottom = 696.0
 rect_min_size = Vector2( 96, 96 )
 custom_styles/panel = SubResource( 4 )
 script = ExtResource( 1 )
+dpad_group = "RIGHT"
+face_group = "B"
+input_group = "X"
 skill_chip_position = Vector2( 16, 8 )
 
 [node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel55"]
@@ -1681,6 +1846,9 @@ margin_bottom = 696.0
 rect_min_size = Vector2( 96, 96 )
 custom_styles/panel = ExtResource( 6 )
 script = ExtResource( 1 )
+dpad_group = "RIGHT"
+face_group = "B"
+input_group = "Y"
 skill_chip_position = Vector2( 16, 8 )
 
 [node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel56"]
@@ -1710,6 +1878,9 @@ margin_bottom = 796.0
 rect_min_size = Vector2( 96, 96 )
 custom_styles/panel = ExtResource( 6 )
 script = ExtResource( 1 )
+dpad_group = "DOWN"
+face_group = "A"
+input_group = "A"
 skill_chip_position = Vector2( 16, 8 )
 
 [node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel57"]
@@ -1740,6 +1911,9 @@ margin_bottom = 796.0
 rect_min_size = Vector2( 96, 96 )
 custom_styles/panel = SubResource( 4 )
 script = ExtResource( 1 )
+dpad_group = "DOWN"
+face_group = "A"
+input_group = "B"
 skill_chip_position = Vector2( 16, 8 )
 
 [node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel58"]
@@ -1770,6 +1944,9 @@ margin_bottom = 796.0
 rect_min_size = Vector2( 96, 96 )
 custom_styles/panel = ExtResource( 6 )
 script = ExtResource( 1 )
+dpad_group = "DOWN"
+face_group = "B"
+input_group = "A"
 skill_chip_position = Vector2( 16, 8 )
 
 [node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel59"]
@@ -1800,6 +1977,9 @@ margin_bottom = 796.0
 rect_min_size = Vector2( 96, 96 )
 custom_styles/panel = SubResource( 4 )
 script = ExtResource( 1 )
+dpad_group = "DOWN"
+face_group = "B"
+input_group = "B"
 skill_chip_position = Vector2( 16, 8 )
 
 [node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel60"]
@@ -1830,6 +2010,9 @@ margin_bottom = 796.0
 rect_min_size = Vector2( 96, 96 )
 custom_styles/panel = ExtResource( 6 )
 script = ExtResource( 1 )
+dpad_group = "RIGHT"
+face_group = "A"
+input_group = "A"
 skill_chip_position = Vector2( 16, 8 )
 
 [node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel61"]
@@ -1860,6 +2043,9 @@ margin_bottom = 796.0
 rect_min_size = Vector2( 96, 96 )
 custom_styles/panel = SubResource( 4 )
 script = ExtResource( 1 )
+dpad_group = "RIGHT"
+face_group = "A"
+input_group = "B"
 skill_chip_position = Vector2( 16, 8 )
 
 [node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel62"]
@@ -1890,6 +2076,9 @@ margin_bottom = 796.0
 rect_min_size = Vector2( 96, 96 )
 custom_styles/panel = ExtResource( 6 )
 script = ExtResource( 1 )
+dpad_group = "RIGHT"
+face_group = "B"
+input_group = "A"
 skill_chip_position = Vector2( 16, 8 )
 
 [node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel63"]
@@ -1920,6 +2109,9 @@ margin_bottom = 796.0
 rect_min_size = Vector2( 96, 96 )
 custom_styles/panel = SubResource( 4 )
 script = ExtResource( 1 )
+dpad_group = "RIGHT"
+face_group = "B"
+input_group = "B"
 skill_chip_position = Vector2( 16, 8 )
 
 [node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel64"]
@@ -1941,3 +2133,11 @@ custom_styles/pressed = ExtResource( 4 )
 custom_styles/focus = SubResource( 1 )
 custom_styles/disabled = SubResource( 2 )
 custom_styles/normal = SubResource( 3 )
+
+[connection signal="button_up" from="ScrollContainer/Checkerboard/Panel/Button" to="ScrollContainer/Checkerboard/Panel" method="on_skill_board_menu_click"]
+[connection signal="button_up" from="ScrollContainer/Checkerboard/Panel2/Button" to="ScrollContainer/Checkerboard/Panel2" method="on_skill_board_menu_click"]
+[connection signal="button_up" from="ScrollContainer/Checkerboard/Panel3/Button" to="ScrollContainer/Checkerboard/Panel3" method="on_skill_board_menu_click"]
+[connection signal="button_up" from="ScrollContainer/Checkerboard/Panel4/Button" to="ScrollContainer/Checkerboard/Panel4" method="on_skill_board_menu_click"]
+[connection signal="button_up" from="ScrollContainer/Checkerboard/Panel5/Button" to="ScrollContainer/Checkerboard/Panel5" method="on_skill_board_menu_click"]
+[connection signal="button_up" from="ScrollContainer/Checkerboard/Panel6/Button" to="ScrollContainer/Checkerboard/Panel6" method="on_skill_board_menu_click"]
+[connection signal="button_up" from="ScrollContainer/Checkerboard/Panel7/Button" to="ScrollContainer/Checkerboard/Panel7" method="on_skill_board_menu_click"]

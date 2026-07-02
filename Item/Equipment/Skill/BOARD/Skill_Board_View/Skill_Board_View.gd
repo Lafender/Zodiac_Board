@@ -23,7 +23,7 @@ export var selected_slot: Dictionary = {
 export(NodePath) onready var checkerboard = $ScrollContainer/Checkerboard
 
 
-const skill_chip_panel = "res://Action/Item/Equipment/Skill/CHIP/Skill_Chip_Panel/Skill_Chip_Panel.tscn"
+const skill_chip_panel = "res://Item/Equipment/Skill/CHIP/Skill_Chip_Panel/Skill_Chip_Panel.tscn"
 
 func _ready():
 	_dim_all_tiles()
@@ -36,10 +36,10 @@ func refresh_skill_board_view():
 	for direction in skill_board.slots:
 		for face_button in skill_board.slots[direction]:
 			for skill_input in skill_board.slots[direction][face_button]:
-				if skill_board.slots[direction][face_button][skill_input] != load("res://Action/Item/Equipment/Skill/LIST/Skill__none.tres"):
+				if skill_board.slots[direction][face_button][skill_input] != load("res:///Item/Equipment/Skill/LIST/_none.tres"):
 					add_skill_chip_panel(direction, face_button, skill_input, skill_board.slots[direction][face_button][skill_input])
 				else:
-					add_skill_chip_panel(direction, face_button, skill_input, load("res://Action/Item/Equipment/Skill/LIST/Skill__none.tres"))
+					add_skill_chip_panel(direction, face_button, skill_input, load("res://Item/Equipment/Skill/LIST/_none.tres"))
 	pass
 
 func _dim_all_tiles():
@@ -57,6 +57,7 @@ func set_selected_slot(dpad_group: String, face_group: String, input_group: Stri
 	selected_slot["dpad_group"] = dpad_group
 	selected_slot["face_group"] = face_group
 	selected_slot["input_group"] = input_group
+	print("selected: " + dpad_group + ", " + face_group + ", "  + input_group + ".")
 	pass
 
 func get_skill(dpad_group:String, face_group: String, input_group: String):
@@ -70,5 +71,8 @@ func add_skill_chip_panel(dpad_group: String, face_group: String, input_group: S
 				if face_group == slot.face_group:
 					if input_group == slot.input_group:
 						slot.add_skill_panel()
+	skill_board.set_skill(dpad_group, face_group, input_group, skill)
 
 	
+
+

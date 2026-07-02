@@ -154,9 +154,13 @@ func _get_groups_from_idx(idx: int):
 
 func set_skill(dpad_group: String, face_group: String, input_group: String, skill: Skill_Data) -> void:
 	slots[dpad_group][face_group][input_group] = skill
+	print(skill.code + " equipped to: " + dpad_group + ", " + face_group + ", "  + input_group + ".")
 	pass
 
 
 func get_skill(dpad_group: String, face_group: String, input_group: String) -> Resource:
 	return slots[dpad_group][face_group][input_group]
 
+func remove_skill(dpad_group: String, face_group: String, input_group: String):
+	slots[dpad_group][face_group][input_group] = load("res://Action/Item/Equipment/Skill/LIST/_none.tres")
+	pass

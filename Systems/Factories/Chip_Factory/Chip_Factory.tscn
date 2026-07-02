@@ -71,8 +71,8 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="GridContainer" type="GridContainer" parent="UI/VBoxContainer/ScrollContainer"]
-margin_right = 123.0
-margin_bottom = 160.0
+margin_right = 72.0
+margin_bottom = 86.0
 columns = 6
 
 [node name="Skill_Chip_Panel" parent="UI/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource( 3 )]

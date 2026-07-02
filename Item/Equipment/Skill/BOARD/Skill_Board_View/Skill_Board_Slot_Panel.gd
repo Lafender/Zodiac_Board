@@ -14,16 +14,16 @@ export(int) var index = -1
 
 export(Vector2) var skill_chip_position = Vector2(14, 4)
 
-var skill: Resource = load("res://Action/Item/Equipment/Skill/LIST/Skill__none.tres")
+
+var skill: Resource = load("res://Item/Equipment/Skill/LIST/Skill__none.tres")
 
 func set_skill(new_skill: Resource) -> bool:
 	if new_skill == null:
-		skill = load("res://Action/Item/Equipment/Skill/LIST/_none.tres")
+		skill = load("res://Item/Equipment/Skill/LIST/_none.tres")
 		return true
 	else:
 		skill = new_skill
 		return true
-
 
 
 func add_skill_panel(new_skill: Resource) -> void: 
@@ -31,10 +31,10 @@ func add_skill_panel(new_skill: Resource) -> void:
 	if !set_successful:
 		print("set_skill() unsuccessful.")
 	else:
-		var skill_chip_panel_instance = find_node("Skill_Chip_Panel")
+		var skill_chip_panel_instance = find_node("Skill_Chip_Panel", true, false)
 		if skill_chip_panel_instance != null:
 			skill_chip_panel_instance.queue_free()
-		if skill == load("res://Action/Item/Equipment/Skill/LIST/_none.tres"):
+		if skill == load("res://Item/Equipment/Skill/LIST/_none.tres"):
 			return
 		var skill_chip_packed_scene = preload(skill_chip_panel)
 		var new_skill_chip = skill_chip_packed_scene.instance()
@@ -44,7 +44,8 @@ func add_skill_panel(new_skill: Resource) -> void:
 		new_skill_chip.rect_scale = Vector2(0.5, 0.5)
 		new_skill_chip.rect_position = Vector2(16, 8)
 
-func set_selected_slot() -> Dictionary:
+
+func get_slot():
 	var slot: Dictionary
 	slot["dpad_group"] = dpad_group
 	slot["face_group"] = face_group
@@ -52,5 +53,15 @@ func set_selected_slot() -> Dictionary:
 	slot["index"] = index
 	return slot
 
+func on_skill_board_menu_click() -> void:
+	var slot = get_slot()
+	var top_parent = get_tree().get_current_scene()
+	if top_parent.name == "Skill_Board_Menu":
+		top_parent._on_board_selection_changed(get_slot())
+#	var board_info_panel = top_parent.find_node("Board_Info_Panel")
+#	board_info_panel._setup_panel(skill, slot)
+
 func get_equipped_index() -> int:
 	return index
+
+

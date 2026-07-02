@@ -31,7 +31,7 @@ func _add_item_to_inventory(item: Resource):
 	var item_code = item.code
 	if item_code in item_sums:
 		item_sums[item_code] += 1
-		print(item_code + " added to item inventory.")
+		print(item_code + " added to inventory.")
 	else:
 		item_sums[item_code] = 1
 		print(item_code + " added to inventory.")

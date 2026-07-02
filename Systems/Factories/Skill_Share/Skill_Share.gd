@@ -4,9 +4,9 @@ class_name Skill_Share
 export(Resource) var selected_skill_chip
 export(Resource) var inventory
 
-export(String, DIR) var skills_directory = "res://Action/Item/Equipment/Skill/LIST/"
-export(String, DIR) var inventory_directory = "res://Action/Item/Equipment/Skill/INVENTORY/"
-const skill_chip_panel = "res://Action/Item/Equipment/Skill/CHIP/Skill_Chip_Panel/Skill_Chip_Panel.tscn"
+export(String, DIR) var skills_directory = "res://Item/Equipment/Skill/LIST/"
+export(String, DIR) var inventory_directory = "res://Item/Equipment/Skill/INVENTORY/"
+const skill_chip_panel = "res://Item/Equipment/Skill/CHIP/Skill_Chip_Panel/Skill_Chip_Panel.tscn"
 
 export(NodePath) onready var skills_list_grid_container = $HBoxContainer/ScrollContainer/GridContainer
 export(NodePath) onready var inventory_view = $HBoxContainer/Skill_Inventory_View
