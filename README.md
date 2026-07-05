@@ -11,7 +11,7 @@ An foss action rpg for those seeking freedom, knowledge, and furry little friend
 3. Run Godot 3.
 After running Godot 3, you will see the following:
 
-4. Click Browse for Project and navigate to where you unzipped/cloned the project. Click on the file that ends with ".project".
+4. Click Import and navigate to where you unzipped/cloned the project. Click on the file "project.godot".
 
 5. Boom. Game loaded. Now navigate to a scene (.tscn file) within the  project that works (or is on the "fully-operational" list) and click the Clapperboard with the Play symbol on it in the top right corner or press F6 to play the scene.
 
@@ -23,3 +23,7 @@ After running Godot 3, you will see the following:
 
 ## Fully-Operational List
 This is a list of all of the fully-operational scenes in the project so far. It is updated monthly or whenever there is a new scene that is fully-operational.
+
+- `res://Systems/Factories/Chip_Factory/Chip_Factory.tscn`
+- `res://Systems/Factories/Skill_Share/Skill_Share.tscn`
+- `res://Interface/Menu/Skill_Board_Menu/Skill_Board_Menu.tscn`
