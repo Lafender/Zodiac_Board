@@ -13,6 +13,8 @@ After running Godot 3, you will see the following:
 ![Godot 3 Project Browser](https://github.com/Lafender/Zodiac_Board/blob/main/README_files/Screenshot%20from%202026-07-05%2002-05-13.png?raw=true)
 
 5. Click Import and navigate to where you unzipped/cloned the project. Click on the file "project.godot".
+![Godot 3 File Explorer with "project.godot" highlighted](https://github.com/Lafender/Zodiac_Board/blob/main/README_files/Screenshot%20from%202026-07-05%2002-06-03.png?raw=true)
+
 
 6. Boom. Game loaded. Now navigate to a scene (.tscn file) within the  project that works (or is on the "fully-operational" list) and click the Clapperboard with the Play symbol on it in the top right corner or press F6 to play the scene.
 
