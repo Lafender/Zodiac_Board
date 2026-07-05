@@ -40,31 +40,54 @@ func _ready():
 
 
 func _setup_panel(skill: Skill_Data, slot: Dictionary = {"dpad_group": "NONE", "face_group": "NONE", "input_group": "NONE"}):
-	selected_skill = skill
-	name1.text =  skill.skill_name_part_1
-	name2.text =  skill.skill_name_part_2
-	name3.text =  skill.skill_name_part_3
-	icon_rect.texture = skill.icon
-	
-	code_label.text = skill.code    # 4‑char alphanumeric
-	strip.get_stylebox("panel").bg_color = skill.color_code
-	
-	
-	base_power_label.text = String(skill.base_power)
-	speed_label.text = String(skill.speed)
-	cost_label.text = String(skill.cost)
-	target_gauge_label.text = skill.target_gauge.name
-	
-	domain_label.text =  skill.domain_data.name
-	domain_icon.texture = skill.domain_data.icon 
-	element_label.text = skill.element_data.name
-	element_icon.texture = skill.element_data.icon
-	
-	price_label.text = String(skill.price)
-	if inventory.item_sums.has(skill.code):
-		owned_label.text = String(inventory.item_sums[skill.code])
-	else:
+	if skill == null:
+		selected_skill = null
+		name1.text = "null"
+		name2.text = "null"
+		name3.text = "null"
+		icon_rect.texture = null
+		
+		code_label.text = "____"
+		strip.get_stylebox("panel").bg_color = Color(1, 1, 1, 1)
+		
+		base_power_label.text = "null"
+		speed_label.text = "null"
+		cost_label.text = "null"
+		target_gauge_label.text = "null"
+		
+		domain_label.text =  "null"
+		domain_icon.texture = null
+		element_label.text = "null"
+		element_icon.texture = null
+		
+		price_label.text = "null"
 		owned_label.text = String(0)
+	else:
+		selected_skill = skill
+		name1.text =  skill.skill_name_part_1
+		name2.text =  skill.skill_name_part_2
+		name3.text =  skill.skill_name_part_3
+		icon_rect.texture = skill.icon
+		
+		code_label.text = skill.code    # 4‑char alphanumeric
+		strip.get_stylebox("panel").bg_color = skill.color_code
+	
+	
+		base_power_label.text = String(skill.base_power)
+		speed_label.text = String(skill.speed)
+		cost_label.text = String(skill.cost)
+		target_gauge_label.text = skill.target_gauge.name
+		
+		domain_label.text =  skill.domain_data.name
+		domain_icon.texture = skill.domain_data.icon 
+		element_label.text = skill.element_data.name
+		element_icon.texture = skill.element_data.icon
+		
+		price_label.text = String(skill.price)
+		if inventory.item_sums.has(skill.code):
+			owned_label.text = String(inventory.item_sums[skill.code])
+		else:
+			owned_label.text = String(0)
 	slot_dpad_label.text = slot["dpad_group"]
 	slot_face_label.text = slot["face_group"]
 	slot_input_label.text = slot["input_group"]

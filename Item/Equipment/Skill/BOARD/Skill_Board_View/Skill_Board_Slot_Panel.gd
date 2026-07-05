@@ -14,35 +14,68 @@ export(int) var index = -1
 
 export(Vector2) var skill_chip_position = Vector2(14, 4)
 
-
 var skill: Resource = load("res://Item/Equipment/Skill/LIST/Skill__none.tres")
+
+
+func _ready():
+	var button = find_node("Button", true, false)
+	if button:
+		button.add_to_group("slot_button")
+
 
 func set_skill(new_skill: Resource) -> bool:
 	if new_skill == null:
-		skill = load("res://Item/Equipment/Skill/LIST/_none.tres")
+		skill = null
 		return true
 	else:
 		skill = new_skill
 		return true
 
-
-func add_skill_panel(new_skill: Resource) -> void: 
+func add_skill_panel(new_skill: Resource) -> void:
 	var set_successful = set_skill(new_skill)
 	if !set_successful:
 		print("set_skill() unsuccessful.")
-	else:
-		var skill_chip_panel_instance = find_node("Skill_Chip_Panel", true, false)
-		if skill_chip_panel_instance != null:
-			skill_chip_panel_instance.queue_free()
-		if skill == load("res://Item/Equipment/Skill/LIST/_none.tres"):
-			return
-		var skill_chip_packed_scene = preload(skill_chip_panel)
-		var new_skill_chip = skill_chip_packed_scene.instance()
-		add_child(new_skill_chip)
-		new_skill_chip.set_skill(skill)
-		move_child(new_skill_chip, 0)
-		new_skill_chip.rect_scale = Vector2(0.5, 0.5)
-		new_skill_chip.rect_position = Vector2(16, 8)
+		return
+
+	# 🧹 Remove all chip panels recursively
+	_clear_chip_panels(self)
+
+	# 🛑 Stop if null or none-skill
+	if skill == null or skill.resource_path.ends_with("_none.tres"):
+		return
+
+	# 🧩 Add new chip
+	var skill_chip_packed_scene = preload(skill_chip_panel)
+	var new_skill_chip = skill_chip_packed_scene.instance()
+	add_child(new_skill_chip)
+	new_skill_chip.set_chip(skill)
+
+	# 🧷 Chip under Button (child 0)
+	move_child(new_skill_chip, 0)
+
+	# 🧷 Button on top (last child)
+	var button = find_node("Button", true, false)
+	if button:
+		move_child(button, get_child_count() - 1)
+
+	new_skill_chip.rect_scale = Vector2(0.5, 0.5)
+	new_skill_chip.rect_position = Vector2(16, 8)
+
+
+
+
+
+
+func remove_skill_panel() -> void:
+	set_skill(null)
+	_clear_chip_panels(self)
+
+	var button = find_node("Button", true, false)
+	if button:
+		move_child(button, get_child_count() - 1)
+
+
+
 
 
 func get_slot():
@@ -57,11 +90,18 @@ func on_skill_board_menu_click() -> void:
 	var slot = get_slot()
 	var top_parent = get_tree().get_current_scene()
 	if top_parent.name == "Skill_Board_Menu":
-		top_parent._on_board_selection_changed(get_slot())
+		top_parent._on_board_slot_selection_changed(slot)
 #	var board_info_panel = top_parent.find_node("Board_Info_Panel")
 #	board_info_panel._setup_panel(skill, slot)
 
 func get_equipped_index() -> int:
 	return index
 
+func _clear_chip_panels(node: Node) -> void:
+	for child in node.get_children():
+		if child.name == "Button":
+			continue
+		# Recursively clear children first
+		_clear_chip_panels(child)
+		child.queue_free()
 

@@ -9,106 +9,106 @@ export var height: int = 8
 var slots: Dictionary = {
 	"LEFT": {
 		"X": {
-			"X": Resource,
-			"Y": Resource,
-			"A": Resource,
-			"B": Resource
+			"X": null,
+			"Y": null,
+			"A": null,
+			"B": null
 		},
 		"Y": {
-			"X": Resource,
-			"Y": Resource,
-			"A": Resource,
-			"B": Resource
+			"X": null,
+			"Y": null,
+			"A": null,
+			"B": null
 		},
 		"A": {
-			"X": Resource,
-			"Y": Resource,
-			"A": Resource,
-			"B": Resource
+			"X": null,
+			"Y": null,
+			"A": null,
+			"B": null
 		},
 		"B": {
-			"X": Resource,
-			"Y": Resource,
-			"A": Resource,
-			"B": Resource
+			"X": null,
+			"Y": null,
+			"A": null,
+			"B": null
 		}
 	},
 	"UP": {
 		"X": {
-			"X": Resource,
-			"Y": Resource,
-			"A": Resource,
-			"B": Resource
+			"X": null,
+			"Y": null,
+			"A": null,
+			"B": null
 		},
 		"Y": {
-			"X": Resource,
-			"Y": Resource,
-			"A": Resource,
-			"B": Resource
+			"X": null,
+			"Y": null,
+			"A": null,
+			"B": null
 		},
 		"A": {
-			"X": Resource,
-			"Y": Resource,
-			"A": Resource,
-			"B": Resource
+			"X": null,
+			"Y": null,
+			"A": null,
+			"B": null
 		},
 		"B": {
-			"X": Resource,
-			"Y": Resource,
-			"A": Resource,
-			"B": Resource
+			"X": null,
+			"Y": null,
+			"A": null,
+			"B": null
 		}
 	},
 	"DOWN": {
 		"X": {
-			"X": Resource,
-			"Y": Resource,
-			"A": Resource,
-			"B": Resource
+			"X": null,
+			"Y": null,
+			"A": null,
+			"B": null
 		},
 		"Y": {
-			"X": Resource,
-			"Y": Resource,
-			"A": Resource,
-			"B": Resource
+			"X": null,
+			"Y": null,
+			"A": null,
+			"B": null
 		},
 		"A": {
-			"X": Resource,
-			"Y": Resource,
-			"A": Resource,
-			"B": Resource
+			"X": null,
+			"Y": null,
+			"A": null,
+			"B": null
 		},
 		"B": {
-			"X": Resource,
-			"Y": Resource,
-			"A": Resource,
-			"B": Resource
+			"X": null,
+			"Y": null,
+			"A": null,
+			"B": null
 		}
 	},
 	"RIGHT": {
 		"X": {
-			"X": Resource,
-			"Y": Resource,
-			"A": Resource,
-			"B": Resource
+			"X": null,
+			"Y": null,
+			"A": null,
+			"B": null
 		},
 		"Y": {
-			"X": Resource,
-			"Y": Resource,
-			"A": Resource,
-			"B": Resource
+			"X": null,
+			"Y": null,
+			"A": null,
+			"B": null
 		},
 		"A": {
-			"X": Resource,
-			"Y": Resource,
-			"A": Resource,
-			"B": Resource
+			"X": null,
+			"Y": null,
+			"A": null,
+			"B": null
 		},
 		"B": {
-			"X": Resource,
-			"Y": Resource,
-			"A": Resource,
-			"B": Resource
+			"X": null,
+			"Y": null,
+			"A": null,
+			"B": null
 		}
 	},
 	
@@ -153,14 +153,20 @@ func _get_groups_from_idx(idx: int):
 
 
 func set_skill(dpad_group: String, face_group: String, input_group: String, skill: Skill_Data) -> void:
+	if dpad_group == "NONE" && face_group == "NONE" && input_group == "NONE":
+		return
 	slots[dpad_group][face_group][input_group] = skill
-	print(skill.code + " equipped to: " + dpad_group + ", " + face_group + ", "  + input_group + ".")
+	if skill != null:
+		print(skill.code + " equipped to: " + dpad_group + ", " + face_group + ", "  + input_group + ".")
 	pass
 
 
 func get_skill(dpad_group: String, face_group: String, input_group: String) -> Resource:
-	return slots[dpad_group][face_group][input_group]
+	if dpad_group == "NONE" && face_group == "NONE" && input_group == "NONE":
+		return null
+	else:
+		return slots[dpad_group][face_group][input_group]
 
 func remove_skill(dpad_group: String, face_group: String, input_group: String):
-	slots[dpad_group][face_group][input_group] = load("res://Action/Item/Equipment/Skill/LIST/_none.tres")
+	slots[dpad_group][face_group][input_group] = null
 	pass

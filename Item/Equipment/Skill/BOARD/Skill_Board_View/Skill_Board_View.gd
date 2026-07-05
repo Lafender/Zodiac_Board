@@ -27,6 +27,7 @@ const skill_chip_panel = "res://Item/Equipment/Skill/CHIP/Skill_Chip_Panel/Skill
 
 func _ready():
 	_dim_all_tiles()
+	refresh_skill_board_view()
 
 func _set_up_array():
 	skill_board._init()
@@ -36,11 +37,12 @@ func refresh_skill_board_view():
 	for direction in skill_board.slots:
 		for face_button in skill_board.slots[direction]:
 			for skill_input in skill_board.slots[direction][face_button]:
-				if skill_board.slots[direction][face_button][skill_input] != load("res:///Item/Equipment/Skill/LIST/_none.tres"):
-					add_skill_chip_panel(direction, face_button, skill_input, skill_board.slots[direction][face_button][skill_input])
-				else:
-					add_skill_chip_panel(direction, face_button, skill_input, load("res://Item/Equipment/Skill/LIST/_none.tres"))
-	pass
+				if skill_board.slots[direction][face_button][skill_input] != load("res:///Item/Equipment/Skill/LIST/_none.tres") || null:
+					var s = skill_board.slots[direction][face_button][skill_input]
+					if s == null or s.resource_path.ends_with("_none.tres"):
+						remove_skill_chip_panel(direction, face_button, skill_input)
+					else:
+						add_skill_chip_panel(direction, face_button, skill_input, s)
 
 func _dim_all_tiles():
 	for tile in get_tree().get_nodes_in_group("selector_tile"):
@@ -66,13 +68,16 @@ func get_skill(dpad_group:String, face_group: String, input_group: String):
 
 func add_skill_chip_panel(dpad_group: String, face_group: String, input_group: String, skill: Skill_Data):
 	for slot in checkerboard.get_children():
-		if slot.get_child_count < 0:
-			if dpad_group == slot.dpad_group:
-				if face_group == slot.face_group:
-					if input_group == slot.input_group:
-						slot.add_skill_panel()
+		if dpad_group == slot.dpad_group:
+			if face_group == slot.face_group:
+				if input_group == slot.input_group:
+					slot.add_skill_panel(skill)
 	skill_board.set_skill(dpad_group, face_group, input_group, skill)
 
-	
-
-
+func remove_skill_chip_panel(dpad_group: String, face_group: String, input_group: String):
+	for slot in checkerboard.get_children():
+		if dpad_group == slot.dpad_group:
+			if face_group == slot.face_group:
+				if input_group == slot.input_group:
+					slot.remove_skill_panel()
+	skill_board.set_skill(dpad_group, face_group, input_group, null)

@@ -26,6 +26,8 @@ func _ready():
 #	popup._setup_popuppanel(chip)
 
 func set_chip(skill: Skill_Data) -> void:
+	if skill == null:
+		return
 	chip = skill
 	
 	domain_icon.texture = chip.domain_data.icon
@@ -80,6 +82,7 @@ func skill_chip_clicked():
 	else:
 		_update_info_panel(top_parent)
 		_update_skill_share_select(top_parent)
+		_update_skill_menu_select(top_parent)
 		
 
 
@@ -90,10 +93,15 @@ func _update_skill_share_select(top_parent):
 		top_parent.selected_skill_chip = chip
 		print(top_parent.selected_skill_chip.code + " now selected chip for Skill Share.")
 
+func _update_skill_menu_select(top_parent):
+	if top_parent.name != "Skill_Board_Menu":
+		return
+	else:
+		top_parent._on_inventory_chip_selection_changed(chip)
 
 func _update_info_panel(top_parent):
 		# var top_parent = get_parent().get_parent().get_parent().get_parent().get_parent()
-	var info_panel = top_parent.find_node("Skill_Info_Panel", true, false)
+	var info_panel = top_parent.find_node("Inventory_Info_Panel", true, false)
 	if info_panel != null:
 		info_panel._setup_panel(chip)
 #	emit_signal("skill_chip_clicked", chip)

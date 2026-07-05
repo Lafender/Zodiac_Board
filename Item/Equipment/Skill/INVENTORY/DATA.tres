@@ -6,7 +6,7 @@
 resource_name = "Skill Inventory Data"
 script = ExtResource( 1 )
 group_name = "Skill Inventory"
-all_item_list = "res://Action/Item/Equipment/Skill/LIST"
+all_item_list = "res://Item/Equipment/Skill/LIST"
 item_sums = {
 "6RYM": 5,
 "8ZWL": 5,

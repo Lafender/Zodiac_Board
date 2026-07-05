@@ -17,6 +17,7 @@ tween_is_start_animation = true
 
 [resource]
 script = ExtResource( 4 )
+item_type = ""
 color_code = Color( 1, 0.686275, 0, 1 )
 code = "ZW4J"
 icon = ExtResource( 6 )

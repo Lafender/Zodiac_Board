@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Item/Equipment/Skill/BOARD/Skill_Board_View/Skill_Board_Slot_Panel.gd" type="Script" id=1]
-[ext_resource path="res://Item/Equipment/Skill/CHIP/Skill_Chip_Panel/Skill_Chip_Panel.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Item/Equipment/Skill/BOARD/Skill_Board_View/Skill_Board_View.gd" type="Script" id=3]
 [ext_resource path="res://Item/Equipment/Skill/CHIP/Skill_Chip_Panel/Hover.tres" type="StyleBox" id=4]
+[ext_resource path="res://Item/Equipment/Skill/BOARD/DATA.tres" type="Resource" id=5]
 [ext_resource path="res://Item/Equipment/Skill/BOARD/Skill_Board_View/Skill_Board_Slot_Panel_2.tres" type="StyleBox" id=6]
+[ext_resource path="res://Item/Equipment/Skill/BOARD/Skill_Board_View/Skill_Board_Slot_Panel_1.tres" type="StyleBox" id=7]
 
 [sub_resource type="StyleBoxFlat" id=4]
 resource_local_to_scene = true
@@ -23,6 +24,8 @@ bg_color = Color( 0.6, 0.6, 0.6, 0 )
 margin_right = 556.0
 margin_bottom = 298.0
 script = ExtResource( 3 )
+skill_board = ExtResource( 5 )
+checkerboard = NodePath("ScrollContainer/Checkerboard")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
 margin_left = 7.0
@@ -49,16 +52,6 @@ face_group = "X"
 input_group = "X"
 skill_chip_position = Vector2( 16, 8 )
 
-[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel"]
-margin_right = 96.0
-margin_bottom = 96.0
-
-[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel/CenterContainer" instance=ExtResource( 2 )]
-margin_left = 12.0
-margin_top = 5.0
-margin_right = 84.0
-margin_bottom = 91.0
-
 [node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel"]
 margin_right = 96.0
 margin_bottom = 96.0
@@ -80,16 +73,6 @@ dpad_group = "LEFT"
 face_group = "X"
 input_group = "Y"
 skill_chip_position = Vector2( 16, 8 )
-
-[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel2"]
-margin_right = 96.0
-margin_bottom = 96.0
-
-[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel2/CenterContainer" instance=ExtResource( 2 )]
-margin_left = 12.0
-margin_top = 5.0
-margin_right = 84.0
-margin_bottom = 91.0
 
 [node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel2"]
 margin_right = 96.0
@@ -113,16 +96,6 @@ face_group = "Y"
 input_group = "X"
 skill_chip_position = Vector2( 16, 8 )
 
-[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel3"]
-margin_right = 96.0
-margin_bottom = 96.0
-
-[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel3/CenterContainer" instance=ExtResource( 2 )]
-margin_left = 12.0
-margin_top = 5.0
-margin_right = 84.0
-margin_bottom = 91.0
-
 [node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel3"]
 margin_right = 96.0
 margin_bottom = 96.0
@@ -144,16 +117,6 @@ dpad_group = "LEFT"
 face_group = "Y"
 input_group = "Y"
 skill_chip_position = Vector2( 16, 8 )
-
-[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel4"]
-margin_right = 96.0
-margin_bottom = 96.0
-
-[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel4/CenterContainer" instance=ExtResource( 2 )]
-margin_left = 12.0
-margin_top = 5.0
-margin_right = 84.0
-margin_bottom = 91.0
 
 [node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel4"]
 margin_right = 96.0
@@ -177,16 +140,6 @@ face_group = "X"
 input_group = "X"
 skill_chip_position = Vector2( 16, 8 )
 
-[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel5"]
-margin_right = 96.0
-margin_bottom = 96.0
-
-[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel5/CenterContainer" instance=ExtResource( 2 )]
-margin_left = 12.0
-margin_top = 5.0
-margin_right = 84.0
-margin_bottom = 91.0
-
 [node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel5"]
 margin_right = 96.0
 margin_bottom = 96.0
@@ -208,16 +161,6 @@ dpad_group = "UP"
 face_group = "X"
 input_group = "Y"
 skill_chip_position = Vector2( 16, 8 )
-
-[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel6"]
-margin_right = 96.0
-margin_bottom = 96.0
-
-[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel6/CenterContainer" instance=ExtResource( 2 )]
-margin_left = 12.0
-margin_top = 5.0
-margin_right = 84.0
-margin_bottom = 91.0
 
 [node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel6"]
 margin_right = 96.0
@@ -241,16 +184,6 @@ face_group = "Y"
 input_group = "X"
 skill_chip_position = Vector2( 16, 8 )
 
-[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel7"]
-margin_right = 96.0
-margin_bottom = 96.0
-
-[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel7/CenterContainer" instance=ExtResource( 2 )]
-margin_left = 12.0
-margin_top = 5.0
-margin_right = 84.0
-margin_bottom = 91.0
-
 [node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel7"]
 margin_right = 96.0
 margin_bottom = 96.0
@@ -273,16 +206,6 @@ face_group = "Y"
 input_group = "Y"
 skill_chip_position = Vector2( 16, 8 )
 
-[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel8"]
-margin_right = 96.0
-margin_bottom = 96.0
-
-[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel8/CenterContainer" instance=ExtResource( 2 )]
-margin_left = 12.0
-margin_top = 5.0
-margin_right = 84.0
-margin_bottom = 91.0
-
 [node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel8"]
 margin_right = 96.0
 margin_bottom = 96.0
@@ -304,16 +227,6 @@ dpad_group = "LEFT"
 face_group = "X"
 input_group = "A"
 skill_chip_position = Vector2( 16, 8 )
-
-[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel9"]
-margin_right = 96.0
-margin_bottom = 96.0
-
-[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel9/CenterContainer" instance=ExtResource( 2 )]
-margin_left = 12.0
-margin_top = 5.0
-margin_right = 84.0
-margin_bottom = 91.0
 
 [node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel9"]
 margin_right = 96.0
@@ -338,16 +251,6 @@ face_group = "X"
 input_group = "B"
 skill_chip_position = Vector2( 16, 8 )
 
-[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel10"]
-margin_right = 96.0
-margin_bottom = 96.0
-
-[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel10/CenterContainer" instance=ExtResource( 2 )]
-margin_left = 12.0
-margin_top = 5.0
-margin_right = 84.0
-margin_bottom = 91.0
-
 [node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel10"]
 margin_right = 96.0
 margin_bottom = 96.0
@@ -370,16 +273,6 @@ dpad_group = "LEFT"
 face_group = "Y"
 input_group = "A"
 skill_chip_position = Vector2( 16, 8 )
-
-[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel11"]
-margin_right = 96.0
-margin_bottom = 96.0
-
-[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel11/CenterContainer" instance=ExtResource( 2 )]
-margin_left = 12.0
-margin_top = 5.0
-margin_right = 84.0
-margin_bottom = 91.0
 
 [node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel11"]
 margin_right = 96.0
@@ -404,16 +297,6 @@ face_group = "Y"
 input_group = "B"
 skill_chip_position = Vector2( 16, 8 )
 
-[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel12"]
-margin_right = 96.0
-margin_bottom = 96.0
-
-[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel12/CenterContainer" instance=ExtResource( 2 )]
-margin_left = 12.0
-margin_top = 5.0
-margin_right = 84.0
-margin_bottom = 91.0
-
 [node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel12"]
 margin_right = 96.0
 margin_bottom = 96.0
@@ -436,16 +319,6 @@ dpad_group = "UP"
 face_group = "X"
 input_group = "A"
 skill_chip_position = Vector2( 16, 8 )
-
-[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel13"]
-margin_right = 96.0
-margin_bottom = 96.0
-
-[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel13/CenterContainer" instance=ExtResource( 2 )]
-margin_left = 12.0
-margin_top = 5.0
-margin_right = 84.0
-margin_bottom = 91.0
 
 [node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel13"]
 margin_right = 96.0
@@ -470,16 +343,6 @@ face_group = "X"
 input_group = "B"
 skill_chip_position = Vector2( 16, 8 )
 
-[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel14"]
-margin_right = 96.0
-margin_bottom = 96.0
-
-[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel14/CenterContainer" instance=ExtResource( 2 )]
-margin_left = 12.0
-margin_top = 5.0
-margin_right = 84.0
-margin_bottom = 91.0
-
 [node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel14"]
 margin_right = 96.0
 margin_bottom = 96.0
@@ -503,16 +366,6 @@ face_group = "Y"
 input_group = "A"
 skill_chip_position = Vector2( 16, 8 )
 
-[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel15"]
-margin_right = 96.0
-margin_bottom = 96.0
-
-[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel15/CenterContainer" instance=ExtResource( 2 )]
-margin_left = 12.0
-margin_top = 5.0
-margin_right = 84.0
-margin_bottom = 91.0
-
 [node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel15"]
 margin_right = 96.0
 margin_bottom = 96.0
@@ -529,22 +382,12 @@ margin_top = 100.0
 margin_right = 796.0
 margin_bottom = 196.0
 rect_min_size = Vector2( 96, 96 )
-custom_styles/panel = SubResource( 4 )
+custom_styles/panel = ExtResource( 7 )
 script = ExtResource( 1 )
 dpad_group = "UP"
 face_group = "Y"
 input_group = "B"
 skill_chip_position = Vector2( 16, 8 )
-
-[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel16"]
-margin_right = 96.0
-margin_bottom = 96.0
-
-[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel16/CenterContainer" instance=ExtResource( 2 )]
-margin_left = 12.0
-margin_top = 5.0
-margin_right = 84.0
-margin_bottom = 91.0
 
 [node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel16"]
 margin_right = 96.0
@@ -567,16 +410,6 @@ dpad_group = "LEFT"
 face_group = "A"
 input_group = "X"
 skill_chip_position = Vector2( 16, 8 )
-
-[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel17"]
-margin_right = 96.0
-margin_bottom = 96.0
-
-[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel17/CenterContainer" instance=ExtResource( 2 )]
-margin_left = 12.0
-margin_top = 5.0
-margin_right = 84.0
-margin_bottom = 91.0
 
 [node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel17"]
 margin_right = 96.0
@@ -601,16 +434,6 @@ face_group = "A"
 input_group = "Y"
 skill_chip_position = Vector2( 16, 8 )
 
-[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel18"]
-margin_right = 96.0
-margin_bottom = 96.0
-
-[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel18/CenterContainer" instance=ExtResource( 2 )]
-margin_left = 12.0
-margin_top = 5.0
-margin_right = 84.0
-margin_bottom = 91.0
-
 [node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel18"]
 margin_right = 96.0
 margin_bottom = 96.0
@@ -633,16 +456,6 @@ dpad_group = "LEFT"
 face_group = "B"
 input_group = "X"
 skill_chip_position = Vector2( 16, 8 )
-
-[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel19"]
-margin_right = 96.0
-margin_bottom = 96.0
-
-[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel19/CenterContainer" instance=ExtResource( 2 )]
-margin_left = 12.0
-margin_top = 5.0
-margin_right = 84.0
-margin_bottom = 91.0
 
 [node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel19"]
 margin_right = 96.0
@@ -667,16 +480,6 @@ face_group = "B"
 input_group = "Y"
 skill_chip_position = Vector2( 16, 8 )
 
-[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel20"]
-margin_right = 96.0
-margin_bottom = 96.0
-
-[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel20/CenterContainer" instance=ExtResource( 2 )]
-margin_left = 12.0
-margin_top = 5.0
-margin_right = 84.0
-margin_bottom = 91.0
-
 [node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel20"]
 margin_right = 96.0
 margin_bottom = 96.0
@@ -699,16 +502,6 @@ dpad_group = "UP"
 face_group = "A"
 input_group = "X"
 skill_chip_position = Vector2( 16, 8 )
-
-[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel21"]
-margin_right = 96.0
-margin_bottom = 96.0
-
-[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel21/CenterContainer" instance=ExtResource( 2 )]
-margin_left = 12.0
-margin_top = 5.0
-margin_right = 84.0
-margin_bottom = 91.0
 
 [node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel21"]
 margin_right = 96.0
@@ -733,16 +526,6 @@ face_group = "A"
 input_group = "Y"
 skill_chip_position = Vector2( 16, 8 )
 
-[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel22"]
-margin_right = 96.0
-margin_bottom = 96.0
-
-[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel22/CenterContainer" instance=ExtResource( 2 )]
-margin_left = 12.0
-margin_top = 5.0
-margin_right = 84.0
-margin_bottom = 91.0
-
 [node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel22"]
 margin_right = 96.0
 margin_bottom = 96.0
@@ -759,22 +542,12 @@ margin_top = 200.0
 margin_right = 696.0
 margin_bottom = 296.0
 rect_min_size = Vector2( 96, 96 )
-custom_styles/panel = SubResource( 4 )
+custom_styles/panel = ExtResource( 7 )
 script = ExtResource( 1 )
 dpad_group = "UP"
 face_group = "B"
 input_group = "X"
 skill_chip_position = Vector2( 16, 8 )
-
-[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel23"]
-margin_right = 96.0
-margin_bottom = 96.0
-
-[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel23/CenterContainer" instance=ExtResource( 2 )]
-margin_left = 12.0
-margin_top = 5.0
-margin_right = 84.0
-margin_bottom = 91.0
 
 [node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel23"]
 margin_right = 96.0
@@ -799,16 +572,6 @@ face_group = "B"
 input_group = "Y"
 skill_chip_position = Vector2( 16, 8 )
 
-[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel24"]
-margin_right = 96.0
-margin_bottom = 96.0
-
-[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel24/CenterContainer" instance=ExtResource( 2 )]
-margin_left = 12.0
-margin_top = 5.0
-margin_right = 84.0
-margin_bottom = 91.0
-
 [node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel24"]
 margin_right = 96.0
 margin_bottom = 96.0
@@ -830,16 +593,6 @@ dpad_group = "LEFT"
 face_group = "A"
 input_group = "A"
 skill_chip_position = Vector2( 16, 8 )
-
-[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel25"]
-margin_right = 96.0
-margin_bottom = 96.0
-
-[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel25/CenterContainer" instance=ExtResource( 2 )]
-margin_left = 12.0
-margin_top = 5.0
-margin_right = 84.0
-margin_bottom = 91.0
 
 [node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel25"]
 margin_right = 96.0
@@ -864,16 +617,6 @@ face_group = "A"
 input_group = "B"
 skill_chip_position = Vector2( 16, 8 )
 
-[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel26"]
-margin_right = 96.0
-margin_bottom = 96.0
-
-[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel26/CenterContainer" instance=ExtResource( 2 )]
-margin_left = 12.0
-margin_top = 5.0
-margin_right = 84.0
-margin_bottom = 91.0
-
 [node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel26"]
 margin_right = 96.0
 margin_bottom = 96.0
@@ -896,16 +639,6 @@ dpad_group = "LEFT"
 face_group = "B"
 input_group = "A"
 skill_chip_position = Vector2( 16, 8 )
-
-[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel27"]
-margin_right = 96.0
-margin_bottom = 96.0
-
-[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel27/CenterContainer" instance=ExtResource( 2 )]
-margin_left = 12.0
-margin_top = 5.0
-margin_right = 84.0
-margin_bottom = 91.0
 
 [node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel27"]
 margin_right = 96.0
@@ -930,16 +663,6 @@ face_group = "B"
 input_group = "B"
 skill_chip_position = Vector2( 16, 8 )
 
-[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel28"]
-margin_right = 96.0
-margin_bottom = 96.0
-
-[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel28/CenterContainer" instance=ExtResource( 2 )]
-margin_left = 12.0
-margin_top = 5.0
-margin_right = 84.0
-margin_bottom = 91.0
-
 [node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel28"]
 margin_right = 96.0
 margin_bottom = 96.0
@@ -963,16 +686,6 @@ face_group = "A"
 input_group = "A"
 skill_chip_position = Vector2( 16, 8 )
 
-[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel29"]
-margin_right = 96.0
-margin_bottom = 96.0
-
-[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel29/CenterContainer" instance=ExtResource( 2 )]
-margin_left = 12.0
-margin_top = 5.0
-margin_right = 84.0
-margin_bottom = 91.0
-
 [node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel29"]
 margin_right = 96.0
 margin_bottom = 96.0
@@ -989,22 +702,12 @@ margin_top = 300.0
 margin_right = 596.0
 margin_bottom = 396.0
 rect_min_size = Vector2( 96, 96 )
-custom_styles/panel = SubResource( 4 )
+custom_styles/panel = ExtResource( 7 )
 script = ExtResource( 1 )
 dpad_group = "UP"
 face_group = "A"
 input_group = "B"
 skill_chip_position = Vector2( 16, 8 )
-
-[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel30"]
-margin_right = 96.0
-margin_bottom = 96.0
-
-[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel30/CenterContainer" instance=ExtResource( 2 )]
-margin_left = 12.0
-margin_top = 5.0
-margin_right = 84.0
-margin_bottom = 91.0
 
 [node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel30"]
 margin_right = 96.0
@@ -1029,16 +732,6 @@ face_group = "B"
 input_group = "A"
 skill_chip_position = Vector2( 16, 8 )
 
-[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel31"]
-margin_right = 96.0
-margin_bottom = 96.0
-
-[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel31/CenterContainer" instance=ExtResource( 2 )]
-margin_left = 12.0
-margin_top = 5.0
-margin_right = 84.0
-margin_bottom = 91.0
-
 [node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel31"]
 margin_right = 96.0
 margin_bottom = 96.0
@@ -1055,22 +748,12 @@ margin_top = 300.0
 margin_right = 796.0
 margin_bottom = 396.0
 rect_min_size = Vector2( 96, 96 )
-custom_styles/panel = SubResource( 4 )
+custom_styles/panel = ExtResource( 7 )
 script = ExtResource( 1 )
 dpad_group = "UP"
 face_group = "B"
 input_group = "B"
 skill_chip_position = Vector2( 16, 8 )
-
-[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel32"]
-margin_right = 96.0
-margin_bottom = 96.0
-
-[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel32/CenterContainer" instance=ExtResource( 2 )]
-margin_left = 12.0
-margin_top = 5.0
-margin_right = 84.0
-margin_bottom = 91.0
 
 [node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel32"]
 margin_right = 96.0
@@ -1091,18 +774,8 @@ custom_styles/panel = SubResource( 4 )
 script = ExtResource( 1 )
 dpad_group = "DOWN"
 face_group = "X"
-input_group = "X"
+input_group = "A"
 skill_chip_position = Vector2( 16, 8 )
-
-[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel33"]
-margin_right = 96.0
-margin_bottom = 96.0
-
-[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel33/CenterContainer" instance=ExtResource( 2 )]
-margin_left = 12.0
-margin_top = 5.0
-margin_right = 84.0
-margin_bottom = 91.0
 
 [node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel33"]
 margin_right = 96.0
@@ -1127,16 +800,6 @@ face_group = "X"
 input_group = "Y"
 skill_chip_position = Vector2( 16, 8 )
 
-[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel34"]
-margin_right = 96.0
-margin_bottom = 96.0
-
-[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel34/CenterContainer" instance=ExtResource( 2 )]
-margin_left = 12.0
-margin_top = 5.0
-margin_right = 84.0
-margin_bottom = 91.0
-
 [node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel34"]
 margin_right = 96.0
 margin_bottom = 96.0
@@ -1159,16 +822,6 @@ dpad_group = "DOWN"
 face_group = "Y"
 input_group = "X"
 skill_chip_position = Vector2( 16, 8 )
-
-[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel35"]
-margin_right = 96.0
-margin_bottom = 96.0
-
-[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel35/CenterContainer" instance=ExtResource( 2 )]
-margin_left = 12.0
-margin_top = 5.0
-margin_right = 84.0
-margin_bottom = 91.0
 
 [node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel35"]
 margin_right = 96.0
@@ -1193,16 +846,6 @@ face_group = "Y"
 input_group = "Y"
 skill_chip_position = Vector2( 16, 8 )
 
-[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel36"]
-margin_right = 96.0
-margin_bottom = 96.0
-
-[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel36/CenterContainer" instance=ExtResource( 2 )]
-margin_left = 12.0
-margin_top = 5.0
-margin_right = 84.0
-margin_bottom = 91.0
-
 [node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel36"]
 margin_right = 96.0
 margin_bottom = 96.0
@@ -1219,22 +862,12 @@ margin_top = 400.0
 margin_right = 496.0
 margin_bottom = 496.0
 rect_min_size = Vector2( 96, 96 )
-custom_styles/panel = SubResource( 4 )
+custom_styles/panel = ExtResource( 7 )
 script = ExtResource( 1 )
 dpad_group = "RIGHT"
 face_group = "X"
 input_group = "X"
 skill_chip_position = Vector2( 16, 8 )
-
-[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel37"]
-margin_right = 96.0
-margin_bottom = 96.0
-
-[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel37/CenterContainer" instance=ExtResource( 2 )]
-margin_left = 12.0
-margin_top = 5.0
-margin_right = 84.0
-margin_bottom = 91.0
 
 [node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel37"]
 margin_right = 96.0
@@ -1259,16 +892,6 @@ face_group = "X"
 input_group = "Y"
 skill_chip_position = Vector2( 16, 8 )
 
-[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel38"]
-margin_right = 96.0
-margin_bottom = 96.0
-
-[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel38/CenterContainer" instance=ExtResource( 2 )]
-margin_left = 12.0
-margin_top = 5.0
-margin_right = 84.0
-margin_bottom = 91.0
-
 [node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel38"]
 margin_right = 96.0
 margin_bottom = 96.0
@@ -1285,22 +908,12 @@ margin_top = 400.0
 margin_right = 696.0
 margin_bottom = 496.0
 rect_min_size = Vector2( 96, 96 )
-custom_styles/panel = SubResource( 4 )
+custom_styles/panel = ExtResource( 7 )
 script = ExtResource( 1 )
 dpad_group = "RIGHT"
 face_group = "Y"
 input_group = "X"
 skill_chip_position = Vector2( 16, 8 )
-
-[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel39"]
-margin_right = 96.0
-margin_bottom = 96.0
-
-[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel39/CenterContainer" instance=ExtResource( 2 )]
-margin_left = 12.0
-margin_top = 5.0
-margin_right = 84.0
-margin_bottom = 91.0
 
 [node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel39"]
 margin_right = 96.0
@@ -1325,16 +938,6 @@ face_group = "Y"
 input_group = "Y"
 skill_chip_position = Vector2( 16, 8 )
 
-[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel40"]
-margin_right = 96.0
-margin_bottom = 96.0
-
-[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel40/CenterContainer" instance=ExtResource( 2 )]
-margin_left = 12.0
-margin_top = 5.0
-margin_right = 84.0
-margin_bottom = 91.0
-
 [node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel40"]
 margin_right = 96.0
 margin_bottom = 96.0
@@ -1356,16 +959,6 @@ dpad_group = "DOWN"
 face_group = "X"
 input_group = "A"
 skill_chip_position = Vector2( 16, 8 )
-
-[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel41"]
-margin_right = 96.0
-margin_bottom = 96.0
-
-[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel41/CenterContainer" instance=ExtResource( 2 )]
-margin_left = 12.0
-margin_top = 5.0
-margin_right = 84.0
-margin_bottom = 91.0
 
 [node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel41"]
 margin_right = 96.0
@@ -1390,16 +983,6 @@ face_group = "X"
 input_group = "B"
 skill_chip_position = Vector2( 16, 8 )
 
-[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel42"]
-margin_right = 96.0
-margin_bottom = 96.0
-
-[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel42/CenterContainer" instance=ExtResource( 2 )]
-margin_left = 12.0
-margin_top = 5.0
-margin_right = 84.0
-margin_bottom = 91.0
-
 [node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel42"]
 margin_right = 96.0
 margin_bottom = 96.0
@@ -1423,16 +1006,6 @@ face_group = "Y"
 input_group = "A"
 skill_chip_position = Vector2( 16, 8 )
 
-[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel43"]
-margin_right = 96.0
-margin_bottom = 96.0
-
-[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel43/CenterContainer" instance=ExtResource( 2 )]
-margin_left = 12.0
-margin_top = 5.0
-margin_right = 84.0
-margin_bottom = 91.0
-
 [node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel43"]
 margin_right = 96.0
 margin_bottom = 96.0
@@ -1449,22 +1022,12 @@ margin_top = 500.0
 margin_right = 396.0
 margin_bottom = 596.0
 rect_min_size = Vector2( 96, 96 )
-custom_styles/panel = SubResource( 4 )
+custom_styles/panel = ExtResource( 7 )
 script = ExtResource( 1 )
 dpad_group = "DOWN"
 face_group = "Y"
 input_group = "B"
 skill_chip_position = Vector2( 16, 8 )
-
-[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel44"]
-margin_right = 96.0
-margin_bottom = 96.0
-
-[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel44/CenterContainer" instance=ExtResource( 2 )]
-margin_left = 12.0
-margin_top = 5.0
-margin_right = 84.0
-margin_bottom = 91.0
 
 [node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel44"]
 margin_right = 96.0
@@ -1489,16 +1052,6 @@ face_group = "X"
 input_group = "A"
 skill_chip_position = Vector2( 16, 8 )
 
-[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel45"]
-margin_right = 96.0
-margin_bottom = 96.0
-
-[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel45/CenterContainer" instance=ExtResource( 2 )]
-margin_left = 12.0
-margin_top = 5.0
-margin_right = 84.0
-margin_bottom = 91.0
-
 [node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel45"]
 margin_right = 96.0
 margin_bottom = 96.0
@@ -1515,22 +1068,12 @@ margin_top = 500.0
 margin_right = 596.0
 margin_bottom = 596.0
 rect_min_size = Vector2( 96, 96 )
-custom_styles/panel = SubResource( 4 )
+custom_styles/panel = ExtResource( 7 )
 script = ExtResource( 1 )
 dpad_group = "RIGHT"
 face_group = "X"
 input_group = "B"
 skill_chip_position = Vector2( 16, 8 )
-
-[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel46"]
-margin_right = 96.0
-margin_bottom = 96.0
-
-[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel46/CenterContainer" instance=ExtResource( 2 )]
-margin_left = 12.0
-margin_top = 5.0
-margin_right = 84.0
-margin_bottom = 91.0
 
 [node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel46"]
 margin_right = 96.0
@@ -1555,16 +1098,6 @@ face_group = "Y"
 input_group = "A"
 skill_chip_position = Vector2( 16, 8 )
 
-[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel47"]
-margin_right = 96.0
-margin_bottom = 96.0
-
-[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel47/CenterContainer" instance=ExtResource( 2 )]
-margin_left = 12.0
-margin_top = 5.0
-margin_right = 84.0
-margin_bottom = 91.0
-
 [node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel47"]
 margin_right = 96.0
 margin_bottom = 96.0
@@ -1581,22 +1114,12 @@ margin_top = 500.0
 margin_right = 796.0
 margin_bottom = 596.0
 rect_min_size = Vector2( 96, 96 )
-custom_styles/panel = SubResource( 4 )
+custom_styles/panel = ExtResource( 7 )
 script = ExtResource( 1 )
 dpad_group = "RIGHT"
 face_group = "Y"
 input_group = "B"
 skill_chip_position = Vector2( 16, 8 )
-
-[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel48"]
-margin_right = 96.0
-margin_bottom = 96.0
-
-[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel48/CenterContainer" instance=ExtResource( 2 )]
-margin_left = 12.0
-margin_top = 5.0
-margin_right = 84.0
-margin_bottom = 91.0
 
 [node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel48"]
 margin_right = 96.0
@@ -1619,16 +1142,6 @@ dpad_group = "DOWN"
 face_group = "A"
 input_group = "X"
 skill_chip_position = Vector2( 16, 8 )
-
-[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel49"]
-margin_right = 96.0
-margin_bottom = 96.0
-
-[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel49/CenterContainer" instance=ExtResource( 2 )]
-margin_left = 12.0
-margin_top = 5.0
-margin_right = 84.0
-margin_bottom = 91.0
 
 [node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel49"]
 margin_right = 96.0
@@ -1653,16 +1166,6 @@ face_group = "A"
 input_group = "Y"
 skill_chip_position = Vector2( 16, 8 )
 
-[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel50"]
-margin_right = 96.0
-margin_bottom = 96.0
-
-[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel50/CenterContainer" instance=ExtResource( 2 )]
-margin_left = 12.0
-margin_top = 5.0
-margin_right = 84.0
-margin_bottom = 91.0
-
 [node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel50"]
 margin_right = 96.0
 margin_bottom = 96.0
@@ -1679,22 +1182,12 @@ margin_top = 600.0
 margin_right = 296.0
 margin_bottom = 696.0
 rect_min_size = Vector2( 96, 96 )
-custom_styles/panel = SubResource( 4 )
+custom_styles/panel = ExtResource( 7 )
 script = ExtResource( 1 )
 dpad_group = "DOWN"
 face_group = "B"
 input_group = "X"
 skill_chip_position = Vector2( 16, 8 )
-
-[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel51"]
-margin_right = 96.0
-margin_bottom = 96.0
-
-[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel51/CenterContainer" instance=ExtResource( 2 )]
-margin_left = 12.0
-margin_top = 5.0
-margin_right = 84.0
-margin_bottom = 91.0
 
 [node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel51"]
 margin_right = 96.0
@@ -1719,16 +1212,6 @@ face_group = "B"
 input_group = "Y"
 skill_chip_position = Vector2( 16, 8 )
 
-[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel52"]
-margin_right = 96.0
-margin_bottom = 96.0
-
-[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel52/CenterContainer" instance=ExtResource( 2 )]
-margin_left = 12.0
-margin_top = 5.0
-margin_right = 84.0
-margin_bottom = 91.0
-
 [node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel52"]
 margin_right = 96.0
 margin_bottom = 96.0
@@ -1745,22 +1228,12 @@ margin_top = 600.0
 margin_right = 496.0
 margin_bottom = 696.0
 rect_min_size = Vector2( 96, 96 )
-custom_styles/panel = SubResource( 4 )
+custom_styles/panel = ExtResource( 7 )
 script = ExtResource( 1 )
 dpad_group = "RIGHT"
 face_group = "A"
 input_group = "X"
 skill_chip_position = Vector2( 16, 8 )
-
-[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel53"]
-margin_right = 96.0
-margin_bottom = 96.0
-
-[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel53/CenterContainer" instance=ExtResource( 2 )]
-margin_left = 12.0
-margin_top = 5.0
-margin_right = 84.0
-margin_bottom = 91.0
 
 [node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel53"]
 margin_right = 96.0
@@ -1785,16 +1258,6 @@ face_group = "A"
 input_group = "Y"
 skill_chip_position = Vector2( 16, 8 )
 
-[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel54"]
-margin_right = 96.0
-margin_bottom = 96.0
-
-[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel54/CenterContainer" instance=ExtResource( 2 )]
-margin_left = 12.0
-margin_top = 5.0
-margin_right = 84.0
-margin_bottom = 91.0
-
 [node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel54"]
 margin_right = 96.0
 margin_bottom = 96.0
@@ -1811,22 +1274,12 @@ margin_top = 600.0
 margin_right = 696.0
 margin_bottom = 696.0
 rect_min_size = Vector2( 96, 96 )
-custom_styles/panel = SubResource( 4 )
+custom_styles/panel = ExtResource( 7 )
 script = ExtResource( 1 )
 dpad_group = "RIGHT"
 face_group = "B"
 input_group = "X"
 skill_chip_position = Vector2( 16, 8 )
-
-[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel55"]
-margin_right = 96.0
-margin_bottom = 96.0
-
-[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel55/CenterContainer" instance=ExtResource( 2 )]
-margin_left = 12.0
-margin_top = 5.0
-margin_right = 84.0
-margin_bottom = 91.0
 
 [node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel55"]
 margin_right = 96.0
@@ -1851,16 +1304,6 @@ face_group = "B"
 input_group = "Y"
 skill_chip_position = Vector2( 16, 8 )
 
-[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel56"]
-margin_right = 96.0
-margin_bottom = 96.0
-
-[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel56/CenterContainer" instance=ExtResource( 2 )]
-margin_left = 12.0
-margin_top = 5.0
-margin_right = 84.0
-margin_bottom = 91.0
-
 [node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel56"]
 margin_right = 96.0
 margin_bottom = 96.0
@@ -1882,16 +1325,6 @@ dpad_group = "DOWN"
 face_group = "A"
 input_group = "A"
 skill_chip_position = Vector2( 16, 8 )
-
-[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel57"]
-margin_right = 96.0
-margin_bottom = 96.0
-
-[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel57/CenterContainer" instance=ExtResource( 2 )]
-margin_left = 12.0
-margin_top = 5.0
-margin_right = 84.0
-margin_bottom = 91.0
 
 [node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel57"]
 margin_right = 96.0
@@ -1916,16 +1349,6 @@ face_group = "A"
 input_group = "B"
 skill_chip_position = Vector2( 16, 8 )
 
-[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel58"]
-margin_right = 96.0
-margin_bottom = 96.0
-
-[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel58/CenterContainer" instance=ExtResource( 2 )]
-margin_left = 12.0
-margin_top = 5.0
-margin_right = 84.0
-margin_bottom = 91.0
-
 [node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel58"]
 margin_right = 96.0
 margin_bottom = 96.0
@@ -1949,16 +1372,6 @@ face_group = "B"
 input_group = "A"
 skill_chip_position = Vector2( 16, 8 )
 
-[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel59"]
-margin_right = 96.0
-margin_bottom = 96.0
-
-[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel59/CenterContainer" instance=ExtResource( 2 )]
-margin_left = 12.0
-margin_top = 5.0
-margin_right = 84.0
-margin_bottom = 91.0
-
 [node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel59"]
 margin_right = 96.0
 margin_bottom = 96.0
@@ -1975,22 +1388,12 @@ margin_top = 700.0
 margin_right = 396.0
 margin_bottom = 796.0
 rect_min_size = Vector2( 96, 96 )
-custom_styles/panel = SubResource( 4 )
+custom_styles/panel = ExtResource( 7 )
 script = ExtResource( 1 )
 dpad_group = "DOWN"
 face_group = "B"
 input_group = "B"
 skill_chip_position = Vector2( 16, 8 )
-
-[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel60"]
-margin_right = 96.0
-margin_bottom = 96.0
-
-[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel60/CenterContainer" instance=ExtResource( 2 )]
-margin_left = 12.0
-margin_top = 5.0
-margin_right = 84.0
-margin_bottom = 91.0
 
 [node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel60"]
 margin_right = 96.0
@@ -2015,16 +1418,6 @@ face_group = "A"
 input_group = "A"
 skill_chip_position = Vector2( 16, 8 )
 
-[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel61"]
-margin_right = 96.0
-margin_bottom = 96.0
-
-[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel61/CenterContainer" instance=ExtResource( 2 )]
-margin_left = 12.0
-margin_top = 5.0
-margin_right = 84.0
-margin_bottom = 91.0
-
 [node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel61"]
 margin_right = 96.0
 margin_bottom = 96.0
@@ -2041,22 +1434,12 @@ margin_top = 700.0
 margin_right = 596.0
 margin_bottom = 796.0
 rect_min_size = Vector2( 96, 96 )
-custom_styles/panel = SubResource( 4 )
+custom_styles/panel = ExtResource( 7 )
 script = ExtResource( 1 )
 dpad_group = "RIGHT"
 face_group = "A"
 input_group = "B"
 skill_chip_position = Vector2( 16, 8 )
-
-[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel62"]
-margin_right = 96.0
-margin_bottom = 96.0
-
-[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel62/CenterContainer" instance=ExtResource( 2 )]
-margin_left = 12.0
-margin_top = 5.0
-margin_right = 84.0
-margin_bottom = 91.0
 
 [node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel62"]
 margin_right = 96.0
@@ -2081,16 +1464,6 @@ face_group = "B"
 input_group = "A"
 skill_chip_position = Vector2( 16, 8 )
 
-[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel63"]
-margin_right = 96.0
-margin_bottom = 96.0
-
-[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel63/CenterContainer" instance=ExtResource( 2 )]
-margin_left = 12.0
-margin_top = 5.0
-margin_right = 84.0
-margin_bottom = 91.0
-
 [node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel63"]
 margin_right = 96.0
 margin_bottom = 96.0
@@ -2107,22 +1480,12 @@ margin_top = 700.0
 margin_right = 796.0
 margin_bottom = 796.0
 rect_min_size = Vector2( 96, 96 )
-custom_styles/panel = SubResource( 4 )
+custom_styles/panel = ExtResource( 7 )
 script = ExtResource( 1 )
 dpad_group = "RIGHT"
 face_group = "B"
 input_group = "B"
 skill_chip_position = Vector2( 16, 8 )
-
-[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Checkerboard/Panel64"]
-margin_right = 96.0
-margin_bottom = 96.0
-
-[node name="Skill_Chip_Panel" parent="ScrollContainer/Checkerboard/Panel64/CenterContainer" instance=ExtResource( 2 )]
-margin_left = 12.0
-margin_top = 5.0
-margin_right = 84.0
-margin_bottom = 91.0
 
 [node name="Button" type="Button" parent="ScrollContainer/Checkerboard/Panel64"]
 margin_right = 96.0
@@ -2141,3 +1504,60 @@ custom_styles/normal = SubResource( 3 )
 [connection signal="button_up" from="ScrollContainer/Checkerboard/Panel5/Button" to="ScrollContainer/Checkerboard/Panel5" method="on_skill_board_menu_click"]
 [connection signal="button_up" from="ScrollContainer/Checkerboard/Panel6/Button" to="ScrollContainer/Checkerboard/Panel6" method="on_skill_board_menu_click"]
 [connection signal="button_up" from="ScrollContainer/Checkerboard/Panel7/Button" to="ScrollContainer/Checkerboard/Panel7" method="on_skill_board_menu_click"]
+[connection signal="button_up" from="ScrollContainer/Checkerboard/Panel8/Button" to="ScrollContainer/Checkerboard/Panel8" method="on_skill_board_menu_click"]
+[connection signal="button_up" from="ScrollContainer/Checkerboard/Panel9/Button" to="ScrollContainer/Checkerboard/Panel9" method="on_skill_board_menu_click"]
+[connection signal="button_up" from="ScrollContainer/Checkerboard/Panel10/Button" to="ScrollContainer/Checkerboard/Panel10" method="on_skill_board_menu_click"]
+[connection signal="button_up" from="ScrollContainer/Checkerboard/Panel11/Button" to="ScrollContainer/Checkerboard/Panel11" method="on_skill_board_menu_click"]
+[connection signal="button_up" from="ScrollContainer/Checkerboard/Panel12/Button" to="ScrollContainer/Checkerboard/Panel12" method="on_skill_board_menu_click"]
+[connection signal="button_up" from="ScrollContainer/Checkerboard/Panel13/Button" to="ScrollContainer/Checkerboard/Panel13" method="on_skill_board_menu_click"]
+[connection signal="button_up" from="ScrollContainer/Checkerboard/Panel14/Button" to="ScrollContainer/Checkerboard/Panel14" method="on_skill_board_menu_click"]
+[connection signal="button_up" from="ScrollContainer/Checkerboard/Panel15/Button" to="ScrollContainer/Checkerboard/Panel15" method="on_skill_board_menu_click"]
+[connection signal="button_up" from="ScrollContainer/Checkerboard/Panel16/Button" to="ScrollContainer/Checkerboard/Panel16" method="on_skill_board_menu_click"]
+[connection signal="button_up" from="ScrollContainer/Checkerboard/Panel17/Button" to="ScrollContainer/Checkerboard/Panel17" method="on_skill_board_menu_click"]
+[connection signal="button_up" from="ScrollContainer/Checkerboard/Panel18/Button" to="ScrollContainer/Checkerboard/Panel18" method="on_skill_board_menu_click"]
+[connection signal="button_up" from="ScrollContainer/Checkerboard/Panel19/Button" to="ScrollContainer/Checkerboard/Panel19" method="on_skill_board_menu_click"]
+[connection signal="button_up" from="ScrollContainer/Checkerboard/Panel20/Button" to="ScrollContainer/Checkerboard/Panel20" method="on_skill_board_menu_click"]
+[connection signal="button_up" from="ScrollContainer/Checkerboard/Panel21/Button" to="ScrollContainer/Checkerboard/Panel21" method="on_skill_board_menu_click"]
+[connection signal="button_up" from="ScrollContainer/Checkerboard/Panel22/Button" to="ScrollContainer/Checkerboard/Panel22" method="on_skill_board_menu_click"]
+[connection signal="button_up" from="ScrollContainer/Checkerboard/Panel23/Button" to="ScrollContainer/Checkerboard/Panel23" method="on_skill_board_menu_click"]
+[connection signal="button_up" from="ScrollContainer/Checkerboard/Panel24/Button" to="ScrollContainer/Checkerboard/Panel24" method="on_skill_board_menu_click"]
+[connection signal="button_up" from="ScrollContainer/Checkerboard/Panel25/Button" to="ScrollContainer/Checkerboard/Panel25" method="on_skill_board_menu_click"]
+[connection signal="button_up" from="ScrollContainer/Checkerboard/Panel26/Button" to="ScrollContainer/Checkerboard/Panel26" method="on_skill_board_menu_click"]
+[connection signal="button_up" from="ScrollContainer/Checkerboard/Panel27/Button" to="ScrollContainer/Checkerboard/Panel27" method="on_skill_board_menu_click"]
+[connection signal="button_up" from="ScrollContainer/Checkerboard/Panel28/Button" to="ScrollContainer/Checkerboard/Panel28" method="on_skill_board_menu_click"]
+[connection signal="button_up" from="ScrollContainer/Checkerboard/Panel29/Button" to="ScrollContainer/Checkerboard/Panel29" method="on_skill_board_menu_click"]
+[connection signal="button_up" from="ScrollContainer/Checkerboard/Panel30/Button" to="ScrollContainer/Checkerboard/Panel30" method="on_skill_board_menu_click"]
+[connection signal="button_up" from="ScrollContainer/Checkerboard/Panel31/Button" to="ScrollContainer/Checkerboard/Panel31" method="on_skill_board_menu_click"]
+[connection signal="button_up" from="ScrollContainer/Checkerboard/Panel32/Button" to="ScrollContainer/Checkerboard/Panel32" method="on_skill_board_menu_click"]
+[connection signal="button_up" from="ScrollContainer/Checkerboard/Panel33/Button" to="ScrollContainer/Checkerboard/Panel33" method="on_skill_board_menu_click"]
+[connection signal="button_up" from="ScrollContainer/Checkerboard/Panel34/Button" to="ScrollContainer/Checkerboard/Panel34" method="on_skill_board_menu_click"]
+[connection signal="button_up" from="ScrollContainer/Checkerboard/Panel35/Button" to="ScrollContainer/Checkerboard/Panel35" method="on_skill_board_menu_click"]
+[connection signal="button_up" from="ScrollContainer/Checkerboard/Panel36/Button" to="ScrollContainer/Checkerboard/Panel36" method="on_skill_board_menu_click"]
+[connection signal="button_up" from="ScrollContainer/Checkerboard/Panel37/Button" to="ScrollContainer/Checkerboard/Panel37" method="on_skill_board_menu_click"]
+[connection signal="button_up" from="ScrollContainer/Checkerboard/Panel38/Button" to="ScrollContainer/Checkerboard/Panel38" method="on_skill_board_menu_click"]
+[connection signal="button_up" from="ScrollContainer/Checkerboard/Panel39/Button" to="ScrollContainer/Checkerboard/Panel39" method="on_skill_board_menu_click"]
+[connection signal="button_up" from="ScrollContainer/Checkerboard/Panel40/Button" to="ScrollContainer/Checkerboard/Panel40" method="on_skill_board_menu_click"]
+[connection signal="button_up" from="ScrollContainer/Checkerboard/Panel41/Button" to="ScrollContainer/Checkerboard/Panel41" method="on_skill_board_menu_click"]
+[connection signal="button_up" from="ScrollContainer/Checkerboard/Panel42/Button" to="ScrollContainer/Checkerboard/Panel42" method="on_skill_board_menu_click"]
+[connection signal="button_up" from="ScrollContainer/Checkerboard/Panel43/Button" to="ScrollContainer/Checkerboard/Panel43" method="on_skill_board_menu_click"]
+[connection signal="button_up" from="ScrollContainer/Checkerboard/Panel44/Button" to="ScrollContainer/Checkerboard/Panel44" method="on_skill_board_menu_click"]
+[connection signal="button_up" from="ScrollContainer/Checkerboard/Panel45/Button" to="ScrollContainer/Checkerboard/Panel45" method="on_skill_board_menu_click"]
+[connection signal="button_up" from="ScrollContainer/Checkerboard/Panel46/Button" to="ScrollContainer/Checkerboard/Panel46" method="on_skill_board_menu_click"]
+[connection signal="button_up" from="ScrollContainer/Checkerboard/Panel47/Button" to="ScrollContainer/Checkerboard/Panel47" method="on_skill_board_menu_click"]
+[connection signal="button_up" from="ScrollContainer/Checkerboard/Panel48/Button" to="ScrollContainer/Checkerboard/Panel48" method="on_skill_board_menu_click"]
+[connection signal="button_up" from="ScrollContainer/Checkerboard/Panel49/Button" to="ScrollContainer/Checkerboard/Panel49" method="on_skill_board_menu_click"]
+[connection signal="button_up" from="ScrollContainer/Checkerboard/Panel50/Button" to="ScrollContainer/Checkerboard/Panel50" method="on_skill_board_menu_click"]
+[connection signal="button_up" from="ScrollContainer/Checkerboard/Panel51/Button" to="ScrollContainer/Checkerboard/Panel51" method="on_skill_board_menu_click"]
+[connection signal="button_up" from="ScrollContainer/Checkerboard/Panel52/Button" to="ScrollContainer/Checkerboard/Panel52" method="on_skill_board_menu_click"]
+[connection signal="button_up" from="ScrollContainer/Checkerboard/Panel53/Button" to="ScrollContainer/Checkerboard/Panel53" method="on_skill_board_menu_click"]
+[connection signal="button_up" from="ScrollContainer/Checkerboard/Panel54/Button" to="ScrollContainer/Checkerboard/Panel54" method="on_skill_board_menu_click"]
+[connection signal="button_up" from="ScrollContainer/Checkerboard/Panel55/Button" to="ScrollContainer/Checkerboard/Panel55" method="on_skill_board_menu_click"]
+[connection signal="button_up" from="ScrollContainer/Checkerboard/Panel56/Button" to="ScrollContainer/Checkerboard/Panel56" method="on_skill_board_menu_click"]
+[connection signal="button_up" from="ScrollContainer/Checkerboard/Panel57/Button" to="ScrollContainer/Checkerboard/Panel57" method="on_skill_board_menu_click"]
+[connection signal="button_up" from="ScrollContainer/Checkerboard/Panel58/Button" to="ScrollContainer/Checkerboard/Panel58" method="on_skill_board_menu_click"]
+[connection signal="button_up" from="ScrollContainer/Checkerboard/Panel59/Button" to="ScrollContainer/Checkerboard/Panel59" method="on_skill_board_menu_click"]
+[connection signal="button_up" from="ScrollContainer/Checkerboard/Panel60/Button" to="ScrollContainer/Checkerboard/Panel60" method="on_skill_board_menu_click"]
+[connection signal="button_up" from="ScrollContainer/Checkerboard/Panel61/Button" to="ScrollContainer/Checkerboard/Panel61" method="on_skill_board_menu_click"]
+[connection signal="button_up" from="ScrollContainer/Checkerboard/Panel62/Button" to="ScrollContainer/Checkerboard/Panel62" method="on_skill_board_menu_click"]
+[connection signal="button_up" from="ScrollContainer/Checkerboard/Panel63/Button" to="ScrollContainer/Checkerboard/Panel63" method="on_skill_board_menu_click"]
+[connection signal="button_up" from="ScrollContainer/Checkerboard/Panel64/Button" to="ScrollContainer/Checkerboard/Panel64" method="on_skill_board_menu_click"]

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Item/Equipment/Skill/BOARD/Skill_Board_Data.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+width = 8
+height = 8
+size = "MAX"

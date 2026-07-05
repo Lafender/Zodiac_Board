@@ -25,16 +25,19 @@ func get_item_resource(item_code: String, file_ext:= ".tres") -> Resource:
 	for i in dir_arr.size():
 		if item_code == load(dir_arr[i]).code:
 			return load(dir_arr[i])
-	return load(dir_arr[0])
+	return null
 
 func _add_item_to_inventory(item: Resource):
-	var item_code = item.code
-	if item_code in item_sums:
-		item_sums[item_code] += 1
-		print(item_code + " added to inventory.")
+	if item != null:
+		var item_code = item.code
+		if item_code in item_sums:
+			item_sums[item_code] += 1
+			print(item_code + " added to inventory.")
+		else:
+			item_sums[item_code] = 1
+			print(item_code + " added to inventory.")
 	else:
-		item_sums[item_code] = 1
-		print(item_code + " added to inventory.")
+		print("Nothing added to inventory.")
 
 # Returns whether or not item was successfully removed based on whether it was available in the Inventory's item_sums.
 func _remove_item_from_inventory(item: Resource) -> bool:
