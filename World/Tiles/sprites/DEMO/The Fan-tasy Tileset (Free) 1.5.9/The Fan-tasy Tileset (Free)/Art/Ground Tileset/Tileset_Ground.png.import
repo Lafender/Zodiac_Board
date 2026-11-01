@@ -1,0 +1,35 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/Tileset_Ground.png-3d9780887d3a6d8826b34e6801b9b376.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://World/Tiles/sprites/DEMO/The Fan-tasy Tileset (Free) 1.5.9/The Fan-tasy Tileset (Free)/Art/Ground Tileset/Tileset_Ground.png"
+dest_files=[ "res://.import/Tileset_Ground.png-3d9780887d3a6d8826b34e6801b9b376.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+process/normal_map_invert_y=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

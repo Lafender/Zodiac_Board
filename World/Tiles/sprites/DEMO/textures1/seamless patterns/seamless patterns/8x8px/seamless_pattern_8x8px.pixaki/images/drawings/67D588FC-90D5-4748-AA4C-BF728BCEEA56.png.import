@@ -1,0 +1,35 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/67D588FC-90D5-4748-AA4C-BF728BCEEA56.png-958791ebc52ad3e3657791a5c822a39d.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://World/Tiles/sprites/DEMO/textures1/seamless patterns/seamless patterns/8x8px/seamless_pattern_8x8px.pixaki/images/drawings/67D588FC-90D5-4748-AA4C-BF728BCEEA56.png"
+dest_files=[ "res://.import/67D588FC-90D5-4748-AA4C-BF728BCEEA56.png-958791ebc52ad3e3657791a5c822a39d.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+process/normal_map_invert_y=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

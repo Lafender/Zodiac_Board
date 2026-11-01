@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Controller/Camera/script/Camera_Follow.gd" type="Script" id=1]
+[ext_resource path="res://Controller/Field/Map/Active_Map_Holder.gd" type="Script" id=2]
+[ext_resource path="res://Controller/input/Movement.gd" type="Script" id=3]
+
+[sub_resource type="CapsuleShape2D" id=1]
+
+[node name="Field" type="Node2D"]
+
+[node name="Active_Map_Holder" type="Node" parent="."]
+script = ExtResource( 2 )
+
+[node name="Active_Character" type="KinematicBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Active_Character"]
+shape = SubResource( 1 )
+
+[node name="Movement" type="Node" parent="Active_Character"]
+script = ExtResource( 3 )
+active_character_path = NodePath("..")
+active_map_holder_path = NodePath("../../Active_Map_Holder")
+
+[node name="Camera2D" type="Camera2D" parent="Active_Character"]
+script = ExtResource( 1 )

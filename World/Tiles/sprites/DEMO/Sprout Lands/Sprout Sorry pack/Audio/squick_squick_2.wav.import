@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/squick_squick_2.wav-69bafa35b5df382bfa0436f57a23e7c8.sample"
+
+[deps]
+
+source_file="res://World/Tiles/sprites/DEMO/Sprout Lands/Sprout Sorry pack/Audio/squick_squick_2.wav"
+dest_files=[ "res://.import/squick_squick_2.wav-69bafa35b5df382bfa0436f57a23e7c8.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

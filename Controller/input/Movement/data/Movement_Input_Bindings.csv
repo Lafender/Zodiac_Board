@@ -1,0 +1,9 @@
+Action_Name,Event_Type,Code_Name,Axis_Value,Dead_Zone
+Move_Left,Key,KEY_A,0,0.2
+Move_Right,Key,KEY_D,0,0.2
+Move_Up,Key,KEY_W,0,0.2
+Move_Down,Key,KEY_S,0,0.2
+Move_Left,Joy_Axis,JOY_AXIS_0,-1.0,0.2
+Move_Right,Joy_Axis,JOY_AXIS_0,1.0,0.2
+Move_Up,Joy_Axis,JOY_AXIS_1,-1.0,0.2
+Move_Down,Joy_Axis,JOY_AXIS_1,1.0,0.2

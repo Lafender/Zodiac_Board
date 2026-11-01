@@ -1,0 +1,60 @@
+{
+    "Bindings": [
+        {
+            "Action_Name": "Move_Left",
+            "Event_Type": "Key",
+            "Code": 65,
+            "Axis_Value": 0.0,
+            "Dead_Zone": 0.2
+        },
+        {
+            "Action_Name": "Move_Right",
+            "Event_Type": "Key",
+            "Code": 68,
+            "Axis_Value": 0.0,
+            "Dead_Zone": 0.2
+        },
+        {
+            "Action_Name": "Move_Up",
+            "Event_Type": "Key",
+            "Code": 87,
+            "Axis_Value": 0.0,
+            "Dead_Zone": 0.2
+        },
+        {
+            "Action_Name": "Move_Down",
+            "Event_Type": "Key",
+            "Code": 83,
+            "Axis_Value": 0.0,
+            "Dead_Zone": 0.2
+        },
+        {
+            "Action_Name": "Move_Left",
+            "Event_Type": "Joy_Axis",
+            "Code": 0,
+            "Axis_Value": -1.0,
+            "Dead_Zone": 0.2
+        },
+        {
+            "Action_Name": "Move_Right",
+            "Event_Type": "Joy_Axis",
+            "Code": 0,
+            "Axis_Value": 1.0,
+            "Dead_Zone": 0.2
+        },
+        {
+            "Action_Name": "Move_Up",
+            "Event_Type": "Joy_Axis",
+            "Code": 1,
+            "Axis_Value": -1.0,
+            "Dead_Zone": 0.2
+        },
+        {
+            "Action_Name": "Move_Down",
+            "Event_Type": "Joy_Axis",
+            "Code": 1,
+            "Axis_Value": 1.0,
+            "Dead_Zone": 0.2
+        }
+    ]
+}
