@@ -4,7 +4,7 @@ class_name Movement_Input_Registrar
 # Registers the movement actions at runtime from the generated JSON.
 # Actions that already exist in Project Settings > Input Map are left untouched.
 
-const BINDINGS_PATH := "res://Controller/input/Movement/data/Movement_Input_Bindings.json"
+const BINDINGS_PATH := "res://Common/config/Movement_Input_Bindings.json"
 
 
 static func register_all() -> void:

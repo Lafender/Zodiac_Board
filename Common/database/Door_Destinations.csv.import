@@ -1,0 +1,16 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+
+[deps]
+
+files=[ "res://Common/database/Door_Destinations.Door.translation", "res://Common/database/Door_Destinations.Destination.translation", "res://Common/database/Door_Destinations.Spawn.translation", "res://Common/database/Door_Destinations.Spawn.translation" ]
+
+source_file="res://Common/database/Door_Destinations.csv"
+dest_files=[ "res://Common/database/Door_Destinations.Door.translation", "res://Common/database/Door_Destinations.Destination.translation", "res://Common/database/Door_Destinations.Spawn.translation", "res://Common/database/Door_Destinations.Spawn.translation" ]
+
+[params]
+
+compress=true
+delimiter=0

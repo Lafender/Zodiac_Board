@@ -16,7 +16,6 @@ func _ready() -> void:
 	dead_zone_ratio = Camera_Config_Loader.load_dead_zone_ratio()
 	Camera_Settings_Applier.apply(self)
 	active_map_holder.connect("map_changed", self, "_on_map_changed")
-	_on_map_changed(active_map_holder.get_map())
 
 
 func _physics_process(_delta: float) -> void:
@@ -28,7 +27,7 @@ func _physics_process(_delta: float) -> void:
 	_move_to(global_position + push)
 
 
-func _on_map_changed(new_map: TileMap) -> void:
+func _on_map_changed(new_map: Node) -> void:
 	map_bounds = Map_Bounds_Reader.read_global_bounds(new_map)
 	_move_to(active_character.global_position) # snap to the character, clamped to the new Map
 

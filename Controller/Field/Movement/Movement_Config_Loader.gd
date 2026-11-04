@@ -1,7 +1,7 @@
 extends Reference
 class_name Movement_Config_Loader
 
-const CONFIG_PATH := "res://Controller/input/Movement/data/Movement_Config.json"
+const CONFIG_PATH := "res://Common/config/Movement_Config.json"
 const DEFAULT_MOVE_SPEED := 120.0
 
 

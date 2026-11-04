@@ -13,5 +13,9 @@ static func build(binding: Dictionary) -> InputEvent:
 			axis_event.axis = int(binding["Code"])
 			axis_event.axis_value = float(binding["Axis_Value"])
 			return axis_event
+		"Joy_Button":
+			var button_event := InputEventJoypadButton.new()
+			button_event.button_index = int(binding["Code"])
+			return button_event
 	push_error("Movement_Input_Event_Factory: unknown Event_Type " + str(binding["Event_Type"]))
 	return null

@@ -1,7 +1,7 @@
 extends Reference
 class_name Camera_Config_Loader
 
-const CONFIG_PATH := "res://Data/Camera/Camera_Config.json"
+const CONFIG_PATH := "res://Common/config/Camera_Config.json"
 const DEFAULT_DEAD_ZONE_RATIO := 0.6666667
 
 

@@ -1,0 +1,6 @@
+{
+	"Door_Group_Path": "FLOORS/DOORS",
+	"Interactive_Group_Path": "FLOOR/INTERACTIVE",
+	"Interact_Reach_Pixels": 24.0,
+	"Interact_Probe_Samples": 3
+}

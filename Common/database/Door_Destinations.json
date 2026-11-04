@@ -1,0 +1,18 @@
+{
+    "Doors": [
+        {
+            "Source_Map_Scene": "res://World/Maps/Example_World/Example_Map_A/Tilemap.tscn",
+            "Door_Name": "Door_To_Map_B",
+            "Destination_Map_Scene": "res://World/Maps/Example_World/Example_Map_B/Tilemap.tscn",
+            "Spawn_X": 64.0,
+            "Spawn_Y": 96.0
+        },
+        {
+            "Source_Map_Scene": "res://World/Maps/Example_World/Example_Map_B/Tilemap.tscn",
+            "Door_Name": "Door_To_Map_A",
+            "Destination_Map_Scene": "res://World/Maps/Example_World/Example_Map_A/Tilemap.tscn",
+            "Spawn_X": 200.0,
+            "Spawn_Y": 40.0
+        }
+    ]
+}

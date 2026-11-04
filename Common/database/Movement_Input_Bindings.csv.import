@@ -1,0 +1,16 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+
+[deps]
+
+files=[ "res://Common/database/Movement_Input_Bindings.Event.translation", "res://Common/database/Movement_Input_Bindings.Code.translation", "res://Common/database/Movement_Input_Bindings.Axis.translation", "res://Common/database/Movement_Input_Bindings.Dead.translation" ]
+
+source_file="res://Common/database/Movement_Input_Bindings.csv"
+dest_files=[ "res://Common/database/Movement_Input_Bindings.Event.translation", "res://Common/database/Movement_Input_Bindings.Code.translation", "res://Common/database/Movement_Input_Bindings.Axis.translation", "res://Common/database/Movement_Input_Bindings.Dead.translation" ]
+
+[params]
+
+compress=true
+delimiter=0

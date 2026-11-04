@@ -1,0 +1,3 @@
+Source_Map_Scene,Door_Name,Destination_Map_Scene,Spawn_X,Spawn_Y
+res://World/Maps/Example_World/Example_Map_A/Tilemap.tscn,Door_To_Map_B,res://World/Maps/Example_World/Example_Map_B/Tilemap.tscn,64,96
+res://World/Maps/Example_World/Example_Map_B/Tilemap.tscn,Door_To_Map_A,res://World/Maps/Example_World/Example_Map_A/Tilemap.tscn,200,40

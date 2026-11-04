@@ -55,6 +55,48 @@
             "Code": 1,
             "Axis_Value": 1.0,
             "Dead_Zone": 0.2
+        },
+        {
+            "Action_Name": "Aim_Left",
+            "Event_Type": "Joy_Axis",
+            "Code": 2,
+            "Axis_Value": -1.0,
+            "Dead_Zone": 0.2
+        },
+        {
+            "Action_Name": "Aim_Right",
+            "Event_Type": "Joy_Axis",
+            "Code": 2,
+            "Axis_Value": 1.0,
+            "Dead_Zone": 0.2
+        },
+        {
+            "Action_Name": "Aim_Up",
+            "Event_Type": "Joy_Axis",
+            "Code": 3,
+            "Axis_Value": -1.0,
+            "Dead_Zone": 0.2
+        },
+        {
+            "Action_Name": "Aim_Down",
+            "Event_Type": "Joy_Axis",
+            "Code": 3,
+            "Axis_Value": 1.0,
+            "Dead_Zone": 0.2
+        },
+        {
+            "Action_Name": "Interact",
+            "Event_Type": "Joy_Button",
+            "Code": 0,
+            "Axis_Value": 0.0,
+            "Dead_Zone": 0.5
+        },
+        {
+            "Action_Name": "Interact",
+            "Event_Type": "Key",
+            "Code": 69,
+            "Axis_Value": 0.0,
+            "Dead_Zone": 0.5
         }
     ]
 }
