@@ -7,4 +7,4 @@ export var statistics: Resource
 export var skill_deck: Resource
 export var weapon: Resource
 
-export var character_facing: float
+export var facing_direction := Vector2.DOWN

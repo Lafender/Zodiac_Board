@@ -10,6 +10,11 @@
 
 [node name="Active_Map_Holder" type="Node" parent="."]
 script = ExtResource( 2 )
+initial_map_scene_path = "res://World/Maps/001_TECH/LAB_001/LAB_001.tscn"
+map_container_path = NodePath("Map_Container")
+
+[node name="Map_Container" type="TileMap" parent="Active_Map_Holder"]
+format = 1
 
 [node name="Active_Character" type="KinematicBody2D" parent="."]
 

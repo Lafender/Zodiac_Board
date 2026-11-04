@@ -230,11 +230,6 @@ _global_script_classes=[ {
 "path": "res://Chemistry/interface/Interaction_List/Interaction_List.gd"
 }, {
 "base": "Reference",
-"class": "Interactive_Action_Lookup",
-"language": "GDScript",
-"path": "res://Controller/Field/Map/Interactive_Action_Lookup.gd"
-}, {
-"base": "Reference",
 "class": "Interactive_Tile_Finder",
 "language": "GDScript",
 "path": "res://Controller/Field/Map/Interactive_Tile_Finder.gd"
@@ -262,7 +257,7 @@ _global_script_classes=[ {
 "base": "Reference",
 "class": "Map_Bounds_Reader",
 "language": "GDScript",
-"path": "res://Controller/Field/Map/Camera_Settings_Applier.gd"
+"path": "res://Controller/Camera/script/Map_Bounds_Reader.gd"
 }, {
 "base": "Reference",
 "class": "Map_Layer_Classifier",
@@ -444,7 +439,6 @@ _global_script_class_icons={
 "Interaction_Data": "",
 "Interaction_Dispatcher": "",
 "Interaction_List": "",
-"Interactive_Action_Lookup": "",
 "Interactive_Tile_Finder": "",
 "Inventory_Data": "",
 "Item_Data": "",
