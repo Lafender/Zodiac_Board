@@ -1,6 +1,6 @@
-"""Converts Door_Destinations.csv and Interactive_Actions.csv into JSON for Godot.
+"""Converts Door_Destinations.csv into JSON for Godot.
 
-Run manually, outside Godot, whenever either CSV changes:
+Run manually, outside Godot, whenever the CSV changes:
     python Generate_Map_Link_Json.py
 """
 import csv
@@ -12,7 +12,6 @@ DATA_DIRECTORY = Path(__file__).resolve().parent.parent / "Data" / "Map"
 # (csv file, json file, key that holds the row list)
 TABLES = [
     ("Door_Destinations.csv", "Door_Destinations.json", "Doors"),
-    ("Interactive_Actions.csv", "Interactive_Actions.json", "Interactives"),
 ]
 NUMERIC_COLUMNS = {"Spawn_X", "Spawn_Y"}
 

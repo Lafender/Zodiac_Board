@@ -219,11 +219,6 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Chemistry/interface/Interaction_Data.gd"
 }, {
-"base": "Reference",
-"class": "Interaction_Dispatcher",
-"language": "GDScript",
-"path": "res://Controller/Field/Map/Interaction_Dispatcher.gd"
-}, {
 "base": "Resource",
 "class": "Interaction_List",
 "language": "GDScript",
@@ -437,7 +432,6 @@ _global_script_class_icons={
 "Interaction": "",
 "Interaction_Action_Names": "",
 "Interaction_Data": "",
-"Interaction_Dispatcher": "",
 "Interaction_List": "",
 "Interactive_Tile_Finder": "",
 "Inventory_Data": "",

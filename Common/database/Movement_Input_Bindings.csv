@@ -12,4 +12,4 @@ Aim_Right,Joy_Axis,JOY_AXIS_2,1.0,0.2
 Aim_Up,Joy_Axis,JOY_AXIS_3,-1.0,0.2
 Aim_Down,Joy_Axis,JOY_AXIS_3,1.0,0.2
 Interact,Joy_Button,JOY_BUTTON_0,0,0.5
-Interact,Key,KEY_E,0,0.5
+Interact,Key,KEY_F,0,0.5

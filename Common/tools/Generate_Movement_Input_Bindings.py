@@ -18,7 +18,7 @@ CODE_LOOKUP = {
     "KEY_A": 65,
     "KEY_S": 83,
     "KEY_D": 68,
-    "KEY_E": 69,
+    "KEY_F": 70,
     "JOY_AXIS_0": 0,
     "JOY_AXIS_1": 1,
     "JOY_AXIS_2": 2,

@@ -1,11 +1,8 @@
 extends Node
 class_name Interaction
 
-# Pressing Interact (A) while facing an interactive tile in range emits
-# dialog_requested(action_id) or menu_requested(action_id). Connect your dialog/menu systems to those.
-
-signal dialog_requested(action_id)
-signal menu_requested(action_id)
+# Pressing Interact (A / F) while facing a TileMap in the interactive group calls
+# interact(active_character, character_data) on that TileMap's own script.
 
 export(NodePath) var active_character_path
 export(NodePath) var active_map_holder_path
@@ -38,7 +35,5 @@ func _try_interact() -> void:
 		active_character.global_position, facing, reach_pixels, probe_samples
 	)
 	var tile_map := Interactive_Tile_Finder.find(active_map_holder.map, interactive_group_path, probe_points)
-	if tile_map == null:
-		return
-	var action := Interactive_Action_Lookup.find(active_map_holder.current_map_scene_path, tile_map.name)
-	Interaction_Dispatcher.dispatch(self, action)
+	if tile_map != null and tile_map.has_method("interact"):
+		tile_map.interact(active_character, character_data)

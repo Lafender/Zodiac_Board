@@ -94,7 +94,7 @@
         {
             "Action_Name": "Interact",
             "Event_Type": "Key",
-            "Code": 69,
+            "Code": 70,
             "Axis_Value": 0.0,
             "Dead_Zone": 0.5
         }
