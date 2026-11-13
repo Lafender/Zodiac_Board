@@ -8,6 +8,7 @@ export(Resource) var input_binding_table
 export(Resource) var map_state
 
 var active_character: KinematicBody2D
+var mouse_aim_state := Mouse_Aim_State_Data.new()
 
 
 func _ready() -> void:
@@ -16,5 +17,9 @@ func _ready() -> void:
 	Facing_Direction_Accessor.warn_if_missing(character_data)
 
 
+func _input(event: InputEvent) -> void:
+	Mouse_Aim_Event_Handler.handle(event, mouse_aim_state, movement_config)
+
+
 func _physics_process(_delta: float) -> void:
-	Movement_Step.run(active_character, character_data, movement_config, map_state)
+	Movement_Step.run(active_character, character_data, movement_config, map_state, mouse_aim_state)

@@ -394,6 +394,21 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Common/Resource/Map_State_Data.gd"
 }, {
+"base": "Reference",
+"class": "Mouse_Aim_Direction_Reader",
+"language": "GDScript",
+"path": "res://Field/Movement/Mouse_Aim_Direction_Reader.gd"
+}, {
+"base": "Reference",
+"class": "Mouse_Aim_Event_Handler",
+"language": "GDScript",
+"path": "res://Field/Movement/Mouse_Aim_Event_Handler.gd"
+}, {
+"base": "Resource",
+"class": "Mouse_Aim_State_Data",
+"language": "GDScript",
+"path": "res://Common/Resource/Mouse_Aim_State_Data.gd"
+}, {
 "base": "Node",
 "class": "Movement",
 "language": "GDScript",
@@ -582,6 +597,9 @@ _global_script_class_icons={
 "Map_Layer_Config_Data": "",
 "Map_Scene_Loader": "",
 "Map_State_Data": "",
+"Mouse_Aim_Direction_Reader": "",
+"Mouse_Aim_Event_Handler": "",
+"Mouse_Aim_State_Data": "",
 "Movement": "",
 "Movement_Action_Names": "",
 "Movement_Bounds_Clamper": "",
@@ -615,6 +633,7 @@ config/icon="res://icon.png"
 
 window/size/width=746
 window/size/height=420
+mouse_cursor/custom_image="res://Common/cursors/x_gap3_len6_dot.png"
 window/stretch/mode="viewport"
 
 [global]
