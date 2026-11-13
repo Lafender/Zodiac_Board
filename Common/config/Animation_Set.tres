@@ -1,0 +1,16 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Common/Resource/Animation_Set_Data.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+idle_prefix = "idle"
+walk_prefix = "walk"
+attack_prefix = "attack"
+separator = "_"
+direction_down = "down"
+direction_left = "left"
+direction_right = "right"
+direction_up = "up"
+min_move_distance = 0.05
+max_move_distance = 32.0

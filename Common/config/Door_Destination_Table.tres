@@ -1,0 +1,22 @@
+[gd_resource type="Resource" load_steps=5 format=2]
+
+[ext_resource path="res://Common/Resource/Door_Destination_Table_Data.gd" type="Script" id=1]
+[ext_resource path="res://Common/Resource/Door_Destination_Data.gd" type="Script" id=2]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 2 )
+source_map_scene = "res://World/Maps/001_TECH/LAB_001/LAB_001.tscn"
+door_name = "Front_Door"
+destination_map_scene = ""
+spawn_position = Vector2( 0, 0 )
+
+[sub_resource type="Resource" id=2]
+script = ExtResource( 2 )
+source_map_scene = "res://World/Maps/001_TECH/LAB_001/LAB_001.tscn"
+door_name = "Warp_STAR_WORLD"
+destination_map_scene = ""
+spawn_position = Vector2( 0, 0 )
+
+[resource]
+script = ExtResource( 1 )
+doors = [ SubResource( 1 ), SubResource( 2 ) ]

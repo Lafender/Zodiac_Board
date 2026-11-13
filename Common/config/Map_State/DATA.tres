@@ -1,0 +1,7 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Common/Resource/Map_State_Data.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+initial_map_scene_path = "res://World/Maps/001_TECH/LAB_001/LAB_001.tscn"

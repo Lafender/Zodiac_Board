@@ -1,0 +1,7 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Common/Resource/Camera_Config_Data.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+dead_zone_ratio = 0.666667

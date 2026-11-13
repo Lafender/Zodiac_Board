@@ -1,0 +1,75 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Field/Camera/Camera_Follow.gd" type="Script" id=1]
+[ext_resource path="res://Field/Map/Active_Map_Holder.gd" type="Script" id=2]
+[ext_resource path="res://Field/Movement/Movement.gd" type="Script" id=3]
+[ext_resource path="res://Field/Map/Door_Trigger.gd" type="Script" id=4]
+[ext_resource path="res://Field/Interaction/Interaction.gd" type="Script" id=5]
+[ext_resource path="res://Common/config/Camera_Config.tres" type="Resource" id=6]
+[ext_resource path="res://Common/config/Movement_Config.tres" type="Resource" id=7]
+[ext_resource path="res://Common/config/Input_Binding_Table.tres" type="Resource" id=8]
+[ext_resource path="res://Common/config/Map_State/DATA.tres" type="Resource" id=9]
+[ext_resource path="res://Common/config/Map_Layer_Config.tres" type="Resource" id=10]
+[ext_resource path="res://Common/config/Door_Destination_Table.tres" type="Resource" id=11]
+[ext_resource path="res://Race/database/Technacollie/sprite_frames/sprite_frames.tres" type="SpriteFrames" id=12]
+[ext_resource path="res://Field/Animation/Character_Animator.gd" type="Script" id=13]
+[ext_resource path="res://Common/config/Animation_Set.tres" type="Resource" id=14]
+[ext_resource path="res://Character/data/Active_Character/DATA.tres" type="Resource" id=15]
+
+[sub_resource type="CapsuleShape2D" id=1]
+
+[node name="Field" type="Node2D"]
+
+[node name="Active_Map_Holder" type="Node" parent="."]
+script = ExtResource( 2 )
+map_container_path = NodePath("../Map_Container")
+map_state = ExtResource( 9 )
+
+[node name="Map_Container" type="Node2D" parent="."]
+
+[node name="Active_Character" type="KinematicBody2D" parent="."]
+position = Vector2( 373, 210 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Active_Character"]
+shape = SubResource( 1 )
+
+[node name="Movement" type="Node" parent="Active_Character"]
+script = ExtResource( 3 )
+active_character_path = NodePath("..")
+character_data = ExtResource( 15 )
+movement_config = ExtResource( 7 )
+input_binding_table = ExtResource( 8 )
+map_state = ExtResource( 9 )
+
+[node name="Door_Trigger" type="Node" parent="Active_Character"]
+script = ExtResource( 4 )
+active_character_path = NodePath("..")
+map_state = ExtResource( 9 )
+map_layer_config = ExtResource( 10 )
+door_destination_table = ExtResource( 11 )
+
+[node name="Interaction" type="Node" parent="Active_Character"]
+script = ExtResource( 5 )
+active_character_path = NodePath("..")
+character_data = ExtResource( 15 )
+map_state = ExtResource( 9 )
+map_layer_config = ExtResource( 10 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Active_Character"]
+scale = Vector2( 2, 2 )
+frames = ExtResource( 12 )
+animation = "idle_down"
+playing = true
+
+[node name="Character_Animator" type="Node" parent="Active_Character"]
+script = ExtResource( 13 )
+animated_sprite_path = NodePath("../AnimatedSprite")
+body_path = NodePath("..")
+character_data = ExtResource( 15 )
+animation_set = ExtResource( 14 )
+
+[node name="Camera2D" type="Camera2D" parent="Active_Character"]
+script = ExtResource( 1 )
+active_character_path = NodePath("..")
+camera_config = ExtResource( 6 )
+map_state = ExtResource( 9 )

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Common/Resource/Map_Layer_Config_Data.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+door_group_path = "DOORS"
+interactive_group_path = "INTERACTIVE"
+interact_reach_pixels = 24.0
+interact_probe_samples = 3
