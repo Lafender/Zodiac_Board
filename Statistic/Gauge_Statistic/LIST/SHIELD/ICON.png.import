@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ICON.png-e4a80b95c25e6c4ede99003570c2cb37.stex"
+path="res://.import/ICON.png-1584c4d4ad0ba4e6a6620d8fe457f107.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Statistic/Gauge_Statistic/LIST/ZERO/ICON.png"
-dest_files=[ "res://.import/ICON.png-e4a80b95c25e6c4ede99003570c2cb37.stex" ]
+source_file="res://Statistic/Gauge_Statistic/LIST/SHIELD/ICON.png"
+dest_files=[ "res://.import/ICON.png-1584c4d4ad0ba4e6a6620d8fe457f107.stex" ]
 
 [params]
 

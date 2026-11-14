@@ -1,10 +1,13 @@
 extends Resource
 class_name Character_Data
 
-export var character_name: String
-export var race: Resource
-export var statistics: Resource
-export var skill_deck: Resource
-export var weapon: Resource
+export(String) var character_name
+export(Resource) var race
+export(Resource) var statistics
+
+# Equipment
+export(Resource) var job_catalog
+export(Resource) var skill_deck
+export(Resource) var weapon
 
 export var facing_direction := Vector2.DOWN

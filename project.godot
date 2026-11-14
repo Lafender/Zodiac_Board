@@ -274,22 +274,12 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Field/Field.gd"
 }, {
-"base": "Statistic_Data",
-"class": "Flux_Statistic_Data",
-"language": "GDScript",
-"path": "res://Statistic/Flux_Statistic/Flux_Statistic_Data.gd"
-}, {
-"base": "Groups_Data",
-"class": "Flux_Statistic_List",
-"language": "GDScript",
-"path": "res://Statistic/Flux_Statistic/LIST/Flux_Statistic_List.gd"
-}, {
 "base": "Reference",
 "class": "Gated_Input_Reader",
 "language": "GDScript",
 "path": "res://Field/Movement/Gated_Input_Reader.gd"
 }, {
-"base": "Statistic_Data",
+"base": "Resource",
 "class": "Gauge_Statistic_Data",
 "language": "GDScript",
 "path": "res://Statistic/Gauge_Statistic/Gauge_Statistic_Data.gd"
@@ -524,30 +514,20 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Common/Factories/Skill_Share/Skill_Share.gd"
 }, {
-"base": "Groups_Data",
-"class": "Statistic_List",
-"language": "GDScript",
-"path": "res://Statistic/Statistic_List.gd"
-}, {
 "base": "Resource",
 "class": "Statistics_Data",
 "language": "GDScript",
-"path": "res://Character/schema/Statistics_Data.gd"
+"path": "res://Statistic/Statistics_Data.gd"
 }, {
 "base": "Reference",
 "class": "Tile_Map_Collector",
 "language": "GDScript",
 "path": "res://Field/Map/Tile_Map_Collector.gd"
 }, {
-"base": "Statistic_Data",
+"base": "Resource",
 "class": "Wind_Statistic_Data",
 "language": "GDScript",
 "path": "res://Statistic/Wind_Statistic/Wind_Statistic_Data.gd"
-}, {
-"base": "Groups_Data",
-"class": "Wind_Statistic_List",
-"language": "GDScript",
-"path": "res://Statistic/Wind_Statistic/LIST/Wind_Statistic_List.gd"
 } ]
 _global_script_class_icons={
 "Active_Map_Holder": "",
@@ -603,8 +583,6 @@ _global_script_class_icons={
 "Facing_Direction_Name_Resolver": "",
 "Facing_Direction_Updater": "",
 "Field": "",
-"Flux_Statistic_Data": "",
-"Flux_Statistic_List": "",
 "Gated_Input_Reader": "",
 "Gauge_Statistic_Data": "",
 "Gauge_Statistic_List": "",
@@ -653,11 +631,9 @@ _global_script_class_icons={
 "Rise_Statistic_Data": "",
 "Rise_Statistic_List": "",
 "Skill_Share": "",
-"Statistic_List": "",
 "Statistics_Data": "",
 "Tile_Map_Collector": "",
-"Wind_Statistic_Data": "",
-"Wind_Statistic_List": ""
+"Wind_Statistic_Data": ""
 }
 
 [application]

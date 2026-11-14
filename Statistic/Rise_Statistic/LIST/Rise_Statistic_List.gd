@@ -1,20 +1,28 @@
 extends Groups_Data
 class_name Rise_Statistic_List
 
-# Populated with Rise_Statistic_Data Resources
+# Aura Stat
+## Increases Magical and Spiritual damage resistance
+## and outgoing Spiritual damage
+export var aura_stat: Resource
+
+# Break Stat
+## Increases Physical and Tempered damage resistance
+export var break_stat: Resource
+
+# Gear Stat
+## Increases outgoing Physical and Tempered damage
+export var kinetic_stat: Resource
+
+# Drive Stat
+## Increases outgoing Magical damage
+export var logic_stat: Resource
+
+# Flux Stat
+## Buffs elemental chemistry effects
+export var flux_stat: Resource
 
 
-## Determines damage dealt with melee weapon, armor, and some ranged weapons
-export var KINETIC_POINTS: Resource
-
-## Determines defense against Physical and Tempered attacks.
-export var BREAK_POINTS: Resource
-
-## Determines power with some skill_chipes
-export var LOGIC_POINTS: Resource
-
-## Determines power with some skill chips.
-export var AURA_POINTS: Resource
-
-## Determines defense against Spiritual and Magical attacks.
-export var WILL_POINTS: Resource
+# Zero Stat
+## Decreases all damage done to shield_points
+export var zero_stat: Resource
