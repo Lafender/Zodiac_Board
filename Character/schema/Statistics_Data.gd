@@ -3,6 +3,7 @@ class_name Statistics_Data
 
 # Aura Stat
 ## Increases Magical and Spiritual damage resistance
+## and outgoing Spiritual damage
 export var aura_stat: Resource
 
 # Break Stat
@@ -14,7 +15,7 @@ export var break_stat: Resource
 export var gear_stat: Resource
 
 # Drive Stat
-## Increases outgoing Magical and Spiritual damage
+## Increases outgoing Magical damage
 export var drive_stat: Resource
 
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Field/Camera/Camera_Follow.gd" type="Script" id=1]
 [ext_resource path="res://Field/Map/Active_Map_Holder.gd" type="Script" id=2]
@@ -15,6 +15,8 @@
 [ext_resource path="res://Field/Animation/Character_Animator.gd" type="Script" id=13]
 [ext_resource path="res://Common/config/Animation_Set.tres" type="Resource" id=14]
 [ext_resource path="res://Character/data/Active_Character/DATA.tres" type="Resource" id=15]
+
+[ext_resource path="res://Common/config/Input_Gate/DATA.tres" type="Resource" id=16]
 
 [sub_resource type="CapsuleShape2D" id=1]
 
@@ -39,6 +41,7 @@ active_character_path = NodePath("..")
 character_data = ExtResource( 15 )
 movement_config = ExtResource( 7 )
 input_binding_table = ExtResource( 8 )
+input_gate = ExtResource( 16 )
 map_state = ExtResource( 9 )
 
 [node name="Door_Trigger" type="Node" parent="Active_Character"]
@@ -54,6 +57,7 @@ active_character_path = NodePath("..")
 character_data = ExtResource( 15 )
 map_state = ExtResource( 9 )
 map_layer_config = ExtResource( 10 )
+input_gate = ExtResource( 16 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Active_Character"]
 scale = Vector2( 2, 2 )

@@ -6,6 +6,7 @@ export(Resource) var character_data
 export(Resource) var movement_config
 export(Resource) var input_binding_table
 export(Resource) var map_state
+export(Resource) var input_gate
 
 var active_character: KinematicBody2D
 var mouse_aim_state := Mouse_Aim_State_Data.new()
@@ -22,4 +23,4 @@ func _input(event: InputEvent) -> void:
 
 
 func _physics_process(_delta: float) -> void:
-	Movement_Step.run(active_character, character_data, movement_config, map_state, mouse_aim_state)
+	Movement_Step.run(active_character, character_data, movement_config, map_state, mouse_aim_state, input_gate)
