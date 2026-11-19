@@ -3,7 +3,8 @@
 ---
 description: After generating or editing code, please generate documentation for the project. 
 paths:
-  - "/Documentation/"
+  - "res://Documentation/*"
+  - "res://*"
 ---
 
 ## Presenting Responses
